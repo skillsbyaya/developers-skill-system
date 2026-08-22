@@ -84,6 +84,8 @@ Claude Code subagents are not installed into Codex. Codex can use the shared ski
 
 This is the first public release of the system. The repository is the distribution source of truth; installed copies are deployments for a specific AI coding environment.
 
+Material changes are recorded in the [change log](CHANGELOG.md).
+
 ## Maintenance
 
 `main` is the current public distribution. This is a one-maintainer project: changes may land directly on `main` after the affected skill checks and the complete diff pass. Use a short-lived branch when a change needs experimentation, independent review, or several commits before it is release-ready.
