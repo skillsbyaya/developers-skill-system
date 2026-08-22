@@ -1,0 +1,435 @@
+<title>REPLACE — Preview Checklist</title>
+
+<style>
+  :root {
+    --paper:      #F6F7F5;
+    --surface:    #FFFFFF;
+    --surface-2:  #EEF1EE;
+    --ink:        #1A1E1C;
+    --ink-soft:   #4A5450;
+    --ink-faint:  #79837E;
+    --line:       #DCE1DD;
+    --line-firm:  #C3CBC5;
+    --accent:     #2C5545;
+    --accent-wash:#E4EDE8;
+    --flag:       #9A5B14;
+    --flag-wash:  #F7EEDF;
+    --done:       #2C5545;
+    --shadow:     0 1px 2px rgba(26,30,28,.06), 0 4px 14px rgba(26,30,28,.05);
+
+    --f-display: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --f-body:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --f-mono:    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:#141714; --surface:#1C201D; --surface-2:#232823;
+      --ink:#E7EBE6; --ink-soft:#AEB7B1; --ink-faint:#7E8882;
+      --line:#2E342F; --line-firm:#3D453E;
+      --accent:#79B39B; --accent-wash:#22302A;
+      --flag:#D9A45C; --flag-wash:#2E2718; --done:#79B39B;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#141714; --surface:#1C201D; --surface-2:#232823;
+    --ink:#E7EBE6; --ink-soft:#AEB7B1; --ink-faint:#7E8882;
+    --line:#2E342F; --line-firm:#3D453E;
+    --accent:#79B39B; --accent-wash:#22302A;
+    --flag:#D9A45C; --flag-wash:#2E2718; --done:#79B39B;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+  }
+  :root[data-theme="light"] {
+    --paper:#F6F7F5; --surface:#FFFFFF; --surface-2:#EEF1EE;
+    --ink:#1A1E1C; --ink-soft:#4A5450; --ink-faint:#79837E;
+    --line:#DCE1DD; --line-firm:#C3CBC5;
+    --accent:#2C5545; --accent-wash:#E4EDE8;
+    --flag:#9A5B14; --flag-wash:#F7EEDF; --done:#2C5545;
+    --shadow:0 1px 2px rgba(26,30,28,.06), 0 4px 14px rgba(26,30,28,.05);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--f-body); font-size: 16px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+
+  /* masthead */
+  .mast { display: flex; flex-direction: column; gap: .9rem; }
+  .eyebrow {
+    font-family: var(--f-mono); font-size: .7rem; letter-spacing: .13em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  h1 {
+    font-family: var(--f-display); font-weight: 400;
+    font-size: clamp(2rem, 5.5vw, 2.9rem); line-height: 1.12;
+    letter-spacing: -.015em; margin: 0; text-wrap: balance;
+  }
+  .standfirst { color: var(--ink-soft); font-size: 1.05rem; margin: 0; max-width: 40rem; }
+  .order-note { color: var(--ink); font-size: .9rem; font-weight: 600; margin: -.25rem 0 0; }
+
+  .urlbar {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .8rem;
+    margin-top: .4rem; padding: .85rem 1rem;
+    background: var(--surface); border: 1px solid var(--line);
+    border-left: 3px solid var(--accent); border-radius: 3px;
+  }
+  .urlbar .lbl {
+    font-family: var(--f-mono); font-size: .68rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+  .urlbar a { font-family: var(--f-mono); font-size: .82rem; color: var(--accent); word-break: break-all; }
+
+  /* progress */
+  .progress {
+    position: sticky; top: 0; z-index: 20; margin: 2.5rem 0 0; padding: .7rem 1rem;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(8px); border: 1px solid var(--line); border-radius: 3px;
+    display: flex; align-items: center; gap: .9rem;
+  }
+  .progress .count {
+    font-family: var(--f-mono); font-size: .8rem; font-variant-numeric: tabular-nums;
+    color: var(--ink-soft); white-space: nowrap;
+  }
+  .progress .count b { color: var(--ink); font-weight: 600; }
+  .track { flex: 1; height: 5px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
+  .bar { height: 100%; width: 0%; background: var(--accent); transition: width .25s ease; }
+  .reset {
+    font-family: var(--f-body); font-size: .74rem; color: var(--ink-faint);
+    background: none; border: 1px solid var(--line-firm); border-radius: 3px;
+    padding: .25rem .55rem; cursor: pointer;
+  }
+  .reset:hover { color: var(--ink); border-color: var(--ink-faint); }
+  .reset:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* precondition callout */
+  .callout {
+    margin: 2.25rem 0 0; padding: 1.15rem 1.25rem;
+    background: var(--flag-wash);
+    border: 1px solid color-mix(in srgb, var(--flag) 32%, transparent);
+    border-radius: 3px;
+  }
+  .callout h2 {
+    font-family: var(--f-body); font-size: .78rem; font-weight: 700;
+    letter-spacing: .09em; text-transform: uppercase; color: var(--flag); margin: 0 0 .5rem;
+  }
+  .callout p { margin: 0; color: var(--ink); }
+
+  /* sections */
+  section { margin-top: 2.75rem; }
+  .shead { display: grid; grid-template-columns: 1.55rem 1fr; gap: .85rem; align-items: start; margin-bottom: .3rem; }
+  .num {
+    font-family: var(--f-mono); font-size: .78rem; font-weight: 600; color: var(--accent);
+    padding-top: .28rem; flex: none; font-variant-numeric: tabular-nums;
+  }
+  .stitle-row { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .7rem; }
+  h2.stitle {
+    font-family: var(--f-display); font-weight: 400; font-size: 1.42rem;
+    line-height: 1.25; margin: 0; letter-spacing: -.01em; text-wrap: balance;
+  }
+  .page-links { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .page-link {
+    display: inline-flex; align-items: center; min-height: 1.75rem; padding: .2rem .58rem;
+    border: 1px solid var(--line-firm); border-radius: 99px; background: var(--surface);
+    color: var(--accent); font-family: var(--f-body); font-size: .74rem; font-weight: 600;
+    line-height: 1.2; text-decoration: none;
+  }
+  .page-link:hover { background: var(--accent-wash); border-color: var(--accent); }
+  .page-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .why { margin: .1rem 0 1rem 2.4rem; color: var(--ink-soft); font-size: .93rem; }
+  section.critical h2.stitle { color: var(--accent); }
+  section.critical .list { border-left: 3px solid var(--accent); padding-left: 1.05rem; }
+
+  /* checklist */
+  .list { list-style: none; margin: 0 0 0 2.4rem; padding: 0; display: flex; flex-direction: column; gap: .1rem; }
+  .list li { margin: 0; }
+  .list label {
+    display: grid; grid-template-columns: 1.15rem 1fr; gap: .8rem; align-items: start;
+    padding: .55rem .6rem .55rem .1rem; border-radius: 3px; cursor: pointer;
+  }
+  .list label:hover { background: var(--surface-2); }
+  .list input { display: none; }
+  .box {
+    width: 1.15rem; height: 1.15rem; margin-top: .2rem;
+    border: 1.5px solid var(--line-firm); border-radius: 3px;
+    background: var(--surface); flex: none; display: grid; place-items: center;
+    transition: background .13s ease, border-color .13s ease;
+  }
+  .box::after {
+    content: ""; width: .34rem; height: .62rem;
+    border: solid var(--surface); border-width: 0 2px 2px 0;
+    transform: rotate(45deg) translateY(-1px); opacity: 0;
+  }
+  input:checked + .box { background: var(--done); border-color: var(--done); }
+  input:checked + .box::after { opacity: 1; }
+  input:focus-visible + .box { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .txt { color: var(--ink); }
+  input:checked ~ .txt { color: var(--ink-faint); text-decoration: line-through; text-decoration-thickness: 1px; }
+  .txt em { font-style: normal; color: var(--flag); font-weight: 600; }
+  .txt strong { font-weight: 600; }
+  .txt code {
+    font-family: var(--f-mono); font-size: .86em; background: var(--surface-2);
+    padding: .08em .34em; border-radius: 3px;
+  }
+  .note { display: block; margin-top: .2rem; font-size: .87rem; color: var(--ink-faint); }
+
+  /* panels */
+  .panel {
+    margin-top: 1rem; padding: 1.15rem 1.25rem; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 3px; box-shadow: var(--shadow);
+  }
+  .panel h3 {
+    font-family: var(--f-body); font-size: .76rem; font-weight: 700; letter-spacing: .09em;
+    text-transform: uppercase; color: var(--ink-faint); margin: 0 0 .7rem;
+  }
+  .panel p { margin: 0 0 .7rem; }
+  .panel p:last-child { margin-bottom: 0; }
+  .changes { margin-top: 1.5rem; box-shadow: none; }
+  .changes h2 {
+    font-family: var(--f-body); font-size: 1rem; font-weight: 700;
+    margin: 0 0 .45rem;
+  }
+
+  .verified { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .verified li {
+    font-family: var(--f-mono); font-size: .74rem; padding: .26rem .55rem;
+    border-radius: 99px; background: var(--accent-wash); color: var(--accent);
+  }
+
+  hr.rule { border: 0; border-top: 1px solid var(--line); margin: 3.5rem 0 0; }
+
+  footer {
+    margin-top: 1.5rem; font-size: .85rem; color: var(--ink-faint);
+    display: flex; flex-wrap: wrap; gap: .3rem 1rem;
+  }
+  footer .mono { font-family: var(--f-mono); }
+
+  @media (max-width: 40rem) {
+    .wrap { padding: 2rem 1.1rem 4rem; }
+    .why, .list { margin-left: 0; }
+    .shead { grid-template-columns: 1.35rem 1fr; gap: .5rem; }
+    section.critical .list { padding-left: .9rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  @media print {
+    .progress, .reset { display: none; }
+    body { background: #fff; color: #000; font-size: 11pt; }
+    .wrap { max-width: none; padding: 0; }
+    section { break-inside: avoid; }
+    .panel, .callout { box-shadow: none; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <div class="eyebrow">Sandbox Checklist</div>
+    <h1>REPLACE — subject under review</h1>
+    <div class="urlbar">
+      <span class="lbl">Open app</span>
+      <a href="https://REPLACE">REPLACE — the actual URL</a>
+    </div>
+    <p class="standfirst">
+      REPLACE — Checks before the release or decision. Compact list of affected areas.
+    </p>
+    <!-- Keep only when order matters. -->
+    <p class="order-note">N.B. Work in order</p>
+  </header>
+
+  <div class="progress">
+    <span class="count"><b>Counter: <span id="done">0</span></b> / <span id="total">0</span> checked</span>
+    <div class="track"><div class="bar" id="bar"></div></div>
+    <button class="reset" id="reset" type="button">Clear</button>
+  </div>
+
+  <!-- Keep only when this checklist has been revised. -->
+  <div class="panel changes">
+    <h2>Changes</h2>
+    <p>REPLACE — one or two factual sentences about relevant fixes or removed test data.</p>
+  </div>
+
+  <!-- Precondition callout: keep only when most steps are invisible until setup exists. -->
+  <div class="callout">
+    <h2>Before you start</h2>
+    <p>REPLACE — required setup and its direct consequence.</p>
+  </div>
+
+  <section>
+    <div class="shead">
+      <span class="num">01</span>
+      <div class="stitle-row">
+        <h2 class="stitle">REPLACE — setup action</h2>
+        <div class="page-links">
+          <a class="page-link" href="https://REPLACE" target="_blank" rel="noopener">REPLACE — page name</a>
+        </div>
+      </div>
+    </div>
+    <!-- Keep the why line only when the heading and checks do not make it clear. -->
+    <p class="why">REPLACE — one short line on why this section matters.</p>
+    <ul class="list">
+      <li><label><input type="checkbox"><span class="box"></span><span class="txt">REPLACE — the action, then the observation that proves it.</span></label></li>
+      <li><label><input type="checkbox"><span class="box"></span><span class="txt">REPLACE — a step needing essential context.<span class="note">REPLACE — only what is needed to complete the check correctly.</span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- Add checking sections for the state created above. Group by page, finishing
+       every relevant check on one page before moving to another. Use more than one
+       page link only when the section must span those pages in that order. -->
+
+  <section>
+    <div class="shead">
+      <span class="num">02</span>
+      <div class="stitle-row">
+        <h2 class="stitle">REPLACE — outcome being checked</h2>
+        <div class="page-links">
+          <a class="page-link" href="https://REPLACE" target="_blank" rel="noopener">Internal Outlets</a>
+          <!-- Add another page link only when this section must span pages. -->
+        </div>
+      </div>
+    </div>
+    <ul class="list">
+      <!-- On a revision, keep only checks still required. Add a new data-recheck
+           token only when a fix invalidated this exact step's earlier pass, for
+           example: input type="checkbox" data-recheck="revision-2". -->
+      <li><label><input type="checkbox"><span class="box"></span><span class="txt">REPLACE — all relevant checks available on this page.</span></label></li>
+    </ul>
+  </section>
+
+  <!-- Start another setup section only when later checks require a changed state,
+       such as deleting an order. Then group the resulting checks by page again. -->
+
+  <section class="critical">
+    <div class="shead">
+      <span class="num">NN</span>
+      <div class="stitle-row">
+        <h2 class="stitle">REPLACE — the one that must not be wrong</h2>
+        <div class="page-links">
+          <a class="page-link" href="https://REPLACE" target="_blank" rel="noopener">REPLACE — page name</a>
+        </div>
+      </div>
+    </div>
+    <p class="why">REPLACE — what a failure here would actually cost.</p>
+    <ul class="list">
+      <li><label><input type="checkbox"><span class="box"></span><span class="txt">REPLACE — highest-blast-radius check.</span></label></li>
+    </ul>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <div class="shead"><span class="num">—</span><div class="stitle-row"><h2 class="stitle">Calls to confirm</h2></div></div>
+    <p class="why">Decisions to accept or change.</p>
+    <ul class="list">
+      <li><label><input type="checkbox" data-opt><span class="box"></span><span class="txt">REPLACE — a decision, and the alternative it was chosen over.</span></label></li>
+    </ul>
+  </section>
+
+  <div class="panel">
+    <h3>Already established</h3>
+    <ul class="verified">
+      <li>REPLACE — short label</li>
+      <li>REPLACE — short label</li>
+    </ul>
+  </div>
+
+  <!-- Revised checklist only. Summarise still-valid earlier human passes; do not
+       copy completed detailed steps here or include them in the counter. -->
+  <div class="panel">
+    <h3>Passed earlier</h3>
+    <ul class="verified">
+      <li>REPLACE — compact section or outcome label</li>
+      <li>REPLACE — compact section or outcome label</li>
+    </ul>
+  </div>
+
+  <!-- Keep only when something was logged rather than fixed. -->
+  <div class="panel">
+    <h3>Known gaps</h3>
+    <p>REPLACE — what is missing and where it is logged.</p>
+  </div>
+
+  <div class="panel">
+    <h3>If something's wrong</h3>
+    <p>REPLACE — how to report it.</p>
+    <p>REPLACE — any effect on live data.</p>
+  </div>
+
+  <footer>
+    <span class="mono">REPLACE — date</span>
+    <span>·</span>
+    <span>REPLACE — scope</span>
+    <span>·</span>
+    <span>Next step after this: REPLACE</span>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.list input[type=checkbox]'));
+    var required = boxes.filter(function (b) { return !b.hasAttribute('data-opt'); });
+    var doneEl = document.getElementById('done');
+    var totalEl = document.getElementById('total');
+    var bar = document.getElementById('bar');
+    var KEY = 'preview-checklist:REPLACE-slug';
+
+    // Key each box by a hash of its own text, not its position, so inserting or
+    // reordering steps on a revision cannot scramble unrelated ticks.
+    function hash(s) {
+      var h = 5381, i = s.length;
+      while (i) { h = (h * 33) ^ s.charCodeAt(--i); }
+      return (h >>> 0).toString(36);
+    }
+    var seen = Object.create(null);
+    boxes.forEach(function (b) {
+      var label = b.parentNode.textContent.replace(/\s+/g, ' ').trim();
+      var k = hash(label);
+      seen[k] = (seen[k] || 0) + 1;            // disambiguate genuinely identical steps
+      b.dataset.k = seen[k] > 1 ? k + '~' + seen[k] : k;
+    });
+    totalEl.textContent = required.length;
+
+    function load() {
+      try {
+        var raw = localStorage.getItem(KEY);
+        if (!raw) return;
+        var saved = JSON.parse(raw);
+        boxes.forEach(function (b) {
+          var token = b.getAttribute('data-recheck');
+          if (token ? saved[b.dataset.k] === token : saved[b.dataset.k]) b.checked = true;
+        });
+      } catch (e) { /* first run, or storage unavailable */ }
+    }
+
+    function save() {
+      try {
+        var out = {};
+        boxes.forEach(function (b) {
+          if (b.checked) out[b.dataset.k] = b.getAttribute('data-recheck') || 1;
+        });
+        localStorage.setItem(KEY, JSON.stringify(out));
+      } catch (e) { /* storage unavailable — page still works */ }
+    }
+
+    function paint() {
+      var n = required.filter(function (b) { return b.checked; }).length;
+      doneEl.textContent = n;
+      bar.style.width = required.length ? (n / required.length * 100) + '%' : '0%';
+    }
+
+    boxes.forEach(function (b) {
+      b.addEventListener('change', function () { save(); paint(); });
+    });
+    document.getElementById('reset').addEventListener('click', function () {
+      boxes.forEach(function (b) { b.checked = false; });
+      save(); paint();
+    });
+
+    load();
+    paint();
+  })();
+</script>

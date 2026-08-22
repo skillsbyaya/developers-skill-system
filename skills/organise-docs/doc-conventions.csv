@@ -1,0 +1,56 @@
+doc-type,folder,naming-pattern,example
+"# resolution-note","","Resolve current rules through references/convention-resolution.md. A matching project override wins; unmentioned rules inherit from this file.",""
+"# root-note","","Root holds only always-read control files; everything else lives in one lifecycle folder.",""
+"# naming-note","","Field separator is underscore _; words within a field use hyphen -. Order fields general->specific: [type]_[area]_[specifics].",""
+"# numbering-note","","Use numbers only where they encode order or durable workflow keys. Gaps are acceptable once referenced; duplicates/collisions and competing numbering systems are errors. Prefer area/purpose labels when numbers add no information.",""
+"# area-note","","[area] = a functional area/module within the project (ordering, invoicing, delivery), not the project name.",""
+"# specifics-note","","[specifics] = the particular subject (customer-order-form, data-model). Drop area/specifics when the remaining fields already pin it down.",""
+"# fixed-name-note","","Fixed-name files keep their conventional name (no pattern). Add a date only to genuine point-in-time artifacts.",""
+"# format-note","","Human-readable developer-Claude workflow documents default to Markdown (.md). Use structured or interactive formats only when the artifact requires them, such as YAML for machine-managed state, CSV for compact registries, or HTML for interactive visual references.",""
+"# sidecar-note","","Sidecars/companions share the parent doc's basename: {parent-basename}.{role}.{ext} (for example prd.decision-log.md, brief.addendum.md, ux.color-themes.html). They are not separate rows; they live beside their parent.",""
+"# coverage-note","","Every recurring durable document type has one row, whether a skill or workflow writes it (for example agent-pm PRD -> prd) or Claude authors it directly. organise-docs owns convention design; upskill updates affected skill consumers.",""
+claude,(root),CLAUDE.md,CLAUDE.md
+backlog,(root),BACKLOG.md,BACKLOG.md
+project-context,(root),project-context.md,project-context.md
+project-conventions,reference,project-conventions.md,reference/project-conventions.md
+identifier-areas,reference,identifier-areas.yaml,reference/identifier-areas.yaml
+directory-index,"the folder being indexed",index.md,reference/index.md
+brief,product,brief_[area]_[specifics],product/brief_ordering.md
+prd,product,prd_[area]_[specifics],product/prd_ordering_customer-order-form.md
+prfaq,product,prfaq_[area]_[specifics],product/prfaq_ordering.md
+trigger-map,product,trigger-map_[area],product/trigger-map_ordering.md
+brainstorming-session,brainstorming,brainstorming-session-[date]-[time],brainstorming/brainstorming-session-2026-07-03-1430.md
+forge-session,brainstorming,"forge-[slug]/ (folder exception: holds optional forged-idea.md, forge-report.html, and hidden .memlog.md; do NOT flatten)",brainstorming/forge-ordering/forge-report.html
+research,product,research_[market|domain|technical]_[specifics],product/research_market_competitors.md
+domain-fit-assessment,product,domain-fit-assessment_[area]_[specifics],product/domain-fit-assessment_ordering_regulatory-practice.md
+applicability-findings,compliance,applicability-findings_[area]_[specifics],compliance/applicability-findings_data-processing.md
+assurance-audit,compliance,assurance-audit_[area]_[specifics],compliance/assurance-audit_data-processing.md
+compliance-register,compliance,compliance-register.md,compliance/compliance-register.md
+dpia,compliance,dpia_[area]_[specifics],compliance/dpia_data-processing.md
+record-of-processing,compliance,record-of-processing.md,compliance/record-of-processing.md
+retention-schedule,compliance,retention-schedule.md,compliance/retention-schedule.md
+lawful-basis-consent-review,compliance,lawful-basis-consent-review.md,compliance/lawful-basis-consent-review.md
+subject-access-process,compliance,subject-access-process.md,compliance/subject-access-process.md
+regulatory-horizon-scan,compliance,regulatory-horizon-scan.md,compliance/regulatory-horizon-scan.md
+architecture,design,architecture_[area]_[specifics],design/architecture_ordering_data-model.md
+ux,design,"ux-[area]/ (folder exception: holds fixed-name DESIGN.md + EXPERIENCE.md plus companions such as .decision-log.md and .working/ notes; do NOT flatten)",design/ux-checkout/DESIGN.md
+design-system-guide,design,design-system_[area]_[specifics],design/design-system_checkout.md
+design-thinking-session,design,design-thinking_[area]_[specifics],design/design-thinking_checkout_first-use.md
+visual-reference,design,visual-reference_[area]_[specifics],design/visual-reference_checkout-token-preview.html
+epics,implementation,epics_[area]_[specifics],implementation/epics_ordering.md
+story,implementation,[story-base-id]-[slug],implementation/S2-E4-order-edit.md
+change-package,implementation,change_[area]_[specifics],implementation/change_checkout_validation.md
+code-review-handoff,implementation,code-review_[area]_[specifics],implementation/code-review_checkout-auth.md
+delivery-status,implementation,sprint-status.md,implementation/sprint-status.md
+retro,implementation,retrospective-[scope]-[slug],implementation/retrospective-epic-3-ordering.md
+spike,implementation,spike_[area]_[specifics],implementation/spike_core_supabase-multi-schema.md
+deferred-work,implementation,deferred-work.md,implementation/deferred-work.md
+sprint-change-proposal,implementation,sprint-change-proposal-[date],implementation/sprint-change-proposal-2026-06-28.md
+atdd-checklist,implementation,tests/atdd_[story-base-id or specifics],implementation/tests/atdd_S2-E4-order-edit.md
+test-summary,implementation,tests/test-summary.md,implementation/tests/test-summary.md
+test-review,implementation,tests/test-review_[area],implementation/tests/test-review_checkout.md
+release-readiness,implementation,tests/release-readiness_[area],implementation/tests/release-readiness_checkout.md
+guide,reference,guide_[area]_[specifics],reference/guide_onboarding.md
+codebase-reference,reference,codebase_[area]_[specifics],reference/codebase_billing_webhook-flow.md
+decisions,reference,decisions.md,reference/decisions.md
+readiness-report,reference,implementation-readiness-report,reference/implementation-readiness-report.md

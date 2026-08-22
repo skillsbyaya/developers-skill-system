@@ -1,0 +1,4 @@
+version: 1
+areas:
+  - name: ExampleArea
+    description: Replace with one durable project area and its clear boundary.
