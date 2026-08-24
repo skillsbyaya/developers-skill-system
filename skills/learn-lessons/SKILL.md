@@ -19,7 +19,7 @@ Read exactly one workflow:
 
 An explicit workflow request selects it directly without consultation or sibling loading. Use current correction for one triggering exchange, queue review for existing unresolved entries, and completed-work retrospective for synthesis across several completed items or one consequential completed event. A `close-session` handoff may select only current correction.
 
-Do not auto-trigger from frustration, generic criticism, a factual correction, cleanup alone, a simple status question, or a request whose primary job is editing a skill. Follow an explicit `organise-docs` handoff to current correction when pruning supplies evidence that a preventable documentation-practice failure left material in the live set or recorded material that should not have been durable; the evidence-backed handoff, not cleanup itself, is the trigger.
+Do not auto-trigger from frustration, generic criticism, a factual correction, cleanup alone, a simple status question, or a request whose primary job is editing a skill. Follow an `organise-docs` handoff during pruning only when it states that a serious preventable documentation-practice failure would lose important causal evidence if current correction were delayed. Routine preventable residue is captured compactly for packet or full close and does not trigger this skill.
 
 ## Ownership
 

@@ -24,7 +24,7 @@ Before editing, make a compact gate map:
 
 Every gate needs repository evidence or an explicit user requirement. Coverage thresholds, sharding, burn-in loops, browser installation, and runtime matrices are choices to justify, not defaults.
 
-Validation or assessment alone is report-only. For a broad “review and fix,” “design and implement,” or similar request, discovery finishes with the gate map and proposed configuration change. Continue without fresh confirmation only when the requested outcome already authorised the exact material trigger, topology, dependency, permission, deletion, status-name, and external-state consequences; otherwise present those choices and stop before editing.
+Validation or assessment alone is report-only. A combined “review and fix,” “design and implement,” or similar request authorises discovery followed by in-scope quality-pipeline edits; do not pause after the gate map merely because discovery determined the exact configuration. Ask again only when discovery exposes materially different work, deletion, a production or deployment change, or a consequential trigger, topology, dependency, permission, status-name, or external-state trade-off that the user has not already authorised.
 
 ## Choose the smallest reliable topology
 

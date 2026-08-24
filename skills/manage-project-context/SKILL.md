@@ -33,6 +33,8 @@ Exclude backlog content, task or story lifecycle, copied priority, a copied next
 
 Clear requests should route directly to their owner without loading project context. Use the delivery-status pointer only to orient an unclear or resumed request; follow it to the current work record rather than copying its current row into this file. Do not duplicate document-placement or identifier-convention overrides here; those belong in `reference/project-conventions.md` and are resolved directly by their consumers.
 
+Context work may expose unresolved backlog, identifier-area, or stale-document work owned elsewhere. By default, report those as follow-ups with the appropriate owner; do not start them inside the snapshot task. Continue into an adjacent workflow only when the user explicitly requested comprehensive project setup that includes it or asks to take the reported follow-up.
+
 ## Establish
 
 1. Inspect the smallest authoritative evidence set: repository manifests and root configuration, likely entry points, representative source and tests, current project documents, and explicit user decisions.
@@ -40,8 +42,8 @@ Clear requests should route directly to their owner without loading project cont
 3. Surface material contradictions before writing.
 4. Create the smallest useful structure below, omitting empty headings.
 5. If technical evidence is substantial, read [Technical context](references/technical-context.md) for that bounded pass.
-6. Hand unresolved work to `agent-pm` backlog planning; do not create or order backlog state here.
-7. Near the end, when the project will use durable IDs or periodic cross-artifact area retrieval would materially help, read [the convention-resolution rules](../organise-docs/references/convention-resolution.md), [the area-registry template](../organise-docs/templates/identifier-areas.yaml), and the registered `identifier-areas` document type. Create `reference/identifier-areas.yaml` only when absent, using the smallest set of recurring main areas supported by current project language. Do not add items, counters, status, priority, relationships, aliases without real alternate usage, or a `next` value.
+6. Report unresolved work that belongs in backlog planning as a follow-up to `agent-pm`; do not create or order backlog state here.
+7. When durable IDs or periodic cross-artifact area retrieval would materially help, report a missing or stale identifier-area registry as a follow-up to `organise-docs`. If comprehensive project setup explicitly includes that registry, resolve the conventions and create it through the document owner rather than treating it as part of the context snapshot.
 
 ## Rebaseline
 
@@ -50,8 +52,8 @@ Clear requests should route directly to their owner without loading project cont
 3. Preserve every still-accurate specialist fact and useful custom section.
 4. Remove stale summaries rather than appending a change history.
 5. Reassess technical sections only when the change affects them.
-6. Pass newly uncommitted work to `agent-pm` backlog planning and an explicit stale-document list to `organise-docs` when needed.
-7. If the approved rebaseline materially changes the project's durable area vocabulary, bootstrap a missing area registry as in Establish or return the exact taxonomy delta to `organise-docs`; do not silently rename current identifier suffixes.
+6. Report newly uncommitted work as a follow-up to `agent-pm` backlog planning and any explicit stale-document list as a follow-up to `organise-docs`; do not start either workflow unless the user asks.
+7. If the approved rebaseline materially changes the project's durable area vocabulary, report the exact taxonomy delta to `organise-docs`. Update or create the registry only when the user's requested scope explicitly includes that work; never silently rename current identifier suffixes.
 
 ## Suggested structure
 
@@ -81,6 +83,6 @@ The lifecycle and durable current state describe the project, not the current ta
 
 ## Finish
 
-Verify that every retained fact is current, durable, actionable, correctly placed, and supported by evidence or an approved decision; unrelated specialist content remains intact; the delivery pointer resolves; no placeholder or competing work state remains; and the file contains no copied next action, backlog, task lifecycle, review log, or history. When an identifier-area registry was created, verify every area is evidenced, distinct, reusable, and free of item or counter state.
+Verify that every retained fact is current, durable, actionable, correctly placed, and supported by evidence or an approved decision; unrelated specialist content remains intact; the delivery pointer resolves; no placeholder or competing work state remains; and the file contains no copied next action, backlog, task lifecycle, review log, or history.
 
-Report the mode, sections changed, any identifier-area registry created or taxonomy handoff, supporting evidence for material updates, unresolved project-wide unknowns, and any handoff to a state or document owner.
+Report the mode, sections changed, supporting evidence for material updates, unresolved project-wide unknowns, and any follow-ups for a state or document owner. Include adjacent work completed only when it was explicitly in scope.

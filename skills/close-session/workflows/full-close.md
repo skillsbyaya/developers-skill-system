@@ -1,0 +1,53 @@
+# Full Close
+
+Use this workflow whenever the user signals that the current working session is ending, including “stop for today.” Close the current session completely: tie up its loose ends, preserve anything later work needs, and make any continuation safe to start in a new session. Do not resume active work after the close output.
+
+## Establish the close surface
+
+Use the current conversation and session evidence to identify:
+
+1. what this session changed and the authoritative record, if any, that owns its state;
+2. whether the work is complete, active, blocked, or interrupted;
+3. session-owned files or records and any unrelated or entangled changes;
+4. concise version-control state: current branch, session-owned uncommitted work, local-only or pushed commits, and an existing pull request or landing only when relevant; and
+5. decisions, ideas, constraints, rejected approaches, or corrections that exist only in the conversation.
+
+Inspect only session-touched paths, the current owner, and the minimum version-control evidence needed to classify the state. Do not survey the repository or document set. If a previous full close already ran in this conversation, inspect only changes since that close.
+
+## Choose the necessary depth
+
+Start with a routine close. Escalate to knowledge-rich capture only when the conversation contains several material decisions, ideas, new constraints, or rejected approaches that remain unwritten, or one interconnected decision set whose relationships would be lost by recording a single fact. Message count, elapsed time, and ordinary implementation detail do not justify escalation.
+
+For a routine close, write only a missing current status, exact continuation boundary, or durable fact that later work genuinely needs.
+
+When the knowledge-rich gate is met, read [Knowledge capture](../references/knowledge-capture.md). Do not load that reference for a routine close.
+
+## Tie up actual loose ends
+
+For active or interrupted work, ensure one authoritative owner records the supported current state, evidence later work needs, material unresolved decisions or risks, and one exact next boundary. Correct only small unambiguous omissions caused by this session.
+
+Read [State reconciliation](../references/state-reconciliation.md) only when a story's lifecycle changed during this session or concrete evidence shows its active record, archive, delivery-status entry, backlog counterpart, or project-context pointer may disagree. Verify and repair only session-caused, unambiguous drift. If safe repair requires reconstructing history, changing product intent, or resolving ownership, leave the last supported state and make that mismatch the next-session action.
+
+Do not choose a new backlog item or new priority during close. If no unfinished owned work remains, close with no continuation.
+
+## Handle Git conditionally
+
+An active multi-packet story waiting for another packet or its story-completion session remains uncommitted by default. Do not read Git close or create a packet commit merely because the session is ending. Use a local checkpoint commit only when Agent Dev recorded a concrete recovery, concurrent-work, branch-switching, or large-overlapping-diff need.
+
+For other session-owned Git work, read [Git close](../references/git-close.md) only when a completed unit has not reached the landing state already authorised by the user's work request and the declared project workflow. Finish that authorised non-live landing when checks and policy allow it. Never treat a close signal alone as authority for a live push, release, deployment, destructive operation, or unrelated work. If the unit is incomplete, entangled, failing required checks, or lacks landing authority, preserve its exact state for the next session instead of forcing a clean worktree.
+
+## Finish the close
+
+Do not ask a new question merely to make the close tidier. A decision that is not required for a safe mutation already in progress becomes the next action for a new session. Route an action to the user only when it genuinely requires their judgement, eyes, access, or approval.
+
+Resolve at most one continuation from the current owner. For multi-packet delivery, name exactly the current or next ready packet and end its prompt with: `Run its packet safety gate, update the record, invoke close-session packet close, and stop.` If every implementation packet is complete, hand off the separate story-completion boundary. Do not include downstream work or select unrelated backlog work.
+
+Keep the output proportional:
+
+- Open with one sentence saying the session is closed and the meaningful outcome.
+- Add `### Saved` only when close-time edits or knowledge capture occurred; list the authoritative files or records changed.
+- Add `### Attention` only for failing checks, unsafe or unresolved state, or an external blocker.
+- Add `### Handoff` only when unfinished owned work remains, using a blockquote of at most two lines with `**New session:**`, `**You:**`, or `**Waiting for <actor>:`.
+- When nothing remains, end with `No continuation required.`
+
+Do not present empty tables, “None” rows, a session recap, or more than one next action. The final output ends the session.

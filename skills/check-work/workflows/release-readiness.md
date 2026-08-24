@@ -1,6 +1,6 @@
 # Release Readiness
 
-Decide whether a bounded feature, epic, or release can ship now from current test and critical-path evidence. Return `PASS`, `CONCERNS`, or `FAIL`.
+Decide whether a bounded feature, epic, or release can ship now under its current release contract and evidence. Return `PASS`, `CONCERNS`, or `FAIL`.
 
 ## Resolve the candidate and oracle
 
@@ -8,31 +8,27 @@ Resolve the current revision and a bounded release scope from a named release, e
 
 Find what the release should satisfy, in descending precision:
 
-1. story or epic acceptance conditions;
-2. PRD, specification, API contract, or other authoritative behaviour source;
-3. release note, changelog, or candidate diff; or
-4. for brownfield work with no requirements source, inferred user journeys, routes, permissions, and critical actions from the implementation, explicitly labelled lower confidence.
+1. an explicit project or candidate release contract and its required gates;
+2. story or epic acceptance conditions;
+3. PRD, specification, API contract, or other authoritative behaviour source;
+4. release note, changelog, or candidate diff; or
+5. for brownfield work with no requirements source, inferred user journeys, routes, permissions, and critical actions from the implementation, explicitly labelled lower confidence.
 
 When plausible sources disagree, ask for authority only if the conflict changes the verdict; otherwise record the limitation.
 
 Create a fresh run for the current revision or update a same-run report; never rewrite an old verdict to represent a new candidate. Return the report in the response unless a current convention or supplied path says otherwise.
 
-## Map coverage and risk
+## Resolve the release contract and risk
 
-For each scoped requirement, map current tests as:
+Use the project's current release contract first: required checks, acceptance conditions, supported environments, named thresholds, sign-offs, rollout controls, and explicitly accepted exceptions. Apply only requirements that govern this candidate. Do not replace that contract with a generic coverage score or percentage.
 
-- **FULL** — all expected behaviours are covered;
-- **PARTIAL** — some behaviours are covered and the named gaps remain; or
-- **NONE** — no current test maps to it.
+For each scoped requirement or critical path, map current evidence as:
 
-Do not guess a mapping when test intent is ambiguous. Score probability of failure and impact from 1–3 and multiply them, then assign:
+- **SUPPORTED** — current evidence establishes the release condition for this candidate.
+- **PARTIAL** — some current evidence exists and the material gap is named.
+- **UNSUPPORTED** — no current evidence establishes the condition.
 
-| Priority | Entry | Required coverage |
-| --- | --- | --- |
-| P0 | Score 6–9, or any exposed authentication, authorisation, tenant isolation, money, sensitive-data, destructive-change, or migration path | 100% |
-| P1 | Score 4–5 or a core journey | At least 90% |
-| P2 | Score 2–3 or secondary behaviour | About 50% |
-| P3 | Score 1, cosmetic, or rarely used | Smoke evidence |
+Do not guess a mapping when test intent is ambiguous. If the project has no numeric coverage target, do not invent one. Judge sufficiency from the release contract, consequence, reachability, reversibility, and current evidence. Authentication, authorisation, tenant isolation, money, sensitive data, destructive change, migrations, and similarly critical in-scope paths require direct current evidence or the applicable mandatory specialist result even when the project omitted a numeric threshold.
 
 ## Confirm current evidence
 
@@ -40,7 +36,7 @@ Run or inspect the smallest project-native test command that genuinely covers th
 
 Record the command or evidence source, revision, date, outcome, skipped suites, unavailable services, and important environment differences. If required tests cannot run or be inspected, `PASS` is unavailable.
 
-For exposed P0 paths, require current evidence that the applicable controls work. This can include endpoint authentication, authorisation and tenant isolation, input validation, migration safety and rollback, dependency vulnerability results, or the relevant specialist result. Check for evidence; do not pretend this gate replaces a security, database, privacy, legal, or compliance specialist. Missing required P0 evidence blocks `PASS`.
+For exposed critical paths, require current evidence that the applicable controls work. This can include endpoint authentication, authorisation and tenant isolation, input validation, migration safety and rollback, dependency vulnerability results, or the relevant specialist result. Check for evidence; do not pretend this gate replaces a security, database, privacy, legal, or compliance specialist. Missing mandatory critical-path evidence blocks `PASS`.
 
 Apply stated non-functional thresholds from current project or release sources. Never invent latency, availability, accessibility, browser, or other targets; mark an unstated material target `UNKNOWN` and name what is needed.
 
@@ -48,10 +44,10 @@ Apply stated non-functional thresholds from current project or release sources. 
 
 | Verdict | Condition |
 | --- | --- |
-| **PASS** | P0 is 100%; P1 is at least 90%; relevant current tests are green; no critical security, isolation, migration, or other mandatory gap exists; and no P0 evidence is missing. |
-| **CONCERNS** | P0 is 100%; P1 is 80–89%, or only minor gaps remain with explicit mitigation and acceptance. Shipping requires acceptance of each listed risk. |
-| **FAIL** | P0 is below 100%; P1 is below 80%; relevant tests fail or are unavailable; or a critical security, data-isolation, migration, or other mandatory gap exists. |
+| **PASS** | Applicable release-contract gates and current tests pass; required critical-path evidence is present; and no blocking defect, mandatory gap, or unaccepted release risk remains. |
+| **CONCERNS** | Mandatory gates pass, but bounded non-blocking evidence gaps or release risks remain and each has an explicit mitigation or acceptance decision. |
+| **FAIL** | An applicable mandatory gate or relevant test fails or is unavailable, required critical-path evidence is missing, or a blocking defect or release risk remains. |
 
-When uncertainty concerns P0/P1 coverage, current test results, or critical-path evidence, choose the more conservative verdict. Never report unrun checks as green.
+When uncertainty concerns a mandatory gate, current test result, or critical-path evidence, choose the more conservative verdict. Never report unrun checks as green.
 
-Report the revision and scope, oracle sources, test evidence, coverage by priority, gaps, critical-path evidence, limitations, and accepted risks. Send test gaps to testing, implementation gaps to technical or specialist review, and planning gaps to their owner. After a fix, run the affected gate again; this verdict controls shipping, not completion.
+Report the revision and scope, release contract and oracle sources, test evidence, requirement and critical-path support, gaps, limitations, and accepted risks. Send test gaps to testing, implementation gaps to technical or specialist review, and planning gaps to their owner. After a fix, rerun only the affected gate plus any integrated check the change invalidated; this verdict controls shipping, not completion.

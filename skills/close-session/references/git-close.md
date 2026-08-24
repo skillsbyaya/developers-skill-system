@@ -1,6 +1,6 @@
 # Git Close
 
-Read this reference only when the project is a Git repository and session-owned changes may be committed or pushed.
+Read this reference only when the project is a Git repository and session-owned work has not yet reached its declared end state — uncommitted, committed but unpushed, or pushed and not yet landed. Enter at the step that matches that state; work already pushed goes straight to Land.
 
 ## Establish policy and intent
 
@@ -18,7 +18,7 @@ Do not infer that `main` is protected or that direct work on it is allowed.
 
 ## Commit
 
-Commit only when the user's close request and project workflow make a commit appropriate for the completed session-owned unit.
+Commit only when the user's delivery instruction or explicit Git request and project workflow make a commit appropriate for the completed session-owned unit. A natural close signal alone does not expand Git authority.
 
 1. Run the checks required by the project and the changed surface.
 2. Re-read Git status and the intended diff.
@@ -32,7 +32,7 @@ If checks fail or the unit is incomplete, keep the work uncommitted and report t
 
 Push only when the user requested it or the declared project workflow explicitly permits unattended push for this branch and state. Immediately before pushing, recheck branch, upstream, local commits, and project policy.
 
-When a natural close request and the declared project workflow already authorise a completed session-owned unit to proceed through checks, commit, and push to a non-live branch, carry out that sequence as one routine landing action. Do not ask separately at each step or treat the absence of separate `commit` and `push` requests as a reason to stop. This never extends authority to a live branch, live release, live deployment, or any state the workflow does not clearly authorise.
+When the user's delivery instruction or explicit Git request and the declared project workflow already authorise a completed session-owned unit to proceed through checks, commit, and push to a non-live branch, carry out that sequence as one routine landing action. Do not ask separately at each step. This never extends authority to a live branch, live release, live deployment, or any state the workflow does not clearly authorise.
 
 Ask before any push that is not clearly authorised. Never describe an unperformed commit or push as complete.
 

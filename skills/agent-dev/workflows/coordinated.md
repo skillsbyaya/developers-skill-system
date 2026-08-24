@@ -14,8 +14,8 @@ Read [Packet coordination](../references/packet-coordination.md) before starting
 
 ## Execute and integrate
 
-Select the current or next ready packet, even when the request names the whole story. Work that packet to its explicit stop boundary. Refresh the version-control baseline before integrating it so concurrent changes are classified as owned, unrelated, or entangled. Stop and ask only when ownership or a user-owned decision is material and unresolved.
+Work the current or next ready packet to its explicit boundary. Refresh the version-control baseline before integrating it so concurrent changes are classified as owned, unrelated, or entangled. Stop and ask only when ownership or a user-owned decision is material and unresolved.
 
 If considering a clean-context implementation or verification worker, read [Worker execution](../references/worker-execution.md). Do not load it for inline delivery.
 
-Run the packet's affected checks and inspect its complete owned diff. If it is the story's final packet, also run the required integrated checks. Apply the completion rule and delivery handoff in the delivery controls, checkpoint exact state in the existing record, and stop the session at the packet boundary. Do not continue merely because no human checkpoint occurs yet. If comprehensive source assembly, multiple review slices, or several clean contexts becomes necessary, select staged delivery for a later session.
+Run the packet safety gate in packet coordination and checkpoint exact state in the existing record. Then invoke `close-session` packet close and stop; never start another packet in the same session. If this was the last implementation packet, its handoff starts a separate story-completion session for integrated verification, the complete story diff, assurance, lifecycle close-out, and any authorised landing. If comprehensive source assembly, multiple review slices, or several clean contexts becomes necessary, record that route change for the next session.

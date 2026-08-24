@@ -27,7 +27,7 @@ Inspect evidence in proportion to the selected operation:
 
 A local repair or lesson may need one command and a few files. Framework setup, a whole-suite review, or a broad improvement programme may require wider manifests, lockfiles, test directories, and current project sources. Do not claim whole-suite coverage from file counts or a partial scan.
 
-Resolve only the strategy needed for the operation. When a consequential level, scope, dependency, deletion, acceptable omission, or “how much is enough” choice remains open, present the recommendation and trade-off before dependent mutation. Reuse a current strategy or coverage map when it answers the question. If new evidence contradicts it, name the conflict instead of silently following either source.
+Resolve only the strategy needed for the operation. A combined assessment-and-fix request carries through ordinary in-scope testing decisions without an interim stop. Before dependent mutation, ask again only when evidence exposes materially different work, deletion, a production behaviour change, or a consequential level, scope, dependency, acceptable omission, or “how much is enough” trade-off that the user has not already authorised. Reuse a current strategy or coverage map when it answers the question. If new evidence contradicts it, name the conflict instead of silently following either source.
 
 ## Finish
 

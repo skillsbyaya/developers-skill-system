@@ -30,11 +30,13 @@ Prune always-read control and context files hardest because their cost recurs. K
 
 When the sweep finds a consequential documentation gap, report the intended reader, decision it blocks, and evidence for the gap. Do not inspect code or author domain content merely to fill it.
 
-## Learn from preventable documentation residue
+## Preserve evidence from preventable documentation residue
 
-When pruning finds evidence that an item remained in the live set because the responsible producing or closing workflow did not clean it up at the right time, or that it should never have been recorded durably, invoke `learn-lessons` with its current-correction workflow before that evidence is lost. Supply the affected artifact, the expected lifecycle or recording boundary, how the item entered or remained in the live set when known, and the consequence. Ask it to separate evidence from inference, identify the cause, and propose the smallest durable prevention through the correct owner, such as a producing skill, closeout instruction, convention, template, or deterministic check.
+When pruning finds supported evidence that an item remained in the live set because the responsible producing or closing workflow did not clean it up at the right time, or that it should never have been recorded durably, capture one compact learning candidate instead of invoking `learn-lessons`. Record only the affected artifact, the expected lifecycle or recording boundary, how it entered or remained in the live set when known, and the consequence. Put the candidate in the current owning story or package when one exists so packet close can preserve it; otherwise include it in the current work outcome for full close. Do not create a standalone lesson note or queue entry.
 
-Do not invoke it for ordinary ageing, valid history, intentional archive material, forward-only convention adoption, or clutter with no supported preventable behaviour. Keep the documentation cleanup moving, but do not expand it into protected skill, instruction, configuration, tool, or project changes without the authority those targets require.
+Invoke `learn-lessons` with its current-correction workflow during pruning only for a serious preventable failure when delaying would genuinely lose important causal evidence, such as when cleanup must remove the only source from which the cause can be established and compact capture cannot preserve it. The urgency must come from the evidence-loss risk, not merely from the fact that the residue was preventable.
+
+Do not invoke it for ordinary residue, ageing, valid history, intentional archive material, forward-only convention adoption, or clutter with no supported preventable behaviour. Keep the documentation cleanup moving, but do not expand it into protected skill, instruction, configuration, tool, or project changes without the authority those targets require.
 
 ## Assess convention mismatches
 

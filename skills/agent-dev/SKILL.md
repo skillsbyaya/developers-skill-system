@@ -26,7 +26,7 @@ Delivery selects directly only when the cause and bounded change are already est
 
 For delivery, adopt the authoritative record before choosing execution depth: explicit story or change package, one unambiguous active record, then the relevant status entry. A small story or accepted review fix may still use direct delivery; a record does not force staged execution. Resume an existing owner rather than creating a replacement.
 
-For a reconciliation-heavy, new-UX/UI-pattern, or multi-slice change, prepare the story as its own boundary first and build from the ready story afterwards, rather than collapsing prep into the build; a bounded change may adopt the record and deliver directly.
+For a reconciliation-heavy, new-UX/UI-pattern, or multi-slice change, prepare the story as its own boundary first and build from the ready story afterwards; a bounded change may adopt the record and deliver directly.
 
 ## Boundaries
 
