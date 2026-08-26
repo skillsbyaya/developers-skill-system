@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 26 August 2026: Forward handoffs after completed work
+
+Full session closes now always end with one compact handoff. When the current work is complete, the close selects the next explicit item from the authoritative ordered backlog or project plan. If no next item is unambiguous, it honestly hands the decision about where the project should go next to the user instead of saying that no continuation is required.
+
 ## 24 August 2026: Workflow boundaries and session continuity
 
 The system's delivery, assurance, and session-continuation boundaries were refined:

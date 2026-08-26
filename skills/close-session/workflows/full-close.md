@@ -12,7 +12,7 @@ Use the current conversation and session evidence to identify:
 4. concise version-control state: current branch, session-owned uncommitted work, local-only or pushed commits, and an existing pull request or landing only when relevant; and
 5. decisions, ideas, constraints, rejected approaches, or corrections that exist only in the conversation.
 
-Inspect only session-touched paths, the current owner, and the minimum version-control evidence needed to classify the state. Do not survey the repository or document set. If a previous full close already ran in this conversation, inspect only changes since that close.
+Inspect only session-touched paths, the current owner, and the minimum version-control evidence needed to classify the state. When the current owner is complete, this scope may also include the single authoritative backlog or plan that orders next work. Do not survey the repository or document set. If a previous full close already ran in this conversation, inspect only changes since that close.
 
 ## Choose the necessary depth
 
@@ -28,7 +28,7 @@ For active or interrupted work, ensure one authoritative owner records the suppo
 
 Read [State reconciliation](../references/state-reconciliation.md) only when a story's lifecycle changed during this session or concrete evidence shows its active record, archive, delivery-status entry, backlog counterpart, or project-context pointer may disagree. Verify and repair only session-caused, unambiguous drift. If safe repair requires reconstructing history, changing product intent, or resolving ownership, leave the last supported state and make that mismatch the next-session action.
 
-Do not choose a new backlog item or new priority during close. If no unfinished owned work remains, close with no continuation.
+Do not invent a new priority during close. If no unfinished owned work remains, inspect only the authoritative ordered backlog or current project plan needed to identify the next explicit item. Use that item when the order is unambiguous; otherwise the next action is for the user to decide where the project should go next.
 
 ## Handle Git conditionally
 
@@ -40,14 +40,13 @@ For other session-owned Git work, read [Git close](../references/git-close.md) o
 
 Do not ask a new question merely to make the close tidier. A decision that is not required for a safe mutation already in progress becomes the next action for a new session. Route an action to the user only when it genuinely requires their judgement, eyes, access, or approval.
 
-Resolve at most one continuation from the current owner. For multi-packet delivery, name exactly the current or next ready packet and end its prompt with: `Run its packet safety gate, update the record, invoke close-session packet close, and stop.` If every implementation packet is complete, hand off the separate story-completion boundary. Do not include downstream work or select unrelated backlog work.
+Resolve exactly one handoff: unfinished work from the current owner first; otherwise the next unambiguous item from the authoritative ordered backlog or project plan; otherwise the user's decision about where the project should go next. For multi-packet delivery, name exactly the current or next ready packet and end its prompt with: `Run its packet safety gate, update the record, invoke close-session packet close, and stop.` If every implementation packet is complete, hand off the separate story-completion boundary. Do not include downstream work or infer an unrecorded priority.
 
 Keep the output proportional:
 
 - Open with one sentence saying the session is closed and the meaningful outcome.
 - Add `### Saved` only when close-time edits or knowledge capture occurred; list the authoritative files or records changed.
 - Add `### Attention` only for failing checks, unsafe or unresolved state, or an external blocker.
-- Add `### Handoff` only when unfinished owned work remains, using a blockquote of at most two lines with `**New session:**`, `**You:**`, or `**Waiting for <actor>:`.
-- When nothing remains, end with `No continuation required.`
+- Always end with `### Handoff`, using a blockquote of at most two lines with `**New session:**`, `**You:**`, or `**Waiting for <actor>:`. When no explicit next item exists or ordering is ambiguous, use `> **You:** Decide where the project should go next.`
 
 Do not present empty tables, “None” rows, a session recap, or more than one next action. The final output ends the session.
