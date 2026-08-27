@@ -24,7 +24,7 @@ An explicit mode request selects that workflow directly, subject to the evidence
 
 Delivery selects directly only when the cause and bounded change are already established and authorised, including an accepted investigation conclusion or review fix. A cause is not established merely because it looks plausible, fits a recent change, or was proposed in the request; nor is a check that could not have observed the reported failure evidence that it is absent. Select investigation. If the distinction would materially change execution and cannot be inferred, ask one short question. Do not preload or combine workflows. If evidence later requires a deeper route, checkpoint the current state before selecting it.
 
-For delivery, adopt the authoritative record before choosing execution depth: explicit story or change package, one unambiguous active record, then the relevant status entry. A small story or accepted review fix may still use direct delivery; a record does not force staged execution. Resume an existing owner rather than creating a replacement.
+For delivery, adopt the authoritative record before choosing execution depth: explicit story or change package, one unambiguous active record, then the relevant status entry. A small story, implementation packet, or accepted review fix may still use direct delivery when it is independently bounded and verifiable; a record or packet label does not force staged execution. Resume an existing owner rather than creating a replacement.
 
 For a reconciliation-heavy, new-UX/UI-pattern, or multi-slice change, prepare the story as its own boundary first and build from the ready story afterwards; a bounded change may adopt the record and deliver directly.
 

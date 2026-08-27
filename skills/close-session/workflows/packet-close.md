@@ -1,6 +1,6 @@
 # Packet Close
 
-Use this workflow only after Agent Dev finishes or stops one coordinated or staged implementation packet and the user has not separately requested a full close. Preserve the minimum reliable continuation, return the next fresh-session prompt, and end the current session.
+Use this workflow only after Agent Dev finishes or stops one named implementation packet or slice, through any delivery route, and the user has not separately requested a full close. Preserve the minimum reliable continuation, return the next fresh-session prompt, and end the current session.
 
 ## Confirm the boundary
 
@@ -13,13 +13,17 @@ Confirm that:
 - the owning story or change package identifies the current packet; and
 - the record contains the packet outcome, files or contracts changed, gate and result, material decisions or discoveries, unresolved risk or blocker, and exact next boundary.
 
-Repair only a small unambiguous omission in that owning record. If ownership is unclear or the checkpoint would require reconstruction, leave the packet unresolved and name the missing state rather than creating another record.
+Repair every small, unambiguous omission the session has made in its owning record or other known authoritative documents. If ownership is unclear or the checkpoint would require reconstruction, leave the packet unresolved and name the missing state rather than creating another record.
 
-## Preserve learning without expanding
+## Keep the documentation true
 
-Save only facts that change remaining work. Put story-specific discoveries, rejected approaches worth not repeating, changed constraints, and any broader learning candidate in the owning story or package. Keep the candidate concise and evidence-based so a later full close or story-completion session can route it properly.
+Update every authoritative document already identified by the session that the packet or its post-landing actions have made materially stale. This includes the owning story or package, a delivery-status or next-action pointer, and a durable project rule or operational fact when the session directly changed it. Use current evidence, replace obsolete wording, and record only facts that improve later action; do not append a session diary.
 
-Do not update broader project documents or invoke another skill. Do not run a retrospective, documentation sweep, backlog reconciliation, story completion, archive close-out, independent review, commit, push, pull request, or deployment. Do not create a session log, handoff file, or standalone lesson note. Replace stale continuation fields instead of appending a session diary.
+Do not search for hypothetical documentation work or run a documentation sweep. The boundary is every known document that now needs a change, not a privileged class of files that packet close is forbidden to touch. Put story-specific discoveries, rejected approaches worth not repeating, changed constraints, and any broader learning candidate in their existing authoritative owner when clear; otherwise keep the concise candidate in the story or package for later routing.
+
+Do not invoke another skill, run a retrospective, perform backlog reconciliation, story completion, archive close-out, independent review, commit, push, open a pull request, or deploy. Do not create a session log, handoff file, or standalone lesson note.
+
+When the packet's landing unit is already complete and project policy would require a separate commit or pull request solely to publish a factual documentation correction, leave the corrected document local for the next already-required landing unit. Record its path and intended landing boundary in the project's existing continuation or next-action source, falling back to the owning record only when no such source exists, and repeat it in the handoff. This is deliberate continuation state, not unrelated work. If delaying publication would mislead another active actor or make the next action unsafe, select publication of the correction as the exact next boundary instead.
 
 ## Produce the next prompt
 
@@ -30,9 +34,10 @@ Resolve exactly one next action:
 3. start the next ready implementation packet; or
 4. when no implementation packet remains, start a separate story-completion session for integrated checks, the complete story diff, assurance, lifecycle reconciliation, and any authorised commit or landing.
 
-Return one compact checkpoint sentence naming the packet, gate result, owning record, and any learning saved. Then add a `### Handoff` blockquote of at most two lines:
+Return one compact checkpoint sentence naming the packet, gate result, owning record, any learning saved, and any documentation pending publication. Then add a `### Handoff` blockquote of at most two lines:
 
-- For implementation: `> **New session:** Implement <packet> from <record>. Run its packet safety gate, update the record, invoke close-session packet close, and stop.`
+- For implementation without pending local documentation: `> **New session:** Implement <packet> from <record>. Run its packet safety gate, update the record, invoke close-session packet close, and stop.`
+- For implementation with pending local documentation: `> **New session:** Implement <packet> from <record>; preserve and land the pending corrections in <paths> with this delivery. Run its packet safety gate, update the record, invoke close-session packet close, and stop.`
 - For story completion: `> **New session:** Complete <story> from <record>: run integrated verification, inspect the full story diff, reconcile lifecycle state, and commit or land once if authorised.`
 - For a user or external blocker, use `> **You:**` or `> **Waiting for <actor>:` and state only the action that clears it.
 

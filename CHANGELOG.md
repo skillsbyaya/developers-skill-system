@@ -2,6 +2,12 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 27 August 2026: One delivery close and durable documentation carry-forward
+
+Every Agent Dev delivery route now ends through Close Session exactly once. Named implementation packets use packet close regardless of whether their implementation was direct, coordinated, or staged; other delivery boundaries use full close. Agent Dev records delivery evidence before closing but no longer emits a competing completion summary.
+
+Close Session now updates every known authoritative document made stale by the work or a post-landing action. When publishing a factual correction alone would require another full commit or pull-request cycle, the corrected local files and their intended landing route are recorded in the project's existing continuation source and repeated in the handoff, so the next Agent Dev session adopts them without another user instruction.
+
 ## 26 August 2026: Forward handoffs after completed work
 
 Full session closes now always end with one compact handoff. When the current work is complete, the close selects the next explicit item from the authoritative ordered backlog or project plan. If no next item is unambiguous, it honestly hands the decision about where the project should go next to the user instead of saying that no continuation is required.

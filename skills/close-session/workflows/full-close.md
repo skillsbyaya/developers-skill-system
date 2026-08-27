@@ -1,6 +1,6 @@
 # Full Close
 
-Use this workflow whenever the user signals that the current working session is ending, including “stop for today.” Close the current session completely: tie up its loose ends, preserve anything later work needs, and make any continuation safe to start in a new session. Do not resume active work after the close output.
+Use this workflow after Agent Dev completes or stops delivery work that is not a named implementation packet or slice, and whenever the user signals that the current working session is ending, including “stop for today.” Close the current session completely: tie up its loose ends, preserve anything later work needs, and make any continuation safe to start in a new session. Do not resume active work after the close output.
 
 ## Establish the close surface
 
@@ -24,7 +24,7 @@ When the knowledge-rich gate is met, read [Knowledge capture](../references/know
 
 ## Tie up actual loose ends
 
-For active or interrupted work, ensure one authoritative owner records the supported current state, evidence later work needs, material unresolved decisions or risks, and one exact next boundary. Correct only small unambiguous omissions caused by this session.
+For active or interrupted work, ensure one authoritative owner records the supported current state, evidence later work needs, material unresolved decisions or risks, and one exact next boundary. Update every authoritative document already identified by the session that the work or its post-landing actions made materially stale; use current evidence and correct only unambiguous session-caused omissions rather than surveying for hypothetical documentation work.
 
 Read [State reconciliation](../references/state-reconciliation.md) only when a story's lifecycle changed during this session or concrete evidence shows its active record, archive, delivery-status entry, backlog counterpart, or project-context pointer may disagree. Verify and repair only session-caused, unambiguous drift. If safe repair requires reconstructing history, changing product intent, or resolving ownership, leave the last supported state and make that mismatch the next-session action.
 
@@ -36,6 +36,8 @@ An active multi-packet story waiting for another packet or its story-completion 
 
 For other session-owned Git work, read [Git close](../references/git-close.md) only when a completed unit has not reached the landing state already authorised by the user's work request and the declared project workflow. Finish that authorised non-live landing when checks and policy allow it. Never treat a close signal alone as authority for a live push, release, deployment, destructive operation, or unrelated work. If the unit is incomplete, entangled, failing required checks, or lacks landing authority, preserve its exact state for the next session instead of forcing a clean worktree.
 
+When an already-landed unit leaves only factual documentation corrections and project policy would require a new commit or pull request solely to publish them, preserve the corrected local files for the next already-required landing unit. Record their paths and intended landing boundary in the project's existing continuation or next-action source, falling back to the current owner only when no such source exists, and repeat them in the handoff. Do not repeat a full landing cycle merely to record that the previous one completed. If delayed publication would mislead another active actor or make continuation unsafe, make landing those corrections the next action instead.
+
 ## Finish the close
 
 Do not ask a new question merely to make the close tidier. A decision that is not required for a safe mutation already in progress becomes the next action for a new session. Route an action to the user only when it genuinely requires their judgement, eyes, access, or approval.
@@ -44,7 +46,7 @@ Resolve exactly one handoff: unfinished work from the current owner first; other
 
 Keep the output proportional:
 
-- Open with one sentence saying the session is closed and the meaningful outcome.
+- Open with one concise sentence saying the session is closed and naming the meaningful outcome, verification and landing state, plus a material assurance recommendation only when it changes the next action.
 - Add `### Saved` only when close-time edits or knowledge capture occurred; list the authoritative files or records changed.
 - Add `### Attention` only for failing checks, unsafe or unresolved state, or an external blocker.
 - Always end with `### Handoff`, using a blockquote of at most two lines with `**New session:**`, `**You:**`, or `**Waiting for <actor>:`. When no explicit next item exists or ordering is ambiguous, use `> **You:** Decide where the project should go next.`
