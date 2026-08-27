@@ -1,6 +1,6 @@
 # Knowledge Capture
 
-Read this reference only when full close finds several material decisions, ideas, new constraints, or rejected approaches that remain unwritten, or one interconnected decision set whose relationships would be lost by recording a single fact.
+Read this reference only when the close-session triage selects knowledge-rich depth.
 
 ## Preserve the durable knowledge
 
@@ -13,4 +13,4 @@ Read this reference only when full close finds several material decisions, ideas
 
 If material knowledge has no authoritative owner and would otherwise be lost, create one temporary capture using the project's document conventions. State its intended owner and make routing or removal the next action. Never create this artifact for a routine close, and remove it once its contents reach their proper owners.
 
-Do not create a session log, memory dump, retrospective, duplicate decision register, or broad documentation-reorganisation task. Do not start new product, design, architecture, documentation, or implementation work merely because the close noticed it. Return to full close for state, Git, and handoff handling.
+Do not create a session log, memory dump, retrospective, duplicate decision register, or broad documentation-reorganisation task. Do not start new product, design, architecture, documentation, or implementation work merely because the close noticed it. Return to the selected boundary workflow for state, Git, and handoff handling.

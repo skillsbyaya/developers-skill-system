@@ -2,6 +2,12 @@
 
 Use this workflow only after Agent Dev finishes or stops one named implementation packet or slice, through any delivery route, and the user has not separately requested a full close. Preserve the minimum reliable continuation, return the next fresh-session prompt, and end the current session.
 
+## Apply the triaged depth
+
+For a routine close, write only missing current state, the exact continuation boundary, and isolated durable facts that later work needs.
+
+For a knowledge-rich close, read [Knowledge capture](../references/knowledge-capture.md) and preserve the material relationships before returning here. Richer capture does not widen this packet boundary into story completion, broad reconciliation, independent assurance, Git landing, or deployment.
+
 ## Confirm the boundary
 
 Use the current session's evidence. Do not rerun checks, reread broad sources, survey project documents, or inspect the whole repository.
@@ -21,7 +27,7 @@ Update every authoritative document already identified by the session that the p
 
 Do not search for hypothetical documentation work or run a documentation sweep. The boundary is every known document that now needs a change, not a privileged class of files that packet close is forbidden to touch. Put story-specific discoveries, rejected approaches worth not repeating, changed constraints, and any broader learning candidate in their existing authoritative owner when clear; otherwise keep the concise candidate in the story or package for later routing.
 
-Do not invoke another skill, run a retrospective, perform backlog reconciliation, story completion, archive close-out, independent review, commit, push, open a pull request, or deploy. Do not create a session log, handoff file, or standalone lesson note.
+Do not invoke another skill during a routine packet close. During knowledge-rich capture, invoke `learn-lessons` only under that reference's confirmed-correction gate; do not expand an ordinary implementation mistake into a retrospective. Do not perform backlog reconciliation, story completion, archive close-out, independent review, commit, push, open a pull request, or deploy. Do not create a session log, handoff file, or standalone lesson note.
 
 When the packet's landing unit is already complete and project policy would require a separate commit or pull request solely to publish a factual documentation correction, leave the corrected document local for the next already-required landing unit. Record its path and intended landing boundary in the project's existing continuation or next-action source, falling back to the owning record only when no such source exists, and repeat it in the handoff. This is deliberate continuation state, not unrelated work. If delaying publication would mislead another active actor or make the next action unsafe, select publication of the correction as the exact next boundary instead.
 

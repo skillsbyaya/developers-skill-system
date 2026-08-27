@@ -8,6 +8,8 @@ Every Agent Dev delivery route now ends through Close Session exactly once. Name
 
 Close Session now updates every known authoritative document made stale by the work or a post-landing action. When publishing a factual correction alone would require another full commit or pull-request cycle, the corrected local files and their intended landing route are recorded in the project's existing continuation source and repeated in the handoff, so the next Agent Dev session adopts them without another user instruction.
 
+Close triage now chooses lifecycle boundary and preservation depth independently. Packet and full closes can each remain routine or conditionally use shared knowledge-rich capture, so simple work stays light while interconnected decisions, durable corrections, and consequential mistakes are preserved without widening a packet into story completion or Git ceremony.
+
 ## 26 August 2026: Forward handoffs after completed work
 
 Full session closes now always end with one compact handoff. When the current work is complete, the close selects the next explicit item from the authoritative ordered backlog or project plan. If no next item is unambiguous, it honestly hands the decision about where the project should go next to the user instead of saying that no continuation is required.

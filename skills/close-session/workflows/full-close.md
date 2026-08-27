@@ -14,13 +14,11 @@ Use the current conversation and session evidence to identify:
 
 Inspect only session-touched paths, the current owner, and the minimum version-control evidence needed to classify the state. When the current owner is complete, this scope may also include the single authoritative backlog or plan that orders next work. Do not survey the repository or document set. If a previous full close already ran in this conversation, inspect only changes since that close.
 
-## Choose the necessary depth
+## Apply the triaged depth
 
-Start with a routine close. Escalate to knowledge-rich capture only when the conversation contains several material decisions, ideas, new constraints, or rejected approaches that remain unwritten, or one interconnected decision set whose relationships would be lost by recording a single fact. Message count, elapsed time, and ordinary implementation detail do not justify escalation.
+For a routine close, write only missing current status, the exact continuation boundary, and isolated durable facts that later work needs.
 
-For a routine close, write only a missing current status, exact continuation boundary, or durable fact that later work genuinely needs.
-
-When the knowledge-rich gate is met, read [Knowledge capture](../references/knowledge-capture.md). Do not load that reference for a routine close.
+For a knowledge-rich close, read [Knowledge capture](../references/knowledge-capture.md) and preserve the material relationships before returning here. Do not load that reference for a routine close.
 
 ## Tie up actual loose ends
 
