@@ -2,6 +2,12 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 31 August 2026: Explicit owner completion and enforceable lessons
+
+Multi-packet delivery now preserves a separate story- or package-completion boundary after the final implementation packet. Owners maintain one current completion-assurance note covering the consequence floor, unresolved attention, reusable evidence, limitations, and selected completion condition. Packet and session close workflows prevent premature lifecycle close-out, while completion and assurance workflows consume the note without repeating valid evidence.
+
+Lesson handling now identifies the actor and artefact present at the moment a failure occurs before choosing where prevention belongs. Repeated application gaps at three or more occurrences can no longer be left as another unresolved increment; they require a usable discriminator, a better-positioned owner, or a deterministic check.
+
 ## 27 August 2026: One delivery close and durable documentation carry-forward
 
 Every Agent Dev delivery route now ends through Close Session exactly once. Named implementation packets use packet close regardless of whether their implementation was direct, coordinated, or staged; other delivery boundaries use full close. Agent Dev records delivery evidence before closing but no longer emits a competing completion summary.

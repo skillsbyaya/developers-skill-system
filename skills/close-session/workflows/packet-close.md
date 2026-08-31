@@ -19,6 +19,8 @@ Confirm that:
 - the owning story or change package identifies the current packet; and
 - the record contains the packet outcome, files or contracts changed, gate and result, material decisions or discoveries, unresolved risk or blocker, and exact next boundary.
 
+For the final implementation packet, the exact next boundary is separate completion of the owning story or package, and its current completion-assurance note must state the consequence floor, exact attention or explicit routine conclusion, reusable evidence and limitations, and selected completion condition. All packets being checked off does not make the owner complete. A tracked story stays active at `review`; a change package stays in its supported pre-completion state. The packet must not mark the owner `done`, archive it, remove its active status, perform completion-only backlog transfer, or advance an orientation pointer to later work. If the session prepared any of those mutations, treat them as a packet-boundary defect and restore the supported pre-completion state before landing; when they are already landed or cannot be safely restored, do not advance and make that correction the exact next boundary.
+
 Repair every small, unambiguous omission the session has made in its owning record or other known authoritative documents. If ownership is unclear or the checkpoint would require reconstruction, leave the packet unresolved and name the missing state rather than creating another record.
 
 ## Keep the documentation true
@@ -38,13 +40,13 @@ Resolve exactly one next action:
 1. resume the same packet when its safety gate failed or it stopped incomplete;
 2. satisfy a human checkpoint or material decision when one blocks dependent work;
 3. start the next ready implementation packet; or
-4. when no implementation packet remains, start a separate story-completion session for integrated checks, the complete story diff, assurance, lifecycle reconciliation, and any authorised commit or landing.
+4. when no implementation packet remains, start a separate story- or package-completion session from the current completion-assurance note: reuse valid packet evidence, run unresolved integrated checks, inspect the complete owner diff, apply the recorded method or explicit routine condition, and use `check-work` only when the decision is missing or stale before lifecycle reconciliation and any authorised landing.
 
 Return one compact checkpoint sentence naming the packet, gate result, owning record, any learning saved, and any documentation pending publication. Then add a `### Handoff` blockquote of at most two lines:
 
 - For implementation without pending local documentation: `> **New session:** Implement <packet> from <record>. Run its packet safety gate, update the record, invoke close-session packet close, and stop.`
 - For implementation with pending local documentation: `> **New session:** Implement <packet> from <record>; preserve and land the pending corrections in <paths> with this delivery. Run its packet safety gate, update the record, invoke close-session packet close, and stop.`
-- For story completion: `> **New session:** Complete <story> from <record>: run integrated verification, inspect the full story diff, reconcile lifecycle state, and commit or land once if authorised.`
+- For story or package completion: `> **New session:** Check <owner> at completion from <record>: start from its completion-assurance note, reuse current packet evidence, run unresolved integrated checks and <recorded method or routine condition>, inspect the complete owner diff, then reconcile lifecycle state and land once if authorised.`
 - For a user or external blocker, use `> **You:**` or `> **Waiting for <actor>:` and state only the action that clears it.
 
 Do not restate packet contents, list later work, or ask the user to prompt the close that Agent Dev has already invoked. End the session after this output.

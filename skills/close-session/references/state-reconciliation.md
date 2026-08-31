@@ -17,6 +17,8 @@ Use that owner to derive continuation. Separately collect every story whose life
 
 The current work record owns execution detail. Delivery status is a narrow index of unfinished committed work, not completed history. The backlog owns only uncommitted work and priority. Project context may point to delivery status for unclear or resumed work; it never owns the current task.
 
+**Delivery status is replaced, not appended.** Setting a new next action obsoletes the one it replaces, so remove the superseded position and narrative in the same pass that writes the new one, along with any working note an archived record or another owner now holds. This is not a periodic tidy triggered by archiving or by the document looking long — it is what writing the next action means. Expect no single session to feel like the one at fault: each addition is individually correct and in scope, which is why an unbounded delivery-status document grows until a human notices rather than being caught by the sessions that grew it. This governs the current-position prose only; **a story's status entry is not covered by it** and is removed solely under the close-out rule below.
+
 When sources conflict, prefer the more specific current record only when concrete evidence supports the later legal state. Otherwise stop and report the conflict.
 
 Do not assume a mismatch is stale. Rule out concurrent work or another active session before editing a shared record; stop when ownership is uncertain.
@@ -62,3 +64,5 @@ Exclude current story status, next action, review evidence, backlog order, compl
 ## Continuation
 
 Derive continuation from the active story or package, then its delivery-status entry. For a multi-packet owner, select exactly its current or next ready packet. A broad request to continue the story does not widen this boundary. Preserve the packet's outcome, prerequisites, evidence, and stop boundary in the owner so a fresh session needs no previous conversation. Do not select a new backlog item or priority merely because the session is closing; when no unfinished owned work remains, return no continuation. Report any prompt in the conversation only and do not save a separate handoff.
+
+All implementation packets being complete does not mean no unfinished owned work remains. Until the story's selected completion condition is satisfied in a separate story-completion session, continuation stays with that story: run its unresolved integrated checks and recorded assurance method, or use `check-work` to select the method when none was recorded. Only after current completion evidence supports `done` may continuation move to a later backlog item.

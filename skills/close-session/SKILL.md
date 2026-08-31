@@ -23,4 +23,4 @@ A natural session-end signal always selects full close, even when the session al
 
 Message count, elapsed time, packet size, and ordinary implementation detail do not justify knowledge-rich capture. Consequence, unwritten durable knowledge, and recurrence risk do.
 
-Read only the selected boundary workflow. It applies the triaged depth and conditionally loads shared knowledge capture when needed. Knowledge-rich depth does not turn packet close into full close or widen its lifecycle, Git, review, or deployment authority. Both workflows end the current session and prepare continuation for a new one; neither continues active work after closing.
+Read only the selected boundary workflow. It applies the triaged depth and conditionally loads shared knowledge capture when needed. The close workflow changes preservation scope, not the delivery unit: neither knowledge-rich depth nor a natural signal selecting full close turns a named packet into story completion or widens its lifecycle, Git, review, or deployment authority. Both workflows end the current session and prepare continuation for a new one; neither continues active work after closing.

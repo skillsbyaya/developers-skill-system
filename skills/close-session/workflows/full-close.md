@@ -22,6 +22,8 @@ For a knowledge-rich close, read [Knowledge capture](../references/knowledge-cap
 
 ## Tie up actual loose ends
 
+When a natural session-end signal selected this workflow after a named packet or slice, preserve that delivery boundary. Full close may capture broader session knowledge and Git state, but it must not perform owner completion, independent assurance, archive close-out, completion-only backlog transfer, or advancement to later work. A final packet leaves a tracked story active at `review`, or a change package in its supported pre-completion state, and hands off the separate completion boundary. If the session prepared completion-only lifecycle mutations, restore the supported packet state before landing or make that correction the exact next boundary when safe restoration is no longer available.
+
 For active or interrupted work, ensure one authoritative owner records the supported current state, evidence later work needs, material unresolved decisions or risks, and one exact next boundary. Update every authoritative document already identified by the session that the work or its post-landing actions made materially stale; use current evidence and correct only unambiguous session-caused omissions rather than surveying for hypothetical documentation work.
 
 Read [State reconciliation](../references/state-reconciliation.md) only when a story's lifecycle changed during this session or concrete evidence shows its active record, archive, delivery-status entry, backlog counterpart, or project-context pointer may disagree. Verify and repair only session-caused, unambiguous drift. If safe repair requires reconstructing history, changing product intent, or resolving ownership, leave the last supported state and make that mismatch the next-session action.
@@ -40,7 +42,7 @@ When an already-landed unit leaves only factual documentation corrections and pr
 
 Do not ask a new question merely to make the close tidier. A decision that is not required for a safe mutation already in progress becomes the next action for a new session. Route an action to the user only when it genuinely requires their judgement, eyes, access, or approval.
 
-Resolve exactly one handoff: unfinished work from the current owner first; otherwise the next unambiguous item from the authoritative ordered backlog or project plan; otherwise the user's decision about where the project should go next. For multi-packet delivery, name exactly the current or next ready packet and end its prompt with: `Run its packet safety gate, update the record, invoke close-session packet close, and stop.` If every implementation packet is complete, hand off the separate story-completion boundary. Do not include downstream work or infer an unrecorded priority.
+Resolve exactly one handoff: unfinished work from the current owner first; otherwise the next unambiguous item from the authoritative ordered backlog or project plan; otherwise the user's decision about where the project should go next. For multi-packet delivery, name exactly the current or next ready packet and end its prompt with: `Run its packet safety gate, update the record, invoke close-session packet close, and stop.` If every implementation packet is complete, hand off the separate story- or package-completion boundary. Do not include downstream work or infer an unrecorded priority.
 
 Keep the output proportional:
 

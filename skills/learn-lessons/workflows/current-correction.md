@@ -28,11 +28,13 @@ Test the proposed prevention counterfactually:
 - Would it have changed the triggering outcome?
 - Could it misroute or burden a neighbouring case?
 - Does an adequate rule already exist?
-- Is the proposed owner able to observe and enforce the condition?
+- **Name the actor that runs at the moment the failure occurs, and the artefact it reads then.** The proposed destination must be that artefact. Name it rather than judging a candidate adequate — a document read at some other moment still produces behaviour and will pass a yes/no form of this test. If the destination already seemed obvious before reaching this step, it came from the diagnosis frame rather than from evidence: owner follows trigger, so re-examine the trigger first.
 
 ## Maintain the queue and apply
 
 If the pattern remains unresolved, create the queue when absent and add one compact `×1` entry, or increment a genuinely matching unresolved entry. When creating it, use a `# Lessons` heading and one sentence stating that it contains unresolved agent-behaviour improvements only. Merge only the same root cause.
+
+**An increment is not a prevention.** An entry reaching `×3` whose recorded resolution is an application gap against rules that already exist is evidence that the rule cannot be applied as written: the next occasion will not differ from the last three, so incrementing again predicts a fourth rather than preventing it. Such an entry may not simply be incremented. Install a discriminator that separates the failing case from the passing one *at the moment of choice*, move the rule to an owner that runs at that moment, or add a deterministic check — then follow the verification and removal rules below. An entry that records a failure accurately but changes nothing about the next occasion is a note, not a lesson.
 
 Use one compact line per unresolved root cause:
 
