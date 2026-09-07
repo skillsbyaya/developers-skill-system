@@ -23,7 +23,7 @@ Do not auto-trigger from frustration, generic criticism, a factual correction, c
 
 ## Ownership
 
-`~/.claude/LESSONS.md` is the single queue for unresolved agent-behaviour improvements. This skill alone creates, merges, increments, or removes its entries.
+`~/.claude/LESSONS.md` is the single queue for unresolved agent-behaviour improvements. This skill alone creates, merges, increments, or removes its entries. Every run resolves what is parked: an entry waiting only on a decision is put to the user in that run. Nothing stays queued for permission that was never asked for.
 
 The queue is not history, native memory, project context, or a defect backlog. Route:
 

@@ -33,13 +33,13 @@ These rules apply to assurance routes other than evidence disposition, whose wor
 
 - Resolve the target, scope, baseline, and current revision. State an obvious assumption; ask only when alternatives would change the route or result.
 - When an owning story or package contains a current completion-assurance note, use its consequence floor, exposed surfaces, reusable evidence, limitations, and residual uncertainty as the review brief. Verify them against the current revision rather than treating the note as passed assurance. Preserve a supported higher floor; upgrade when the complete current surface warrants it. An explicit routine note may support routine completion without independent review only when current affected checks and complete-diff inspection confirm that no material uncertainty or upgrade trigger emerged.
-- Inspect current, scope-matched evidence. Never report an unperformed, stale, unavailable, or mismatched check as passed.
+- Inspect current, scope-matched evidence. Never report an unperformed, stale, unavailable, or mismatched check as passed: a read is scope-matched only if you know which environment it reached, so name that environment with the result or call the claim unverified.
 - Do not rerun a method when current scope- and revision-matched evidence already answers the decision. Rerun it after relevant changes, wider scope, insufficient earlier inspection, or a fix that invalidated the affected result.
 - Consult a decision-of-record only when it could resolve source authority, scope, or a candidate finding. Search by the scope's identifier or area; do not scan registers for evidence disposition, clean results, or routine reporting. Carry a relevant accepted decision unless current evidence materially contradicts it.
 - Require human preview before another method only when experience, visual behaviour, copy, interaction, accessibility use, or a manual journey could materially change the revision. Otherwise order assurance by evidence value and the risk of reviewing stale work.
 - Do not change the assessed work or its lifecycle or release state. If fixes were requested, finish the assessment and return the scope, revision, evidence, findings, and limitations to the relevant owner; recheck affected assurance after changes.
 - If required specialist evidence is unavailable, state what is missing and leave the decision unresolved rather than imitating the specialist.
-- Leave consequential acceptance and residual-risk decisions to the user. Acceptance cannot replace a mandatory safety or legal control.
+- Consequential acceptance and residual-risk decisions are the user's. Put them to the user in this run, batching every such decision the assurance raised into one round of questions, rather than returning them as findings for a later run. Only a decision that genuinely cannot be put to the user yet — because required evidence is still missing — stays written down, and it names what has to happen first. Acceptance cannot replace a mandatory safety or legal control.
 
 ## Finished result
 

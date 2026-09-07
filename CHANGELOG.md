@@ -2,6 +2,14 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 7 September 2026: Same-run decisions and self-contained landing units
+
+User-owned decisions are now asked in the run that raises them, batched into one round of questions, instead of being reported as unresolved work for a later session. Decisions may remain open only when evidence, an external actor, or another event must come first; specialist-owned choices continue to route to their specialist.
+
+Delivery records now describe the change and the state it leaves behind rather than recording merge metadata that source control already owns. Where project policy lands each packet, its code, record updates, status, and stale orientation pointers land together. Post-landing verification records only divergence, and factual corrections are landed as their own boundary rather than carried as an uncommitted claim on another session's branch or worktree.
+
+Close-session handoffs now use one plain-language subject and one pasteable instruction naming the delivery skill and record. The named skill carries its own gate, update, completion, and close procedure, so handoffs no longer repeat it. Assurance also names the environment actually observed and keeps human preview focused on observable behaviour rather than source-control artifacts, while cleanup and lesson workflows more sharply distinguish live ownership, stale duplication, and decisions that should not remain parked.
+
 ## 31 August 2026: Explicit owner completion and enforceable lessons
 
 Multi-packet delivery now preserves a separate story- or package-completion boundary after the final implementation packet. Owners maintain one current completion-assurance note covering the consequence floor, unresolved attention, reusable evidence, limitations, and selected completion condition. Packet and session close workflows prevent premature lifecycle close-out, while completion and assurance workflows consume the note without repeating valid evidence.

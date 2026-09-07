@@ -27,5 +27,6 @@ An explicit mode or clear natural-language request selects it directly. Use inli
 - Distinguish interface-specific composition from reusable visual decisions. Local layout may remain local; repeated values and chrome belong in the design-token-system workflow.
 - Preserve one canonical source for token values and one shared implementation for reusable visual patterns. Visual references render the system; they do not override it.
 - Preserve fixed user and product choices. Surface a conflict to `agent-ux-designer` or `agent-pm` instead of silently changing experience behaviour or product intent.
+- Route a specialist's decision to that specialist, but ask the user's own decisions in the run that raises them, batched into one round of questions, rather than finishing with them open. Only a decision that genuinely cannot be put to the user yet stays written down, and it names what has to happen first.
 
 Keep neighbouring ownership clear: `agent-ux-designer` owns user needs, journeys, information architecture, interaction behaviour, copy, usability, and `EXPERIENCE.md`; `agent-pm` owns product scope and brand or business choices; `agent-dev` owns unrelated application implementation; `check-work human preview` observes the implemented experience; and architecture, testing, legal, security, privacy, and compliance questions remain with their specialists.

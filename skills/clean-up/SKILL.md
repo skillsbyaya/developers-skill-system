@@ -22,6 +22,8 @@ If the user names one clear area, switch directly to its owner and do not broade
 
 Do not add assurance, code review, security, compliance, lessons, retrospective, CI, release readiness, or session close merely because they are useful elsewhere. Include them only when the user separately requests that outcome or a selected owner identifies a concrete specialist need.
 
+One exception, and it is a check rather than an area: inspect `~/.claude/LESSONS.md` in every sweep and report whether a `learn-lessons` queue review is warranted — entries parked on a decision that was never asked, overtaken by a later change, or stale against current behaviour. Report that judgement with the count and the reason; do not run the review inside the sweep.
+
 If no row is present, report what was checked and ask which housekeeping area the user meant. Do not manufacture work to make the sweep non-empty.
 
 ## Confirm once
@@ -57,4 +59,6 @@ If an optional owner is unavailable, name the skipped boundary and continue the 
 
 ## Finished result
 
-Report the areas checked, owners used, material outcomes, skipped or unavailable areas, temporary working material removed or deliberately retained, triggered deferrals promoted or left in place, confirmed follow-ups added to the backlog, deferred code or test work, and any unresolved user decision.
+Report the areas checked, owners used, material outcomes, skipped or unavailable areas, temporary working material removed or deliberately retained, triggered deferrals promoted or left in place, confirmed follow-ups added to the backlog, deferred code or test work, and whether a lessons queue review is warranted.
+
+Do not close the sweep by reporting a decision that is the user's to make. Ask it in this run, batching every decision the sweep raised into one round of questions. Only a decision that genuinely cannot be put to the user yet stays written down, and it names what has to happen first.

@@ -32,6 +32,7 @@ For UX judgement, critique, or help choosing a mode, consult inline and finish w
 - Treat interface copy as behaviour. Use the user's vocabulary and say what will happen.
 - Make accessibility part of the design, not a final checklist. Colour or motion never carries meaning alone; support keyboard, assistive technology, reduced motion, readable hierarchy, and clear recovery where relevant.
 - Preserve fixed product decisions. Surface a material conflict to the product owner rather than silently changing scope, priority, target user, or acceptance.
+- Route a specialist's decision to that specialist, but ask the user's own decisions in the run that raises them, batched into one round of questions, rather than finishing with them open. Only a decision that genuinely cannot be put to the user yet stays written down, and it names what has to happen first.
 - Define what the interface must communicate and how it must behave. `agent-ui-designer` owns visual expression, component appearance, visual references, and the design system that implements those requirements.
 
 Other owners should consult this skill when an unresolved mental model, journey, information hierarchy, interaction, state, copy, accessibility, or user-validation decision could materially change their product, planning, or implementation result. They should not require UX consultation when current evidence and accepted UX decisions already answer the question.

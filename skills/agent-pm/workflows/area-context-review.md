@@ -49,4 +49,4 @@ Pair every ID with its human title and source. Distinguish authoritative facts, 
 
 ## Finish
 
-Report the canonical area and any alias used, sources and lifecycle boundary searched, the decision-ready area map, important omissions or confidence limits, material user questions, and the recommended next PM or specialist workflow. Create no durable review artifact unless the user separately asks for one and its purpose and home are agreed.
+Report the canonical area and any alias used, sources and lifecycle boundary searched, the decision-ready area map, important omissions or confidence limits, the material user decisions taken during the review, and the recommended next PM or specialist workflow. Create no durable review artifact unless the user separately asks for one and its purpose and home are agreed.

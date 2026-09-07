@@ -21,7 +21,7 @@ Do not manufacture a global lesson when evidence supports only a project consequ
 
 Prefer the existing owner that can prevent the root cause. Do not duplicate the same content across queue, project context, backlog, instructions, and skills.
 
-For an instruction or skill change, use `upskill` to inspect the current owner and make the smallest coherent correction. Prefer replacing or consolidating existing wording over appending another rule. Prefer an enforceable mechanism over prose when the failure is mechanical and the mechanism has the facts needed to decide safely.
+For an instruction or skill change, use `upskill` to inspect the current owner and make the smallest coherent correction. Prefer replacing or consolidating existing wording over appending another rule. Lead with the fix that makes the failure impossible — remove the affordance, constrain the output, or add a check. Fall back to a rule needing judgement only if you can show removal breaks something real.
 
 Test the proposed prevention counterfactually:
 
@@ -44,6 +44,6 @@ Use one compact line per unresolved root cause:
 
 Do not add status fields, completed entries, project-specific task detail, transcripts, or facts that native memory already owns.
 
-Before changing a protected target without specific prior authority, present the evidence, inferred mechanism, target, exact change, expected counterfactual benefit, and material trade-off, then ask. Preserve the unresolved queue entry if the change is deferred or declined.
+Before changing a protected target without specific prior authority, present the evidence, inferred mechanism, target, exact change, expected counterfactual benefit, and material trade-off, then ask. Ask in the run that finds it, batching several into one round of questions rather than deferring any. A declined change answers the entry: delete it. Only a decision that genuinely cannot be put to the user yet stays queued, and it names what has to happen first.
 
 After an authorised change, run the smallest finished-behaviour check that could disprove the fix. Remove the queue entry only when the prevention is installed and that check passes. If verification fails, keep the entry and report why.

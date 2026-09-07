@@ -101,7 +101,7 @@ Check both directions:
 
 Then run two deletion tests:
 
-- **Description counterfactual:** read only the skill name and description beside plausible neighbouring live descriptions. Remove each clause in turn. Keep it only when its removal changes the correct selection for a realistic clear, vague, direct-mode, neighbouring, or non-trigger request. A true statement about what happens after selection still fails this test when it does not affect selection. Prefer positive cues; retain an exclusion only for a demonstrated cue collision and keep it to the smallest discriminating phrase. Operational boundaries belong in the loaded skill, not a duplicate routing catalogue.
+- **Description counterfactual:** read only the skill name and description beside plausible neighbouring live descriptions. Remove each clause in turn. Keep it only when its removal changes the correct selection for a realistic clear, vague, direct-mode, neighbouring, or non-trigger request. A clause that summarises the skill, describes how work finishes, names a safeguard, or explains library ownership is a true statement about what happens after selection, and fails this test. Prefer positive cues; retain an exclusion only for a demonstrated cue collision and keep it to the smallest discriminating phrase. Operational boundaries belong in the loaded skill, not a duplicate routing catalogue.
 - **Standalone necessity:** read the skill without project, migration, or predecessor context. Keep each sentence in the core and each instruction in a support file only when removing it would change judgement, safety, failure handling, or the finished result. Put lineage, compatibility mapping, and design rationale in their actual owner unless current operation genuinely needs them.
 - **Loaded-pair overlap:** read the core with each support file it can load. Consolidate repeated rules into the narrowest reliable owner so one selected route does not receive the same instruction twice.
 
@@ -164,7 +164,7 @@ For each case, check the selected skill or route, files that load, questions ask
 4. Check the proposal for new duplication, ceremony, vague language, hidden prerequisites, and lost safeguards.
 5. If the calling route owns changes, apply in-scope corrections and rerun the affected stages. If the calling route is audit-only, return the proposed changes without editing.
 
-Write or refine the description after the behaviour and support structure are stable. Rerun the description counterfactual against adjacent descriptions. Do not preserve a clause because it accurately summarizes the skill, describes how work finishes, names a safeguard, or explains library ownership; keep it only when it changes correct selection for a realistic request.
+Write or refine the description after the behaviour and support structure are stable, then rerun the description counterfactual against adjacent descriptions.
 
 Finish with a plain-language sweep. Every instruction should be understandable on one reading and specific enough to guide action.
 

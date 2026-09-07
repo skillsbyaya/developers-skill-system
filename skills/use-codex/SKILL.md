@@ -73,6 +73,6 @@ After the run:
 2. Validate material claims and rerun proportionate checks under the natural owner's rules.
 3. Fix, reject, or request one focused rerun for unsupported, unsafe, or out-of-scope work. Do not duplicate the whole packet inline without a concrete reason.
 4. Reconcile accepted work into the natural owner's state and normal assurance path. Codex does not independently declare the user task complete or gain authority to commit, push, deploy, publish, send, delete, or mutate durable records.
-5. Report what Codex performed, which skills it used, what Claude accepted, changed, or rejected, checks actually completed, and remaining uncertainty or decisions.
+5. Report what Codex performed, which skills it used, what Claude accepted, changed, or rejected, checks actually completed, and remaining uncertainty. A decision the packet surfaced that is the user's to make is asked in this run, batched into one round of questions, not listed in that report; only a decision that genuinely cannot be put to the user yet stays written down, and it names what has to happen first.
 
 Codex output is evidence and work product for the natural owner, not a separate source of authority.

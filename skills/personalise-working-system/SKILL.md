@@ -17,7 +17,7 @@ On a bare invocation or broad personalisation request, infer the likely concern 
 
 When the selected concern is documents or identifiers, read the registered global sources and distil only the consequential choices relevant to it, such as placement, naming, fixed names, numbering, sidecars, formats, identifier grammar, area routing, allocation, or legacy handling. Present the first small coherent group with the current convention, what it solves, credible alternatives, practical trade-offs, and a recommendation. This is a convention-design conversation, not a compliance review of the current project's documents.
 
-Do not inspect, inventory, compare, rename, move, or migrate the current project's documents merely to explain global defaults. Do not read `reference/project-conventions.md` or use project examples unless a genuinely local need or project constraint could materially change the decision. After the user confirms or changes a convention, decide its intended reach and inspect only the relevant project constraint or existing overlay.
+Do not inspect, inventory, compare, rename, move, or migrate the current project's documents — `reference/project-conventions.md` and project examples included — unless a genuinely local need or project constraint could materially change the decision. After the user confirms or changes a convention, decide its intended reach and inspect only the relevant project constraint or existing overlay.
 
 Read `~/.claude/CLAUDE.md` when the user selects a broader working-style area or when a proposed cross-project directive must always load. Use [the convention-resolution rules](../organise-docs/references/convention-resolution.md) only when resolving a confirmed document or identifier change or a genuinely local candidate. Inspect only the smallest relevant set of live skill frontmatter, owner instructions, and configuration. Installed skill names and descriptions are the capability catalogue; read owner bodies only when their metadata does not reveal the actual default or mutation authority.
 
@@ -90,4 +90,4 @@ Prefer forward adoption when bulk migration has little practical value. Do not c
 
 ## Finish
 
-Report the defaults reviewed, decisions retained or changed, owners and source files updated, migrations completed or deferred, intentional exceptions, and any unresolved owner work. A successful result leaves one source of truth per rule and no new preference artifact.
+Report the defaults reviewed, decisions retained or changed, owners and source files updated, migrations completed or deferred, and intentional exceptions. Name outstanding work with the owner it belongs to; a decision that is the user's is asked in this run, batched with the others, not reported as unresolved. Only a decision that genuinely cannot be put to the user yet stays written down, and it names what has to happen first. A successful result leaves one source of truth per rule and no new preference artifact.

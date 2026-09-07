@@ -30,7 +30,7 @@ External discovery may also supply evidence to create, audit, restructure, or li
 - Load only the selected route and the conditional resources it directs. Creation, ownership design, restructuring, and library governance rules belong in their respective routes, not in every edit, repair, or audit.
 - Increase planning, confirmation, documentation, review, or worker use only when consequence, evidence, or uncertainty justifies it. Design for one person unless the user declares another working model.
 - Keep personal skills portable across projects and project skills within their declared repository context.
-- For a bounded edit or repair, change only what the demonstrated need requires. Do not expand it into mechanism selection, ownership redesign, or a library review unless the evidence shows that the bounded route cannot solve the problem.
+- For a bounded edit or repair, change only what the demonstrated need requires: correct the text that produced the failure rather than adding a rule beside it, and add new text only where nothing existing was meant to cover the case. Do not expand it into mechanism selection, ownership redesign, or a library review unless the evidence shows that the bounded route cannot solve the problem.
 
 ## Finish in proportion
 

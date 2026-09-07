@@ -30,11 +30,11 @@ If checks fail or the unit is incomplete, keep the work uncommitted and report t
 
 ## Push
 
-Push only when the user requested it or the declared project workflow explicitly permits unattended push for this branch and state. Immediately before pushing, recheck branch, upstream, local commits, and project policy.
+Push only when the user requested it or the declared project workflow explicitly permits unattended push for this branch and state; otherwise ask. Immediately before pushing, recheck branch, upstream, local commits, and project policy.
 
 When the user's delivery instruction or explicit Git request and the declared project workflow already authorise a completed session-owned unit to proceed through checks, commit, and push to a non-live branch, carry out that sequence as one routine landing action. Do not ask separately at each step. This never extends authority to a live branch, live release, live deployment, or any state the workflow does not clearly authorise.
 
-Ask before any push that is not clearly authorised. Never describe an unperformed commit or push as complete.
+Never describe an unperformed commit or push as complete.
 
 ## Land
 

@@ -28,7 +28,7 @@ An explicit mode request selects that workflow directly. Start from a supplied c
 
 - Establish the product decision, target users and problem, evidence, constraints, current commitment, and material uncertainty. Infer obvious context and ask only for information that could change the result.
 - Separate observed evidence, user-supplied facts, inference, assumptions, and recommendations. Do not turn an attractive product narrative into proof of demand.
-- Recommend a position rather than returning an unranked menu. Make the user-owned choices visible before changing the product promise, target user, scope, priority, committed dates, or accepted requirements.
+- Recommend a position rather than returning an unranked menu. Ask the user-owned choices in the run that raises them, batched into one round of questions, before changing the product promise, target user, scope, priority, committed dates, or accepted requirements. Only a choice that genuinely cannot be put to the user yet stays written down, and it names what has to happen first.
 - Treat accepted product decisions as fixed until new evidence creates a material conflict. When artifacts disagree, identify the authoritative current decision and reconcile only the artifact this workflow owns.
 - Advice or a bounded decision may finish the request. Do not create or mutate artifacts, backlog, delivery state, or implementation unless the user asks for that result.
 - Match depth to consequence and uncertainty. Use research, specialist consultation, or assurance only when the unresolved decision needs it; state limitations when required evidence is unavailable.

@@ -19,7 +19,7 @@ Exclude tool-managed memory, hidden system state, generated or build output, and
 Read the relevant convention rows and notes; do not restate the registry as prose. Judge each document by what it is for and who needs it.
 
 - **Placement and naming:** classify by purpose and lifecycle rather than title keywords, then identify the document type, folder, area, and durable distinguishing detail. When no convention fits, record a convention gap instead of forcing a match. Preserve stable paths or identifiers when churn would cost more than the inconsistency.
-- **Duplication:** choose the living authority, merge only still-useful unique content, and archive the superseded copy.
+- **Duplication:** two documents may duplicate wholly, or share only a restated argument while both stay live. Archive a wholly superseded copy once still-useful unique content is merged; where only an argument is shared both documents usually survive, so one owner carries the reasoning and every other site keeps the conclusion and a pointer. **The owner is the document whose stated purpose is incomplete without the content** — where a record of work and a durable reference both hold it, the reference owns it and the record cites. **Check the copies still agree before choosing:** a pair that has drifted apart identifies which side is stale, and that correction is worth more than the tidy-up, but resolve it against an explicit current authority as concept staleness requires below — never by preferring the better-written copy or the more recently changed file. **Lifecycle decides whether there is anything to fix:** a live delivery record legitimately carries its own argument, while a retired or archived one is frozen history and is never edited to remove a repetition.
 - **Hygiene staleness:** remove finished-work-as-current, dated session framing, obsolete navigation, duplicated history, and next-action sections that contain anything other than the actual next direction.
 - **Concept staleness:** remove a reversed decision, abandoned approach, or invalid claim only from an explicit current decision or stale-concepts list. Never infer a pivot from tidy but older prose.
 - **Size and structure:** split only when parts have distinct lasting purposes or readers. Keep one source intact when the real need is a shorter derivative and route that need to the `agent-writer` distillation workflow.
@@ -36,7 +36,7 @@ When pruning finds supported evidence that an item remained in the live set beca
 
 Invoke `learn-lessons` with its current-correction workflow during pruning only for a serious preventable failure when delaying would genuinely lose important causal evidence, such as when cleanup must remove the only source from which the cause can be established and compact capture cannot preserve it. The urgency must come from the evidence-loss risk, not merely from the fact that the residue was preventable.
 
-Do not invoke it for ordinary residue, ageing, valid history, intentional archive material, forward-only convention adoption, or clutter with no supported preventable behaviour. Keep the documentation cleanup moving, but do not expand it into protected skill, instruction, configuration, tool, or project changes without the authority those targets require.
+Keep the documentation cleanup moving, but do not expand it into protected skill, instruction, configuration, tool, or project changes without the authority those targets require.
 
 ## Assess convention mismatches
 
