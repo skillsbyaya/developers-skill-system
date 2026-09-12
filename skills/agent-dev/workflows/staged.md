@@ -8,9 +8,9 @@ Read [Delivery controls](../references/delivery-controls.md) before editing.
 
 Resume the existing story or change package first. If approved epics contain the selected story but no implementation-ready story record exists, prepare it before slicing per [Story preparation](../references/story-preparation.md), without changing product intent. For reconciliation-heavy, new-UX/UI-pattern, or multi-slice work, complete the [Prepare story](prepare-story.md) workflow and write the durable story before code; continue into delivery in the same session only under that workflow's explicit continuation rule. If no story owns the work, create one change package only when durable continuation or assurance earns it; never create a synthetic tracker item for a package.
 
-Keep the record useful for continuation: outcome and acceptance, relevant constraints and sources, material decisions, review slices or execution packets, current evidence, status, and the exact next incomplete boundary. Do not copy whole upstream artifacts or maintain a session diary.
+Keep the record useful for fresh-session continuation across providers: outcome and acceptance, relevant constraints and sources, material decisions, review slices or execution packets, current evidence, status, and the checkout and exact next incomplete boundary. Do not copy whole upstream artifacts or maintain a session diary.
 
-Read [Packet coordination](../references/packet-coordination.md) before starting the first packet.
+Read [Packet coordination](../references/packet-coordination.md) before implementing or resuming a packet. For a separate owner-completion request, adopt the current record and use its owner-completion section directly; do not repeat preparation or select another implementation packet.
 
 If an active delivery-status index exists, update only the item this workflow prepares or implements and only through its legal lifecycle and completion close-out. If the index is missing, bootstrap it only when one authoritative epics document exists and the project's PM structural convention supplies an unambiguous structure; otherwise stop and route structural creation to the PM owner.
 

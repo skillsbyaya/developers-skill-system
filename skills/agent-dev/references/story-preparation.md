@@ -30,7 +30,7 @@ Create or update one semantically complete story containing:
 - the authoritative outcome, observable acceptance, constraints, and non-goals;
 - current-code reuse points, likely change surfaces, contracts, and behaviour to preserve;
 - consequential security, performance, data, compatibility, deployment, and test requirements;
-- bounded implementation packets with dependencies and verification; and
+- bounded implementation packets with dependencies, each sized to include implementation, targeted verification, failure diagnosis, and a compact fresh-session checkpoint; and
 - an execution area for decisions, evidence, files, review findings, status, exact continuation, and one current completion-assurance note. Initialise that note with the expected consequence floor, any known completion attention, and the likely completion condition; state explicitly when the plan is routine and no independent assurance is expected unless implementation changes the risk.
 
 Resolve genuine design decisions here, not at build time, and record each supported decision in the story. A new interaction pattern or shared primitive is a prep-time decision — not a build-time "try it on the sandbox and see."

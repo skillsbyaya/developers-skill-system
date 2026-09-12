@@ -6,11 +6,11 @@ Read [Delivery controls](../references/delivery-controls.md) before editing.
 
 ## Shape the work
 
-Define the owned outcome, acceptance evidence, change-owned paths or contracts, packet boundaries, dependencies, integration order, and route-upgrade triggers. Keep one product and rollback boundary; do not split a cohesive cross-layer outcome merely because it touches several files.
+Define the owned outcome, acceptance evidence, change-owned paths or contracts, packet boundaries sized for implementation and targeted verification, dependencies, integration order, and route-upgrade triggers. Keep one product and rollback boundary; do not split a cohesive cross-layer outcome merely because it touches several files.
 
 Use an existing story or package when present. Create one compact change package only when no record owns the work and durable continuity or assurance will improve later action. Record the outcome, acceptance, packets, material decisions, current state, checks, and next exact boundary—nothing more.
 
-Read [Packet coordination](../references/packet-coordination.md) before starting the first packet.
+Read [Packet coordination](../references/packet-coordination.md) before implementing or resuming a packet. For a separate owner-completion request, adopt the current record and use its owner-completion section directly; do not repeat preparation or select another implementation packet.
 
 ## Execute and integrate
 

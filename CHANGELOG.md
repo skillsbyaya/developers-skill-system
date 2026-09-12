@@ -2,6 +2,12 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 12 September 2026: Fresh-session packets and story-level commits
+
+Multi-packet delivery now defaults to keeping code and current records uncommitted in one checkout until separate story or package completion. Explicit project commit policies still apply. Each packet includes implementation, targeted checks, and a compact handoff that supports continuation in Claude Code or Codex. Execution state preserves the checkout, branch, original story base, and packet baseline so interrupted work and overlapping changes can be resumed without replaying earlier sessions.
+
+Packet closing no longer assumes that code has already landed or requires a clean worktree. Implementation self-checks remain with each packet; separate reviews remain driven by risk, with integrated checks and whole-story assessment at completion. Context loading and successful tool output stay bounded, and handoffs recommend a model and reasoning effort for the next action without treating all completion work as mechanical.
+
 ## 7 September 2026: Same-run decisions and self-contained landing units
 
 User-owned decisions are now asked in the run that raises them, batched into one round of questions, instead of being reported as unresolved work for a later session. Decisions may remain open only when evidence, an external actor, or another event must come first; specialist-owned choices continue to route to their specialist.
