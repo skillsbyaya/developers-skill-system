@@ -15,11 +15,11 @@ Begin with the user's stated concern. When they name an area, inspect only that 
 
 On a bare invocation or broad personalisation request, infer the likely concern from the request and current context when that is reasonably clear. Otherwise present a concise map of recognisable areas—communication, planning and backlog, delivery and Git, documents and identifiers, assurance, session continuity, delegation, and system maintenance—and let the user choose where to start. For a broad review of several areas, agree or recommend an order from the user's concerns and work through only the selected area at each step. Do not privilege documents and identifiers or inspect owner bodies before an area is selected.
 
-When the selected concern is documents or identifiers, read the registered global sources and distil only the consequential choices relevant to it, such as placement, naming, fixed names, numbering, sidecars, formats, identifier grammar, area routing, allocation, or legacy handling. Present the first small coherent group with the current convention, what it solves, credible alternatives, practical trade-offs, and a recommendation. This is a convention-design conversation, not a compliance review of the current project's documents.
+When the selected concern is documents or identifiers, read the [documentation template](../manage-project-context/templates/documentation-conventions.md) for document preferences or the [identifier convention](../organise-docs/references/identifier-conventions.md) for identifier preferences and distil only the consequential choices relevant to it, such as placement, naming, fixed names, numbering, sidecars, formats, identifier grammar, area routing, allocation, or legacy handling. Present the first small coherent group with the current convention, what it solves, credible alternatives, practical trade-offs, and a recommendation. This is a convention-design conversation, not a compliance review of the current project's documents.
 
-Do not inspect, inventory, compare, rename, move, or migrate the current project's documents — `reference/project-conventions.md` and project examples included — unless a genuinely local need or project constraint could materially change the decision. After the user confirms or changes a convention, decide its intended reach and inspect only the relevant project constraint or existing overlay.
+Do not inspect, inventory, compare, rename, move, or migrate the current project's documents — its context and project examples included — unless a genuinely local need or project constraint could materially change the decision. After the user confirms or changes a convention, decide its intended reach and inspect only the relevant project constraint or adopted context section.
 
-Read `~/.claude/CLAUDE.md` when the user selects a broader working-style area or when a proposed cross-project directive must always load. Use [the convention-resolution rules](../organise-docs/references/convention-resolution.md) only when resolving a confirmed document or identifier change or a genuinely local candidate. Inspect only the smallest relevant set of live skill frontmatter, owner instructions, and configuration. Installed skill names and descriptions are the capability catalogue; read owner bodies only when their metadata does not reveal the actual default or mutation authority.
+Read `~/.claude/CLAUDE.md` when the user selects a broader working-style area or when a proposed cross-project directive must always load. Read the project's Documentation conventions section only when resolving an explicitly scoped project change or a genuinely local candidate. Inspect only the smallest relevant set of live skill frontmatter, owner instructions, and configuration. Installed skill names and descriptions are the capability catalogue; read owner bodies only when their metadata does not reveal the actual default or mutation authority.
 
 Classify each candidate:
 
@@ -45,10 +45,10 @@ Ask in small coherent groups. Preserve an already confirmed preference unless ne
 For a document or identifier choice, make the scope judgement before proposing a mutation:
 
 - prefer a global change only when the preference should govern future projects generally;
-- prefer a project overlay when the difference is caused by this project's domain, users, legacy, contracts, tooling, or declared working model; and
-- leave the rule inherited when the project has no durable reason to diverge.
+- update project context when the choice applies to this project because of its domain, users, legacy, contracts, tooling, or declared working model; and
+- preserve adopted project document rules until a deliberate adoption task changes them. A global template edit affects new projects and future adoption, not existing project rules automatically.
 
-Judge scope from the intended reach and stated cause, not from an unsolicited audit of the current project. State whether the change would edit the registered global source or create/update `reference/project-conventions.md`. Do not ask the user to choose a storage location without first making and explaining this judgement.
+Judge scope from the intended reach and stated cause, not from an unsolicited audit of the current project. State whether the change edits the global documentation template, shared identifier convention, or the adopted rules in project context. Do not ask the user to choose a storage location without first making and explaining this judgement.
 
 ## Route each confirmed change
 
@@ -58,8 +58,9 @@ There is no central preferences profile. Use one owner per rule:
 | --- | --- |
 | Cross-project directive that must always load in Claude Code | `~/.claude/CLAUDE.md` |
 | Reusable skill behaviour, trigger, workflow, or ownership | Stop personalisation and switch to `upskill` on the owning skill |
-| Global document or identifier convention | The registered global convention source owned by `organise-docs` |
-| Project-specific document or identifier convention | `reference/project-conventions.md`, created on the first confirmed durable divergence |
+| Global document preferences | `manage-project-context/templates/documentation-conventions.md` |
+| Global identifier preferences | `organise-docs/references/identifier-conventions.md` |
+| Adopted project document or identifier conventions | Documentation conventions section of the existing project context; use `manage-project-context` if context must first be established |
 | Review whether project documents follow the current conventions | Stop personalisation and switch to `organise-docs` |
 | Document-set migration | `organise-docs` and the resolved current conventions |
 | Backlog structure, ordering, or uncommitted-work behaviour | `agent-pm` backlog planning |
@@ -71,7 +72,7 @@ There is no central preferences profile. Use one owner per rule:
 
 Present one change plan grouped by owner before mutation. Identify affected consumers, project instructions, configuration, documents, and existing artifacts. Do not duplicate a rule into consumers that already read or follow its owner.
 
-Personalisation may create or update approved global and project convention sources directly, including `~/.claude/CLAUDE.md`, `organise-docs/doc-conventions.csv`, `organise-docs/references/identifier-conventions.md`, and a project's `reference/project-conventions.md`. A registered convention resource remains a convention source even when it is stored inside the owning skill directory.
+Personalisation may create or update approved global and project convention sources directly, including `~/.claude/CLAUDE.md`, `manage-project-context/templates/documentation-conventions.md`, `organise-docs/references/identifier-conventions.md`, and the Documentation conventions section of an existing project context. Edit only preference content under this authority. Changes to template adoption, routing, migration procedure, or other workflow behaviour belong to `upskill`, even when written in a convention resource.
 
 Personalisation must never create, edit, rename, move, or delete any `SKILL.md`. If a requested result requires changing skill selection, instructions, workflow, ownership, or another non-convention skill resource, stop this route and switch to `upskill`; do not make that mutation under personalisation. Project mutations outside the convention sources go through their operational owner. Preserve unrelated customisation.
 

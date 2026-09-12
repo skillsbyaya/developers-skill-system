@@ -13,7 +13,7 @@ If the bounded scope can be delivered responsibly without durable decomposition 
 
 When creating or structurally rewriting the decomposition, read [the epics-and-stories template](../templates/epics-and-stories.md).
 
-Resolve [the identifier convention](../../organise-docs/references/convention-resolution.md) and the project `identifier-areas` registry when stable planning IDs are in use. Preserve valid current and legacy keys. Use the preferred grammar below only when an authoritative project allocator or already approved key set supplies the numbers; this workflow does not calculate or store the next number.
+Resolve [the identifier convention](../../organise-docs/references/identifier-conventions.md) and the project `identifier-areas` registry when stable planning IDs are in use. Preserve valid current and legacy keys. Use the preferred grammar below only when an authoritative project allocator or already approved key set supplies the numbers; this workflow does not calculate or store the next number.
 
 ## Design stable decomposition
 
@@ -33,7 +33,7 @@ Give each packet one coherent technical outcome, exact dependencies, likely chan
 
 ## Reconcile the delivery-status structure
 
-Use the project's registered delivery-status convention when available; otherwise preserve an existing format. If no convention or status document exists, use a compact Markdown table with stable key, item, status, and last-updated fields. Delivery status is an active index, not a completed-work ledger.
+Use the delivery-status convention recorded in project context when available; otherwise preserve an existing format. If no convention or status document exists, use a compact Markdown table with stable key, item, status, and last-updated fields. Delivery status is an active index, not a completed-work ledger.
 
 - Initialise newly approved unfinished entries at `backlog` unless an authoritative current record proves a later active state. Legal active epic states are `backlog` and `in-progress`; legal active story states are `backlog`, `ready-for-dev`, `in-progress`, and `review`. `done` is preserved in the archived owning record and is not a lasting delivery-status state.
 - Add approved unfinished keys and align names and order. Remove a never-started entry only when its removal is explicitly approved. Remove a completed entry only when its archived owning record supplies authoritative completion evidence; a `done` row without that archive is a lifecycle inconsistency to route to the delivery owner, not proof to manufacture an archive.

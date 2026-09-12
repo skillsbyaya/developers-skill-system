@@ -13,7 +13,7 @@ For interactive creation, use a fast full-draft path when the supplied material 
 
 When drafting or structurally updating, read [the PRD template](../templates/prd.md). Adapt it to the product; do not fill sections with placeholder prose merely for completeness.
 
-When the PRD uses durable requirement IDs, resolve [the identifier convention](../../organise-docs/references/convention-resolution.md) and the project `identifier-areas` registry. Preserve current or legacy identifiers. Use the new grammar only when the project has an authoritative allocator or key set; this workflow does not invent the next requirement number.
+When the PRD uses durable requirement IDs, resolve [the identifier convention](../../organise-docs/references/identifier-conventions.md) and the project `identifier-areas` registry. Preserve current or legacy identifiers. Use the new grammar only when the project has an authoritative allocator or key set; this workflow does not invent the next requirement number.
 
 ## Establish authority and inputs
 

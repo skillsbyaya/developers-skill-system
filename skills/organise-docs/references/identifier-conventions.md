@@ -1,6 +1,6 @@
 # Shared Identifier Convention
 
-Use this reference only when creating, changing, locating, or reconciling durable identified items or the project area vocabulary. Resolve it through [the project-first convention rules](convention-resolution.md): a targeted project override supersedes the matching rule here, while unmentioned rules remain the global default. `organise-docs` owns this convention; `personalise-working-system` may update it after confirming a global change; domain skills own the meaning and lifecycle of their item types.
+Use this reference only when creating, changing, locating, or reconciling durable identified items or the project area vocabulary. Follow explicit user requirements and binding project instructions, then any identifier rules in the Documentation conventions section of the project's context. Those project rules supersede the matching defaults here; preserve existing identities when no adopted rule settles a case. `organise-docs` owns this shared identifier convention and handling; `personalise-working-system` may update global identifier preferences after their scope is confirmed. Domain skills own item meaning and lifecycle. This reference is not a document-placement lookup.
 
 ## Grammar
 
@@ -39,7 +39,7 @@ Do not introduce a new prefix merely to label prose. Add a type only when items 
 
 ## Canonical project areas
 
-The project-local registry is `reference/identifier-areas.yaml`. It holds vocabulary, not item metadata:
+Use the registry path recorded in project context; otherwise preserve an existing registry or use `reference/identifier-areas.yaml` when creation is authorised. It holds vocabulary, not item metadata:
 
 ```yaml
 version: 1
@@ -58,12 +58,12 @@ areas:
 - An alias maps a genuine alternate user term or former name to one canonical area. Omit aliases until real usage or a rename earns them. Aliases never appear in IDs and are not legacy-ID mappings.
 - Do not store IDs, counters, status, priority, owners, relationships, or a `next` value in this registry.
 
-When no registry exists, do not improvise competing spellings. For substantial project setup, `manage-project-context` may bootstrap the smallest evidence-backed registry near the end of establishment or rebaseline. For a bounded writer, create it only when the request authorises the needed project documentation and durable area routing will recur; otherwise use an existing title/ID and report the missing vocabulary owner.
+When no registry exists, do not improvise competing spellings. For substantial project setup that includes identifier vocabulary, `manage-project-context` may route creation of the smallest evidence-backed registry through `organise-docs` near the end of establishment or rebaseline. For a bounded writer, create it only when the request authorises the needed project documentation and durable area routing will recur; otherwise use an existing title/ID and report the missing vocabulary owner.
 
 ## Writer behaviour
 
 1. Preserve an existing base identity and any progressed or externally referenced legacy identity.
-2. Resolve intended areas against `reference/identifier-areas.yaml`, including aliases.
+2. Resolve intended areas against the project area registry, including aliases.
 3. Add only areas for which a periodic area review should reasonably triage the item. Do not use suffixes as exhaustive tags.
 4. If none fits, define one clear reusable area in the registry instead of forcing a misleading match. Change the registry only once for that taxonomy change.
 5. Keep the canonical ID with the item heading or structured row. Use the same complete canonical form in current cross-references.

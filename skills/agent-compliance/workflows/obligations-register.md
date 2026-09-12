@@ -13,13 +13,13 @@ An explicit register request selects this workflow directly. A broad missed-risk
 
 ## Establish authority and scope
 
-Resolve the `compliance-register` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md), then inspect the existing register before creating anything. Maintain one canonical project register. This workflow is its sole structural writer; other workflows may supply bounded, source-backed changes.
+Resolve the `compliance-register` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file), then inspect the existing register before creating anything. Maintain one canonical project register. This workflow is its sole structural writer; other workflows may supply bounded, source-backed changes. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Establish the product, process, jurisdiction, affected people, data or safety exposure, contractual commitments, business model, current controls, evidence horizon, and decision that the register must support. Verify consequential legal or regulatory propositions against current primary official sources. Do not convert a possibility into an obligation merely because it appeared in a checklist or horizon scan.
 
 If legacy obligation, risk, control-evidence, or accepted-risk registers exist, preserve their supported content, identifiers, and decision history while consolidating them into the canonical register. Do not leave competing live sources of truth.
 
-Resolve [the identifier convention](../../organise-docs/references/convention-resolution.md) and the project `identifier-areas` registry when durable typed IDs are in use. Preserve existing and legacy identities. Apply the preferred no-dash grammar only when an authoritative project allocator or approved key set supplies the numbers; this workflow does not infer or store the next number.
+Resolve [the identifier convention](../../organise-docs/references/identifier-conventions.md) and the project `identifier-areas` registry when durable typed IDs are in use. Preserve existing and legacy identities. Apply the preferred no-dash grammar only when an authoritative project allocator or approved key set supplies the numbers; this workflow does not infer or store the next number.
 
 ## Maintain the linked model
 

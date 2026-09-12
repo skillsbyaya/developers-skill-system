@@ -1,11 +1,11 @@
 ---
 name: manage-project-context
-description: "Creates, comprehensively rebaselines, or audits a project's durable context snapshot. Use when project-context is missing, an existing repository is being adopted, a major change alters purpose, users, scope, direction, or structure, or project-wide technical conventions and hazards need evidence-based reassessment."
+description: "Creates, comprehensively rebaselines, or audits a project's durable context snapshot. Use when project-context is missing, an existing repository is being adopted, a major change alters purpose, users, scope, direction, or structure, documentation locations or naming rules need establishing or updating, or project-wide technical conventions and hazards need evidence-based reassessment."
 ---
 
 # Manage Project Context
 
-Own the structure and full lifecycle of the project's small durable context snapshot. Other owners may make bounded updates only to almost-always-needed facts they directly establish.
+Own the structure and full lifecycle of the project's small durable context snapshot and the template for its documentation conventions. Other owners may make bounded updates to durable facts they directly establish, including an authorised document convention; they do not rebuild the snapshot for a single change.
 
 ## Select one mode
 
@@ -13,11 +13,12 @@ Own the structure and full lifecycle of the project's small durable context snap
 | --- | --- |
 | Context is absent, a project is starting, or an existing repository is being adopted | Establish the snapshot. |
 | An approved major change alters project-wide purpose, users, scope, direction, or structure | Rebaseline the affected framing while preserving still-valid facts. |
-| Stack, runtime, conventions, testing expectations, constraints, or hazards need project-wide reassessment | Read [Technical context](references/technical-context.md) and update only those sections. |
+| Documentation locations, naming rules, or an existing convention record need establishing, updating, or consolidation into context | Adapt [Documentation conventions](templates/documentation-conventions.md) into the existing context; update only that section. If context is absent, use Establish. |
+| Stack, runtime, technical conventions, testing expectations, constraints, or hazards need project-wide reassessment | Read [Technical context](references/technical-context.md) and update only those sections. |
 
 Routine task status, backlog changes, review findings, and one newly discovered fact do not require this skill. The discovering owner may update that fact in place when it is durable, almost always useful, and within its evidence.
 
-Resolve the registered `project-context` and `delivery-status` document types from the current document conventions when available. Otherwise use one obvious existing context file or root `project-context.md`, and preserve an existing delivery-status path. Do not create a second context source.
+Use the context file designated by project instructions, otherwise one obvious existing context file or root `project-context.md`. Preserve an existing delivery-status path. Locate context directly; do not require a convention record to find the file that will hold those conventions. Do not create a second context source.
 
 ## Content boundary
 
@@ -26,12 +27,15 @@ Keep only information that a future session will need almost every time it works
 - what the project is, who it serves, and its durable current lifecycle state;
 - accepted product, technical, operational, or compliance decisions that broadly constrain work;
 - concise codebase orientation, stack, conventions, verification expectations, and material hazards;
+- the actual documentation locations and naming rules this project uses, with examples and useful authority pointers;
 - standing constraints, dependencies, and unresolved project-wide risks; and
 - one stable pointer to the authoritative delivery-status document when one exists.
 
 Exclude backlog content, task or story lifecycle, copied priority, a copied next action, review logs, session recaps, completed history, dependency inventories, and short summaries of records that already have a clear retrieval path. Project directives that must govern every conversation belong in project `CLAUDE.md`, not here.
 
-Clear requests should route directly to their owner without loading project context. Use the delivery-status pointer only to orient an unclear or resumed request; follow it to the current work record rather than copying its current row into this file. Do not duplicate document-placement or identifier-convention overrides here; those belong in `reference/project-conventions.md` and are resolved directly by their consumers.
+Clear requests route directly to their owner. When that work needs document discovery, placement, or naming, the owner reads the relevant Documentation conventions section directly; it does not invoke this skill or `organise-docs` for lookup. Use the delivery-status pointer only to orient an unclear or resumed request; follow it to the current work record rather than copying its current row into this file.
+
+Project context holds the adopted documentation rules, including justified exceptions and any project-specific identifier rules. The global template is an authoring starting point, not a live source of inherited project rules. Keep the project section self-contained for its actual document types; omit unused catalogue entries, empty folders, and exhaustive file inventories. A template change affects existing projects only through a deliberate adoption task.
 
 Context work may expose unresolved backlog, identifier-area, or stale-document work owned elsewhere. By default, report those as follow-ups with the appropriate owner; do not start them inside the snapshot task. Continue into an adjacent workflow only when the user explicitly requested comprehensive project setup that includes it or asks to take the reported follow-up.
 
@@ -40,7 +44,7 @@ Context work may expose unresolved backlog, identifier-area, or stale-document w
 1. Inspect the smallest authoritative evidence set: repository manifests and root configuration, likely entry points, representative source and tests, current project documents, and explicit user decisions.
 2. Separate verified facts, user decisions, inference, and unresolved uncertainty. Ask only for facts that would materially change the durable snapshot.
 3. Surface material contradictions before writing.
-4. Create the smallest useful structure below, omitting empty headings.
+4. Create the smallest useful structure below, omitting empty headings. Adapt [Documentation conventions](templates/documentation-conventions.md) to the project evidence and intended work; include only the rules it needs.
 5. If technical evidence is substantial, read [Technical context](references/technical-context.md) for that bounded pass.
 6. Report unresolved work that belongs in backlog planning as a follow-up to `agent-pm`; do not create or order backlog state here.
 7. When durable IDs or periodic cross-artifact area retrieval would materially help, report a missing or stale identifier-area registry as a follow-up to `organise-docs`. If comprehensive project setup explicitly includes that registry, resolve the conventions and create it through the document owner rather than treating it as part of the context snapshot.
@@ -51,7 +55,7 @@ Context work may expose unresolved backlog, identifier-area, or stale-document w
 2. Rewrite only the project-wide framing that the decision invalidates.
 3. Preserve every still-accurate specialist fact and useful custom section.
 4. Remove stale summaries rather than appending a change history.
-5. Reassess technical sections only when the change affects them.
+5. Reassess technical sections only when the change affects them. When documentation structure or naming changes, adapt the relevant part of [Documentation conventions](templates/documentation-conventions.md); preserve adopted rules unless this task authorises their replacement.
 6. Report newly uncommitted work as a follow-up to `agent-pm` backlog planning and any explicit stale-document list as a follow-up to `organise-docs`; do not start either workflow unless the user asks.
 7. If the approved rebaseline materially changes the project's durable area vocabulary, report the exact taxonomy delta to `organise-docs`. Update or create the registry only when the user's requested scope explicitly includes that work; never silently rename current identifier suffixes.
 
@@ -72,6 +76,7 @@ Use the smallest useful subset:
 ## Codebase orientation
 ## Stack and runtime
 ## Conventions and patterns
+## Documentation conventions
 ## Testing and verification
 ## Technical hazards and unknowns
 ## Delivery orientation
@@ -83,6 +88,6 @@ The lifecycle and durable current state describe the project, not the current ta
 
 ## Finish
 
-Verify that every retained fact is current, durable, actionable, correctly placed, and supported by evidence or an approved decision; unrelated specialist content remains intact; the delivery pointer resolves; no placeholder or competing work state remains; and the file contains no copied next action, backlog, task lifecycle, review log, or history.
+Verify that every retained fact is current, durable, actionable, correctly placed, and supported by evidence or an approved decision; unrelated specialist content remains intact; the delivery and documentation authority pointers resolve; adopted naming rules produce an unambiguous future path and preserve intentional existing paths; no placeholder or competing convention or work state remains; and the file contains no copied next action, backlog, task lifecycle, review log, or history.
 
 Report the mode, sections changed, supporting evidence for material updates, unresolved project-wide unknowns, and any follow-ups for a state or document owner. Include adjacent work completed only when it was explicitly in scope.

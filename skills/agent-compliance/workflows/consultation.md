@@ -38,7 +38,7 @@ Use for a plan, project, release, contract, process, or â€œwhat have we missed?â
 
 ## Applicability findings and assurance reports
 
-Resolve the `applicability-findings` and `assurance-audit` rows through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md) when a durable output is justified.
+Resolve the `applicability-findings` and `assurance-audit` rules in the Documentation conventions section of the project's `project-context.md` (or its designated context file) when a durable output is justified. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 An applicability finding belongs to this owner. Create or refresh it only when broad applicability will be reused, the current finding is missing or no longer reliable, or the user requests it. Include scope, jurisdiction, date and evidence horizon, official sources, assumptions, applicable areas, considered-but-not-applicable areas with reasons, unresolved questions, downstream handoffs, and concrete refresh triggers. It is not a complete obligations register.
 

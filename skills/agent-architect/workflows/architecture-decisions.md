@@ -56,13 +56,13 @@ For each consequential decision, record:
 
 When drafting or structurally rewriting, read [the architecture template](../templates/architecture.md). Adapt it to the scope and omit sections that add no decision value.
 
-When decisions use durable IDs, resolve [the identifier convention](../../organise-docs/references/convention-resolution.md) and the project `identifier-areas` registry. Preserve current and legacy identities. Use forms such as `A13.Invoicing.Delivery` only when an authoritative project allocator or approved key set supplies the base number; this workflow does not infer the next architecture number.
+When decisions use durable IDs, resolve [the identifier convention](../../organise-docs/references/identifier-conventions.md) and the project `identifier-areas` registry. Preserve current and legacy identities. Use forms such as `A13.Invoicing.Delivery` only when an authoritative project allocator or approved key set supplies the base number; this workflow does not infer the next architecture number.
 
 ## Write safely
 
-Resolve the `architecture` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md) when available. Reuse one current artifact for the same scope and update it in place. If several plausible artifacts exist and authority cannot be inferred, ask the user to choose. If no convention exists, use a supplied path or agree one before creating a durable file.
+Resolve the `architecture` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file) when available. Reuse one current artifact for the same scope and update it in place. If several plausible artifacts exist and authority cannot be inferred, ask the user to choose. If no convention exists, use a supplied path or agree one before creating a durable file.
 
-A different durable architecture scope may earn a separate area-specific architecture document under the registered naming convention. Decision base IDs remain project-stable across those documents; area suffixes route retrieval and do not restart or replace identity. Do not append unrelated architecture areas into one file merely to avoid another document.
+A different durable architecture scope may earn a separate area-specific architecture document under the naming convention recorded in project context. Decision base IDs remain project-stable across those documents; area suffixes route retrieval and do not restart or replace identity. Do not append unrelated architecture areas into one file merely to avoid another document.
 
 Preserve accepted decisions, identifiers, source links, and unaffected content. Replace stale claims rather than appending a workflow diary. Mark superseded decisions and point to their replacement when history is needed for interpretation; version control remains the default history.
 

@@ -4,7 +4,7 @@ Build a current cross-artifact map for one canonical project area before product
 
 ## Establish the area and scope
 
-1. Resolve [the identifier convention](../../organise-docs/references/convention-resolution.md) and the project's registered `identifier-areas` file, normally `reference/identifier-areas.yaml`.
+1. Resolve [the identifier convention](../../organise-docs/references/identifier-conventions.md) and the project's registered `identifier-areas` file, normally `reference/identifier-areas.yaml`.
 2. Resolve the user's term to one canonical area, including a declared alias. If no registry exists or no area fits, inspect only enough current product language to recommend a canonical area; do not silently create it during this read-only workflow. When the project has not adopted routed IDs yet, continue from explicitly supplied and clearly current sources, use a bounded text search for the proposed area and genuine alternate terms, and report reduced retrieval confidence.
 3. Establish the decision this review must support: an area overview, backlog shaping, epic/story bundling, priority choice, conflict resolution, or another bounded planning question.
 

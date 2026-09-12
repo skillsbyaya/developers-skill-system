@@ -16,6 +16,6 @@ Keep examples small enough to understand and complete enough to use. Label code 
 
 Link to canonical material instead of copying it. Do not create competing reference truth.
 
-For a standalone durable project document, use [the convention-resolution rules](../../organise-docs/references/convention-resolution.md) before saving and resolve the matching row. Do not load the conventions for an in-chat draft or a user-specified path. If no row fits, ask for the destination or choose a sensible location and report it.
+For a standalone durable project document, use the Documentation conventions section of the project's `project-context.md` (or its designated context file) before saving and find the matching rule. Do not load the conventions for an in-chat draft or a user-specified path. If no rule fits, ask for the destination or choose a sensible location and report it.
 
 Finish by checking prerequisites, steps, examples, links, failure handling, and success criteria against the source. Verify referenced paths or commands when the environment permits.

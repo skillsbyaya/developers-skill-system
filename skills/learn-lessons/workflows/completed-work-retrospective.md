@@ -41,7 +41,7 @@ Respect an explicit no-write instruction. Otherwise stay in chat unless the user
 
 When saving:
 
-1. Resolve the `retro` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md). If it is unavailable, update an existing matching path when one is clear; otherwise return the review in chat and name the missing convention instead of inventing one.
+1. Resolve the `retro` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file). If it is unavailable, update an existing matching path when one is clear; otherwise return the review in chat and name the missing convention instead of inventing one.
 2. Use the selected scope and a stable descriptive slug.
 3. Update an existing matching review, including a legacy `epic-*-retro-*` file, rather than creating a duplicate.
 4. Include only the scope and intended outcome, evidence and limitations, recurring successes, recurring problems or root causes, previous-commitment follow-through when applicable, agreed improvements with destination and observable outcome, and any next-plan conflict.

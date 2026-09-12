@@ -2,7 +2,7 @@
 
 Read this reference when a tracked story was touched or the session changed delivery state, backlog state, or a durable project-context fact.
 
-Resolve the registered delivery-status, backlog, and project-context document types from current document conventions when available. Otherwise preserve the project's existing obvious paths.
+Locate the context file designated by project instructions, otherwise one obvious existing context file or root `project-context.md`. Read its Documentation conventions section for delivery-status and backlog paths when needed; preserve explicit paths or the project's existing obvious paths when no rule is recorded. Do not load a global template to locate session records.
 
 ## Resolve scope and one forward owner
 

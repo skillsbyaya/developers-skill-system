@@ -43,9 +43,9 @@ When no scenario can be activated responsibly because an interface or environmen
 
 ## Write the implementation checklist
 
-Resolve the `atdd-checklist` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md) for the current folder and naming pattern. Then read [the checklist template](../templates/atdd-checklist.md) and fill it from current evidence.
+Resolve the `atdd-checklist` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file) for the current folder and naming pattern. Then read [the checklist template](../templates/atdd-checklist.md) and fill it from current evidence. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
-When the scope uses a durable story or requirement ID, preserve its canonical base and area suffix from the authoritative source. Resolve [the identifier convention](../../organise-docs/references/convention-resolution.md) only if the ID must be parsed, corrected, or used for area routing; this workflow does not allocate or re-key IDs.
+When the scope uses a durable story or requirement ID, preserve its canonical base and area suffix from the authoritative source. Resolve [the identifier convention](../../organise-docs/references/identifier-conventions.md) only if the ID must be parsed, corrected, or used for area routing; this workflow does not allocate or re-key IDs.
 
 The checklist must map every acceptance criterion to its scaffolds, list fixtures, mocks, and required hooks, and order implementation one test at a time: activate, confirm the expected red failure, implement the minimum production change, reach green, then continue. Do not instruct delivery to delete or weaken a scaffold merely to make it pass.
 

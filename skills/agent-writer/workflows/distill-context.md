@@ -21,7 +21,7 @@ Each delegated group receives only its source paths, downstream lens, this workf
 
 ## Produce and save
 
-Apply the method's preservation, compression, output, and split rules. Before saving a durable project artifact, use [the convention-resolution rules](../../organise-docs/references/convention-resolution.md).
+Apply the method's preservation, compression, output, and split rules. Before saving a durable project artifact, use the Documentation conventions section of the project's `project-context.md` (or its designated context file). An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 - For one clear primary source, save `{primary-basename}.distillate.md` beside it.
 - For a genuinely multi-source result with no primary source, use a user-specified destination or ask when several durable homes are plausible.

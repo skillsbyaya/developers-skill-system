@@ -14,7 +14,7 @@ An explicit record request selects it directly. Do not require a separate consul
 
 Confirm UK scope and identify the processing activity, data subjects and categories, purpose, sources, recipients and processors, transfers, retention, access, controls, incidents, and evidence relevant to the selected record.
 
-Resolve the matching rows through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md), then inspect existing compliance records before creating anything. Update the existing authority for the same purpose; do not create near-duplicates.
+Resolve the matching rules in the Documentation conventions section of the project's `project-context.md` (or its designated context file), then inspect existing compliance records before creating anything. Update the existing authority for the same purpose; do not create near-duplicates. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Use the smallest sufficient record set:
 

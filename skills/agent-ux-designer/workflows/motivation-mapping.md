@@ -49,7 +49,7 @@ The score makes judgement inspectable; it is not measured truth. Record rational
 
 ## Write and update the artifact
 
-For a durable file, resolve the `trigger-map` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md) when available. Otherwise update a supplied path, reuse one obvious existing map, or agree a location before writing.
+For a durable file, resolve the `trigger-map` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file) when available. Otherwise update a supplied path, reuse one obvious existing map, or agree a location before writing.
 
 Use only sections earned by the work:
 

@@ -59,7 +59,7 @@ Use one risk-led control set with framework lenses rather than duplicate program
 
 ## Boundaries, handoff, and output
 
-This workflow assesses readiness and may create or update the scope-matched assurance report after resolving the `assurance-audit` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md). It does not issue legal advice, perform an attestation, certify conformity, reproduce licensed standards, guarantee an auditor's conclusion, fill a questionnaire with unsupported claims, or silently change controls.
+This workflow assesses readiness and may create or update the scope-matched assurance report after resolving the `assurance-audit` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file). It does not issue legal advice, perform an attestation, certify conformity, reproduce licensed standards, guarantee an auditor's conclusion, fill a questionnaire with unsupported claims, or silently change controls. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Select this owner's UK data-protection advice or records workflow directly when substantive privacy judgement or a named privacy record is needed. Select its database access-control audit for live database inspection and its obligations-register workflow for canonical obligation, risk, control, evidence, or accepted-risk entries. Route architecture changes to `agent-architect` and application or infrastructure implementation to `agent-dev`.
 

@@ -2,6 +2,14 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 12 September 2026: Documentation conventions in project context
+
+`manage-project-context` now supplies a documentation-conventions template containing the existing naming and placement defaults. Each project records the rules it adopts in its own context. Document readers and writers consult that section directly; template changes reach existing projects only through deliberate adoption.
+
+`organise-docs` retains pruning, merging, archiving, restructuring, indexing, and identifier-vocabulary maintenance. The former document-conventions CSV, convention-resolution reference, and project-override template have been removed. Existing project convention records can be consolidated into project context while preserving local decisions and stable paths. Backlog planning remains with `agent-pm`.
+
+When upgrading an installed copy, remove the three obsolete resources listed in the [upgrade guidance](README.md#upgrading-documentation-conventions). Copying updated files alone leaves those resources behind.
+
 ## 12 September 2026: Fresh-session packets and story-level commits
 
 Multi-packet delivery now defaults to keeping code and current records uncommitted in one checkout until separate story or package completion. Explicit project commit policies still apply. Each packet includes implementation, targeted checks, and a compact handoff that supports continuation in Claude Code or Codex. Execution state preserves the checkout, branch, original story base, and packet baseline so interrupted work and overlapping changes can be resumed without replaying earlier sessions.

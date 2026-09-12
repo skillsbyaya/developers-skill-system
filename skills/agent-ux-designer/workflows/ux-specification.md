@@ -69,7 +69,7 @@ Do not make routine warnings so frequent that users learn to dismiss them. A blo
 
 ## Write the artifact
 
-For durable output, resolve the `ux` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md). Use its scoped UX folder and update `EXPERIENCE.md` for users, context, evidence, experience principles, journeys, flows, interaction, copy, states, responsive priorities, accessibility, UI requirements, and validation needs.
+For durable output, resolve the `ux` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file). Use its scoped UX folder and update `EXPERIENCE.md` for users, context, evidence, experience principles, journeys, flows, interaction, copy, states, responsive priorities, accessibility, UI requirements, and validation needs. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Update an existing folder in place. Preserve stable supported decisions, reconcile contradictions, and remove stale content rather than appending a workflow history. Do not rewrite `DESIGN.md`; report any conflict or required UI update to `agent-ui-designer`.
 

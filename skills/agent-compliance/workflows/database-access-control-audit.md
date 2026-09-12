@@ -46,7 +46,7 @@ For each material path, classify:
 
 Give each finding the affected object and role, reachable action, evidence, plausible consequence, smallest corrective direction, dependencies, and verification. Include a compact confirmed-safe section for important controls actually checked so the result is not only a defect list.
 
-Resolve the `assurance-audit` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md) for a substantial reusable report. Update the existing report for the same environment and scope rather than creating duplicates.
+Resolve the `assurance-audit` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file) for a substantial reusable report. Update the existing report for the same environment and scope rather than creating duplicates. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 ## Draft or apply hardening
 

@@ -44,7 +44,7 @@ For a durable reference, use the `visual-reference` convention or sidecar naming
 
 ## Write and finish
 
-For durable output, resolve the `ux` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md). Use the existing scoped UX folder and update `DESIGN.md` with visual thesis, hierarchy, composition, responsive presentation, component appearance, visual roles, token and pattern dependencies, reference links, implementation guidance, and unresolved visual decisions.
+For durable output, resolve the `ux` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file). Use the existing scoped UX folder and update `DESIGN.md` with visual thesis, hierarchy, composition, responsive presentation, component appearance, visual roles, token and pattern dependencies, reference links, implementation guidance, and unresolved visual decisions. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Do not rewrite `EXPERIENCE.md`. Report any conflict or required UX update to `agent-ux-designer`. Preserve stable supported visual decisions, reconcile contradictions, and remove stale content rather than appending history.
 

@@ -80,6 +80,16 @@ These commands update matching files but do not remove obsolete files from an ea
 
 Claude Code subagents are not installed into Codex. Codex can use the shared skills, but it has a different agent model and no equivalent subagent package is claimed here.
 
+### Upgrading documentation conventions
+
+After updating the integrated skills, remove these obsolete resources from each installed skill root (`~/.claude/skills/` or `~/.agents/skills/`), preserving any personal customisations first:
+
+- `organise-docs/doc-conventions.csv`
+- `organise-docs/references/convention-resolution.md`
+- `organise-docs/templates/project-conventions.md`
+
+Global document defaults now live in [`manage-project-context/templates/documentation-conventions.md`](skills/manage-project-context/templates/documentation-conventions.md). Use `manage-project-context` to adopt the relevant rules into each project's existing context. If a project has a separate convention record, consolidate its valid local rules and update its pointers before retiring it. Established project rules and document paths are preserved unless an explicit adoption task changes them.
+
 ## Project status
 
 This is the first public release of the system. The repository is the distribution source of truth; installed copies are deployments for a specific AI coding environment.

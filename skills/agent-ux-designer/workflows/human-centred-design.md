@@ -62,7 +62,7 @@ When the experience direction is settled, use this skill's UX-specification mode
 
 ## Artifact and finished result
 
-Keep the conversation lightweight unless a reusable record would improve the next decision or the user requests one. Before writing, resolve the `design-thinking-session` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md). Update an existing record for the same challenge rather than creating a duplicate.
+Keep the conversation lightweight unless a reusable record would improve the next decision or the user requests one. Before writing, resolve the `design-thinking-session` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file). Update an existing record for the same challenge rather than creating a duplicate. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Include only earned sections: challenge and decision; evidence, inference, and assumptions; problem framing and success signals; concepts and rationale; prototype learning brief; test observations and assumption verdicts; decision, next iteration, and owner.
 

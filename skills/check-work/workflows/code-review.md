@@ -15,7 +15,7 @@ Use, in order:
 
 Ask when several plausible targets remain. Do not review an empty or unverified diff.
 
-Establish the source baseline, current revision, changed and untracked files in scope, requirements or acceptance sources when relevant, and material limitations. Read project context only when durable project constraints or hazards could change the review. A review-candidate brief supplies hypotheses and exposed surfaces, never findings.
+Establish the source baseline, current revision, changed and untracked files in scope, requirements or acceptance sources when relevant, and material limitations. Read relevant project-context sections when document locations, durable project constraints, or hazards could change the review. A review-candidate brief supplies hypotheses and exposed surfaces, never findings.
 
 A specification is optional for code-quality review. When product behaviour or acceptance is in scope, prefer an explicit story or requirement source and preserve unresolved source conflicts.
 
@@ -81,11 +81,11 @@ When a story or change package owns the work and unresolved findings need contin
 - checked `[Review][Fixed]` only after correction and fresh focused re-review; and
 - checked `[Review][Defer]` with the reason and destination when one exists.
 
-When that project already gives durable review findings stable IDs, resolve [the identifier convention](../../organise-docs/references/convention-resolution.md) and preserve canonical `RV` identities and area suffixes through fix and re-review. Pair each ID with its finding title. Do not introduce `RV` IDs, infer the next number, or create a finding registry merely for a routine review.
+When that project already gives durable review findings stable IDs, resolve [the identifier convention](../../organise-docs/references/identifier-conventions.md) and preserve canonical `RV` identities and area suffixes through fix and re-review. Pair each ID with its finding title. Do not introduce `RV` IDs, infer the next number, or create a finding registry merely for a routine review.
 
 Do not write individual findings into delivery status.
 
-If no owning record exists, keep a clean or fully resolved review in conversation. When unresolved findings must survive another session, use [the convention-resolution rules](../../organise-docs/references/convention-resolution.md) and create or update the smallest `code-review-handoff` artifact. Do not create it merely to archive a review.
+If no owning record exists, keep a clean or fully resolved review in conversation. When unresolved findings must survive another session, use the Documentation conventions section of the project's `project-context.md` (or its designated context file) and create or update the smallest `code-review-handoff` artifact. Do not create it merely to archive a review. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 ## Fix and re-review boundary
 

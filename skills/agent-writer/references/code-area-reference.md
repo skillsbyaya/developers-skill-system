@@ -3,7 +3,7 @@
 Create or refresh one concise reusable reference without turning the repository into an inventory.
 
 1. Read `project-context.md` when present and relevant to the area's purpose or constraints.
-2. Resolve the `codebase-reference` row through [the convention-resolution rules](../../organise-docs/references/convention-resolution.md).
+2. Resolve the `codebase-reference` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file). An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 3. Identify the target, intended reader, and decision or recurring work the reference must support. Check for an existing reference covering the same area and update it in place.
 4. Read relevant source files and their direct configuration, tests, interfaces, and dependency boundaries. For a small target, inspect every source file. For a large target, inventory it first, state a coherent boundary, and ask before expanding materially.
 5. Prefer the smallest map that lets a future reader change or assess the area safely. Avoid line-by-line inventories, full export lists, generated trees, and generic technology summaries unless the task requires one.
