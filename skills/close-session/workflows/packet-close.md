@@ -1,6 +1,6 @@
 # Packet Close
 
-Use this workflow after Agent Dev finishes or stops one named implementation packet or slice, through any delivery route, unless the user separately requests a full close. Preserve compact continuation for a fresh session in Claude Code or Codex and end the current session. A completed packet may intentionally remain uncommitted under Agent Dev's commit boundary.
+Use this workflow after Agent Dev finishes or stops one named implementation packet or slice, through any delivery route, unless the user separately requests a full close. Preserve compact continuation for a fresh local or cloud session in Claude Code or Codex, push a reproducible non-live checkpoint, and end the current session.
 
 ## Apply the triaged depth
 
@@ -18,7 +18,7 @@ Confirm that:
 - the packet safety gate passed, or its exact failure was recorded;
 - the owning story or change package identifies the current packet;
 - the record contains the packet outcome, files or contracts changed, gate and result, material decisions or discoveries, unresolved risk or blocker, and exact next boundary; and
-- for a multi-packet owner, its execution state identifies the checkout, branch, owner base, and expected uncommitted work, plus the packet-start baseline if the packet is incomplete. Use the recorded state and current session evidence; do not repeat Agent Dev's baseline inspection.
+- for a multi-packet owner, its execution state identifies the repository, remote branch, owner base, checkpoint state, and packet-start baseline if the packet is incomplete. Use the recorded state and current session evidence; do not repeat Agent Dev's baseline inspection.
 
 For the final implementation packet, the exact next boundary is separate completion of the owning story or package, and its current completion-assurance note must state the consequence floor, exact attention or explicit routine conclusion, reusable evidence and limitations, and selected completion condition. All packets being checked off does not make the owner complete. A tracked story stays active at `review`; a change package stays in its supported pre-completion state. The packet must not mark the owner `done`, archive it, remove its active status, perform completion-only backlog transfer, or advance an orientation pointer to later work. If the session prepared any of those mutations, treat them as a packet-boundary defect and restore the supported pre-completion state before landing; when they are already landed or cannot be safely restored, do not advance and make that correction the exact next boundary.
 
@@ -30,9 +30,9 @@ Update every authoritative document already identified by the session that the p
 
 Do not search for hypothetical documentation work or run a documentation sweep. The boundary is every known document that now needs a change, not a privileged class of files that packet close is forbidden to touch. Put story-specific discoveries, rejected approaches worth not repeating, changed constraints, and any broader learning candidate in their existing authoritative owner when clear; otherwise keep the concise candidate in the story or package for later routing.
 
-Do not invoke another skill during a routine packet close. During knowledge-rich capture, invoke `learn-lessons` only under that reference's confirmed-correction gate; do not expand an ordinary implementation mistake into a retrospective. Do not perform backlog reconciliation, story completion, archive close-out, independent review, commit, push, open a pull request, or deploy. Do not create a session log, handoff file, or standalone lesson note.
+Do not invoke another skill during a routine packet close. During knowledge-rich capture, invoke `learn-lessons` only under that reference's confirmed-correction gate; do not expand an ordinary implementation mistake into a retrospective. Do not perform backlog reconciliation, story completion, archive close-out, independent review, open a pull request merely for a packet checkpoint, merge, or deploy. Do not create a session log, handoff file, or standalone lesson note.
 
-Code and current records normally remain together and uncommitted until owner completion. That is supported continuation, not a documentation defect or a reason for another finishing session. Preserve the same checkout for the next packet; do not clean, stash, or commit its work as closing ceremony. Only when an actual landing left a factual correction does correcting that landed unit become the exact next boundary.
+Read [Git close](../references/git-close.md) and commit and push all separable packet-owned code and current records to the declared non-live working branch. Use a clearly labelled checkpoint when the packet is incomplete or its gate failed, and never land that checkpoint while required evidence is failing. Preserve unrelated work and stop before Git mutation when the target, ownership, staged intent, or content is unsafe. A local-only state is a blocker to cloud continuation, not a supported default.
 
 ## Produce the next prompt
 
@@ -40,13 +40,14 @@ Resolve exactly one next action:
 
 1. resume the same packet when its safety gate failed or it stopped incomplete;
 2. satisfy a human checkpoint or material decision when one blocks dependent work;
-3. start the next ready implementation packet; or
-4. when no implementation packet remains, start a separate story- or package-completion session from the current completion-assurance note: reuse valid packet evidence, run unresolved integrated checks, inspect the complete owner diff, apply the recorded method or explicit routine condition, and use `check-work` only when the decision is missing or stale before lifecycle reconciliation and any authorised landing.
+3. review this packet when its owning record requires independent review before dependent work and none is recorded; the review session reviews the packet delta, applies accepted fixes, and records the result;
+4. start the next ready implementation packet; or
+5. when no implementation packet remains, start a separate story- or package-completion session from the current completion-assurance note: reuse valid packet evidence, run unresolved integrated checks, inspect the complete owner diff, apply the recorded method or explicit routine condition, and use `check-work` only when the decision is missing or stale before lifecycle reconciliation and any authorised landing.
 
-Return one compact checkpoint sentence naming the packet, gate result, owning record, and uncommitted or landed state; mention saved learning or a post-landing correction only when material. Then add a `### Handoff` blockquote whose first line is the single pasteable action, written as `<subject> — <instruction>`:
+Return one compact checkpoint sentence naming the packet, gate result, owning record, and pushed checkpoint or exact Git blocker; mention saved learning or a post-landing correction only when material. Then add a `### Handoff` blockquote whose first line is the single pasteable action, written as `<subject> — <instruction>`:
 
 - Lead with the subject in plain words: what the next session is about, readable by a person without opening the record or decoding a key.
-- After the dash, give one pasteable sentence carrying only the verb, the unit, the delivery skill, and the absolute record path in the existing checkout. This path must let another provider locate the uncommitted continuation; never assume a new chat uses the same worktree. For implementation: `> **New session:** The template repository and replace path — Implement P2 with agent-dev from <record>.` For owner completion: `> **New session:** <what the owner delivered> — Take <owner> through owner completion with agent-dev from <record>.`
+- After the dash, give one pasteable sentence carrying only the verb, the unit, the delivery skill, the remote branch, and the repository-relative record path. These identifiers must let another local or cloud session reconstruct the continuation without the same filesystem path. For implementation: `> **New session:** The template repository and replace path — On <branch>, implement P2 with agent-dev from <record-path>.` For a packet review: `> **New session:** <what the packet delivered> — On <branch>, review P1 with check-work from <record-path>.` For owner completion: `> **New session:** <what the owner delivered> — On <branch>, take <owner> through owner completion with agent-dev from <record-path>.`
 - For a user or external blocker, use `> **You:**` or `> **Waiting for <actor>:` and state only the action that clears it.
 
 Read [Model recommendation in a handoff](../references/model-handoff.md). Follow the action sentence with the next action's model class and named model on a separate **Model** line, and its reasoning effort on a separate **Effort** line — nothing for any later review.

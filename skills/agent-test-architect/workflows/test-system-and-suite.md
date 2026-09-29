@@ -31,4 +31,4 @@ Resolve only the strategy needed for the operation. A combined assessment-and-fi
 
 ## Finish
 
-If the current state already satisfies the requested outcome, make no change and report the evidence. Otherwise report the operation, state found, files changed if any, commands and results, repeated-run evidence where relevant, remaining failures or limitations, durable artifact updated if any, and the next highest-value testing action. Do not claim an unrun check passed, infer release permission, mutate delivery lifecycle, or commit or push.
+If the current state already satisfies the requested outcome, make no change and report the evidence. Otherwise report the operation, state found, files changed if any, commands and results, repeated-run evidence where relevant, remaining failures or limitations, durable artifact updated if any, and the next highest-value testing action. Do not claim an unrun check passed, infer release permission, or mutate delivery lifecycle. Preserve repository mutations through the owning project's non-live session-checkpoint workflow.

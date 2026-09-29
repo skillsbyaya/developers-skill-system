@@ -94,4 +94,4 @@ Report:
 - secrets, variables, hosted runs, required checks, rulesets, or merge-queue settings still requiring external action; and
 - whether hosted execution and merge enforcement were actually verified.
 
-Do not create a recurring pipeline report. If the work establishes a durable, almost-always-needed project fact such as the CI platform or canonical verification command, make only that bounded update to the existing project context; do not duplicate details already authoritative in manifests or pipeline configuration. This workflow does not commit or push repository changes.
+Do not create a recurring pipeline report. If the work establishes a durable, almost-always-needed project fact such as the CI platform or canonical verification command, make only that bounded update to the existing project context; do not duplicate details already authoritative in manifests or pipeline configuration. Preserve repository mutations through the owning project's non-live session-checkpoint workflow without claiming deployment, merge, or release authority.

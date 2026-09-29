@@ -2,6 +2,14 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 29 September 2026: Cloud-resumable session checkpoints and canonical distribution
+
+The public repository is now the explicit canonical source for shared and platform-specific skills. A deterministic installer refreshes Claude Code and Codex deployments while preserving unrelated runtime or plugin skills. Codex receives its project-guidance bridge, Claude retains the Claude-only Codex delegation skill, and Great Britain employment-law guidance is now part of the shared distribution.
+
+Repository work now commits and pushes a safe checkpoint to a non-live working branch at every session boundary. Incomplete or failing work may be preserved through a clearly labelled checkpoint without being presented or merged as complete. Live or protected branches, force-pushes, merges, releases, deployments, secrets, and entangled unrelated changes retain their existing safeguards.
+
+Session handoffs now name a remote branch and repository-relative record path instead of assuming the next local or cloud session shares an absolute checkout path. Application repositories can replace vendored skill copies with a small cloud bootstrap that installs the public distribution during environment setup.
+
 ## 12 September 2026: Documentation conventions in project context
 
 `manage-project-context` now supplies a documentation-conventions template containing the existing naming and placement defaults. Each project records the rules it adopts in its own context. Document readers and writers consult that section directly; template changes reach existing projects only through deliberate adoption.

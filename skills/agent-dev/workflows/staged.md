@@ -23,8 +23,7 @@ At each slice boundary:
 1. refresh the version-control baseline and detect concurrent edits before integration;
 2. run the packet safety gate in packet coordination, including its complete packet-owned diff inspection;
 3. update the owning record with decisions, evidence, residual risk, and exact continuation state that later work needs;
-4. obtain user or independent feedback only when the uncertainty or consequence requires it; and
-5. incorporate only accepted findings, then refresh affected assurance; and
-6. invoke `close-session` packet close and stop at the fresh-session-safe checkpoint; never start another slice in the same session.
+4. obtain user feedback only when a decision blocks the slice, incorporate only accepted answers, and refresh affected checks; when independent review of the slice is required, record the need and leave it for its own session per packet coordination; and
+5. invoke `close-session` packet close, push the fresh-session-safe checkpoint, and stop; never start another slice in the same session.
 
 If considering a clean-context implementation or verification worker, read [Worker execution](../references/worker-execution.md). Do not load it for inline delivery. After the last implementation slice, the packet-close handoff starts a separate story- or package-completion session to run required integrated checks before applying the completion rule and delivery handoff in the delivery controls. When context ends or a block remains, leave the story or package at one precise safe boundary rather than creating a separate handoff log.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Read Project Guidance"
+  short_description: "Load shared Claude project instructions"
+  default_prompt: "Use $read-project-guidance before starting substantive work in this project."
