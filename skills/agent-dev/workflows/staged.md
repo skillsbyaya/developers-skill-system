@@ -10,7 +10,7 @@ Resume the existing story or change package first. If approved epics contain the
 
 Keep the record useful for fresh-session continuation across providers: outcome and acceptance, relevant constraints and sources, material decisions, review slices or execution packets, current evidence, status, and the checkout and exact next incomplete boundary. Do not copy whole upstream artifacts or maintain a session diary.
 
-Read [Packet coordination](../references/packet-coordination.md) before implementing or resuming a packet. For a separate owner-completion request, adopt the current record and use its owner-completion section directly; do not repeat preparation or select another implementation packet.
+Read [Packet coordination](../references/packet-coordination.md) before implementing or resuming a packet. To finish a story whose packets are done, adopt the current record and use its story review and completion section directly; do not repeat preparation or select another packet.
 
 If an active delivery-status index exists, update only the item this workflow prepares or implements and only through its legal lifecycle and completion close-out. If the index is missing, bootstrap it only when one authoritative epics document exists and the project's PM structural convention supplies an unambiguous structure; otherwise stop and route structural creation to the PM owner.
 
@@ -26,4 +26,4 @@ At each slice boundary:
 4. obtain user feedback only when a decision blocks the slice, incorporate only accepted answers, and refresh affected checks; when independent review of the slice is required, record the need and leave it for its own session per packet coordination; and
 5. invoke `close-session` packet close, push the fresh-session-safe checkpoint, and stop; never start another slice in the same session.
 
-If considering a clean-context implementation or verification worker, read [Worker execution](../references/worker-execution.md). Do not load it for inline delivery. After the last implementation slice, the packet-close handoff starts a separate story- or package-completion session to run required integrated checks before applying the completion rule and delivery handoff in the delivery controls. When context ends or a block remains, leave the story or package at one precise safe boundary rather than creating a separate handoff log.
+If considering a clean-context implementation or verification worker, read [Worker execution](../references/worker-execution.md). Do not load it for inline delivery. After the last slice, finish the story as packet coordination's story review and completion section directs. When context ends or a block remains, leave the story or package at one precise safe boundary rather than creating a separate handoff log.

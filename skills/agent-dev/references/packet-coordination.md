@@ -2,7 +2,17 @@
 
 Read this reference for a named packet in a multi-packet story or change package, including when direct delivery implements it.
 
-Give each packet a stable ID, one bounded technical outcome, acceptance coverage, dependencies, expected path or contract surface, non-goals where scope could drift, narrow verification, and one state: `pending`, `ready`, `in-progress`, `blocked`, `done`, or `invalidated`. Size it for implementation, targeted checks, failure diagnosis, and a compact checkpoint within one session; code-writing alone is not the budget. Split at a coherent technical boundary when that is too much, without creating new product ownership or tracker items.
+## Packet size
+
+Use as few packets as the work allows; a story that fits one session is one packet. Split only where the work genuinely divides:
+
+- a human step sits between the parts, such as the user configuring an external account;
+- a later part needs an earlier part landed and proven first, such as a schema change before the screens that use it; or
+- the whole cannot be built and checked in one session.
+
+Never split merely because a split is possible or would make each session lighter. A session that runs out of room mid-packet checkpoints and the next session resumes the same packet.
+
+Give each packet a stable ID, its outcome, the acceptance it covers, dependencies, likely change surface, non-goals where scope could drift, verification, and one state: `pending`, `ready`, `in-progress`, `blocked`, `done`, or `invalidated`. Packets are not tracker items.
 
 Allow exactly one packet in progress and one packet per delivery session. A broad request to build, continue, or finish a multi-packet story selects only its current or next ready packet. Execute dependent packets in order. A corrected or invalidated packet invalidates downstream completion whose evidence no longer holds. A human checkpoint remains a hard stop before dependent work.
 
@@ -20,7 +30,7 @@ Establish a packet-start baseline for touched paths: use an existing revision wh
 
 Keep planning, implementation, meaningful targeted tests, and failure diagnosis together. Before handing off, run the smallest current check showing that later work can build on the packet: its targeted acceptance or regression check, otherwise the narrow compile, type, lint, contract, render, or observable check for the changed surface. Add a critical-path check for a critical domain. If no meaningful runnable check exists, record the gap and alternative evidence. A failed gate leaves the packet incomplete; hand off resumption of that packet, not the next one.
 
-Inspect the complete packet delta, including its record updates, and refresh affected checks after fixes. Do not repeat the full story suite, cumulative diff review, or independent assurance at every packet. When the owning record requires independent review of a packet before dependent work, or the packet's consequence now requires it, that review is its own session and never part of the implementation session, including through a worker: record the need, close at the safety gate, and leave the dependent packet unready until the review session records its result with accepted fixes applied and affected checks refreshed. Reuse earlier evidence unless its surface, contract, dependency, environment, or acceptance oracle changed; a new session or a commit alone does not invalidate it. Keep unavailable manual observations as pending evidence, not an automatic human-preview request.
+Inspect the complete packet delta, including its record updates, and refresh affected checks after fixes. Do not repeat the full story suite, cumulative diff review, or independent assurance at every packet. Independent review happens once per story, after the last packet. Review a packet earlier only when the story record names a specific risk that later packets build on, such as a schema or access rule. Any independent review is its own session, never part of the implementation session or a worker inside it, and it applies its own fixes before dependent work starts. Reuse earlier evidence unless its surface, contract, dependency, environment, or acceptance oracle changed; a new session or a commit alone does not invalidate it. Keep unavailable manual observations as pending evidence, not an automatic human-preview request.
 
 Maintain the delivery controls' single completion-assurance note. Change it only when consequence, completion uncertainty, reusable evidence, or invalidation changes. Preserve unresolved material or critical attention across later light packets; keep an explicit routine conclusion when appropriate. Record the packet outcome, changed paths or contracts, checks and results, material decisions, unresolved risk, newly ready or invalidated work, and exact next boundary. Update known stale documents with the code. Packet `done` means its gate passed, not that its code is committed or its owner complete.
 
@@ -32,12 +42,13 @@ Use explicit paths and include every change-owned tracked and untracked file nee
 
 If the branch, upstream, policy, staged intent, or ownership is unclear or entangled, do not guess. Preserve the exact local state, record why remote checkpointing was unsafe, and make resolution the next boundary. A packet-only checkpoint does not require a pull request. Verify the remote branch contains the checkpoint before handing off, and resume from that branch rather than relying on one machine's checkout.
 
-## Owner-completion session
+## Story review and completion
 
-When every implementation packet is complete, leave the story at `review` or the package in its supported pre-completion state and hand off separate owner completion; do not create a synthetic final packet. Start from the current execution state and completion-assurance note, not story preparation or replay of packet history.
+One session finishes the story, starting from the current execution state and completion-assurance note rather than replaying packet history:
 
-Consume accumulated evidence once: preserve the recorded consequence floor unless the complete current diff disproves it, reuse valid results, run outstanding integrated or delta acceptance and regression checks, inspect the complete owner diff against its recorded base including untracked files and checkpoint commits, and apply the recorded assurance method. An explicit routine note may be satisfied by current affected checks and complete-diff inspection when no upgrade trigger remains. Use `check-work` only when the completion decision is missing or stale.
+- **When the note requires independent review,** the session after the last packet is that review. Run the recorded method (normally `check-work` code review) on the complete story diff, apply its fixes in the same session, recheck each fixed surface, then complete and land the story. Start a separate re-review session only when a fix substantially changes a critical surface, such as rewriting an access or data-protection rule.
+- **Otherwise** the last packet's own session completes the story once its gate passes.
 
-Prescribed check execution and settled record or Git actions may suit lower reasoning; judging coverage, reviewing consequential changes, and diagnosing failures require capability appropriate to the uncertainty. Never classify all completion work as mechanical. If verification exposes an implementation defect, invalidate and resume the responsible packet with affected downstream evidence; do not repair it invisibly inside completion. Reconcile final records and complete the project's authorised landing sequence only after the completion condition is satisfied; include all checkpoint commits in the complete owner diff and use the project's declared merge strategy to retain or squash them.
+Either way: reuse valid packet evidence, run outstanding integrated acceptance and regression checks, and inspect the complete story diff against its recorded base, including untracked files and checkpoint commits. Keep the recorded consequence floor unless the complete diff disproves it. Fix a defect found here in the same session unless it needs a packet of its own. Then apply the completion rule in the delivery controls and the project's landing sequence, using its declared merge strategy for checkpoint commits.
 
 At each packet boundary, invoke `close-session` packet close without waiting for a prompt, regardless of delivery route. Its compact checkpoint and paste-ready handoff are the only final response. Stop after that close. Use a bounded worker only under the worker reference.

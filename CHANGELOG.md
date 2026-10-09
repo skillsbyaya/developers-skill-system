@@ -2,6 +2,14 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 9 October 2026: Fewer packets, one review, shorter closes
+
+Stories are split into packets only where the work genuinely divides: a human step between parts, a part that must land and be proven before the next, or work too large for one session. `agent-dev` story preparation alone plans packets; `agent-pm` no longer does. Independent review happens once per story after the last packet, and that review session applies its fixes, rechecks them, completes, and lands the story. When no review is required, the last packet's session completes the story. A separate re-review runs only when a fix substantially changes a critical surface. Deferred review findings must name a backlog ID or story key.
+
+`close-session` is one short file with one output shape for every close: a status line or two, problems only when real, and one handoff. Packet and full closes differ only in boundary; the separate workflows, state-reconciliation, knowledge-capture, model-handoff, and Git references are removed, since `agent-dev` already owns story lifecycle and completion.
+
+Local installs can now be symlinked to the clone (`./scripts/install.sh --link all`), and cloud bootstraps install from `main` rather than a pinned commit.
+
 ## 9 October 2026: Lighter skill maintenance
 
 `upskill` now has three jobs (change, create, review) plus external discovery, and a shared writing standard that treats ceremony, repetition, and unclear output as defects. The separate edit, repair, restructure, audit, library-review, registration, and eight-stage pressure-test routes are removed; new skills are trialled against a few realistic requests instead. Reported failures are traced through session transcripts to the instruction that caused them, and fixes replace or delete that text rather than adding rules beside it.

@@ -78,8 +78,8 @@ Present confirmed findings before any implementation handoff.
 When a story or change package owns the work and unresolved findings need continuity, update one `### Review Findings` section in its existing execution or review area. Preserve its current structure and findings:
 
 - unchecked `[Review][Decision]` or `[Review][Fix]` for unresolved items;
-- checked `[Review][Fixed]` only after correction and fresh focused re-review; and
-- checked `[Review][Defer]` with the reason and destination when one exists.
+- checked `[Review][Fixed]` only after correction and its recheck; and
+- checked `[Review][Defer]` with the reason and its destination: a backlog ID or story key.
 
 When that project already gives durable review findings stable IDs, resolve [the identifier convention](../../organise-docs/references/identifier-conventions.md) and preserve canonical `RV` identities and area suffixes through fix and re-review. Pair each ID with its finding title. Do not introduce `RV` IDs, infer the next number, or create a finding registry merely for a routine review.
 
@@ -89,11 +89,9 @@ If no owning record exists, keep a clean or fully resolved review in conversatio
 
 ## Fix and re-review boundary
 
-Resolve decision-needed items with the user before implementation. When fixes are accepted, pass the owning record, current revision, bounded findings, evidence, requirements, and success checks to `agent-dev`. Do not continue automatically from assessment into mutation.
+Ask the user every decision-needed item in one round. In a story review, apply the accepted fixes in the same session through `agent-dev`, then recheck each fixed surface and any shared contract the fix changed, and continue to story completion. Outside a story review, pass accepted fixes to `agent-dev` instead of changing code unasked.
 
-After fixes, reconstruct the current diff, inspect or rerun affected evidence, and perform a focused re-review of every corrected surface plus any shared contract the fix changed. A prior clean review does not cover a new revision.
-
-Mark a persisted finding fixed only after the correction and fresh affected recheck pass. Report the current result to the lifecycle owner; only Dev or session close may reconcile `review` to `done` from applicable current evidence.
+A prior clean review does not cover a new revision. Mark a persisted finding fixed only after its recheck passes. Start a separate re-review session only when a fix substantially changes a critical surface. Only `agent-dev` reconciles `review` to `done`.
 
 ## Finished result
 

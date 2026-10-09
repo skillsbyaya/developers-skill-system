@@ -27,9 +27,7 @@ Resolve [the identifier convention](../../organise-docs/references/identifier-co
 
 Size a story as one coherent delivery that benefits from one integrated review, not by estimated human effort, token budget, or one agent's capacity. Keep cross-layer work together when it shares acceptance, integration, test setup, and review reasoning. Split outcomes that can ship, be rejected, rolled back, sequenced, or reviewed independently; split when learning from one should shape the next or when combined risk becomes unsafe to assess.
 
-A story is the acceptance and review boundary, not a promise that all implementation belongs in one session. After fixing the story boundary, shape its execution into internal work packets whenever it cannot responsibly finish in one bounded implementation-and-checkpoint session. Packets are required when a human checkpoint divides the work, when a later part can start safely from durable evidence left by an earlier part, or when separable technical outcomes would otherwise make one session carry unnecessary context. A small story may remain one packet.
-
-Give each packet one coherent technical outcome, exact dependencies, likely change surface, narrow verification, and an explicit stop boundary. Put a hard packet boundary before and after every human checkpoint; no packet crosses one. Also split between human checkpoints when completed work can be recorded and the next part can start in a fresh session without relying on conversation history. Do not bundle every packet between two human checkpoints merely because the user will review only at the end. Packets remain internal execution units, not separate tracked stories, and one delivery session should normally select exactly one ready packet.
+A story is the acceptance and review boundary. Do not plan its execution: `agent-dev` story preparation splits a story into packets only where the work genuinely divides.
 
 ## Reconcile the delivery-status structure
 

@@ -10,7 +10,7 @@ Define the owned outcome, acceptance evidence, change-owned paths or contracts, 
 
 Use an existing story or package when present. Create one compact change package only when no record owns the work and durable continuity or assurance will improve later action. Record the outcome, acceptance, packets, material decisions, current state, checks, and next exact boundary—nothing more.
 
-Read [Packet coordination](../references/packet-coordination.md) before implementing or resuming a packet. For a separate owner-completion request, adopt the current record and use its owner-completion section directly; do not repeat preparation or select another implementation packet.
+Read [Packet coordination](../references/packet-coordination.md) before implementing or resuming a packet. To finish a story whose packets are done, adopt the current record and use its story review and completion section directly; do not repeat preparation or select another packet.
 
 ## Execute and integrate
 
@@ -18,4 +18,4 @@ Work the current or next ready packet to its explicit boundary. Refresh the vers
 
 If considering a clean-context implementation or verification worker, read [Worker execution](../references/worker-execution.md). Do not load it for inline delivery.
 
-Run the packet safety gate in packet coordination and checkpoint exact state in the existing record. Then invoke `close-session` packet close and stop; never start another packet in the same session. If this was the last implementation packet, its handoff starts a separate story- or package-completion session for integrated verification, the complete owner diff, assurance, lifecycle close-out, and any authorised landing. If comprehensive source assembly, multiple review slices, or several clean contexts becomes necessary, record that route change for the next session.
+Run the packet safety gate in packet coordination and checkpoint exact state in the existing record. Then invoke `close-session` packet close and stop; never start another packet in the same session. After the last packet, finish the story as packet coordination's story review and completion section directs. If comprehensive source assembly, multiple review slices, or several clean contexts becomes necessary, record that route change for the next session.

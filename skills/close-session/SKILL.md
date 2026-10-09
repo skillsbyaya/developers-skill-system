@@ -1,26 +1,68 @@
 ---
 name: close-session
-description: "Closes working sessions cleanly and produces fresh-session continuation when needed. Use after agent-dev completes or stops delivery work, or when the user says to wrap up, close or end the session, stop for today, or otherwise signals that the current session is ending."
+description: "Closes a working session: saves what the next session needs, preserves the work in Git, and gives one clear handoff. Use after agent-dev finishes or stops delivery work, or when the user says to wrap up, close or end the session, stop for today, or otherwise signals that the session is ending."
 ---
 
 # Close Session
 
-Triage the close before reading a workflow. Choose the boundary and preservation depth independently; implementation mechanics must not force either too much or too little knowledge capture.
+A close does three things: makes sure nothing the next session needs exists only in this conversation, preserves the work in Git, and tells the user in a few lines where things stand and what happens next. It does not continue the work, start new work, run reviews, or complete a story.
 
-## 1. Choose the boundary
+- **Packet close:** agent-dev finished or stopped one named packet or slice. The packet's boundary holds: agent-dev's delivery controls decide what a packet may change, and a close never widens it.
+- **Full close:** anything else, including any sign from the user that the session is ending.
 
-| Boundary | Read |
-| --- | --- |
-| Agent Dev finished or stopped a named implementation packet or slice, through any delivery route | [Packet close](workflows/packet-close.md) |
-| Agent Dev finished or stopped another delivery unit, or the user signals that the current working session is ending, including “stop for today” | [Full close](workflows/full-close.md) |
+Work from what this session already knows. Do not rerun checks, survey the project, or reread broad sources. If a close already ran in this conversation, cover only what changed since.
 
-A natural session-end signal always selects full close, even when the session also ended at a packet boundary. Agent Dev invokes the matching close automatically after every delivery boundary; no additional prompt is required.
+## 1. Save what exists only in the conversation
 
-## 2. Choose the preservation depth
+The record that owns the work (story, change package or plan) must hold its current state, the exact next step, and any decision, constraint, rejected approach or correction that later work needs and that is written nowhere else. Write what is missing into the document that owns it, replacing outdated text rather than appending a session diary. Update another document only when this session made it wrong.
 
-- **Routine:** Current status, one exact continuation boundary, and isolated durable facts are already written or can be repaired directly from session evidence.
-- **Knowledge-rich:** Several material decisions, ideas, new constraints, rejected approaches, or corrections remain unwritten; one interconnected decision set would lose its relationships if reduced to isolated facts; or a confirmed mistake has a cause, consequence, or prevention that would otherwise be lost.
+- A delivery-status or next-steps document is replaced, not appended: writing the new next action removes the one it supersedes, along with any note another document now holds.
+- Send a confirmed correction to agent behaviour through `learn-lessons` current correction only when it would otherwise be lost.
+- Create no session log, handoff file or summary document.
 
-Message count, elapsed time, packet size, and ordinary implementation detail do not justify knowledge-rich capture. Consequence, unwritten durable knowledge, and recurrence risk do.
+## 2. Preserve the work in Git
 
-Read only the selected boundary workflow. It applies the triaged depth and conditionally loads shared knowledge capture when needed. The close workflow changes preservation scope, not the delivery unit: neither knowledge-rich depth nor a natural signal selecting full close turns a named packet into story completion or widens its lifecycle, Git, review, or deployment authority. Both workflows end the current session and prepare continuation for a new one; neither continues active work after closing.
+Skip this when the session changed nothing in a repository.
+
+1. Follow the project's declared Git workflow. Stop and name the blocker when the workflow is unclear, the branch is wrong for the work, or session work cannot be separated from unrelated changes, secrets or local environment files.
+2. Stage explicit paths. Recheck the branch and every staged path immediately before committing.
+3. Commit and push session work to its non-live working branch so a fresh local or cloud session can resume it. Start the message with `checkpoint:` when the work is incomplete or its checks fail; a checkpoint is never landed.
+4. Land a completed unit when the project's workflow authorises it, carrying the pull request, gates and merge through as one action. A mergeable pull request left open is unfinished work, not a handoff. A packet lands only when the project's workflow lands each packet.
+
+Never report a commit, push or merge that did not happen. If the work cannot reach the remote, say so: the next session cannot resume in the cloud.
+
+## 3. Ask, then choose one next action
+
+Ask every decision this session surfaced that is the user's to make, in one round of questions, before writing the output. Do not invent questions. Carry a decision forward only when something must happen first, and name it.
+
+Choose exactly one next action, taking the first that applies:
+
+1. the same unit, when it is incomplete or its checks failed;
+2. a user action or decision that blocks the next step;
+3. an independent review the story record requires before the next step;
+4. the next ready packet;
+5. the next item in the project's ordered backlog or plan, when the order is unambiguous; otherwise the user's answer to where the project goes next, asked in the round above.
+
+## Output
+
+The whole output, with each fact said once:
+
+1. **Status:** one or two plain sentences on what was done, whether checks passed, and where the work is (merged, pushed to a named branch, or the Git blocker). Link a saved document only when the user will want to open it, such as where their decision was recorded.
+2. **Problems:** a short list only for failing checks, unsafe or unresolved state, or something the user must do that is not the handoff. Omit it otherwise. Never use it for things already saved in a document.
+3. **Handoff,** exactly this shape:
+
+```markdown
+### Handoff
+
+> **New session:** <what the next session is about, in plain words> — On `<branch>`, <verb> <unit> with <skill> from `<repository-relative record path>`.
+>
+> **Model:** <capability class> — <model>.
+>
+> **Effort:** <level>.
+```
+
+For a blocker, the first line is `> **You:** <the one action>` or `> **Waiting for <who>:** <what>`, with Model and Effort `not applicable`.
+
+Naming the skill carries its procedure: do not restate gates, record updates, review steps or when to stop. Use the project's model-routing policy when it has one. Otherwise use High capability for consequential or unsettled judgement and Standard for settled, well-tested work; effort medium for settled implementation, high for consequential work or review, low only for mechanical work. Name a model only when it is known to be available.
+
+No recap, no list of checks that passed, no list of saved files, no empty sections, no second next action. End the session after the output.
