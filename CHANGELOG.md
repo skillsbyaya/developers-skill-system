@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 9 October 2026: Lighter skill maintenance
+
+`upskill` now has three jobs (change, create, review) plus external discovery, and a shared writing standard that treats ceremony, repetition, and unclear output as defects. The separate edit, repair, restructure, audit, library-review, registration, and eight-stage pressure-test routes are removed; new skills are trialled against a few realistic requests instead. Reported failures are traced through session transcripts to the instruction that caused them, and fixes replace or delete that text rather than adding rules beside it.
+
 ## 29 September 2026: Cloud-resumable session checkpoints and canonical distribution
 
 The public repository is now the explicit canonical source for shared and platform-specific skills. A deterministic installer refreshes Claude Code and Codex deployments while preserving unrelated runtime or plugin skills. Codex receives its project-guidance bridge, Claude retains the Claude-only Codex delegation skill, and Great Britain employment-law guidance is now part of the shared distribution.

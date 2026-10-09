@@ -4,7 +4,7 @@ An integrated, self-improving skill system for one person building software with
 
 The system covers discovery, product planning, architecture, UX and UI design, implementation, testing, assurance, compliance, research, writing, project continuity, and maintenance. Its skills are designed to work together: one owner handles the current job, loads only the workflow needed, passes bounded context when specialist help is required, and preserves one source of truth for durable state.
 
-The system improves through use. Demonstrated failures and corrections feed into lessons, skill audit, repair, restructuring, pressure testing, and verification rather than accumulating as unstructured instructions.
+The system improves through use. Demonstrated failures and corrections feed into lessons and skill changes that replace or remove the instruction at fault, rather than accumulating as extra rules. Ceremony, repetition, and unclear output count as defects.
 
 ## How the system works
 
@@ -23,8 +23,7 @@ work
   -> evidence and assurance
   -> completion or demonstrated failure
   -> lessons
-  -> skill audit, repair, or restructure
-  -> pressure test and verification
+  -> skill review and change
   -> improved system
 ```
 
