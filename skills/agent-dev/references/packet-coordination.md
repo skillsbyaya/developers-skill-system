@@ -4,13 +4,12 @@ Read this reference for a named packet in a multi-packet story or change package
 
 ## Packet size
 
-Use as few packets as the work allows; a story that fits one session is one packet. Split only where the work genuinely divides:
+Use as few packets as the work allows. Split only at a boundary you can see in the plan:
 
-- a human step sits between the parts, such as the user configuring an external account;
-- a later part needs an earlier part landed and proven first, such as a schema change before the screens that use it; or
-- the whole cannot be built and checked in one session.
+- a human step sits between the parts, such as the user configuring an external account; or
+- a later part needs an earlier part landed and proven first, such as a schema change before the screens that use it.
 
-Never split merely because a split is possible or would make each session lighter. A session that runs out of room mid-packet checkpoints and the next session resumes the same packet.
+Never split to fit a session or keep sessions light: session room cannot be predicted, so running out is handled when it happens, as the core describes.
 
 Give each packet a stable ID, its outcome, the acceptance it covers, dependencies, likely change surface, non-goals where scope could drift, verification, and one state: `pending`, `ready`, `in-progress`, `blocked`, `done`, or `invalidated`. Packets are not tracker items.
 

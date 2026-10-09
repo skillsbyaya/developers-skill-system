@@ -40,6 +40,7 @@ For a reconciliation-heavy, new-UX/UI-pattern, or multi-slice change, prepare th
 
 ## Read and return only useful context
 
+- **Running out.** When the conversation has been compacted, the tool warns that context is low, or the user says the session or their usage is running out, finish the current step, checkpoint the unit as in-progress, and close through `close-session` with a handoff that resumes the same unit.
 - Locate before reading: use file names, headings, and scoped symbol searches to select the relevant files and sections. For a packet, load its acceptance, shared constraints, preservation obligations, and current execution state; retrieve earlier packet history only when a dependency or uncertainty requires it. Do not concatenate whole story records, manuals, and repository-wide search results for orientation.
 - Keep tool output bounded at the source. Start routine text calls around 2,000–4,000 output tokens, with one shared budget for a batch, and increase deliberately when the evidence needs it. If output truncates, narrow the query or read the missing sections; a truncated result is not complete inspection. A low output limit does not replace selecting useful input.
 - Run every required check, but keep verbose test, build, database, and CI logs in a temporary file. Return exit status, result totals, and relevant failures; inspect additional log sections when needed. Do not stream successful per-test detail or repeatedly dump a running log.
