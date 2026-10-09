@@ -78,7 +78,7 @@ Present confirmed findings before any implementation handoff.
 When a story or change package owns the work and unresolved findings need continuity, update one `### Review Findings` section in its existing execution or review area. Preserve its current structure and findings:
 
 - unchecked `[Review][Decision]` or `[Review][Fix]` for unresolved items;
-- checked `[Review][Fixed]` only after correction and its recheck; and
+- remove a finding once it is fixed and its recheck passes; the commit keeps it; and
 - checked `[Review][Defer]` with the reason and its destination: a backlog ID or story key.
 
 When that project already gives durable review findings stable IDs, resolve [the identifier convention](../../organise-docs/references/identifier-conventions.md) and preserve canonical `RV` identities and area suffixes through fix and re-review. Pair each ID with its finding title. Do not introduce `RV` IDs, infer the next number, or create a finding registry merely for a routine review.
