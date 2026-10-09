@@ -61,32 +61,26 @@ git clone https://github.com/skillsbyaya/developers-skill-system.git
 cd developers-skill-system
 ```
 
-Install or refresh both local runtimes:
+On the machine where you edit the skills, link both runtimes to the clone so there is one local copy:
 
 ```sh
-./scripts/install.sh all
+./scripts/install.sh --link all
 ```
 
-Install only one runtime when needed:
+Claude Code and Codex then read the clone directly: an edit made from either is live at once and is the same edit you commit and push. Rerun the command only when a skill is added, renamed, or removed. Without `--link`, the installer copies instead (`./scripts/install.sh all`, or `claude` / `codex` for one runtime); use copies on machines where you do not edit the skills.
 
-```sh
-./scripts/install.sh claude
-./scripts/install.sh codex
-```
-
-The installer replaces repository-managed skill directories exactly, removes skills retired by a later repository version, and preserves unrelated runtime, plugin, system, and personal skills. Claude receives `use-codex`; Codex omits it and receives the Codex-only `read-project-guidance` bridge. Claude Code subagents remain a separate installation surface.
+The installer replaces repository-managed skill directories exactly, removes skills retired by a later repository version, preserves unrelated runtime, plugin, system, and personal skills, and installs the Claude Code subagents into `~/.claude/agents/`. Claude receives `use-codex`; Codex omits it and receives the Codex-only `read-project-guidance` bridge.
 
 ### Cloud sessions
 
-The repository is public, so a cloud environment can load a reviewed release without copying skills into every application repository. Pin the setup to a trusted commit or immutable release tag; do not fetch and execute a moving branch on every session start:
+The repository is public, so a cloud environment can install the current release at session start without copying skills into every application repository. A project keeps a small bootstrap script, run during environment setup:
 
 ```sh
-git clone https://github.com/skillsbyaya/developers-skill-system.git /tmp/developers-skill-system
-git -C /tmp/developers-skill-system checkout --detach <trusted-commit>
-/tmp/developers-skill-system/scripts/install.sh codex
+git clone --depth 1 https://github.com/skillsbyaya/developers-skill-system.git /tmp/developers-skill-system
+/tmp/developers-skill-system/scripts/install.sh claude
 ```
 
-Use `claude` instead of `codex` for a Claude Code cloud environment. A project may keep a small bootstrap script containing the reviewed commit; it should not vendor the whole skill library. Update that pin deliberately after reviewing a new skill-system commit. For an Agents API sandbox, the pinned repository's `skills/` directory may instead be registered as a capability directory, with platform-specific skills added separately.
+Use `codex` instead of `claude` for a Codex cloud environment. This tracks `main`, so cloud sessions match local ones with no per-project updates; it relies on only trusted maintainers pushing to `main`. If that ever stops being true, check out a reviewed commit or release tag after cloning instead.
 
 Claude Code subagents are not installed into Codex. Codex can use the shared skills, but it has a different agent model and no equivalent subagent package is claimed here.
 
@@ -102,7 +96,7 @@ Global document defaults now live in [`manage-project-context/templates/document
 
 ## Project status
 
-The repository is the distribution source of truth; installed copies are deployments for a specific AI coding environment. Make changes here, validate them, commit and push them, then run the installer to refresh local Claude and Codex copies.
+The repository is the distribution source of truth; installed copies are deployments for a specific AI coding environment. Make changes here (directly, or through linked runtimes), validate them, and commit and push them; cloud sessions pick them up at their next start.
 
 Material changes are recorded in the [change log](CHANGELOG.md).
 

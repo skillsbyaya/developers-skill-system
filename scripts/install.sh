@@ -2,9 +2,16 @@
 set -eu
 
 usage() {
-  echo "Usage: $0 [claude|codex|all]" >&2
+  echo "Usage: $0 [--link] [claude|codex|all]" >&2
+  echo "  --link  symlink to this clone instead of copying, so edits here are live at once" >&2
   exit 2
 }
+
+link=false
+if [ "${1:-}" = --link ]; then
+  link=true
+  shift
+fi
 
 mode=${1:-all}
 case "$mode" in
@@ -15,6 +22,15 @@ esac
 script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 repo_root=$(CDPATH= cd -- "$script_dir/.." && pwd)
 install_home=${DEVELOPERS_SKILL_HOME:-$HOME}
+
+place() {
+  rm -rf -- "$2"
+  if [ "$link" = true ]; then
+    ln -s "$1" "$2"
+  else
+    cp -R "$1" "$2"
+  fi
+}
 
 install_set() {
   platform=$1
@@ -36,8 +52,7 @@ install_set() {
     if [ "$platform" = codex ] && [ "$name" = use-codex ]; then
       continue
     fi
-    rm -rf -- "$target/$name"
-    cp -R "$source" "$target/$name"
+    place "$source" "$target/$name"
     printf '%s\n' "$name" >> "$next_manifest"
   done
 
@@ -46,8 +61,7 @@ install_set() {
     for source in "$platform_root"/*; do
       [ -d "$source" ] || continue
       name=$(basename "$source")
-      rm -rf -- "$target/$name"
-      cp -R "$source" "$target/$name"
+      place "$source" "$target/$name"
       printf '%s\n' "$name" >> "$next_manifest"
     done
   fi
@@ -65,7 +79,21 @@ install_set() {
 
   sort -u "$next_manifest" > "$manifest"
   rm -f -- "$next_manifest"
-  echo "Installed $platform skills in $target"
+
+  if [ "$platform" = claude ]; then
+    agents=$install_home/.claude/agents
+    mkdir -p "$agents"
+    for source in "$repo_root"/subagents/claude-code/*.md; do
+      [ -f "$source" ] || continue
+      place "$source" "$agents/$(basename "$source")"
+    done
+  fi
+
+  if [ "$link" = true ]; then
+    echo "Linked $platform skills in $target to $repo_root"
+  else
+    echo "Installed $platform skills in $target"
+  fi
 }
 
 if [ "$mode" = claude ] || [ "$mode" = all ]; then

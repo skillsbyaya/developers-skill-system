@@ -9,7 +9,7 @@ A skill earns its place only when sessions that use it finish faster or better t
 
 ## Where changes go
 
-Edit the canonical source, never an installed copy. When the library is a cloned repository with an install script, the clone is the source and `~/.claude/skills/` (Claude Code) and `~/.agents/skills/` (Codex) are deployments: edit the clone, run its installer, commit and push, then tell the user which projects pin an older commit of the library. Without a repository, personal skills live in `~/.claude/skills/` and project skills in the project's `.claude/skills/`.
+Edit the canonical source, never a copied install. When the library is a cloned repository with an install script, the clone is the source and `~/.claude/skills/` (Claude Code) and `~/.agents/skills/` (Codex) are deployments, ideally symlinks to the clone. Edit the clone, rerun the installer if a skill was added, renamed or removed (or if the installs are copies), then commit and push. Without a repository, personal skills live in `~/.claude/skills/` and project skills in the project's `.claude/skills/`.
 
 ## Choose the job
 
