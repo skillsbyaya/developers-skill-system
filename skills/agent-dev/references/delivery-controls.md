@@ -91,7 +91,7 @@ After an actual landing, verify any required external outcome at the existing au
 
 Update authoritative project context only when delivery confirms a durable, almost-always-needed project pattern or hazard. Preserve its structure and exclude story-specific progress, review history, and copied next actions.
 
-Continue through the selected unit unless a user-owned decision, human checkpoint, safety issue, inaccessible required artifact, failed target, missing mandatory assurance, or repeated implementation failure prevents responsible progress. For coordinated or staged delivery, the selected unit is exactly one packet. If work cannot finish, preserve the same continuation state; do not create a separate handoff log.
+Continue through the selected unit unless a user-owned decision, human checkpoint, safety issue, inaccessible required artifact, failed target, missing mandatory assurance, or repeated implementation failure prevents responsible progress. For coordinated or staged delivery, the selected unit is one packet at a time; packet coordination says when the session continues to the next. If work cannot finish, preserve the same continuation state; do not create a separate handoff log.
 
 ## Close delivery once
 
