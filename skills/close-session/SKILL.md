@@ -10,7 +10,7 @@ A close does three things: makes sure nothing the next session needs exists only
 - **Packet close:** agent-dev finished or stopped one named packet or slice. The packet's boundary holds: agent-dev's delivery controls decide what a packet may change, and a close never widens it.
 - **Full close:** anything else, including any sign from the user that the session is ending.
 
-Work from what this session already knows. Do not rerun checks, survey the project, or reread broad sources. If a close already ran in this conversation, cover only what changed since.
+Work from what this session already knows. Do not rerun checks, survey the project, or reread broad sources. If a close or a pre-landing change report already ran in this conversation, cover only what changed since and never repeat the change list.
 
 ## 1. Save what exists only in the conversation
 
@@ -27,7 +27,7 @@ Skip this when the session changed nothing in a repository.
 1. Follow the project's declared Git workflow. Stop and name the blocker when the workflow is unclear, the branch is wrong for the work, or session work cannot be separated from unrelated changes, secrets or local environment files.
 2. Stage explicit paths. Recheck the branch and every staged path immediately before committing.
 3. Commit and push session work to its non-live working branch so a fresh local or cloud session can resume it. Start the message with `checkpoint:` when the work is incomplete or its checks fail; a checkpoint is never landed.
-4. Land a completed unit when the project's workflow authorises it, carrying the pull request, gates and merge through as one action. A mergeable pull request left open is unfinished work, not a handoff. A packet lands only when the project's workflow lands each packet.
+4. Land a completed unit when the project's workflow authorises it. If the user has not yet seen its changes described, first post the change report defined in agent-dev's delivery controls (*Show the work as it forms*). Carry the pull request, gates and merge through as one action. A mergeable pull request left open is unfinished work, not a handoff. A packet lands only when the project's workflow lands each packet.
 
 Never report a commit, push or merge that did not happen. If the work cannot reach the remote, say so: the next session cannot resume in the cloud.
 
