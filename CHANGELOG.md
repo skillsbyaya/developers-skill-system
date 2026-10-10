@@ -2,6 +2,12 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 10 October 2026: Fewer stops between packets, fixes and landing
+
+A delivery session continues to the next ready packet once the current one passes its gate and is pushed or landed, stopping only for a human checkpoint, a user decision, a required independent review, or low context. A story's review session applies its confirmed fixes itself, and `check-work` now says so, so findings are recorded only when they outlive the session. An investigation that was asked to fix carries straight into delivery when the cause is confirmed at High confidence and the change involves no user-owned decision; otherwise it still stops for confirmation.
+
+`close-session` pushes as soon as checks pass, reuses checks already passed on the same code, waits only on checks the project requires for merge (never a preview or deployment), and does not land record-only changes. The handoff's Model line names the capability class only.
+
 ## 9 October 2026: Fewer packets, one review, shorter closes
 
 Stories are split into packets only where the work genuinely divides: a human step between parts, a part that must land and be proven before the next, or work too large for one session. `agent-dev` story preparation alone plans packets; `agent-pm` no longer does. Independent review happens once per story after the last packet, and that review session applies its fixes, rechecks them, completes, and lands the story. When no review is required, the last packet's session completes the story. A separate re-review runs only when a fix substantially changes a critical surface. Deferred review findings must name a backlog ID or story key.

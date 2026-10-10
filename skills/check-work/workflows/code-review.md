@@ -75,7 +75,7 @@ A zero-finding result is valid when the selected depth completed and limitations
 
 Present confirmed findings before any implementation handoff.
 
-When a story or change package owns the work and unresolved findings need continuity, update one `### Review Findings` section in its existing execution or review area. Preserve its current structure and findings:
+When a story or change package owns the work and findings remain unresolved when the session ends, not findings the same session is about to fix, update one `### Review Findings` section in its existing execution or review area. Preserve its current structure and findings:
 
 - unchecked `[Review][Decision]` or `[Review][Fix]` for unresolved items;
 - remove a finding once it is fixed and its recheck passes; the commit keeps it; and
