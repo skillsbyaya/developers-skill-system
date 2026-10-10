@@ -1,6 +1,6 @@
 ---
 name: close-session
-description: "Closes a working session: saves what the next session needs, preserves the work in Git, and gives one clear handoff. Use after agent-dev finishes or stops delivery work, or when the user says to wrap up, close or end the session, stop for today, or otherwise signals that the session is ending."
+description: "Closes a working session: saves what the next session needs, preserves the work in Git, and gives one clear handoff. It is the only route that lands repository work, so use it whenever finished work is ready to merge or ship, including after a review and its fixes; also use it after agent-dev finishes or stops delivery work, or when the user says to wrap up, close or end the session, stop for today, or otherwise signals that the session is ending."
 ---
 
 # Close Session
@@ -10,7 +10,9 @@ A close does three things: makes sure nothing the next session needs exists only
 - **Packet close:** agent-dev finished or stopped one named packet or slice. The packet's boundary holds: agent-dev's delivery controls decide what a packet may change, and a close never widens it.
 - **Full close:** anything else, including any sign from the user that the session is ending.
 
-Work from what this session already knows. Do not rerun checks, survey the project, or reread broad sources. If a close or a pre-landing change report already ran in this conversation, cover only what changed since and never repeat the change list.
+Work lands only through a close, whatever skill or instruction produced it, so step 2 owns the order of reporting and landing. A project instruction that names a landing command, such as a ship script, describes how step 2 lands, not a separate trigger.
+
+Work from what this session already knows. Do not rerun checks, survey the project, or reread broad sources. If a close already ran in this conversation, cover only what changed since and never repeat a change report already posted.
 
 ## 1. Save what exists only in the conversation
 
@@ -27,7 +29,10 @@ Skip this when the session changed nothing in a repository.
 1. Follow the project's declared Git workflow. Stop and name the blocker when the workflow is unclear, the branch is wrong for the work, or session work cannot be separated from unrelated changes, secrets or local environment files.
 2. Stage explicit paths. Recheck the branch and every staged path immediately before committing.
 3. Commit and push session work to its non-live working branch so a fresh local or cloud session can resume it. Start the message with `checkpoint:` when the work is incomplete or its checks fail; a checkpoint is never landed.
-4. Land a completed unit when the project's workflow authorises it. If the user has not yet seen its changes described, first post the change report defined in agent-dev's delivery controls (*Show the work as it forms*). Carry the pull request, gates and merge through as one action. A mergeable pull request left open is unfinished work, not a handoff. A packet lands only when the project's workflow lands each packet.
+4. Land a completed unit when the project's workflow authorises it, in this order. A packet lands only when the project's workflow lands each packet.
+   1. **Change report first,** unless one already posted covers every current change: what changed, grouped by document and by code area, in plain terms, naming each judgement call and any new wording. Write it from what the session already knows. It is not an approval gate; carry straight on unless it contains a decision that is the user's to make.
+   2. **Then land, in the same turn:** pull request, gates and merge as one action, run in the background when it waits on remote gates so comments can still arrive. A mergeable pull request left open is unfinished work, not a handoff.
+   3. **A comment before the merge** goes into the same pull request: make the accepted change, rerun its affected checks, and make sure only the updated head merges, after its gates pass.
 
 Never report a commit, push or merge that did not happen. If the work cannot reach the remote, say so: the next session cannot resume in the cloud.
 

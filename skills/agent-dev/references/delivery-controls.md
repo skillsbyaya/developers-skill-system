@@ -17,13 +17,11 @@ Delivery may resolve routine implementation facts about an already established c
 
 Inspect version-control state and the project's existing continuation or next-action source before editing. Record the baseline and distinguish change-owned, unrelated, and entangled work. A local documentation correction explicitly carried by the previous close is change-owned continuation for its named landing unit: preserve it and include it without requiring the user to repeat the instruction. Continue around clearly unrelated user changes; stop before overwriting or integrating entangled work. Refresh the baseline at packet or slice boundaries.
 
-## Show the work as it forms
+## Show the plan before acting
 
-Keep the user able to comment before anything lands. Neither report is an approval gate: carry straight on unless it contains a decision that is the user's to make. Write both from reasoning already done; do not reread files, rerun checks or review again to produce them.
+Keep the user able to comment before anything lands. Once the plan for the selected unit is formed, show it in a few lines before acting on it: what will change, where, and any judgement call. Write it from reasoning already done. It is not an approval gate: carry straight on unless it contains a decision that is the user's to make.
 
-- **Plan:** once the plan for the selected unit is formed, show it in a few lines before acting on it: what will change, where, and any judgement call.
-- **Change report:** once the docs or code are written and checked, and before the project's landing sequence starts, post what changed, grouped by document and by code area, in plain terms, naming each judgement call and any new wording. Then start landing in the same turn; run a landing that waits on remote gates in the background so comments can still arrive.
-- **A comment before the merge** goes into the same pull request: make the accepted change, rerun its affected checks, and make sure the landing merges only the updated head after its gates pass.
+Land only through `close-session`, never by running the project's landing sequence from delivery: it posts the change report before the merge.
 
 ## Implement the smallest correct change
 
@@ -99,4 +97,4 @@ Continue through the selected unit unless a user-owned decision, human checkpoin
 
 Every completed or stopped Agent Dev delivery session ends through `close-session`, regardless of whether delivery used direct, coordinated, or staged execution. Use packet close whenever the selected unit is a named implementation packet or slice; use full close for a whole direct-delivery unit, story-completion session, or other delivery boundary. A natural user session-end signal still selects full close.
 
-Before invoking it, ensure the authoritative record or current session evidence contains the outcome, material change surface, checks and results, unavailable evidence and consequence, residual risk, assurance judgement, landing state, and exact continuation boundary. Then invoke `close-session`. Apart from the change report above, its output is the only completion summary and handoff: it covers only what is new since that report, such as the landing result, and never repeats the change list. Stop when close-session finishes.
+Before invoking it, ensure the authoritative record or current session evidence contains the outcome, material change surface, checks and results, unavailable evidence and consequence, residual risk, assurance judgement, landing state, and exact continuation boundary. Then invoke `close-session`. Its change report and output are the only completion summary and handoff: do not emit an Agent Dev summary first or repeat the same evidence afterwards. Stop when close-session finishes.
