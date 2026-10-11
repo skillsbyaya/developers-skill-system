@@ -1,46 +1,42 @@
 # Model Guide
 
-Checked: 2026-07-16
+Checked: 2026-10-11
 
-This is a refreshable decision aid, not proof of account entitlement. Verify the target surface before applying a choice.
+## Paired recommendations
 
-## Claude Code
+Choose by task, regardless of the tool hosting the conversation. These are practical alternatives, not benchmark equivalences or proof of account access.
 
-Local evidence: Claude Code 2.1.170 accepts `--model <model>` and `--effort <low|medium|high|xhigh|max>` when starting a session. Its help lists moving aliases including `fable`, `opus`, and `sonnet`, plus full model identifiers. The current official CLI reference also documents aliases and notes that available effort levels depend on the model. Local help proves accepted controls, not which models the current account can use.
-
-| Role | Best fit | Avoid when |
+| Task | Codex | Claude Code |
 | --- | --- | --- |
-| Strongest available reasoning model, commonly reached through the current `opus` alias | Consequential judgement, difficult architecture or diagnosis, adversarial review, and synthesis where subtle errors are expensive | Routine bounded transformations with strong verification |
-| Balanced capable model, commonly reached through the current `sonnet` alias | Normal coding, drafting, research synthesis, and multi-step tool use | The task demonstrably needs the strongest reasoning available or a lighter option is clearly sufficient |
-| Fast or light model exposed by the current surface | Narrow extraction, classification, formatting, and mechanical checks with a clear oracle | Ambiguous decisions, cross-system reasoning, or omission-sensitive work |
+| Consequential judgement, difficult diagnosis or architecture, adversarial review, sustained ambiguous work | Astra (`gpt-6-astra`) | Opus (`opus`) |
+| Everyday implementation, writing, synthesis, and multi-step tool use | Sol (`gpt-6.1-sol`) | Sonnet (`sonnet`) |
+| Narrow extraction, classification, formatting, and mechanical work with a clear check | Luna (`gpt-6-luna`) | Haiku (`haiku`) |
 
-Use low effort for narrow mechanical work, medium for ordinary bounded work, and high for difficult or consequential reasoning. Use `xhigh` or `max` only when the installed model supports it and the expected gain justifies the extra time and tokens.
+The recommendation set is limited to these families. Fable is excluded from recommendations and fallbacks by the user's budget constraint; preserve that exclusion during refreshes unless the user changes it. If an option is unavailable, choose a suitable accessible model within this set and state the trade-off.
 
-## Codex
+## Effort and controls
 
-Local evidence: Codex CLI 0.144.1 accepts `--model` for interactive and non-interactive runs. Reasoning effort can be supplied through current configuration when supported; inspect the effective configuration or current docs rather than inventing a dedicated flag.
+Start from model-specific defaults, then increase for unresolved complexity or demanding verification. Similar effort names do not imply equal reasoning, cost, or quality across models. A weak brief needs clarification, not higher effort.
 
-Current official guidance starts with the recommended default or Power setting, then moves toward a faster option for clear repeatable work or a deeper option for complex open-ended work. As of this check, the documented GPT-5.6 family uses:
+### Codex
 
-| Role | Current documented fit |
-| --- | --- |
-| Sol / recommended Power default | Complex, open-ended, high-value work needing judgement and polish |
-| Terra | Everyday coding, tool use, exploration, and pragmatic multi-step work |
-| Luna | Clear, repeatable, high-volume extraction, classification, transformation, and structured summaries |
+Official guidance starts Astra at Light (`low`), Sol at the client's default, and Luna at High. Increase for harder planning or checking. Max spends more time on one task; Ultra uses parallel subagents and requires an appropriate task and permission to delegate.
 
-Use the lowest reasoning effort that produces the required result. Low suits well-scoped work, medium balances speed and depth, and high or extra high suits difficult multi-step work. Max is for unusually hard single-agent reasoning; Ultra changes the execution shape by using subagents and should be selected only when meaningful parallel decomposition is justified.
+The current desktop tool schema exposes Astra and Sol at `low`, `medium`, `high`, `xhigh`, `max`, and `ultra`; Luna stops at `max`. These controls are observed locally, not a guarantee for other accounts or workers. Older Sol and Terra entries may remain visible; prefer the current families above for new recommendations.
 
-Prefer the configured default when no material model choice exists. Verify current availability in the picker, `/model`, installed help, or a successful invocation before naming a model as usable.
+Local CLI: Codex 0.144.1 accepts `--model` and `-c` configuration overrides. For example: `codex --model gpt-6-astra -c 'model_reasoning_effort="low"'`. In the CLI, `/model` selects model and effort; in the desktop app, use its model/effort picker. Verify a worker's supported controls separately.
 
-## Other surfaces
+### Claude Code
 
-Inspect that surface's own current controls and documentation. Do not reuse Claude or Codex model names, roles, or effort labels by analogy.
+Current documentation lists Opus 5.5, Sonnet 5.5, and Haiku 5.5 with `low`, `medium`, `high`, `xhigh`, and `max`, defaulting to `medium`. Use higher effort when the task needs deeper checking; reserve `max` for a demonstrated need. Aliases can resolve differently by account or configuration.
+
+Local CLI: Claude Code 2.1.250 accepts `--model` and `--effort`. For example: `claude --model opus --effort medium`. Existing sessions expose `/model` and `/effort`. Help proves accepted syntax, not entitlement; confirm the resolved model and supported effort before applying a choice.
 
 ## Sources
 
-- Local `claude --version` and `claude --help`, checked 2026-07-16.
-- [Claude Code CLI reference](https://code.claude.com/docs/en/cli-usage), checked 2026-07-16.
-- Local `codex --version`, `codex --help`, and `codex exec --help`, checked 2026-07-16.
-- [Codex model selection](https://developers.openai.com/codex/models), checked 2026-07-16.
-- [Codex configuration](https://developers.openai.com/codex/config-basic), checked 2026-07-16.
+All checked on the date above. The task pairings are this guide's judgement based on provider roles, not a provider claim of equivalence.
 
+- Local Claude Code and Codex version/help output; current Codex desktop tool model/effort schema.
+- [Codex models and effort](https://learn.chatgpt.com/docs/models).
+- [Codex configuration](https://learn.chatgpt.com/docs/config-file/config-basic).
+- [Claude Code models and effort](https://code.claude.com/docs/en/model-config).

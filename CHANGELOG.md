@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 11 October 2026: Model choices across both tools
+
+`choose-model` now gives paired Codex and Claude recommendations regardless of the host tool, with model-specific effort and availability caveats. The refreshed guide maps demanding work to Astra/Opus, everyday work to Sol/Sonnet, and bounded transformations to Luna/Haiku. Budget-excluded models stay outside recommendations and fallbacks.
+
 ## 9 October 2026: Fewer packets, one review, shorter closes
 
 Stories are split into packets only where the work genuinely divides: a human step between parts, a part that must land and be proven before the next, or work too large for one session. `agent-dev` story preparation alone plans packets; `agent-pm` no longer does. Independent review happens once per story after the last packet, and that review session applies its fixes, rechecks them, completes, and lands the story. When no review is required, the last packet's session completes the story. A separate re-review runs only when a fix substantially changes a critical surface. Deferred review findings must name a backlog ID or story key.
