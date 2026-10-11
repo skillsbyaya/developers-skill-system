@@ -26,13 +26,15 @@ The record that owns the work (story, change package or plan) must hold its curr
 
 Skip this when the session changed nothing in a repository.
 
-1. Follow the project's declared Git workflow. Stop and name the blocker when the workflow is unclear, the branch is wrong for the work, or session work cannot be separated from unrelated changes, secrets or local environment files.
-2. Stage explicit paths. Recheck the branch and every staged path immediately before committing.
+1. Follow the project's declared Git workflow. Include all related files in the agreed deliverable; preserve unrelated pre-existing edits. Resolve unclear scope once before staging. Stop and name the blocker when the workflow is unclear, the branch is wrong, or the agreed work cannot be separated safely.
+2. If the user requested a preview or a material user decision remains, show the finished change and resolve it before publishing. Otherwise proceed without a new approval gate. Stage explicit paths. Recheck the branch and every staged path immediately before committing.
 3. Commit and push session work to its non-live working branch so a fresh local or cloud session can resume it, as soon as its checks pass and before anything that waits on a remote. Reuse checks that passed on the same code; rerun only what changed since. Start the message with `checkpoint:` when the work is incomplete or its checks fail; a checkpoint is never landed.
 4. Land a completed unit when the project's workflow authorises it, in this order. A packet lands only when the project's workflow lands each packet.
    1. **Change report first,** unless one already posted covers every current change: what changed, grouped by document and by code area, in plain terms, naming each judgement call and any new wording. Write it from what the session already knows. It is not an approval gate; carry straight on unless it contains a decision that is the user's to make.
    2. **Then land, in the same turn:** pull request, gates and merge as one action, run in the background when it waits on remote gates so comments can still arrive. Wait only on checks the project requires for merge, never on a preview or deployment. A mergeable pull request left open is unfinished work, not a handoff. Never land a change that only records state for the same unit's next session; push it to the working branch.
    3. **A comment before the merge** goes into the same pull request: make the accepted change, rerun its affected checks, and make sure only the updated head merges, after its gates pass.
+
+Carry an authorised publication through commit and push without separate requests for each file or step. Tags, releases, force-pushes, and deployment to other machines require their own authorisation.
 
 Never report a commit, push or merge that did not happen. If the work cannot reach the remote, say so: the next session cannot resume in the cloud.
 

@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 11 October 2026: Skill-owned maintenance and publication
+
+`upskill` treats a skill and its affected supporting files as one deliverable, including distribution guidance when affected. `close-session` resolves requested previews and scope decisions before publication, then carries the agreed work through commit and push without separate requests for each step. Unrelated edits stay separate.
+
 ## 11 October 2026: Model choices across both tools
 
 `choose-model` now gives paired Codex and Claude recommendations regardless of the host tool, with model-specific effort and availability caveats. The refreshed guide maps demanding work to Astra/Opus, everyday work to Sol/Sonnet, and bounded transformations to Luna/Haiku. Budget-excluded models stay outside recommendations and fallbacks.
