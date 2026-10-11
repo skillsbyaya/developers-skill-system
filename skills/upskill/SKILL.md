@@ -5,7 +5,7 @@ description: Creates, changes, simplifies, reviews, or removes reusable Claude C
 
 # Upskill
 
-A skill earns its place only when sessions that use it finish faster or better than sessions without it. Every loaded instruction costs context and is followed literally, so a needless step is not harmless: it slows every run, and a wrong one does damage every run. Treat ceremony, repetition and unclear output as defects, as serious as a missing capability.
+A skill earns its place only when sessions that use it finish faster or better than sessions without it. Every loaded instruction costs context and is followed literally, so a needless step is not harmless: it slows every run, and a wrong one does damage every run. Treat ceremony, repetition and unclear output as serious defects.
 
 ## Where changes go
 
