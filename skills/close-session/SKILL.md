@@ -28,10 +28,10 @@ Skip this when the session changed nothing in a repository.
 
 1. Follow the project's declared Git workflow. Stop and name the blocker when the workflow is unclear, the branch is wrong for the work, or session work cannot be separated from unrelated changes, secrets or local environment files.
 2. Stage explicit paths. Recheck the branch and every staged path immediately before committing.
-3. Commit and push session work to its non-live working branch so a fresh local or cloud session can resume it. Start the message with `checkpoint:` when the work is incomplete or its checks fail; a checkpoint is never landed.
+3. Commit and push session work to its non-live working branch so a fresh local or cloud session can resume it, as soon as its checks pass and before anything that waits on a remote. Reuse checks that passed on the same code; rerun only what changed since. Start the message with `checkpoint:` when the work is incomplete or its checks fail; a checkpoint is never landed.
 4. Land a completed unit when the project's workflow authorises it, in this order. A packet lands only when the project's workflow lands each packet.
    1. **Change report first,** unless one already posted covers every current change: what changed, grouped by document and by code area, in plain terms, naming each judgement call and any new wording. Write it from what the session already knows. It is not an approval gate; carry straight on unless it contains a decision that is the user's to make.
-   2. **Then land, in the same turn:** pull request, gates and merge as one action, run in the background when it waits on remote gates so comments can still arrive. A mergeable pull request left open is unfinished work, not a handoff.
+   2. **Then land, in the same turn:** pull request, gates and merge as one action, run in the background when it waits on remote gates so comments can still arrive. Wait only on checks the project requires for merge, never on a preview or deployment. A mergeable pull request left open is unfinished work, not a handoff. Never land a change that only records state for the same unit's next session; push it to the working branch.
    3. **A comment before the merge** goes into the same pull request: make the accepted change, rerun its affected checks, and make sure only the updated head merges, after its gates pass.
 
 Never report a commit, push or merge that did not happen. If the work cannot reach the remote, say so: the next session cannot resume in the cloud.
@@ -61,13 +61,13 @@ The whole output, with each fact said once:
 
 > **New session:** <what the next session is about, in plain words> — On `<branch>`, <verb> <unit> with <skill> from `<repository-relative record path>`.
 >
-> **Model:** <capability class> — <model>.
+> **Model:** <capability class>.
 >
 > **Effort:** <level>.
 ```
 
 For a blocker, the first line is `> **You:** <the one action>` or `> **Waiting for <who>:** <what>`, with Model and Effort `not applicable`.
 
-Naming the skill carries its procedure: do not restate gates, record updates, review steps or when to stop. Use the project's model-routing policy when it has one. Otherwise use High capability for consequential or unsettled judgement and Standard for settled, well-tested work; effort medium for settled implementation, high for consequential work or review, low only for mechanical work. Name a model only when it is known to be available.
+Naming the skill carries its procedure: do not restate gates, record updates, review steps or when to stop. Use the project's model-routing policy when it has one. Otherwise use High capability for consequential or unsettled judgement and Standard for settled, well-tested work; effort medium for settled implementation, high for consequential work or review, low only for mechanical work. Name the class only, never a product or model, so either runtime can act on it.
 
 No recap, no list of checks that passed, no list of saved files, no empty sections, no second next action. End the session after the output.
