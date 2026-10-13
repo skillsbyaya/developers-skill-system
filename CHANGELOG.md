@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 13 October 2026: Carry authorisation through delivery
+
+Agent Dev carries an authorised fix through diagnosis, implementation and verification, including reversible local diagnostics. It asks again only for unresolved consequential choices or actions separately gated by project policy. Preparation, packet checkpoints and context compaction no longer force a new session. Independent review may use an appropriately isolated reviewer in the current session; substantial critical fixes receive fresh independent judgement, while other fixes receive affected rechecks. Unchanged review evidence remains reusable. Close-session returns continuing packet checkpoints to delivery and reserves its final handoff for an actual stop.
+
 ## 11 October 2026: Skill-owned maintenance and publication
 
 `upskill` treats a skill and its affected supporting files as one deliverable, including distribution guidance when affected. `close-session` resolves requested previews and scope decisions before publication, then carries the agreed work through commit and push without separate requests for each step. Unrelated edits stay separate.

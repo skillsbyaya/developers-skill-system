@@ -8,7 +8,7 @@ Start from the user's symptom, ticket, logs, diagnostic material, code area, rec
 
 Resume an existing investigation record when one clearly owns the case. If it is concluded and no new evidence or question changes the case, surface the current conclusion rather than repeating the investigation.
 
-Create a durable case file only when multi-session continuation, broad or changing evidence, incident recovery, future handoff, or an explicitly requested report makes it useful. Otherwise investigate inline. Use a user-supplied path first, then the project's document conventions. If neither resolves one clear location, ask before creating the record. For a new case file, read [Investigation case template](../references/investigation-case-template.md); do not create a record merely to prove that investigation occurred.
+Create a durable case file only when multi-session continuation, broad or changing evidence, incident recovery, future handoff, or an explicitly requested report makes it useful. Otherwise investigate inline. Use a user-supplied path first, then the project's document conventions. If neither resolves a location, choose and report a suitable path; ask only when placement affects ownership or access. For a new case file, read [Investigation case template](../references/investigation-case-template.md); do not create a record merely to prove that investigation occurred.
 
 ## Grade and map the evidence
 
@@ -43,22 +43,14 @@ For unfamiliar-code exploration:
 
 Update or discard a working theory when evidence contradicts it. In a durable case file, retain materially useful refuted hypotheses with their resolution so later work does not repeat the same dead end.
 
-## Conclude without fixing
+## Conclude and continue when authorised
 
 Finish when the root cause is confirmed; the best explanation is bounded by a clear evidence gap; the requested code-area model is sufficient; or no available evidence can responsibly advance the case.
 
-Return:
+For an investigation-only result, report the conclusion, supporting causal evidence, material uncertainty and smallest next step. Link the case file when one exists. When continuing into an authorised fix, give only the conclusion and plan needed before implementation.
 
-- the conclusion and confidence: **High** for a confirmed cause with deterministic evidence, **Medium** for a well-supported deduction with limited uncertainty, or **Low** for a bounded hypothesis;
-- confirmed findings, deductions, and unresolved hypotheses with citations;
-- the causal trace or code-area model;
-- material contradictions, ruled-out explanations, and missing evidence;
-- reproduction, diagnostic, or verification steps where useful;
-- the smallest credible fix direction or implementation constraints, without editing production code; and
-- the case-file path and exact continuation boundary when durable state exists.
+When evidence supports a fix, show the bounded change, material trade-offs and verification. A request to fix authorises diagnosis and implementation within that scope; continue into the appropriate delivery workflow without asking again. Ask only when the fix requires an unresolved consequential choice, expands the requested outcome, or needs explicit permission under project policy. Restoring agreed behaviour or copy does not itself create a new decision. For exploration-only requests, return the conclusion without implementing a fix.
 
-When the conclusion supports a mutation, present the specific proposed change, its material scope, important risks or trade-offs, expected verification, and any remaining uncertainty. If the request asked for the fix (“investigate and fix”, or a bug report, which is a request for the fix), the cause is confirmed at High confidence, and the change touches nothing the delivery controls name as the user's to decide (product behaviour, copy, scope, schema or data, security or privacy, destructive behaviour, rollout), carry straight into delivery as with any shown plan. Otherwise stop and ask whether to implement that diagnosed fix; do not select delivery or mutate project state before the user confirms it. If the requested result is exploration only, no responsible mutation is supported, or the evidence remains too weak to propose one, finish with the report-only result and evidence boundary without prompting for implementation.
+Use reversible local instrumentation and diagnostic tests within the authorised investigation. Preserve unrelated work and remove temporary instrumentation when finished. Production changes, destructive diagnostics, schema changes and external effects remain subject to project permissions. Insufficient evidence calls for further diagnosis or a named evidence gap, not a request to approve an unsupported fix.
 
-Do not present an old check, unsupported theory, or completed procedure as proof. If diagnosis requires new instrumentation or changes to application code, tests, configuration, data, or infrastructure, stop with the smallest proposed diagnostic change and the evidence it would distinguish. Ask for confirmation before performing that mutation through delivery, then return its observations to the investigation. Diagnostic-change approval does not also approve the eventual production fix.
-
-The same rule applies to mitigations, workarounds, tracker mutation, commits, and deployment: proceed under the condition above, otherwise stop. Once the next change is authorised, select direct, coordinated, staged, or the relevant specialist workflow and reuse settled investigation evidence rather than rerunning it.
+Reuse settled investigation evidence in delivery. Authorisation for diagnosis does not imply permission to deploy or perform other separately gated actions.

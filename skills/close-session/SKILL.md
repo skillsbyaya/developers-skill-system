@@ -12,7 +12,7 @@ A close does three things: makes sure nothing the next session needs exists only
 
 Work lands only through a close, whatever skill or instruction produced it, so step 2 owns the order of reporting and landing. A project instruction that names a landing command, such as a ship script, describes how step 2 lands, not a separate trigger.
 
-Work from what this session already knows. Do not rerun checks, survey the project, or reread broad sources. If a close already ran in this conversation, cover only what changed since and never repeat a change report already posted.
+Work from what this session already knows. Do not rerun checks, survey the project, or reread broad sources. If a close already ran in this conversation, cover only what changed since and never repeat a change report already posted. For a packet checkpoint followed by authorised work in the same session, perform steps 1–2, return control to delivery, and defer the final handoff until work actually stops.
 
 ## 1. Save what exists only in the conversation
 
@@ -72,4 +72,4 @@ For a blocker, the first line is `> **You:** <the one action>` or `> **Waiting f
 
 Naming the skill carries its procedure: do not restate gates, record updates, review steps or when to stop. Use the project's model-routing policy when it has one. Otherwise use High capability for consequential or unsettled judgement and Standard for settled, well-tested work; effort medium for settled implementation, high for consequential work or review, low only for mechanical work. Name the class only, never a product or model, so either runtime can act on it.
 
-No recap, no list of checks that passed, no list of saved files, no empty sections, no second next action. End the session after the output.
+No recap, no list of checks that passed, no list of saved files, no empty sections, no second next action. End the session after the final output.

@@ -6,8 +6,8 @@ Produce an implementation-ready story from an approved epic or backlog story, re
 
 The change is reconciliation-heavy (the approved spec may be stale against today's code), introduces a new UX/UI pattern or a new shared primitive, or spans several slices or sessions. A bounded, single-surface change needs no separate prep step — adopt the record and go straight to a delivery workflow.
 
-## Prepare, then stop at the boundary
+## Prepare before implementation
 
 Follow [Story preparation](../references/story-preparation.md) for the procedure — including resolving the genuine design decisions during prep, via `agent-ux-designer` and `agent-ui-designer`, rather than deferring a new pattern or primitive to a build-time try-it-on-the-sandbox.
 
-Finish at a durable `ready-for-dev` story with a precise next boundary, before any code. For a small story you may continue to a delivery workflow in the same session — but only once the ready story is written, so the durable record exists before the code does; heavier work continues in a separate session. Do not fold preparing and building into one continuous pass.
+Write the `ready-for-dev` story before code. Stop here for a preparation-only request. When implementation is authorised, continue into delivery once blocking decisions and dependencies are resolved; story size alone does not require a new session.
