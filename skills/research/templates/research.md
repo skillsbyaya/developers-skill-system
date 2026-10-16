@@ -8,7 +8,6 @@ geographies_or_jurisdictions: []
 versions_or_configurations: []
 inputs: []
 evidence_cutoff: '{{date}}'
-last_updated: '{{date}}'
 ---
 
 # {{Research title}}

@@ -69,7 +69,7 @@ Do not make routine warnings so frequent that users learn to dismiss them. A blo
 
 ## Write the artifact
 
-For durable output, resolve the `ux` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file). Use its scoped UX folder and update `EXPERIENCE.md` for users, context, evidence, experience principles, journeys, flows, interaction, copy, states, responsive priorities, accessibility, UI requirements, and validation needs. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
+For durable output, resolve the `ux` rule in the project's declared documentation conventions. Update the owning experience specification (normally `EXPERIENCE.md`) for users, context, evidence, experience principles, journeys, flows, interaction, copy, states, responsive priorities, accessibility, UI requirements, and validation needs. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Update an existing folder in place. Preserve stable supported decisions, reconcile contradictions, and remove stale content rather than appending a workflow history. Do not rewrite `DESIGN.md`; report any conflict or required UI update to `agent-ui-designer`.
 
@@ -86,4 +86,4 @@ Check that:
 - component behaviour and state requirements are complete enough for UI design and implementation; and
 - open decisions, evidence gaps, validation needs, and downstream owners are explicit.
 
-Return the operation, scope, `EXPERIENCE.md` path, decisions made, material changes or findings, unresolved choices, evidence limits, UI handoff, and next owner. Do not automatically begin visual design, implementation, or assurance.
+Return the operation, scope, experience-specification path, decisions made, material changes or findings, unresolved choices, evidence limits, UI handoff, and next owner. Do not automatically begin visual design, implementation, or assurance.

@@ -92,7 +92,7 @@ After updating the integrated skills, remove these obsolete resources from each 
 - `organise-docs/references/convention-resolution.md`
 - `organise-docs/templates/project-conventions.md`
 
-Global document defaults now live in [`manage-project-context/templates/documentation-conventions.md`](skills/manage-project-context/templates/documentation-conventions.md). Use `manage-project-context` to adopt the relevant rules into each project's existing context. If a project has a separate convention record, consolidate its valid local rules and update its pointers before retiring it. Established project rules and document paths are preserved unless an explicit adoption task changes them.
+[Documentation guidance](skills/manage-project-context/templates/documentation-conventions.md) starts from the areas people work on: related documents stay together, with links to shared authorities. Skills follow the convention source named by project instructions or context; a separate convention file need not move. Existing project rules and paths change only through an explicit adoption task. Projects that still inherit removed global defaults need to record the rules they rely on when adopting this version.
 
 ## Project status
 

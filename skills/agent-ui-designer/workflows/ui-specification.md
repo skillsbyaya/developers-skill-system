@@ -40,11 +40,11 @@ If visual exploration reveals a material problem in hierarchy of information, jo
 
 Create a rendered comparison or reference only when seeing the interface materially improves a decision or the user asks for one. Render canonical token variables where available; clearly label provisional variables and never let a sidecar become an independent source of truth.
 
-For a durable reference, use the `visual-reference` convention or sidecar naming beside the scoped UX artifact. App-embedded style-guide or preview pages remain application code and require the relevant implementation authority.
+For a durable reference, use the `visual-reference` convention or place a companion beside its owning artifact. App-embedded style-guide or preview pages remain application code and require the relevant implementation authority.
 
 ## Write and finish
 
-For durable output, resolve the `ux` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file). Use the existing scoped UX folder and update `DESIGN.md` with visual thesis, hierarchy, composition, responsive presentation, component appearance, visual roles, token and pattern dependencies, reference links, implementation guidance, and unresolved visual decisions. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
+For durable output, resolve the `ux` rule in the project's declared documentation conventions. Update the owning visual specification (normally `DESIGN.md`), including a shared specification when it owns this area, with visual thesis, hierarchy, composition, responsive presentation, component appearance, visual roles, token and pattern dependencies, reference links, implementation guidance, and unresolved visual decisions. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Do not rewrite `EXPERIENCE.md`. Report any conflict or required UX update to `agent-ux-designer`. Preserve stable supported visual decisions, reconcile contradictions, and remove stale content rather than appending history.
 
@@ -59,4 +59,4 @@ Validate that:
 - placement and layout-stability judgements are confirmed against the rendered interface (run or sandbox) when static inspection cannot settle them — token and value drift show in code, spatial and layout-shift drift do not; and
 - implementation constraints, evidence limits, open decisions, and downstream owners are explicit.
 
-Return the operation, scope, `DESIGN.md` and visual-reference paths changed or reviewed, visual decisions or findings, token and shared-pattern requirements, unresolved UX or product choices, evidence limits, and next owner. Validation and critique are report-only; obtain fresh authority before applying materially determined design changes.
+Return the operation, scope, visual-specification and visual-reference paths changed or reviewed, visual decisions or findings, token and shared-pattern requirements, unresolved UX or product choices, evidence limits, and next owner. Validation and critique are report-only; obtain fresh authority before applying materially determined design changes.

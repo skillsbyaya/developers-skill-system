@@ -46,7 +46,7 @@ Do not turn horizon monitoring into substantive legal advice or silently rewrite
 
 ## Maintain the watchlist
 
-For durable monitoring, resolve the `regulatory-horizon-scan` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file). Update the existing watchlist rather than creating dated duplicates. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
+For durable monitoring, resolve the `regulatory-horizon-scan` rule in the project's declared documentation conventions. Update the existing watchlist rather than creating dated duplicates. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Each live item uses a stable identifier and records topic, jurisdiction and authority, source links and dates, last verification, current status, materiality, affected scope, deadlines, owner, next check, confidence, trigger for escalation, and downstream handoff. Preserve a concise outcome for closed items that explains enacted, withdrawn, superseded, not applicable, or transferred status; remove detail that no longer helps future decisions.
 

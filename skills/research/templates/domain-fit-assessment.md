@@ -6,7 +6,6 @@ decision_supported: '{{decision_supported}}'
 geographies_or_jurisdictions: []
 baseline_artifacts: []
 evidence_cutoff: '{{date}}'
-last_updated: '{{date}}'
 ---
 
 # Domain-Fit Assessment: {{research_topic}}

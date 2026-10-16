@@ -12,7 +12,7 @@ Create and maintain one living backlog for work that is not yet owned by approve
 | Show what is next, waiting, deferred, or in one area | Return a read-only view unless the user also asked to edit. Assess the whole backlog when answering a cross-area priority question. |
 | Adopt work into planning or delivery | Remove the backlog item only after the new owner exists, or narrow it to distinct uncommitted work that remains. |
 
-Resolve the path from a supplied file, the Documentation conventions section of project context, one obvious existing backlog, then root `BACKLOG.md`. Read other context sections only when a durable project fact could change classification or priority. For a broad grooming pass over a large backlog, ask for a goal, area, or bounded scope only when one pass would otherwise be unreliable.
+Resolve the path from a supplied file, the project's declared documentation conventions, one obvious existing backlog, then root `BACKLOG.md`. Read other context sections only when a durable project fact could change classification or priority. For a broad grooming pass over a large backlog, ask for a goal, area, or bounded scope only when one pass would otherwise be unreliable.
 
 For next-work, grooming, or adoption, inspect delivery status only when committed work may already own an item. Follow an active row to its story or change package rather than treating the status table as sufficient task context.
 

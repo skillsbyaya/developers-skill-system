@@ -7,7 +7,7 @@ description: "Organises, prunes, merges, archives, restructures, or indexes exis
 
 Make a project's durable documentation coherent, current, and findable. Own documentation-set maintenance, migrations, indexing, and [identifier vocabulary and handling](references/identifier-conventions.md). Domain owners retain the meaning and lifecycle of their identified items.
 
-Read actual locations and naming rules directly from the Documentation conventions section of the project's `project-context.md` or designated context file. `manage-project-context` owns establishing that section from its global template; `personalise-working-system` handles changes to global preferences. Routine lookup needs neither this skill nor the global template. If directly asked a lookup question here, answer from project context or one obvious existing authority, then stop.
+Follow project instructions or context to the declared documentation conventions. `manage-project-context` establishes project conventions; `personalise-working-system` changes global preferences. Routine lookup needs neither this skill nor the global template; answer from the existing authority.
 
 ## Select one workflow
 
@@ -16,7 +16,7 @@ Read only the workflow selected by the requested outcome.
 | Need | Read |
 | --- | --- |
 | Audit, prune, move, rename, merge, archive, restructure, or migrate documents to agreed conventions; maintain identifier vocabulary | [Organisation and pruning](workflows/organise.md) |
-| Create or refresh a navigable `index.md` for a bounded documentation folder | [Index documents](workflows/index.md) |
+| Create or refresh navigation for a bounded documentation folder | [Index documents](workflows/index.md) |
 
 An explicit indexing request selects the index workflow directly. Use organisation and pruning for a vague request to clean up project documentation. If a mixed request needs both, finish the approved structure first and then index the resulting paths; do not preload both workflows.
 

@@ -31,7 +31,7 @@ A story is the acceptance and review boundary. Do not plan its execution: `agent
 
 ## Reconcile the delivery-status structure
 
-Use the delivery-status convention recorded in project context when available; otherwise preserve an existing format. If no convention or status document exists, use a compact Markdown table with stable key, item, status, and last-updated fields. Delivery status is an active index, not a completed-work ledger.
+Use the project's declared delivery-status convention when available; otherwise preserve an existing format. If no convention or status document exists, use a compact Markdown table with stable key, item, status, and last-updated fields. Delivery status is an active index, not a completed-work ledger.
 
 - Initialise newly approved unfinished entries at `backlog` unless an authoritative current record proves a later active state. Legal active epic states are `backlog` and `in-progress`; legal active story states are `backlog`, `ready-for-dev`, `in-progress`, and `review`. `done` is preserved in the archived owning record and is not a lasting delivery-status state.
 - Add approved unfinished keys and align names and order. Remove a never-started entry only when its removal is explicitly approved. Remove a completed entry only when its archived owning record supplies authoritative completion evidence; a `done` row without that archive is a lifecycle inconsistency to route to the delivery owner, not proof to manufacture an archive.

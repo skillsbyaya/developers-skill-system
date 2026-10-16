@@ -2,7 +2,6 @@
 documentType: atdd-checklist
 scope: "{story key or feature}"
 status: "{red-verified | red-unverified}"
-updated: "{date}"
 sources: []
 ---
 

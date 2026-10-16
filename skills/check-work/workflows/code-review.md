@@ -85,7 +85,7 @@ When that project already gives durable review findings stable IDs, resolve [the
 
 Do not write individual findings into delivery status.
 
-If no owning record exists, keep a clean or fully resolved review in conversation. When unresolved findings must survive another session, use the Documentation conventions section of the project's `project-context.md` (or its designated context file) and create or update the smallest `code-review-handoff` artifact. Do not create it merely to archive a review. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
+If no owning record exists, keep a clean or fully resolved review in conversation. When unresolved findings must survive another session, use the project's declared documentation conventions and create or update the smallest `code-review-handoff` artifact. Do not create it merely to archive a review. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 ## Fix and re-review boundary
 

@@ -1,11 +1,11 @@
 # Index Documents
 
-Create or refresh a useful `index.md` for a bounded folder without changing the documents it lists.
+Create or refresh navigation for a bounded folder without changing the documents it lists.
 
 ## Set the boundary
 
 1. Resolve the target folder from the request or one obvious supplied path; ask one short question only when several plausible folders remain.
-2. Read the `directory-index` rule in the project's Documentation conventions section when present. Otherwise preserve an existing index path or use `index.md` inside the folder it describes. Do not load the global template for this lookup.
+2. Follow the project's declared navigation convention. Reuse an existing README or index; otherwise use `README.md` inside the folder. Do not load the global template for this lookup.
 3. Inspect immediate eligible files and subdirectories. Recurse only when requested or when a small nested documentation tree clearly benefits from one index; state the boundary before traversing a large tree.
 4. Exclude the index itself, hidden files, build or generated outputs, archives, and non-document assets unless requested. Do not follow a symlink outside the target boundary.
 
@@ -13,11 +13,11 @@ If no eligible documents remain, do not create an empty index; report the bounda
 
 ## Preserve curated information
 
-When `index.md` already exists, identify its curated introduction, usage notes, section order or grouping, per-entry annotations, and any generated listing. Match existing entries by resolved relative path rather than display title.
+When navigation already exists, identify its curated introduction, usage notes, section order or grouping, per-entry annotations, and any generated listing. Match existing entries by resolved relative path rather than display title.
 
 - Preserve curated prose and grouping unless the user asks to change it.
 - Carry a useful existing entry annotation forward when its target still exists and the annotation remains true. Generate or refresh only missing, generic, or demonstrably stale descriptions.
-- Remove an entry only when its target is outside the stated boundary or no longer exists; do not treat omission from a fresh scan as permission to discard unmatched curated content until its path is resolved.
+- Preserve useful links to shared dependencies outside the folder. Remove stale inventory entries only after resolving their paths; absence from a folder scan alone does not make a link stale.
 - If generated and curated regions cannot be distinguished confidently, show the proposed replacement and preservation mapping before writing.
 
 For a new index, or an existing index with a clearly separable generated listing, wrap only the replaceable listing in:

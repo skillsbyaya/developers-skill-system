@@ -13,12 +13,12 @@ Own the structure and full lifecycle of the project's small durable context snap
 | --- | --- |
 | Context is absent, a project is starting, or an existing repository is being adopted | Establish the snapshot. |
 | An approved major change alters project-wide purpose, users, scope, direction, or structure | Rebaseline the affected framing while preserving still-valid facts. |
-| Documentation locations, naming rules, or an existing convention record need establishing, updating, or consolidation into context | Adapt [Documentation conventions](templates/documentation-conventions.md) into the existing context; update only that section. If context is absent, use Establish. |
+| Documentation organisation, ownership, or naming needs establishing or updating | Adapt [Documentation conventions](templates/documentation-conventions.md) in the existing convention source, or add a short section to context when none exists. |
 | Stack, runtime, technical conventions, testing expectations, constraints, or hazards need project-wide reassessment | Read [Technical context](references/technical-context.md) and update only those sections. |
 
 Routine task status, backlog changes, review findings, and one newly discovered fact do not require this skill. The discovering owner may update that fact in place when it is durable, almost always useful, and within its evidence.
 
-Use the context file designated by project instructions, otherwise one obvious existing context file or root `project-context.md`. Preserve an existing delivery-status path. Locate context directly; do not require a convention record to find the file that will hold those conventions. Do not create a second context source.
+Use the context file designated by project instructions, otherwise one obvious existing context file or root `project-context.md`. Preserve an existing delivery-status path. Locate context directly from project instructions or the existing root file. Do not create a second context source.
 
 ## Content boundary
 
@@ -27,15 +27,15 @@ Keep only information that a future session will need almost every time it works
 - what the project is, who it serves, and its durable current lifecycle state;
 - accepted product, technical, operational, or compliance decisions that broadly constrain work;
 - concise codebase orientation, stack, conventions, verification expectations, and material hazards;
-- the actual documentation locations and naming rules this project uses, with examples and useful authority pointers;
+- a small map of working areas and their authorities, with documentation conventions inline or linked;
 - standing constraints, dependencies, and unresolved project-wide risks; and
 - one stable pointer to the authoritative delivery-status document when one exists.
 
 Exclude backlog content, task or story lifecycle, copied priority, a copied next action, review logs, session recaps, completed history, dependency inventories, and short summaries of records that already have a clear retrieval path. Project directives that must govern every conversation belong in project `CLAUDE.md`, not here.
 
-Clear requests route directly to their owner. When that work needs document discovery, placement, or naming, the owner reads the relevant Documentation conventions section directly; it does not invoke this skill or `organise-docs` for lookup. Use the delivery-status pointer only to orient an unclear or resumed request; follow it to the current work record rather than copying its current row into this file.
+Clear requests route directly to their owner. When that work needs document discovery, placement, or naming, the owner follows project instructions or context to the declared convention source; it does not invoke this skill or `organise-docs` for lookup. Use the delivery-status pointer only to orient an unclear or resumed request; follow it to the current work record rather than copying its current row into this file.
 
-Project context holds the adopted documentation rules, including justified exceptions and any project-specific identifier rules. The global template is an authoring starting point, not a live source of inherited project rules. Keep the project section self-contained for its actual document types; omit unused catalogue entries, empty folders, and exhaustive file inventories. A template change affects existing projects only through a deliberate adoption task.
+Keep an existing convention source where it is and point to it from context. For new conventions, a short context section is enough; use a separate document when the detail would burden routine reading. The template supplies starting choices, not rules that silently change existing projects.
 
 Context work may expose unresolved backlog, identifier-area, or stale-document work owned elsewhere. By default, report those as follow-ups with the appropriate owner; do not start them inside the snapshot task. Continue into an adjacent workflow only when the user explicitly requested comprehensive project setup that includes it or asks to take the reported follow-up.
 
@@ -67,7 +67,6 @@ Use the smallest useful subset:
 # {Project name}
 
 **Lifecycle:** {concept / early build / active / mature / paused}
-**Last reviewed:** {date}
 
 ## What it is
 ## Problem and users

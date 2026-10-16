@@ -1,6 +1,6 @@
 # Shared Identifier Convention
 
-Use this reference only when creating, changing, locating, or reconciling durable identified items or the project area vocabulary. Follow explicit user requirements and binding project instructions, then any identifier rules in the Documentation conventions section of the project's context. Those project rules supersede the matching defaults here; preserve existing identities when no adopted rule settles a case. `organise-docs` owns this shared identifier convention and handling; `personalise-working-system` may update global identifier preferences after their scope is confirmed. Domain skills own item meaning and lifecycle. This reference is not a document-placement lookup.
+Use this reference only when creating, changing, locating, or reconciling durable identified items or the project area vocabulary. Follow explicit user requirements and binding project instructions, then any identifier rules in the project's declared documentation conventions. Those project rules supersede the matching defaults here; preserve existing identities when no adopted rule settles a case. `organise-docs` owns this shared identifier convention and handling; `personalise-working-system` may update global identifier preferences after their scope is confirmed. Domain skills own item meaning and lifecycle. This reference is not a document-placement lookup.
 
 ## Grammar
 
@@ -39,7 +39,7 @@ Do not introduce a new prefix merely to label prose. Add a type only when items 
 
 ## Canonical project areas
 
-Use the registry path recorded in project context; otherwise preserve an existing registry or use `reference/identifier-areas.yaml` when creation is authorised. It holds vocabulary, not item metadata:
+Use the registry path declared by the project's conventions; otherwise preserve an existing registry or use `reference/identifier-areas.yaml` when creation is authorised. It holds vocabulary, not item metadata:
 
 ```yaml
 version: 1

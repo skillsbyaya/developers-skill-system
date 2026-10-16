@@ -60,9 +60,9 @@ When decisions use durable IDs, resolve [the identifier convention](../../organi
 
 ## Write safely
 
-Resolve the `architecture` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file) when available. Reuse one current artifact for the same scope and update it in place. If several plausible artifacts exist and authority cannot be inferred, ask the user to choose. If no convention exists, use a supplied path or agree one before creating a durable file.
+Resolve the `architecture` rule in the project's declared documentation conventions when available. Reuse one current artifact for the same scope and update it in place. If several plausible artifacts exist and authority cannot be inferred, ask the user to choose. If no convention exists, use a supplied path or agree one before creating a durable file.
 
-A different durable architecture scope may earn a separate area-specific architecture document under the naming convention recorded in project context. Decision base IDs remain project-stable across those documents; area suffixes route retrieval and do not restart or replace identity. Do not append unrelated architecture areas into one file merely to avoid another document.
+A different durable architecture scope may earn a separate area-specific architecture document under the project's declared naming convention. Decision base IDs remain project-stable across those documents; area suffixes route retrieval and do not restart or replace identity. Do not append unrelated architecture areas into one file merely to avoid another document.
 
 Preserve accepted decisions, identifiers, source links, and unaffected content. Replace stale claims rather than appending a workflow diary. Mark superseded decisions and point to their replacement when history is needed for interpretation; version control remains the default history.
 

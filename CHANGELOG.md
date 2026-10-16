@@ -2,6 +2,12 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 16 October 2026: Documentation organised around working areas
+
+Documentation guidance now starts from a subject folder containing its related working material, with links to shared authorities. A compact guide replaces the document-type folder catalogue. Project conventions may remain in a separate declared source; context and producing skills no longer assume that every rule lives inside project context. Existing projects adopt changes deliberately, including resolving any inherited legacy defaults.
+
+Document navigation reuses an existing README or index. UI and UX update the owning specification, including a shared one, rather than assuming both belong in the local folder. Templates no longer suggest decision-log companions or emit document-currency metadata. Cleanup resolves the project's actual identifier registry instead of testing one default path.
+
 ## 13 October 2026: Carry authorisation through delivery
 
 Agent Dev carries an authorised fix through diagnosis, implementation and verification, including reversible local diagnostics. It asks again only for unresolved consequential choices or actions separately gated by project policy. Preparation, packet checkpoints and context compaction no longer force a new session. Independent review may use an appropriately isolated reviewer in the current session; substantial critical fixes receive fresh independent judgement, while other fixes receive affected rechecks. Unchanged review evidence remains reusable. Close-session returns continuing packet checkpoints to delivery and reserves its final handoff for an actual stop.

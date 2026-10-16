@@ -2,7 +2,6 @@
 documentType: architecture
 scope: "{scope}"
 status: draft
-updated: "{date}"
 sources: []
 ---
 

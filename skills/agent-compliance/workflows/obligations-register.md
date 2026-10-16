@@ -13,7 +13,7 @@ An explicit register request selects this workflow directly. A broad missed-risk
 
 ## Establish authority and scope
 
-Resolve the `compliance-register` rule in the Documentation conventions section of the project's `project-context.md` (or its designated context file), then inspect the existing register before creating anything. Maintain one canonical project register. This workflow is its sole structural writer; other workflows may supply bounded, source-backed changes. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
+Resolve the `compliance-register` rule in the project's declared documentation conventions, then inspect the existing register before creating anything. Maintain one canonical project register. This workflow is its sole structural writer; other workflows may supply bounded, source-backed changes. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
 
 Establish the product, process, jurisdiction, affected people, data or safety exposure, contractual commitments, business model, current controls, evidence horizon, and decision that the register must support. Verify consequential legal or regulatory propositions against current primary official sources. Do not convert a possibility into an obligation merely because it appeared in a checklist or horizon scan.
 
