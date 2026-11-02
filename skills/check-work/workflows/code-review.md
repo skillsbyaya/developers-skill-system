@@ -91,7 +91,7 @@ If no owning record exists, keep a clean or fully resolved review in conversatio
 
 Ask the user every decision-needed item in one round. In a story review, apply the accepted fixes in the same session through `agent-dev`, then recheck each fixed surface and any shared contract the fix changed, and continue to story completion. Outside a story review, pass accepted fixes to `agent-dev` instead of changing code unasked.
 
-Reuse prior review evidence for unchanged surfaces and contracts. Mark a finding fixed after its affected recheck passes. Obtain fresh independent judgement when a fix substantially changes a critical surface; use a separate session only when required independence cannot be obtained here. Once the selected assurance is satisfied and material findings are resolved, return to completion without another review cycle. Only `agent-dev` reconciles `review` to `done`.
+Reuse prior review evidence for unchanged surfaces and contracts. Mark a finding fixed after its affected recheck passes. Obtain fresh independent judgement when a fix substantially changes a critical surface; use a separate session only when required independence cannot be obtained here. Once the selected assurance is satisfied and material findings are resolved, the review is finished: no further cycle, and the close rule in `SKILL.md` applies.
 
 ## Finished result
 

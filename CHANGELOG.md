@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 2 November 2026: A finished assessment closes the session itself
+
+Check-work no longer returns a finished assessment "to the relevant owner" or reserves the move from `review` to `done` for Agent Dev. When an assessment ends with nothing awaiting the user and the work lives in a repository, the session invokes close-session itself, which lands, checkpoints or only records by the project's rules. Prompted by a clean High review of a story packet that ended with "the delivery session should update the record and land the branch" when the same session could have landed it.
+
 ## 2 November 2026: A handoff problem is written for the person who must act on it
 
 Close-session's output spec now says how a problem is written, not only when one belongs in the list: the verdict first, then what it costs the user in practice, the fix with what it takes and what it loses, its one risk, why the session did not do it, and the single action that unblocks it, naming an internal mechanism only when the user has to act on it. Prompted by a handoff that described a drifted local database stack in terms of a missing column and a port, which the user could not read, where the same problem written as "you cannot preview on your Mac until it is reset; a reset takes minutes and loses test data only; I did not do it because another session may be using it; say go" was clear.
