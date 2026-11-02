@@ -16,7 +16,7 @@ Work from what this session already knows. Do not rerun checks, survey the proje
 
 ## 1. Save what exists only in the conversation
 
-The record that owns the work (story, change package or plan) must hold its current state, the exact next step, and any decision, constraint, rejected approach or correction that later work needs and that is written nowhere else. Write what is missing into the document that owns it, replacing outdated text rather than appending a session diary. Update another document only when this session made it wrong.
+The record that owns the work (story, change package or plan) must hold its current state, the exact next step, and any decision, constraint, rejected approach or correction that later work needs and that is written nowhere else. List every unfinished item, open question and finding not yet acted on, so a new session cannot miss one; something that belongs outside this unit goes to the project's backlog. Write what is missing into the document that owns it, replacing outdated text rather than appending a session diary. Update another document only when this session made it wrong.
 
 - A delivery-status or next-steps document is replaced, not appended: writing the new next action removes the one it supersedes, along with any note another document now holds.
 - Send a confirmed correction to agent behaviour through `learn-lessons` current correction only when it would otherwise be lost.
