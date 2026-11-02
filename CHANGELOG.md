@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 2 November 2026: Git belongs to close-session; a red check is read, not rerun
+
+Agent Dev no longer commits, pushes or lands: every checkpoint and every landing goes through close-session, whose packet close now also serves a checkpoint of work in progress, and whose commit step carries the branch and staged-diff check that used to live in Agent Dev's commit-and-push-safety reference (removed). Agent Dev gains one rule for a red check: read and classify it (code defect, wrong test, environment) before anything else, question the rule that produced the test before repairing it, and rerun only once for a named environmental cause. Close-session applies the same rule to a red gate at landing, and the test architect's repair route asks whether a test should exist before repairing it. Agent Dev's delivery controls and packet coordination references lose their duplicated Git and close-session text and shrink by about a third.
+
 ## 2 November 2026: A preview loop for visible work
 
 Agent Dev gains a preview-loop workflow for many small visible changes the user judges by looking, such as a page-by-page review or polish pass. The app runs once on the user's machine for the whole session, their look is the working check, accepted batches are checkpointed to the story branch, and the pass lands once when the user says it is done. Nothing lands per change and no review session follows a pass the user has watched. Close-session treats a change the user watched as already previewed, and its change report covers watched changes in one line, reporting in full only what the user did not see. A close lists every unfinished item, open question and finding not yet acted on in the owning record, and sends work that belongs outside the unit to the backlog.

@@ -2,7 +2,7 @@
 
 Restore trustworthy execution without weakening the behaviour contract.
 
-1. Reproduce with the narrowest canonical command and classify configuration or collection, environment, assertion or regression, race or flake, isolation or leakage, timeout or performance, or obsolete expectation.
+1. Ask first whether the test, and the rule that produced it, should exist under the project's test rules; one that fails that question is rewritten or deleted, not repaired. Then reproduce with the narrowest canonical command and classify configuration or collection, environment, assertion or regression, race or flake, isolation or leakage, timeout or performance, or obsolete expectation.
 2. Inspect the test, exercised source, relevant changes, fixtures, setup and teardown, and framework configuration. For a suspected flake, vary order, isolation, repetition, or concurrency only enough to expose the cause.
 3. State the root-cause conclusion and evidence before a consequential change.
 4. Fix test or configuration defects with event-based waits, deterministic data or time, proper cleanup, isolated fixtures, correct environment, specific assertions, or a better test boundary.

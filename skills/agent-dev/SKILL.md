@@ -37,8 +37,12 @@ For a reconciliation-heavy, new-UX/UI-pattern, or multi-slice change, prepare th
 - When story preparation or implementation exposes a material unresolved user journey, information hierarchy, interaction behaviour, state meaning, interface-copy, usability, or experience-accessibility decision, consult `agent-ux-designer`. When it exposes unresolved visual hierarchy, component appearance, brand expression, token, theme, or shared-pattern work, consult `agent-ui-designer`. Return with the bounded decision; do not insert design consultation for routine implementation details or reopen settled work. Whenever a specialist consultation (design or any other) is shown to the user mid-workflow, frame it plainly as expert working-notes — announce before that expert input is being gathered, and present the returned output visibly distinct from both a decision the user must make and the eventual deliverable — so relayed advice is never mistaken for a question or for the story itself.
 - If a named neighbouring owner is unavailable, state the boundary and give only the bounded help this skill can support. Stop when responsible completion requires that missing specialist or state owner.
 - Preserve fixed user choices. Surface product, UX, UI/design-system, architecture, API/data, dependency, security/privacy, rollout, and residual-risk decisions before dependent implementation.
-- Land work only through `close-session`, including after a review and its fixes; it posts the change report before the merge. Never run the project's landing sequence directly.
+- Git belongs to `close-session`: this skill never commits, pushes or lands. A packet boundary, an hour of accepted preview work, or any need to preserve progress calls `close-session` packet close; finished work, including after a review and its fixes, calls full close. Never run the project's landing sequence directly.
 - Follow project instructions and established code conventions. Read relevant project-context sections when document locations, project facts, current delivery state, or known hazards could change the answer. Reuse unchanged guidance already read in this context; a workflow transition alone does not require another read.
+
+## A red check
+
+Read the failure before anything else and name its class: a defect in the code, a test that is wrong or should not exist, or the environment (a stalled runner, a service that did not start). Fix the code, or fix or delete the test, asking first whether the rule that produced the test is itself sound and bringing in `agent-test-architect` only after that. Rerun only for a named environmental cause, once, and say so. Never rerun to see whether it passes.
 
 ## Read and return only useful context
 
