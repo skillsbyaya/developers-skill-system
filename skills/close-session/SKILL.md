@@ -56,7 +56,7 @@ Choose exactly one next action, taking the first that applies:
 The whole output, with each fact said once:
 
 1. **Status:** one or two plain sentences on what was done, whether checks passed, and where the work is (merged, pushed to a named branch, or the Git blocker). Link a saved document only when the user will want to open it, such as where their decision was recorded.
-2. **Problems:** a short list only for failing checks, unsafe or unresolved state, or something the user must do that is not the handoff. Omit it otherwise. Never use it for things already saved in a document.
+2. **Problems:** a short list only for failing checks, unsafe or unresolved state, or something the user must do that is not the handoff. Omit it otherwise. Never use it for things already saved in a document. Write each one for the user, not for a mechanic, in this order: the verdict (fix it, or it can wait), what it costs them in practice, the fix with what it takes and what it loses, its one risk, why this session did not do it, and the single action that unblocks it. Name an internal mechanism only when the user has to act on it; a missing column, a port or a container name is not their problem, being unable to preview on their machine is.
 3. **Handoff,** exactly this shape:
 
 ```markdown

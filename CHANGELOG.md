@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 2 November 2026: A handoff problem is written for the person who must act on it
+
+Close-session's output spec now says how a problem is written, not only when one belongs in the list: the verdict first, then what it costs the user in practice, the fix with what it takes and what it loses, its one risk, why the session did not do it, and the single action that unblocks it, naming an internal mechanism only when the user has to act on it. Prompted by a handoff that described a drifted local database stack in terms of a missing column and a port, which the user could not read, where the same problem written as "you cannot preview on your Mac until it is reset; a reset takes minutes and loses test data only; I did not do it because another session may be using it; say go" was clear.
+
 ## 2 November 2026: Git belongs to close-session; a red check is read, not rerun
 
 Agent Dev no longer commits, pushes or lands: every checkpoint and every landing goes through close-session, whose packet close now also serves a checkpoint of work in progress, and whose commit step carries the branch and staged-diff check that used to live in Agent Dev's commit-and-push-safety reference (removed). Agent Dev gains one rule for a red check: read and classify it (code defect, wrong test, environment) before anything else, question the rule that produced the test before repairing it, and rerun only once for a named environmental cause. Close-session applies the same rule to a red gate at landing, and the test architect's repair route asks whether a test should exist before repairing it. Agent Dev's delivery controls and packet coordination references lose their duplicated Git and close-session text and shrink by about a third.
