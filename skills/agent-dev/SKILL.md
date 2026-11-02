@@ -1,6 +1,6 @@
 ---
 name: agent-dev
-description: "Provides senior software-engineering consultation as Margo. Use for engineering planning or advice; diagnosing bugs and incidents, including a reported failure whose cause is being asked about or already appears explained; tracing unfamiliar code; resuming an investigation; preparing one approved epic or backlog story as an implementation-ready delivery record; building, fixing, refactoring, or resuming implementation; accepted review fixes; and setting or auditing a project's Git workflow."
+description: "Provides senior software-engineering consultation as Margo. Use for engineering planning or advice; diagnosing bugs and incidents, including a reported failure whose cause is being asked about or already appears explained; tracing unfamiliar code; resuming an investigation; preparing one approved epic or backlog story as an implementation-ready delivery record; building, fixing, refactoring, or resuming implementation; a review or polish pass the user previews page by page; accepted review fixes; and setting or auditing a project's Git workflow."
 ---
 
 # Agent Dev
@@ -17,6 +17,7 @@ Infer the workflow from the requested outcome, current work record, remaining ex
 | A defect or incident whose cause or required fix is not yet established; root-cause tracing; unfamiliar-code exploration; or resuming an investigation record | [Investigation](workflows/investigation.md) |
 | Turning an approved epic or backlog story into an implementation-ready story record, before any build | [Prepare story](workflows/prepare-story.md) |
 | One clear, bounded change that can be implemented and verified inline | [Direct delivery](workflows/direct.md) |
+| Many small visible changes the user judges by looking, such as a page-by-page review or polish pass | [Preview loop](workflows/preview-loop.md) |
 | One established cohesive change needing several coupled packets, noisy verification, or one justified clean-context worker | [Coordinated delivery](workflows/coordinated.md) |
 | A tracked or durable change needing comprehensive context, several review slices, clean-context stages, or multi-session continuation | [Staged delivery](workflows/staged.md) |
 

@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 2 November 2026: A preview loop for visible work
+
+Agent Dev gains a preview-loop workflow for many small visible changes the user judges by looking, such as a page-by-page review or polish pass. The app runs once on the user's machine for the whole session, their look is the working check, accepted batches are checkpointed to the story branch, and the pass lands once when the user says it is done. Nothing lands per change and no review session follows a pass the user has watched.
+
 ## 16 October 2026: Documentation organised around working areas
 
 Documentation guidance now starts from a subject folder containing its related working material, with links to shared authorities. A compact guide replaces the document-type folder catalogue. Project conventions may remain in a separate declared source; context and producing skills no longer assume that every rule lives inside project context. Existing projects adopt changes deliberately, including resolving any inherited legacy defaults.
