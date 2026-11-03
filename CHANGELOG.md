@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 3 November 2026: Close-session separates this session's branch from other sessions'
+
+Close-session's "Unlanded work" line becomes a "Work in progress" section with two lines: this session's branch and its state first, then every other remote working branch underneath. Status no longer repeats where the work is. Prompted by a user who could not tell at a glance, from one line naming three branches, which was the session they had just closed and what was waiting on it.
+
 ## 3 November 2026: A finished session hands off to its parallel sessions
 
 When a session's unit is done while parallel sessions carry the user's wider work, close-session's handoff names those sessions and whether each is finished or still running; with no parallel sessions it gives the next item from the project's plan, as before. A plan item another session already holds is no longer a next action, and a handoff's working branch is one the session worked on, or the base branch. Prompted by a session that filed and merged one backlog item split out of a parallel polish pass, then handed off "continue the polish pass" on another session's sibling branch because the handoff had no way to say nothing follows.
