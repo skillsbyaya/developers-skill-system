@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 3 November 2026: Parallel preview-loop sessions land as one set; every handoff lists unlanded work
+
+Agent Dev's preview loop gains parallel sessions: each runs in its own worktree on a lettered sibling branch of one set, never writes the shared story record, status lines or backlog, and marks its branch `checkpoint: done` when the user accepts its item. The session that finds every sibling done lands the set once, after claiming the set's base branch by pushing it so two siblings cannot land together; "land what's done" lands the finished siblings at any time. Close-session's output gains an always-present "Unlanded work" line listing every remote working branch with its state and age, or `none`, so finished work waiting on a set, or anything else unmerged, is never lost. Prompted by a user who runs several small-edit sessions concurrently and wanted one shipment without risking stranded branches.
+
 ## 3 November 2026: A prepared story is reported as what it will do; Agent Dev closes its own sessions
 
 When Agent Dev finishes preparing a story, it tells the user what the story will do: one bullet per decision, named in a few words and explained in one or two plain sentences, with the user's own decisions marked, then any corrections to other documents and one line on the build stages. Function names, files, checks and process stay out, and the report doubles as close-session's change report. Prompted by a preparation summary the user found clear, after a second version written as a section-by-section tour of the record was unreadable.
