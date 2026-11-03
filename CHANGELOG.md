@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 3 November 2026: Prepared stories follow one template
+
+Agent Dev's story preparation now writes every story from `agent-dev/references/story-template.md`. The sections, in order: boundary and authority with a one-sentence outcome, numbered decisions (each a bold one-line claim then a few plain sentences, naming the user and date when the call was theirs), numbered acceptance, what to preserve, one packet table, verification, and an execution area holding current state, completion assurance and the next step. The template replaces the reference's list of what a story should contain. Prompted by a prepared story the user found easy to read and asked to have every time.
+
 ## 2 November 2026: A finished assessment closes the session itself
 
 Check-work no longer returns a finished assessment "to the relevant owner" or reserves the move from `review` to `done` for Agent Dev. When an assessment ends with nothing awaiting the user and the work lives in a repository, the session invokes close-session itself, which lands, checkpoints or only records by the project's rules. Prompted by a clean High review of a story packet that ended with "the delivery session should update the record and land the branch" when the same session could have landed it.
