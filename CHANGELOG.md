@@ -10,6 +10,10 @@ Close-session counts every tool, script or check failure a session saw as a find
 
 Close-session's "Unlanded work" line becomes a "Work in progress" section with two lines: this session's branch and its state first, then every other remote working branch underneath. Status no longer repeats where the work is. Prompted by a user who could not tell at a glance, from one line naming three branches, which was the session they had just closed and what was waiting on it.
 
+## 3 November 2026: A request-time read is checked for its cost
+
+Agent Dev's delivery controls treat the cost of a page render, API handler or page-called database function as part of its check: independent awaits run together, a render asks each question once, a per-row helper is measured by counting its calls, and a project's latency or round-trip budget is a check like any other. Prompted by one project's third slowness fix in three days (a per-row policy helper, a dashboard waterfall, then helpers re-planned on every call with pages making up to 26 requests in series), each shipped because correctness checks passed and nothing measured cost; the project now fails those shapes mechanically, and this rule covers what its guards cannot see.
+
 ## 3 November 2026: A finished session hands off to its parallel sessions
 
 When a session's unit is done while parallel sessions carry the user's wider work, close-session's handoff names those sessions and whether each is finished or still running; with no parallel sessions it gives the next item from the project's plan, as before. A plan item another session already holds is no longer a next action, and a handoff's working branch is one the session worked on, or the base branch. Prompted by a session that filed and merged one backlog item split out of a parallel polish pass, then handed off "continue the polish pass" on another session's sibling branch because the handoff had no way to say nothing follows.
