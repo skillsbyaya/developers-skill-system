@@ -25,7 +25,13 @@ Give one specialist the approved outcome, the exact unresolved question, the min
 
 Do not run a general UX or UI sweep after every story. Request a bounded review of the prepared draft only when a new or shared pattern, several consequential states or layouts, or unresolved experiential acceptance could materially change the story, and resolve it before `ready-for-dev`. If a defect's cause or required fix is not sufficiently established, stop and route to investigation instead of inventing an implementation plan.
 
-Write the story from [the story template](story-template.md), keeping its sections and order, and placing it where the project's documentation conventions say. Keep every explanation to a few plain sentences: the record holds current decisions and state, not how they were reached. Plan packets as few as the work allows under [packet size](packet-coordination.md#packet-size). Leave out a section only when it would be empty.
+Create or update one semantically complete story containing:
+
+- the authoritative outcome, observable acceptance, constraints, and non-goals;
+- current-code reuse points, likely change surfaces, contracts, and behaviour to preserve;
+- consequential security, performance, data, compatibility, deployment, and test requirements;
+- implementation packets with dependencies, as few as the work allows under [packet size](packet-coordination.md#packet-size); and
+- an execution area for decisions, evidence, files, review findings, status, exact continuation, and one current completion-assurance note. Initialise that note with the expected consequence floor, any known completion attention, and the likely completion condition; state explicitly when the plan is routine and no independent assurance is expected unless implementation changes the risk.
 
 Resolve genuine design decisions here, not at build time, and record each supported decision in the story. A new interaction pattern or shared primitive is a prep-time decision — not a build-time "try it on the sandbox and see."
 

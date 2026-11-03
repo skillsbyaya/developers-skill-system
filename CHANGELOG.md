@@ -2,9 +2,11 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
-## 3 November 2026: Prepared stories follow one template
+## 3 November 2026: A prepared story is reported as what it will do; Agent Dev closes its own sessions
 
-Agent Dev's story preparation now writes every story from `agent-dev/references/story-template.md`. The sections, in order: boundary and authority with a one-sentence outcome, numbered decisions (each a bold one-line claim then a few plain sentences, naming the user and date when the call was theirs), numbered acceptance, what to preserve, one packet table, verification, and an execution area holding current state, completion assurance and the next step. The template replaces the reference's list of what a story should contain. Prompted by a prepared story the user found easy to read and asked to have every time.
+When Agent Dev finishes preparing a story, it tells the user what the story will do: one bullet per decision, named in a few words and explained in one or two plain sentences, with the user's own decisions marked, then any corrections to other documents and one line on the build stages. Function names, files, checks and process stay out, and the report doubles as close-session's change report. Prompted by a preparation summary the user found clear, after a second version written as a section-by-section tour of the record was unreadable.
+
+Agent Dev also invokes close-session itself at the end of any workflow that changed the repository when nothing awaits the user, and asks first only when a decision, review or comment they would want is open. A preparation-only request now ends through close-session rather than stopping.
 
 ## 2 November 2026: A finished assessment closes the session itself
 
