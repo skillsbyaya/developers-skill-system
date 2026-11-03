@@ -49,7 +49,7 @@ Choose exactly one next action, taking the first that applies:
 2. a user action or decision that blocks the next step;
 3. an independent review the story record requires before the next step;
 4. the next ready packet;
-5. the next item in the project's ordered backlog or plan, when the order is unambiguous; otherwise the user's answer to where the project goes next, asked in the round above.
+5. the next item in the project's ordered backlog or plan, when the order is unambiguous and no other session holds it; none, when this session's unit is done and other sessions carry the user's wider work; otherwise the user's answer to where the project goes next, asked in the round above.
 
 ## Output
 
@@ -70,7 +70,7 @@ The whole output, with each fact said once:
 > **Effort:** <level>.
 ```
 
-For a blocker, the first line is `> **You:** <the one action>` or `> **Waiting for <who>:** <what>`, with Model and Effort `not applicable`.
+For a blocker, the first line is `> **You:** <the one action>` or `> **Waiting for <who>:** <what>`, with Model and Effort `not applicable`. With no next action it is `> **New session:** none from this session — <where its unit ended up>`, the same way. A handoff names only a branch this session worked on, or the base branch.
 
 Naming the skill carries its procedure: do not restate gates, record updates, review steps or when to stop. Use the project's model-routing policy when it has one. Otherwise use High capability for consequential or unsettled judgement and Standard for settled, well-tested work; effort medium for settled implementation, high for consequential work or review, low only for mechanical work. Name the class only, never a product or model, so either runtime can act on it.
 

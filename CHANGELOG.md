@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 3 November 2026: A finished session can hand off nothing
+
+Close-session's next-action list gains a "none" outcome for a session whose unit is done while other sessions carry the user's wider work, with a handoff line that says so and where the unit ended up. A plan item another session already holds is no longer a next action, and a handoff names only a branch the session worked on, or the base branch. Prompted by a session that filed and merged one backlog item split out of a parallel polish pass, then handed off "continue the polish pass" on another session's sibling branch because the handoff had no way to say nothing follows.
+
 ## 3 November 2026: Parallel preview-loop sessions land as one set; every handoff lists unlanded work
 
 Agent Dev's preview loop gains parallel sessions: each runs in its own worktree on a lettered sibling branch of one set, never writes the shared story record, status lines or backlog, and marks its branch `checkpoint: done` when the user accepts its item. The session that finds every sibling done lands the set once, after claiming the set's base branch by pushing it so two siblings cannot land together; "land what's done" lands the finished siblings at any time. Close-session's output gains an always-present "Unlanded work" line listing every remote working branch with its state and age, or `none`, so finished work waiting on a set, or anything else unmerged, is never lost. The user may name the set so every session can open at once, and each session claims its lettered branch by pushing it before any other work, so two sessions opened together cannot take the same letter. A sibling whose item turns out to need a migration, a new route or new behaviour leaves the set as its own story so the set does not wait on it. Prompted by a user who runs several small-edit sessions concurrently and wanted one shipment without risking stranded branches.
