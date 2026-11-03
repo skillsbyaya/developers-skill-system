@@ -10,7 +10,7 @@ Use this workflow when the user will judge many small visible changes by looking
 
 ## Parallel sessions
 
-When the user runs several passes at once, each session is one sibling of a set: its own worktree on its own branch, named from the set's base branch plus a letter (`story/<key>-a`, `-b`, …). A joining session fetches, takes the next unused letter and branches from the default branch.
+When the user runs several passes at once, each session is one sibling of a set: its own worktree on its own branch, named from the set's base branch plus a letter (`story/<set>-a`, `-b`, …). The set is the name the user gives, so they can open every session at once; without one, the first session picks a short name. Before any other work, a session fetches, branches from the default branch with the next unused letter and pushes that branch to claim it, taking the next letter if the push is refused. Its first reply names the set and its letter.
 
 - A sibling never edits the story record, status lines or backlog, which the set's landing writes once. It keeps its pages done, pages left and open asks in its checkpoint commit messages.
 - When the user says the sibling's item is done, checkpoint with a message starting `checkpoint: done`. Then fetch and read the last commit subject on every sibling. If one is not done, stop there: the sibling waits, and nothing lands.
