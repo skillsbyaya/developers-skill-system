@@ -2,9 +2,9 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
-## 3 November 2026: A finished session can hand off nothing
+## 3 November 2026: A finished session hands off to its parallel sessions
 
-Close-session's next-action list gains a "none" outcome for a session whose unit is done while other sessions carry the user's wider work, with a handoff line that says so and where the unit ended up. A plan item another session already holds is no longer a next action, and a handoff names only a branch the session worked on, or the base branch. Prompted by a session that filed and merged one backlog item split out of a parallel polish pass, then handed off "continue the polish pass" on another session's sibling branch because the handoff had no way to say nothing follows.
+When a session's unit is done while parallel sessions carry the user's wider work, close-session's handoff names those sessions and whether each is finished or still running; with no parallel sessions it gives the next item from the project's plan, as before. A plan item another session already holds is no longer a next action, and a handoff's working branch is one the session worked on, or the base branch. Prompted by a session that filed and merged one backlog item split out of a parallel polish pass, then handed off "continue the polish pass" on another session's sibling branch because the handoff had no way to say nothing follows.
 
 ## 3 November 2026: Parallel preview-loop sessions land as one set; every handoff lists unlanded work
 
