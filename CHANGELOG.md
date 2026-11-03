@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 3 November 2026: A harmless failure is still a finding
+
+Close-session counts every tool, script or check failure a session saw as a finding, including one that proved harmless or that a saved workaround handled: it is fixed, or filed in the backlog with its cause and fix, and never closed as a known quirk. Prompted by a landing script that reported failure after a successful merge on three landings over five days; each session confirmed the merge, applied the saved workaround and moved on, until the user asked what the error was. The fix was a few lines.
+
 ## 3 November 2026: Close-session separates this session's branch from other sessions'
 
 Close-session's "Unlanded work" line becomes a "Work in progress" section with two lines: this session's branch and its state first, then every other remote working branch underneath. Status no longer repeats where the work is. Prompted by a user who could not tell at a glance, from one line naming three branches, which was the session they had just closed and what was waiting on it.
