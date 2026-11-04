@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 4 November 2026: Parallel sessions announce instead of coordinating through Git
+
+Before anything a parallel session could collide with (chiefly each commit, and also claiming a backlog or story ID, resetting a shared local service, or editing files another session announced) a session sends each other session running on the same machine one line: its branch and what it will touch. When two announce the same thing they agree the order first. Close-session sends the line before committing; agent-dev covers the rest. Agent Dev's preview-loop parallel set (lettered sibling branches, a `checkpoint: done` subject read by every sibling, one session landing the merged set) is removed: it was never used, and sessions were already messaging each other. A parallel pass is now its own story and lands on its own.
+
 ## 3 November 2026: A harmless failure is still a finding
 
 Close-session counts every tool, script or check failure a session saw as a finding, including one that proved harmless or that a saved workaround handled: it is fixed, or filed in the backlog with its cause and fix, and never closed as a known quirk. Prompted by a landing script that reported failure after a successful merge on three landings over five days; each session confirmed the merge, applied the saved workaround and moved on, until the user asked what the error was. The fix was a few lines.
