@@ -2,6 +2,14 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 7 November 2026: Improve the existing Markdown planning workflow
+
+Backlog intake searches likely owners and cross-area alternatives before reading full detail, reuses an existing owner on repeated capture, and preserves source, authority and residual scope during partial adoption. Outcome grouping stays separate from priority and concurrent ownership. Waiting work names its unlock condition and next check.
+
+PM now routes roadmap reviews explicitly, separating preferred order, prerequisites and milestone acceptance. Documentation updates replace settled questions and reconcile affected action references while preserving unique evidence. The epics template no longer asks PM to plan Dev's execution packets. Delivery handles interrupted multi-file close-out and changed prerequisites explicitly; close-session follows declared state owners instead of copying actions into multiple records.
+
+These changes retain project Markdown and Git as the workflow. They add no queue app, local store or cloud dependency. Existing documentation/context/cleanup ownership remains in force. Targeted retrieval and clearer guidance are supported by the bounded queue experiment; no general token, cost or concurrency guarantee is claimed.
+
 ## 4 November 2026: Parallel sessions announce instead of coordinating through Git
 
 Before anything a parallel session could collide with (chiefly each commit, and also claiming a backlog or story ID, resetting a shared local service, or editing files another session announced) a session sends each other session running on the same machine one line: its branch and what it will touch. When two announce the same thing they agree the order first. Close-session sends the line before committing; agent-dev covers the rest. Agent Dev's preview-loop parallel set (lettered sibling branches, a `checkpoint: done` subject read by every sibling, one session landing the merged set) is removed: it was never used, and sessions were already messaging each other. A parallel pass is now its own story and lands on its own.

@@ -23,8 +23,8 @@ When the user asks to apply an approved contained correction:
 - update only the affected requirement, plan, status row, or related product text;
 - preserve stable keys and progressed lifecycle state;
 - never infer `done`, silently downgrade status, or reconcile unrelated tracker structure;
-- list invalidated downstream artifacts or reviews without rewriting their owners' content; and
-- identify a duplicate backlog entry when the same committed work is unambiguously owned by the active artifact or tracker. If backlog reconciliation was requested, finish the correction and then select backlog planning; otherwise report the exact removal or narrowing needed.
+- apply settled decisions to stale questions and duplicate action references in the affected documents; preserve unique evidence and identify downstream reviews that need reassessment; and
+- remove or narrow a matching backlog entry only after its committed owner exists, retaining distinct uncommitted scope and lineage. Unresolved scope or specialist decisions stay with their owners.
 
 If the change requires comprehensive requirements rewriting, epic redesign, backlog reprioritisation, UX, UI/design-system work, architecture, implementation, or assurance, stop with a compact handoff to the selected workflow or neighbouring owner. Carry the approved decision, affected paths or stable keys, current revision, invalidated assumptions, and unresolved constraints. Return to the prior active owner when the correction is contained.
 

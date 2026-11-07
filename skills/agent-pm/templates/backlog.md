@@ -1,6 +1,6 @@
 # Backlog
 
-> Group discretionary uncommitted work by the outcome sought or problem addressed, even when related candidates touch different product or system areas. Use governed identifier suffixes for area routing rather than repeating that taxonomy as backlog structure. Headings and adjacency support comparison and shaping, not delivery chunking or a total priority order. When governed IDs are active, pair each canonical ID with its item title; otherwise do not invent numbers. An unqualified item is ready; qualify exceptions as `(needs shaping — owner)`, `(waiting — blocker)`, or `(not now — reason or revisit trigger)`. Remove completed or adopted items instead of keeping history.
+> Group discretionary uncommitted work by the outcome sought or problem addressed, even when related candidates touch different product or system areas. Use governed identifier suffixes for area routing rather than repeating that taxonomy as backlog structure. Headings and adjacency support comparison and shaping, not delivery chunking or a total priority order. When governed IDs are active, pair each canonical ID with its item title; otherwise do not invent numbers. An unqualified item is available for assessment, not build approval; qualify exceptions as `(needs shaping — owner)`, `(waiting — blocker; check date or event)`, or `(not now — reason or revisit trigger)`. Remove completed or adopted items instead of keeping history.
 
 ## [Outcome sought or problem addressed]
 
