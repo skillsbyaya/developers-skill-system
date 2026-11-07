@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 7 November 2026: Close-session stops handing off to proof that nothing waits on
+
+Close-session's next-action order put any review or completion check on the last unit ahead of the next build, because a story whose code had merged still counted as "incomplete". A review, walkthrough or completion check now goes next only when something waits on it now: a merge it gates, a packet that builds on it, or a release or user due before more building could finish. Otherwise it is recorded with the point that needs it, and checks waiting for the same point run together in one session. Prompted by a day in one project where about half of seventeen handoffs were reviews, walkthroughs or staging completion checks on work already merged and not due for release for two days, one session per story.
+
 ## 7 November 2026: Improve the existing Markdown planning workflow
 
 Backlog intake searches likely owners and cross-area alternatives before reading full detail, reuses an existing owner on repeated capture, and preserves source, authority and residual scope during partial adoption. Outcome grouping stays separate from priority and concurrent ownership. Waiting work names its unlock condition and next check.

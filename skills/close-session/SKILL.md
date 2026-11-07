@@ -45,9 +45,9 @@ Ask every decision this session surfaced that is the user's to make, in one roun
 
 Choose exactly one next action, taking the first that applies:
 
-1. the same unit, when it is incomplete or its checks failed;
+1. the same unit, when its build is unfinished or its checks failed;
 2. a user action or decision that blocks the next step;
-3. an independent review the story record requires before the next step;
+3. a review, walkthrough or completion check, only when something waits on it now: a merge it gates, a packet that builds on it, or a release or user due before more building could finish. Otherwise record it with the point that needs it (for example "before the next release") and go on to 4; checks waiting for the same point run together in one session when it comes, not one session per story;
 4. the next ready packet;
 5. the next item in the project's ordered backlog or plan, when the order is unambiguous and no other session holds it; when this session's unit is done and parallel sessions carry the user's wider work, those sessions; otherwise the user's answer to where the project goes next, asked in the round above.
 
