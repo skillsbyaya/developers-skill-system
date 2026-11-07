@@ -2,9 +2,9 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
-## 7 November 2026: The next-session prompt is a grey box again
+## 7 November 2026: The next-session prompt is a copyable box
 
-An agent handoff from close-session is once more a fixed, copyable prompt: a **Next session** label over a fenced text block, which renders as a grey box with a copy button, holding the plain-words purpose, branch, unit, skill and record, then Model and Effort lines. User actions and waits stay one plain sentence. Prompted by the user finding handoffs hard to follow after the shorter-closes change removed the fixed shape.
+A close-session agent handoff is a fixed prompt under a **Next session** label, in a fenced text block that renders as a grey box with a copy button: the plain-words purpose, branch, unit, skill and record, then Model and Effort lines. User actions and waits are one plain sentence. Prompted by a user who found free-form handoffs hard to follow.
 
 ## 7 November 2026: Safer preservation and shorter closes
 

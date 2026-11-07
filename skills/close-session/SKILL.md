@@ -46,7 +46,7 @@ Normally use a few sentences:
 
 - **Outcome:** what finished and any material verification limit. For repository work, give this task's actual branch and preservation or landing state, distinguishing repositories when more than one is involved.
 - **Problems, when present:** every unresolved issue affecting the user's immediate decisions, its practical impact and the needed action. A saved record does not replace surfacing a material blocker; link it instead of repeating its detail. Do not repeat a problem already explained in this response.
-- **Continuation, when needed:** one action with its owner. A user action, decision or wait is one plain sentence. An agent handoff is a prompt the user pastes into the next session, set apart under a `**Next session**` label in a fenced `text` block so it renders as a grey box with a copy button:
+- **Continuation, when needed:** one action with its owner. A user action, decision or wait is one plain sentence. An agent handoff is a prompt for the next session in exactly this shape:
 
   ````markdown
   **Next session**
@@ -59,7 +59,7 @@ Normally use a few sentences:
   ```
   ````
 
-  Omit a branch or record that does not apply. Do not require a new chat or invent a record. Include the Model and Effort lines when project policy asks for them or they are useful to the continuation; otherwise High/high for consequential judgement and Standard/medium for settled work, naming the class, never a product.
+  Omit a branch or record that does not apply. Do not require a new chat or invent a record. Include Model and Effort when project policy asks for them or they help the continuation; otherwise High/high for consequential judgement and Standard/medium for settled work, naming the class, never a product.
 
 Report relevant parallel sessions from session evidence, not branch names; label unknown state honestly. When the user or project requests a branch inventory, fetch and list non-permanent remote branches as **Remote branches**, with commit age and verified merge state. Distinguish that inventory from active sessions; if retrieval fails, report it as unavailable rather than empty. Do not perform a repository-wide census on every close.
 
