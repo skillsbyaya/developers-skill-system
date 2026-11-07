@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 7 November 2026: The next-session prompt is a grey box again
+
+An agent handoff from close-session is once more a fixed, copyable prompt: a **Next session** label over a fenced text block, which renders as a grey box with a copy button, holding the plain-words purpose, branch, unit, skill and record, then Model and Effort lines. User actions and waits stay one plain sentence. Prompted by the user finding handoffs hard to follow after the shorter-closes change removed the fixed shape.
+
 ## 7 November 2026: Safer preservation and shorter closes
 
 Close-session now handles already-committed work after a clean review or resumed session, separates incomplete checkpoints from completed publication, and follows the project's direct-push, PR or scripted route. Cleanup requires task ownership and preservation of local files, including ignored files; uncertain worktrees stay in place and removal is never forced.
