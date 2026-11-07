@@ -2,6 +2,14 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 7 November 2026: Safer preservation and shorter closes
+
+Close-session now handles already-committed work after a clean review or resumed session, separates incomplete checkpoints from completed publication, and follows the project's direct-push, PR or scripted route. Cleanup requires task ownership and preservation of local files, including ignored files; uncertain worktrees stay in place and removal is never forced.
+
+Required completion and landing assurance retain their owning boundaries; only checks unnecessary for those boundaries may be deferred. Material blockers stay visible even when documented. Failure capture targets unresolved defects, recurrence and workarounds with a future cost rather than every transient command error.
+
+A completed task may end without a handoff. Reports describe outcomes and useful continuation without mandatory rule quotations, model fields or branch censuses. Requested remote-branch inventories remain available under their own label; active-session claims require session evidence. Dev and close-session coordinate relevant shared work where messaging is permitted, then recheck state. Repository policy now distinguishes unfinished checkpoints from completed direct publication.
+
 ## 7 November 2026: Close-session stops handing off to proof that nothing waits on
 
 Close-session's next-action order put any review or completion check on the last unit ahead of the next build, because a story whose code had merged still counted as "incomplete". A review, walkthrough or completion check now goes next only when something waits on it now: a merge it gates, a packet that builds on it, or a release or user due before more building could finish. Otherwise it is recorded with the point that needs it, and checks waiting for the same point run together in one session. Prompted by a day in one project where about half of seventeen handoffs were reviews, walkthroughs or staging completion checks on work already merged and not due for release for two days, one session per story.

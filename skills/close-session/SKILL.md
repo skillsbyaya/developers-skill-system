@@ -1,85 +1,53 @@
 ---
 name: close-session
-description: "Closes a working session: saves what the next session needs, preserves the work in Git, and gives one clear handoff. It is the only route that lands repository work, so use it whenever finished work is ready to merge or ship, including after a review and its fixes; also use it after agent-dev finishes or stops delivery work, or when the user says to wrap up, close or end the session, stop for today, or otherwise signals that the session is ending."
+description: "Closes a working session, preserves work in Git, and reports the outcome with a handoff when needed. Use whenever finished repository work is ready to merge or ship, including after a review with no edits; after agent-dev finishes or stops delivery; or when the user says to wrap up, close, end the session, or stop for today. Owns commits, pushes and merges for the skill system."
 ---
 
 # Close Session
 
-A close does three things: makes sure nothing the next session needs exists only in this conversation, preserves the work in Git, and tells the user in a few lines where things stand and what happens next. It does not continue the work, start new work, run reviews, or complete a story.
+Save what later work needs, preserve the task's work, and report where it stands. Delivery owns implementation, assurance and story completion; close-session does not invent more work or relax those boundaries.
 
-- **Packet close:** agent-dev finished or stopped one named packet or slice, or asks for a checkpoint of work in progress. The packet's boundary holds: agent-dev's delivery controls decide what a packet may change, and a close never widens it.
-- **Full close:** anything else, including any sign from the user that the session is ending.
+A **packet close** preserves one named packet, slice or checkpoint within its existing scope. When authorised work continues in this session, perform steps 1–2 and return to delivery without a final handoff. A **full close** reports the outcome when work actually stops.
 
-Every commit, push and merge goes through step 2, whatever skill or instruction produced the work: delivery skills never run Git themselves. A project instruction that names a landing command, such as a ship script, describes how step 2 lands, not a separate trigger.
+Every commit, push and merge goes through step 2. A project's landing script is one way to perform that step. Reuse current session evidence; retrieve only missing or changed facts needed for the next action. After an earlier close, cover only the delta.
 
-Work from what this session already knows. Do not rerun checks, survey the project, or reread broad sources. If a close already ran in this conversation, cover only what changed since and never repeat a change report already posted. For a packet checkpoint followed by authorised work in the same session, perform steps 1–2, return control to delivery, and defer the final handoff until work actually stops.
+## 1. Save missing continuity
 
-## 1. Save what exists only in the conversation
+Use the project's declared state owners, otherwise the existing story, package or plan. Save unfinished work, decisions, constraints and findings that later work needs once with their owner. Link existing records, replace stale text, and update other documents only where this work made them wrong. Send distinct follow-up work through backlog planning to reuse any existing owner.
 
-Follow the project's declared owners for lifecycle and next actions; otherwise use the existing story, change package or plan. Save each unfinished item, open question, decision, constraint or finding once with its owner; link existing records instead of copying their state. Send distinct work outside this unit through backlog planning so repeated capture reuses its owner. Every tool, script or check failure the session saw is such a finding, including one that proved harmless or that a saved workaround handled: fix it, or file it with its cause and fix; never close it as a known quirk. Write what is missing into the document that owns it, replacing outdated text rather than appending a session diary. Update another document only when this session made it wrong.
+Preserve unresolved defects, recurring failures and workarounds that leave a future cost. If the cause is unknown, save the evidence and next diagnostic rather than inventing a fix. Expected failures and already-resolved transient mistakes need no backlog item. Do not repeatedly dismiss a real defect because its workaround succeeds.
 
-- Update only the affected delivery-status or next-steps entries, removing superseded actions while preserving unrelated work. Replace a settled question with its decision and source; check touched links after moves or adoption. If reconciliation is unfinished, save the exact remaining edit with the existing owner rather than claiming it is settled.
-- Send a confirmed correction to agent behaviour through `learn-lessons` current correction only when it would otherwise be lost.
-- Create no session log, handoff file or summary document.
+Reconcile only affected status and next-action entries, preserving unrelated work. Replace settled questions with their decisions and sources; repair affected links. If reconciliation cannot finish safely, save the exact remaining edit with its owner. Send a confirmed agent-behaviour correction through `learn-lessons` current correction only when it would otherwise be lost. Create no session diary or separate handoff document.
 
-## 2. Preserve the work in Git
+## 2. Preserve and publish
 
-Skip this when the session changed nothing in a repository.
+Skip Git only when there are no task-owned edits, commits to preserve, or authorised landing operations outstanding. A clean working tree or a review with no edits can still need a push or merge.
 
-1. Follow the project's declared Git workflow. Include all related files in the agreed deliverable; preserve unrelated pre-existing edits. Resolve unclear scope once before staging. Stop and name the blocker when the workflow is unclear, the branch is wrong, or the agreed work cannot be separated safely.
-2. If the user asked for a preview they have not yet had, or a material user decision remains, show the finished change and resolve it before publishing. A change the user watched being made has had its preview. Otherwise proceed without a new approval gate. Stage explicit paths. Immediately before committing, recheck the branch and read the staged diff: only change-owned paths, nothing another session or the user left in the tree. When the runtime can message other sessions, send one line before committing to each session running on this machine (not cloud sessions or ones on other machines): this branch, the staged paths, and whether it will land; if one announced the same paths, agree the order with it first. Never force-push.
-3. Commit and push session work to its non-live working branch so a fresh local or cloud session can resume it, as soon as its checks pass and before anything that waits on a remote. Reuse checks that passed on the same code; rerun only what changed since. Start the message with `checkpoint:` when the work is incomplete or its checks fail; a checkpoint is never landed.
-4. Land a completed unit when the project's workflow authorises it, in this order. A packet lands only when the project's workflow lands each packet.
-   1. **Change report first,** unless one already posted covers every current change: what changed, grouped by document and by code area, in plain terms, naming each judgement call and any new wording. Changes the user watched being made take one line naming the surfaces covered; report in full only what they did not see. Open it with every rule added to or changed in an instruction file (`CLAUDE.md`, `AGENTS.md`, a skill), quoted exactly, including one changed as a side effect of other work. Write it from what the session already knows. It is not an approval gate; carry straight on unless it contains a decision that is the user's to make.
-   2. **Then land, in the same turn:** pull request, gates and merge as one action, run in the background when it waits on remote gates so comments can still arrive. Wait only on checks the project requires for merge, never on a preview or deployment. A red check is read and classified before anything else: a code or test defect goes back to delivery in this session; only a named environmental cause earns one rerun. A mergeable pull request left open is unfinished work, not a handoff. Never land a change that only records state for the same unit's next session; push it to the working branch.
-   3. **A comment before the merge** goes into the same pull request: make the accepted change, rerun its affected checks, and make sure only the updated head merges, after its gates pass.
-   4. **After the merge,** leave no finished checkout behind: return the main checkout to its base branch, and remove any linked worktree the session worked in (`git worktree remove`, run from the main checkout). The merged branch holds everything it did.
+1. **Establish scope.** Follow the project's Git workflow and existing authority. Include the agreed deliverable and its already-committed work; preserve unrelated edits and commits. Resolve entangled ownership or an unclear target before staging or publishing. Reuse checks valid for the current change; refresh affected evidence after changes.
+2. **Resolve decisions and report.** Honour any requested preview and unresolved material decision before publication. Watched changes have had their preview. Briefly describe unreported behaviour changes, including changed instructions and consequential choices, and provide the diff or changed-file links. Quote exact rules when the user requests them or their wording needs a decision. Do not repeat an adequate report or add another approval gate.
+3. **Commit safely.** When messaging is available and permitted, notify relevant sessions sharing the repository or affected resources before committing: branch, paths and intended landing. Resolve known overlap first; an announcement is not a lock. Stage explicit owned paths or hunks. Immediately before committing, recheck the branch and staged diff, including after coordination, so no unrelated work enters the commit. If shared state cannot be isolated safely, stop and report the conflict. Never force-push.
+4. **Preserve incomplete work.** Commit and push a safe checkpoint to a non-live working branch before handing off or waiting on remote gates. Use `checkpoint:` for incomplete or failing work, state the missing or failed evidence, and do not land while it remains incomplete or its gates fail. Reuse an existing owned commit when only its push remains. Changes solely recording this unit's continuation stay on its working branch.
+5. **Publish completed work.** Carry the project's authorised route through to completion: direct push, pull request, or landing script. Do not invent a checkpoint branch or PR when the project permits direct publication. A packet lands only when the project permits packet landing. Before landing, required assurance and acceptance must be current. For a PR, push the candidate before waiting on required gates and merge only the reviewed, checked head. Incorporate accepted comments before merging and refresh affected evidence. Read a red gate before retrying: return defects to delivery in this session; allow one rerun for a named environmental cause. Keep remote waits interruptible. Do not wait on unrelated previews or deployments, or leave an authorised mergeable PR open as a handoff.
+6. **Verify, then clean up.** Verify the intended commit reached the remote and any required merge completed. Remove only a disposable worktree owned by this task after checking for concurrent use and local files that must survive, including ignored files; Git status alone is insufficient. Never force removal. If ownership or preservation is uncertain, retain it and report why. Return the main checkout to its base branch only when doing so respects its current work and owner.
 
-Carry an authorised publication through commit and push without separate requests for each file or step. Tags, releases, force-pushes, and deployment to other machines require their own authorisation.
+Carry authorised publication through without separate requests for each step. Tags, releases and deployments require their own authorisation. If preservation or publication fails, report what actually reached Git and what remains local; do not claim a remote continuation is ready.
 
-Never report a commit, push or merge that did not happen. If the work cannot reach the remote, say so: the next session cannot resume in the cloud.
+## 3. Choose a continuation only when needed
 
-## 3. Ask, then choose one next action
+Resolve user-owned decisions needed for this task before dependent work, batching questions where possible. If evidence must come first, record that dependency. Do not ask for a new project direction just to fill a handoff.
 
-Ask every decision this session surfaced that is the user's to make, in one round of questions, before writing the output. Do not invent questions. Carry a decision forward only when something must happen first, and name it.
+Required completion or landing assurance retains the boundary set by its owner. Defer only checks already established as unnecessary for that boundary, recording when they become necessary; group release-only checks that share that point. A merge is not evidence that a required review became optional.
 
-Choose exactly one next action, taking the first that applies:
-
-1. the same unit, when its build is unfinished or its checks failed;
-2. a user action or decision that blocks the next step;
-3. a review, walkthrough or completion check, only when something waits on it now: a merge it gates, a packet that builds on it, or a release or user due before more building could finish. Otherwise record it with the point that needs it (for example "before the next release") and go on to 4; checks waiting for the same point run together in one session when it comes, not one session per story;
-4. the next ready packet;
-5. the next item in the project's ordered backlog or plan, when the order is unambiguous and no other session holds it; when this session's unit is done and parallel sessions carry the user's wider work, those sessions; otherwise the user's answer to where the project goes next, asked in the round above.
+Choose at most one next action: unblock this unit, resume its unfinished work or required assurance, then the next ready packet or unclaimed item in the existing agreed plan. When relevant parallel sessions already carry the continuation, name them and their known state instead of assigning their work again. When the requested outcome is complete and nothing needs continuation, end without a handoff.
 
 ## Output
 
-The whole output, with each fact said once:
+Normally use a few sentences:
 
-1. **Status:** one or two plain sentences on what was done and whether checks passed. Link a saved document only when the user will want to open it, such as where their decision was recorded.
-2. **Problems:** a short list only for failing checks, unsafe or unresolved state, or something the user must do that is not the handoff. Omit it otherwise. Never use it for things already saved in a document. Write each one for the user, not for a mechanic, in this order: the verdict (fix it, or it can wait), what it costs them in practice, the fix with what it takes and what it loses, its one risk, why this session did not do it, and the single action that unblocks it. Name an internal mechanism only when the user has to act on it; a missing column, a port or a container name is not their problem, being unable to preview on their machine is.
-3. **Work in progress:** always present, this session first and other sessions underneath, exactly this shape:
+- **Outcome:** what finished and any material verification limit. For repository work, give this task's actual branch and preservation or landing state, distinguishing repositories when more than one is involved.
+- **Problems, when present:** every unresolved issue affecting the user's immediate decisions, its practical impact and the needed action. A saved record does not replace surfacing a material blocker; link it instead of repeating its detail. Do not repeat a problem already explained in this response.
+- **Continuation, when needed:** one action with its owner. For an agent handoff, include the skill, existing record path and verified working branch where applicable. Do not require a new chat or invent a record. Include model capability and effort only when useful to the continuation, following project policy; otherwise High/high for consequential judgement and Standard/medium for settled work.
 
-```markdown
-**Work in progress**
-- **This session:** `<branch>` — <state>, last commit <age>.
-- **Other sessions:** `<branch>` — <state>, last commit <age>; `<branch>` — …
-```
+Report relevant parallel sessions from session evidence, not branch names; label unknown state honestly. When the user or project requests a branch inventory, fetch and list non-permanent remote branches as **Remote branches**, with commit age and verified merge state. Distinguish that inventory from active sessions; if retrieval fails, report it as unavailable rather than empty. Do not perform a repository-wide census on every close.
 
-   This session's line gives where its work is: `merged to <default branch>`, or its branch with its state (in progress, waiting on a named review, or blocked by what) and the age of its last commit; when nothing reached Git, the Git blocker. Other sessions' line lists every other remote branch except the default branch and the project's declared permanent branches, from `git fetch --prune` and `git for-each-ref refs/remotes`, with the same facts, or `none`, so the user knows it was checked.
-4. **Handoff,** exactly this shape:
-
-```markdown
-### Handoff
-
-> **New session:** <what the next session is about, in plain words> — On `<branch>`, <verb> <unit> with <skill> from `<repository-relative record path>`.
->
-> **Model:** <capability class>.
->
-> **Effort:** <level>.
-```
-
-For a blocker, the first line is `> **You:** <the one action>` or `> **Waiting for <who>:** <what>`, with Model and Effort `not applicable`. For parallel sessions, it is `> **Waiting for parallel sessions:** <each by name, finished or still running>`, the same way. A handoff's working branch is one this session worked on, or the base branch.
-
-Naming the skill carries its procedure: do not restate gates, record updates, review steps or when to stop. Use the project's model-routing policy when it has one. Otherwise use High capability for consequential or unsettled judgement and Standard for settled, well-tested work; effort medium for settled implementation, high for consequential work or review, low only for mechanical work. Name the class only, never a product or model, so either runtime can act on it.
-
-No recap, no list of checks that passed, no list of saved files, no empty sections, no second next action. End the session after the final output.
+No empty sections, repeated change report, routine check list, or manufactured next task.

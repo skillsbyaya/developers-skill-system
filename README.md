@@ -14,7 +14,7 @@ The system improves through use. Demonstrated failures and corrections feed into
 4. Use specialist consultation, assurance, or an isolated subagent only when the unresolved decision requires it.
 5. Preserve one authoritative source for project state, decisions, lessons, and conventions.
 6. Scale planning, evidence, review, and durable records to consequence and reversibility.
-7. Commit and push a safe non-live checkpoint at every session boundary so work can continue locally or in the cloud.
+7. Preserve unfinished work on a non-live remote branch; publish completed work through the project’s authorised route.
 
 ```text
 work
@@ -104,7 +104,7 @@ Material changes are recorded in the [change log](CHANGELOG.md).
 
 `main` is the current public distribution. This is a one-maintainer project: changes may land directly on `main` after the affected skill checks and the complete diff pass. Use a short-lived branch when a change needs experimentation, independent review, or several commits before it is release-ready.
 
-Every working session commits and pushes a safe checkpoint to a non-live branch so another local or cloud session can continue. A checkpoint with failing or incomplete work must be labelled and must not be merged. This standing preservation rule never authorises a force-push, a direct push to a live or protected branch, a release, or a deployment.
+When work remains unfinished at a session boundary, commit and push a safe checkpoint to a non-live branch so another local or cloud session can continue. Label incomplete or failing checkpoints and do not merge until the work is complete and its required checks pass. Completed changes may follow the direct-to-`main` route above without an intermediate checkpoint branch or pull request. This preservation rule does not authorise force-pushes, bypassing branch protection, live-system changes, releases or deployments.
 
 ## Inspiration and independence
 
