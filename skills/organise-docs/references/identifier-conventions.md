@@ -17,13 +17,14 @@ New identifiers use a typed base identity followed by optional area-routing suff
 - When a document convention includes an ID in a filename, use the stable base ID unless that convention explicitly says otherwise; keep mutable area routing in the document's canonical heading and current cross-references.
 - In user-facing conversation, pair the ID with its title. Do not refer to work as only `S2-E4` or `A13` when a person could lose the thread.
 
-Numbers are positive integers without decorative zero-padding. This convention does **not** define how the next number is allocated. Use a project-owned allocator or an already authoritative key set. If neither exists, retain the title or existing legacy key and report the allocation gap; do not infer `max + 1`, invent a counter, or create a `next` field.
+Numbers are positive integers without decorative zero-padding. Except for delivery batches below, this convention does **not** define how the next number is allocated. Use a project-owned allocator or an already authoritative key set. If neither exists, retain the title or existing legacy key and report the allocation gap; do not infer `max + 1`, invent a counter, or create a `next` field.
 
 ## Prefixes and writers
 
 | Prefix | Meaning | Structural writer |
 | --- | --- | --- |
 | `B` | Backlog item | `agent-pm` backlog planning |
+| `BAT` | Delivery batch, separate from item identity | `agent-pm` delivery batch planning |
 | `FR` | Functional requirement | `agent-pm` PRD |
 | `E` | Epic | `agent-pm` epics and stories |
 | `S` | Story | `agent-pm` epics and stories; delivery owners preserve it |
@@ -36,6 +37,12 @@ Numbers are positive integers without decorative zero-padding. This convention d
 | `EV` | Compliance evidence item | `agent-compliance` obligations register |
 
 Do not introduce a new prefix merely to label prose. Add a type only when items recur, survive title/order edits, need cross-document references, and have one clear structural writer and lifecycle owner. Update this table and affected consumers together through `upskill`.
+
+## Delivery batch identity
+
+Use `BAT1`, `BAT2`, … for project-wide batch IDs unless the project has an adopted batch scheme. Display `BAT3 · B14 — Invoice totals`; the batch is a relationship, never an item suffix, replacement key or filename component. Numbers survive reorder and retitle and never imply priority. PM owns membership in one existing queue or plan; delivery preserves the assigned ID.
+
+For this type, PM may allocate numbers during an authorised batch-planning edit. Use the project allocator when present; otherwise inspect issued batch IDs in the authoritative current and retained planning/landing records (including Git history when retired rows were removed), allocate above the highest issued number, and recheck the source before writing. Start at BAT1 only after confirming none was issued. If history is unavailable or another writer overlaps, resolve allocation before assigning numbers. Do not add a separate counter, registry or batch tracker. Retired IDs are not recycled.
 
 ## Canonical project areas
 

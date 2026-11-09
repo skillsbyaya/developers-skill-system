@@ -15,6 +15,8 @@ Resolve the target from an explicit path or stable key, the user's clear current
 
 Delivery may settle routine implementation facts about an established change. It is not a second investigation: if the cause, required fix, or consequences stop being established, stop before further edits, preserve the record and evidence, and select the investigation workflow. Resume under the existing authorisation once evidence supports the fix.
 
+When the existing queue or plan assigns a batch, resolve its membership and finish condition before selecting a standalone landing. Preserve its ID in the owning execution record and user-facing handoff; PM owns membership; read [batch planning](../../agent-pm/workflows/batch-planning.md) only when a membership change needs planning. Do not renumber or expand the batch during implementation.
+
 Inspect version-control state and the project's continuation source before editing. Record the baseline and classify work as change-owned, unrelated, or entangled. A documentation correction the previous close carried for this landing unit is change-owned: include it without being asked again. Continue around unrelated user changes; stop before overwriting or integrating entangled work. Refresh the baseline at packet or slice boundaries.
 
 ## Show the plan before acting

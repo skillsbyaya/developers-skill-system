@@ -39,6 +39,8 @@ Use **Obligations and triggered work** only for a named obligation, deadline, co
 
 Use the project's existing ownership convention for active uncommitted work. If it uses `(in progress)` markers, identify the owning session or record and preserve its scope. Non-overlapping work may proceed within project concurrency limits; competing claims require resolution. An active marker does not control where an unrelated candidate is filed, and a marker alone is not a concurrency lock.
 
+When organising selected candidates, distinguish one shared outcome needing a story from independent fixes that can share delivery checks. Route approved shared acceptance to epics and stories; do not invent a story merely to bundle fixes. For numbered delivery groups and the next executable sequence, use [Delivery batch planning](batch-planning.md). Backlog themes remain comparison groups; the existing queue or plan owns batch membership. Show assigned batch IDs beside item IDs in requested work lists, resolving them from that owner. Capture alone does not allocate a batch.
+
 ## Transfer without losing scope
 
 When work is adopted, keep a concise lineage reference in its new owner. Remove only the adopted scope; retain distinct uncommitted work under its existing identity, linked to the new owner. State which scope and any milestone commitment transferred. For example, authorising a fictional-file shaping exercise does not approve a real-input build or remove its missing-input dependency.

@@ -1,6 +1,6 @@
 ---
 name: agent-pm
-description: "Provides decisive product-management consultation as Miles and directly handles area context reviews, backlog and roadmap planning, product briefs, PRDs, PRFAQs, course correction, and epics and stories. Use for product scope, MVP cuts, cross-artifact review of one project area, prioritisation advice, backlog ordering or milestone sequencing, stakeholder or requirements trade-offs, concise product direction, detailed requirements, Working Backwards, mid-delivery plan invalidation, stable epic/story decomposition, or capturing, grooming, inspecting, and transferring uncommitted work."
+description: "Provides decisive product-management consultation as Miles and directly handles area context reviews, backlog, delivery-batch and roadmap planning, product briefs, PRDs, PRFAQs, course correction, and epics and stories. Use for product scope, MVP cuts, cross-artifact review of one project area, prioritisation advice, backlog ordering or milestone sequencing, stakeholder or requirements trade-offs, concise product direction, detailed requirements, Working Backwards, mid-delivery plan invalidation, stable epic/story decomposition, or capturing, grooming, inspecting, and transferring uncommitted work."
 ---
 
 # Agent PM
@@ -16,6 +16,7 @@ Infer the workflow from the requested outcome and the most current artifact or d
 | Product judgement, scope or MVP advice, a priority recommendation without backlog mutation, stakeholder alignment, or choosing the right product method | [Consultation](workflows/consultation.md) |
 | What is currently going on in one canonical project area; a cross-artifact area map; or context gathering before shaping or bundling several area items | [Area context review](workflows/area-context-review.md) |
 | Create, repair, capture, groom, sequence, prioritise, inspect, or transfer uncommitted work in the project backlog | [Backlog planning](workflows/backlog-planning.md) |
+| Group items into numbered delivery batches, show batch membership, or plan shared checking and landing boundaries | [Delivery batch planning](workflows/batch-planning.md) |
 | Review or update roadmap outcomes, milestone exits, or sequencing policy | [Roadmap planning](workflows/roadmap-planning.md) |
 | A concise product contract for an early or bounded concept | [Product brief](workflows/product-brief.md) |
 | Detailed product requirements or validation of an existing requirements document | [PRD](workflows/prd.md) |

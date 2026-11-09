@@ -27,7 +27,7 @@ Resolve [the identifier convention](../../organise-docs/references/identifier-co
 
 Size a story as one coherent delivery that benefits from one integrated review, not by estimated human effort, token budget, or one agent's capacity. Keep cross-layer work together when it shares acceptance, integration, test setup, and review reasoning. Split outcomes that can ship, be rejected, rolled back, sequenced, or reviewed independently; split when learning from one should shape the next or when combined risk becomes unsafe to assess.
 
-A story is the acceptance and review boundary. Do not plan its execution: `agent-dev` story preparation splits a story into packets only where the work genuinely divides.
+A story keeps its acceptance and required assurance when grouped with other work. [Delivery batch planning](batch-planning.md) may group compatible stories for shared integrated checks and landing without renumbering them or merging their product ownership. Do not plan a story's execution: `agent-dev` story preparation splits a story into packets only where the work genuinely divides.
 
 ## Reconcile the delivery-status structure
 
