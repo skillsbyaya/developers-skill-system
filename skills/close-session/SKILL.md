@@ -44,12 +44,14 @@ Choose at most one next action: unblock this unit, resume its unfinished work or
 
 ## Output
 
-Start with these short lines, in order:
+Start with these short lines in everyday language:
 
 - **Status** — Say whether the requested work passed, is incomplete, or is blocked. Name what finished and where repository work was saved or landed. Say here if the batch is still open.
 - **Your action** — Give the one thing the user needs to do now. Write “None” when the batch is open and the next step belongs to an agent.
 - **Next** — When work remains, name who owns the next step and what they will do. Link the existing record for details.
 
-Keep evidence in the record. Add a material blocker or verification limit only when it affects the user's decision. If the user needs to start a new session, add a copyable `text` prompt with the task, batch ID if assigned, verified branch, skill and record. Include Model and Effort when project policy requires them. End after the status when the work is complete and there is no next action.
+Keep evidence in the record. Add a material blocker or verification limit only when it affects the user's decision. End after the status when the work is complete and there is no next action.
+
+For a handoff to another session, put **Next session** below the summary. Follow it with a fenced `text` block containing only the prompt to paste. Include the task, batch ID if assigned, verified branch, skill and record when applicable. Put **Model** and **Effort** on separate lines below the closing fence. Use the project's choices when specified.
 
 Name active sessions only from session evidence. When the user or project requests a branch inventory, fetch and list non-permanent remote branches under **Remote branches**, with commit age and verified merge state. Say when the inventory is unavailable.
