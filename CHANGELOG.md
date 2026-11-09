@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 9 November 2026: Batch delivery across short chats
+
+Chat endings now save progress without automatically triggering completion checks or publication. Close-session owns the distinction between cheap remote checkpoints and landing a coherent batch. Delivery no longer forces commits at each packet or elapsed hour; focused checks establish safe dependencies, while integrated assurance runs at the batch boundary. A standalone completed request still ships, and failed or deferred evidence remains explicit. Reviews preserve an open batch rather than implicitly closing it.
+
 ## 7 November 2026: The next-session prompt is a copyable box
 
 A close-session agent handoff is a fixed prompt under a **Next session** label, in a fenced text block that renders as a grey box with a copy button: the plain-words purpose, branch, unit, skill and record, then Model and Effort lines. User actions and waits are one plain sentence. Prompted by a user who found free-form handoffs hard to follow.

@@ -5,6 +5,6 @@ Use this workflow when the user will judge many small visible changes by looking
 1. Confirm the scope in a line: visible changes only. A change that needs a migration, a new route or new behaviour is recorded in the project's backlog as its own story and does not join the pass.
 2. Start the app once, the way the project's instructions say (its dev server against local data), sign the user in, and open it in their browser. Say where it is running. Keep it running for the whole session.
 3. Loop: the user says what to change; make the change; tell them which page to refresh. Their look is the working check. Run a narrow check only for something they cannot see, such as a server action or a calculation. No plan, record update or assurance note per change.
-4. When the user accepts a batch, or an hour has passed, checkpoint through `close-session` packet close. The story record's execution area holds only the pages done, the pages left, and anything asked for that is not yet done or accepted.
+4. Use `close-session` at a preservation boundary; neither elapsed time nor each accepted edit requires a checkpoint. The story record's execution area holds only the pages done, the pages left, and anything asked for that is not yet done or accepted.
 5. Close through `close-session` as a checkpoint whenever the session ends before the user says the pass is done. When they do, record that their preview covered every change and close fully: the pass lands once, on the tiers its diff selects, with no separate review session.
 

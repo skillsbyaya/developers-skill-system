@@ -14,7 +14,7 @@ The system improves through use. Demonstrated failures and corrections feed into
 4. Use specialist consultation, assurance, or an isolated subagent only when the unresolved decision requires it.
 5. Preserve one authoritative source for project state, decisions, lessons, and conventions.
 6. Scale planning, evidence, review, and durable records to consequence and reversibility.
-7. Preserve unfinished work on a non-live remote branch; publish completed work through the project’s authorised route.
+7. Keep one delivery batch across short chats: checkpoint remotely at handoff and publish once its agreed outcome and assurance are complete (`close-session`).
 
 ```text
 work
