@@ -44,13 +44,13 @@ Choose at most one next action: unblock this unit, resume its unfinished work or
 
 ## Output
 
-Start with these short lines in everyday language:
+Give the core handoff in short lines and everyday language:
 
 - **Status** — Say whether the requested work passed, is incomplete, or is blocked. Name what finished and where repository work was saved or landed. Say here if the batch is still open.
 - **Your action** — Give the one thing the user needs to do now. Write “None” when the batch is open and the next step belongs to an agent.
 - **Next** — When work remains, name who owns the next step and what they will do. Link the existing record for details.
 
-Keep evidence in the record. Add a material blocker or verification limit only when it affects the user's decision. End after the status when the work is complete and there is no next action.
+Lead with the core handoff by default. Include other information when it changes how the user understands the result or what they should do. Put it before the summary when it needs immediate attention. Keep routine evidence in the record. A completed task with no next action may need only a status line.
 
 For a handoff to another session, put **Next session** below the summary. Follow it with a fenced `text` block containing only the prompt to paste. Include the task, batch ID if assigned, verified branch, skill and record when applicable. Put **Model** and **Effort** on separate lines below the closing fence. Use the project's choices when specified.
 
