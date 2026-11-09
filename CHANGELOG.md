@@ -4,7 +4,7 @@ This file records material changes to the integrated system. Because the skills 
 
 ## 9 November 2026: Handovers lead with status and ownership
 
-Close-session gives a short status, says whether the user needs to act, and names the next owner. Relevant details can lead when they need immediate attention. A next-session prompt follows in a copyable box, with Model and Effort below it.
+Close-session marks the session goal Done or Not done, says whether the user needs to act, and names the next owner. Relevant details can lead when they need immediate attention. A next-session prompt follows in a copyable box, with Model and Effort below it.
 
 ## 9 November 2026: Visible batch IDs and PM planning
 

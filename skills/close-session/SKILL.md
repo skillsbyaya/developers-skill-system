@@ -46,7 +46,7 @@ Choose at most one next action: unblock this unit, resume its unfinished work or
 
 Give the core handoff in short lines and everyday language:
 
-- **Status** — Say whether the requested work passed, is incomplete, or is blocked. Name what finished and where repository work was saved or landed. Say here if the batch is still open.
+- Begin the status line with **Done** when this session achieved its requested goal, or **Not done** otherwise. Say what finished and where repository work was saved or landed. State separately if the wider batch is still open.
 - **Your action** — Give the one thing the user needs to do now. Write “None” when the batch is open and the next step belongs to an agent.
 - **Next** — When work remains, name who owns the next step and what they will do. Link the existing record for details.
 
