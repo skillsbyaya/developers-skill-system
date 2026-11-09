@@ -24,7 +24,7 @@ Cover only decisions needed for this scope:
 2. **Experience intent:** core action, desired progress, emotional or trust goal, success signals, and principles that resolve likely trade-offs.
 3. **Information architecture:** content hierarchy, navigation, entry points, orientation, progressive disclosure, and cross-journey consistency.
 4. **Journeys and flows:** initiation, decisions, feedback, completion, interruption, abandonment, failure, recovery, permissions, and return.
-5. **Interaction and copy:** controls, system feedback, focus and keyboard behaviour, motion intent, labels, instructions, confirmations, empty states, and errors.
+5. **Interaction and copy:** controls, system feedback, focus and keyboard behaviour, motion intent, labels, instructions, confirmations, empty states, and errors. Every string passes [Interface copy](../references/interface-copy.md) before it is written down; implementation copies it exactly.
 6. **States and boundaries:** loading, empty, partial, stale, offline or degraded, error, success, disabled, permission, destructive, and recovery states that are reachable for this product.
 7. **Responsive and inclusive behaviour:** how priority, layout, navigation, input, density, and feedback adapt across supported contexts; assistive technology, reduced motion, colour use, readable hierarchy, focus, and target requirements.
 
@@ -57,7 +57,7 @@ Resolve the risk at the lowest-cost layer that is sufficient:
 4. Add a deliberate commitment step only for material risk that the earlier layers do not control. Its effort must address the actual failure mode and remain operable by keyboard and assistive technology without depending on speed, precision, sustained movement, colour, or motion alone.
 5. After the action, show what happened, its scope, when it takes effect, and the available recovery or next step.
 
-Do not make routine warnings so frequent that users learn to dismiss them. A blocking confirmation is warranted only when the action is plausibly accidental, materially consequential, and not adequately recoverable or preventable. Explain any non-obvious or downstream effect before commitment without obscuring the choice with boilerplate.
+Do not make routine warnings so frequent that users learn to dismiss them. A blocking confirmation is warranted only when the action is plausibly accidental, materially consequential, and not adequately recoverable or preventable. State a non-obvious or downstream effect before commitment in the fewest words that change the decision; never explain how the system works.
 
 ## Define interface requirements and the UI handoff
 
@@ -81,6 +81,7 @@ Check that:
 - journeys cover relevant failure, interruption, permission, and recovery paths;
 - the chosen interaction reduces user work and conceptual load without hiding capability, assumptions, or state;
 - consequential interactions use the least burdensome sufficient safeguard and communicate the actual outcome before commitment;
+- every string passes [Interface copy](../references/interface-copy.md): each is cut to what the user needs to act, and none survives because it is accurate or helpful-sounding;
 - interaction, copy, states, accessibility, and responsiveness are implementable;
 - product, UX, UI, and architecture sources do not make competing claims;
 - component behaviour and state requirements are complete enough for UI design and implementation; and
