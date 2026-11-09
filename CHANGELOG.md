@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 9 November 2026: Focused checks cover what a change can break
+
+Delivery's narrow-tests-first rule no longer means only tests named after the feature. It now includes the project's sweep and inventory checks for that kind of change (catalogues, privilege floors, page or route lists, budgets), searching the tests for any user-visible text, route or identifier the change removes or renames, and never pinning a calendar date that today-dependent logic reads. Prompted by a week of nightly failures in one project: every defect came from a change whose session ran only feature-named tests.
+
 ## 9 November 2026: Handovers lead with status and ownership
 
 Close-session marks the session goal Done or Not done, says whether the user needs to act, and names the next owner. Relevant details can lead when they need immediate attention. A next-session prompt follows in a copyable box, with Model and Effort below it.
