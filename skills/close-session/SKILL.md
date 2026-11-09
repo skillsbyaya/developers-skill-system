@@ -44,25 +44,12 @@ Choose at most one next action: unblock this unit, resume its unfinished work or
 
 ## Output
 
-Normally use a few sentences:
+Start with these short lines, in order:
 
-- **Outcome:** what finished and any material verification limit. For repository work, give this task's actual branch and preservation or landing state, distinguishing repositories when more than one is involved.
-- **Problems, when present:** every unresolved issue affecting the user's immediate decisions, its practical impact and the needed action. A saved record does not replace surfacing a material blocker; link it instead of repeating its detail. Do not repeat a problem already explained in this response.
-- **Continuation, when needed:** one action with its owner. A user action, decision or wait is one plain sentence. An agent handoff is a prompt for the next session in exactly this shape:
+- **Status** — Say whether the requested work passed, is incomplete, or is blocked. Name what finished and where repository work was saved or landed. Say here if the batch is still open.
+- **Your action** — Give the one thing the user needs to do now. Write “None” when the batch is open and the next step belongs to an agent.
+- **Next** — When work remains, name who owns the next step and what they will do. Link the existing record for details.
 
-  ````markdown
-  **Next session**
+Keep evidence in the record. Add a material blocker or verification limit only when it affects the user's decision. If the user needs to start a new session, add a copyable `text` prompt with the task, batch ID if assigned, verified branch, skill and record. Include Model and Effort when project policy requires them. End after the status when the work is complete and there is no next action.
 
-  ```text
-  <what the next session is about, in plain words>. On <verified working branch>, <verb> <batch ID when assigned · unit ID and title> with <skill> from <existing record path>.
-
-  Model: <capability class>
-  Effort: <level>
-  ```
-  ````
-
-  Omit a branch or record that does not apply. Do not require a new chat or invent a record. Include Model and Effort when project policy asks for them or they help the continuation; otherwise High/high for consequential judgement and Standard/medium for settled work, naming the class, never a product.
-
-Report relevant parallel sessions from session evidence, not branch names; label unknown state honestly. When the user or project requests a branch inventory, fetch and list non-permanent remote branches as **Remote branches**, with commit age and verified merge state. Distinguish that inventory from active sessions; if retrieval fails, report it as unavailable rather than empty. Do not perform a repository-wide census on every close.
-
-No empty sections, repeated change report, routine check list, or manufactured next task.
+Name active sessions only from session evidence. When the user or project requests a branch inventory, fetch and list non-permanent remote branches under **Remote branches**, with commit age and verified merge state. Say when the inventory is unavailable.

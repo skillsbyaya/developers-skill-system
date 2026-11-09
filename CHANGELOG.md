@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 9 November 2026: Handovers lead with status and ownership
+
+Close-session puts the result and whether the batch is still open on the first line. It states whether the user needs to act and names the next owner. Evidence stays in the working record.
+
 ## 9 November 2026: Visible batch IDs and PM planning
 
 PM can plan numbered delivery batches in the existing queue, using stable BAT IDs beside unchanged item IDs. The batch workflow checks shared outcomes, dependencies, build authority, assurance and finish conditions; membership has one owner and does not duplicate item status. Delivery and handoffs preserve the batch identity across chats. The identifier convention defines PM allocation without a new counter or tracker.
