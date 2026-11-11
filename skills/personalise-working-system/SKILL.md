@@ -67,7 +67,6 @@ There is no central preferences profile. Use one owner per rule:
 | Project Git branching, review, or release convention | `agent-dev` Git-workflow consultation and project instructions |
 | Session-end reconciliation or handoff behaviour | `close-session` |
 | Project-wide facts, constraints, conventions, or hazards | `manage-project-context` or the discovering owner within its bounded authority |
-| Model and effort selection rules | `choose-model` when the choice is truly durable and surface-specific |
 | How Claude delegates a bounded task or independent pass to Codex | `use-codex` |
 
 Present one change plan grouped by owner before mutation. Identify affected consumers, project instructions, configuration, documents, and existing artifacts. Do not duplicate a rule into consumers that already read or follow its owner.

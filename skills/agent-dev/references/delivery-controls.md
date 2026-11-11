@@ -35,7 +35,7 @@ For changed behaviour, establish the smallest failing or observable check first 
 
 Establish claims yourself from implementation artifacts, tests, logs, rendered surfaces, and running dev behaviour when you are better placed to produce the evidence at proportionate cost. A human check is justified only when its result could change acceptance and it depends on the person's judgement or perception, assistive technology or a physical device, an app login or user-only account state, or an environment unavailable to you; an unusually heavy check the person can do reasonably well may also be delegated. State the reason for each retained human check.
 
-Batch foreseeable user-owned decisions. Stop before dependent work when an unresolved choice, not already settled by the request or project conventions, materially affects product behaviour, UX or copy, scope, architecture, public APIs or data, dependencies or services, compatibility, security or privacy, performance or cost, rollout, destructive behaviour, review boundaries, or accepted residual risk. Implementation mechanics the requirements and conventions determine stay with you.
+Batch foreseeable user-owned decisions (the core names which are the user's) and stop before dependent work on one the request or project conventions have not already settled.
 
 When evidence proves the implementation plan wrong, classify before editing its record. A change to outcome, acceptance, scope, or another user-owned constraint needs the user's decision. A technical defect in the plan may be corrected in place: keep the behaviours and tests that remain valid, amend only the bad guidance, invalidate dependent packet evidence, and rerun from the narrowest check. Keep an unrelated pre-existing issue outside this unit.
 

@@ -56,5 +56,4 @@ If the current delivery tracker has one unambiguous exact retrospective key for 
 - A one-off annoyance is not called recurring without consequential justification.
 - Previous commitments are assessed only where current evidence supports a verdict.
 - Improvements are few, observable, and routed to current owners.
-- Project facts do not enter the global lessons queue.
 - Saved output and tracker changes follow their current contracts without creating duplicate state.

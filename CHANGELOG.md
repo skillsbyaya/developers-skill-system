@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 11 November 2026: Two unused skills, the lessons queue and an over-broad ask list retired
+
+A usage audit of 353 sessions found `choose-model` and `uk-employment-law` never invoked; the first carried a model guide older than the models in use, the second was a diverged copy of `agent-compliance`'s Great Britain employment-law workflow and routed to four skills that do not exist. Both are removed; rerun `scripts/install.sh` to drop their installs. `learn-lessons` no longer keeps `~/.claude/LESSONS.md`: the file had held the same parked entries for two months while the runtime's memory did the job, so a correction is now settled in the run that finds it and the queue-review workflow is gone. Delivery asks the user about choices that change product behaviour, data, security, cost or anything hard to reverse, and makes purely technical calls itself with a one-line statement of cost; the earlier list also stopped for architecture, APIs, dependencies, compatibility and review boundaries.
+
 ## 9 November 2026: Focused checks cover what a change can break
 
 Delivery's narrow-tests-first rule no longer means only tests named after the feature. It now includes the project's sweep and inventory checks for that kind of change (catalogues, privilege floors, page or route lists, budgets), searching the tests for any user-visible text, route or identifier the change removes or renames, and never pinning a calendar date that today-dependent logic reads. Prompted by a week of nightly failures in one project: every defect came from a change whose session ran only feature-named tests.

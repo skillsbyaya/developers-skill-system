@@ -1,6 +1,6 @@
 ---
 name: learn-lessons
-description: "Prevents recurrence after a correction or delivery mistake, reviews and resolves unresolved agent-behaviour lessons, and runs retrospectives across completed epics, releases, milestones, or chosen work blocks. Use when the user explicitly asks to learn from a current failure, work through the lessons queue, find cross-work patterns, or check whether earlier improvements held."
+description: "Prevents recurrence after a correction or delivery mistake, and runs retrospectives across completed epics, releases, milestones, or chosen work blocks. Use when the user explicitly asks to learn from a current failure, find cross-work patterns, or check whether earlier improvements held."
 ---
 
 # Learn Lessons
@@ -14,31 +14,28 @@ Read exactly one workflow:
 | Request | Read |
 | --- | --- |
 | Learn from the current correction, mistake, or confirmed close-session lesson | [Current correction](workflows/current-correction.md) |
-| Review, implement, accept, merge, or clear existing unresolved lessons | [Review queue](workflows/review-queue.md) |
 | Review a completed epic, release, milestone, or chosen work block for cross-work patterns and improvements | [Completed-work retrospective](workflows/completed-work-retrospective.md) |
 
-An explicit workflow request selects it directly without consultation or sibling loading. Use current correction for one triggering exchange, queue review for existing unresolved entries, and completed-work retrospective for synthesis across several completed items or one consequential completed event. A `close-session` handoff may select only current correction.
+An explicit workflow request selects it directly without consultation or sibling loading. Use current correction for one triggering exchange and completed-work retrospective for synthesis across several completed items or one consequential completed event. A `close-session` handoff may select only current correction.
 
 Do not auto-trigger from frustration, generic criticism, a factual correction, cleanup alone, a simple status question, or a request whose primary job is editing a skill. Follow an `organise-docs` handoff during pruning only when it states that a serious preventable documentation-practice failure would lose important causal evidence if current correction were delayed. Routine preventable residue is captured compactly for packet or full close and does not trigger this skill.
 
 ## Ownership
 
-`~/.claude/LESSONS.md` is the single queue for unresolved agent-behaviour improvements. This skill alone creates, merges, increments, or removes its entries. Every run resolves what is parked: an entry waiting only on a decision is put to the user in that run. Nothing stays queued for permission that was never asked for.
-
-The queue is not history, native memory, project context, or a defect backlog. Route:
+This skill keeps no queue. A correction is settled in the run that finds it: installed, or put to the user and declined. Route:
 
 - durable project facts and constraints to the project-context owner;
 - corrective delivery work to the active story, change package, or backlog owner;
 - skill creation or change to `upskill`;
 - instruction, configuration, tool, hook, or deterministic-check changes to their canonical owner; and
-- only an unresolved preventable behaviour pattern to `LESSONS.md`.
+- a behaviour pattern whose fix genuinely cannot be decided yet to the runtime's own memory, once, naming what has to happen first.
 
-A completed-work retrospective does not write to `LESSONS.md`. When it identifies a supported agent-behaviour correction, finish the retrospective with the exact evidence and select current correction only if the user asks to continue; do not preload both workflows.
+When a completed-work retrospective identifies a supported agent-behaviour correction, finish the retrospective with the exact evidence and select current correction only if the user asks to continue; do not preload both workflows.
 
-A single incident may justify a durable fix when the cause and prevention are clear. Recurrence strengthens only an entry that is still unresolved. Once the fix is applied and verified, remove the entry; a later recurrence starts new evidence at `×1`.
+A single incident may justify a durable fix when the cause and prevention are clear.
 
 ## Protected changes
 
-Queue maintenance is part of this skill. Changes to skills, instruction files, skill metadata, hooks, scripts, configuration, tools, or project artifacts require the authority appropriate to that target. An explicit request to apply a specific correction supplies that authority; a general request to “learn lessons” does not.
+Changes to skills, instruction files, skill metadata, hooks, scripts, configuration, tools, or project artifacts require the authority appropriate to that target. An explicit request to apply a specific correction supplies that authority; a general request to “learn lessons” does not.
 
 Finish with the selected scope, evidence and limitations, conclusions, destinations used, changes and verification completed, and anything that remains unresolved.
