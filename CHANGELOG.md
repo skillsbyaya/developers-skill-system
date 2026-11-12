@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 12 November 2026: Fewer landings per story
+
+A review of 76 sessions and 88 landings over five days found closing and landing took about a quarter of token spend: a third of the landings changed only documents, and one small story landed as five pull requests. A prepared story record is now the story's first checkpoint and lands with its build. Each packet after the first states the boundary that separates it, parts with no boundary are one packet, and a handoff prompt no longer says when to land. A change that only records a result waits on its batch's branch or a `notes/` branch for the next landing. PM gives a batch number only to two or more items that share set-up; a story on its own has none.
+
 ## 11 November 2026: Two unused skills, the lessons queue and an over-broad ask list retired
 
 A usage audit of 353 sessions found `choose-model` and `uk-employment-law` never invoked; the first carried a model guide older than the models in use, the second was a diverged copy of `agent-compliance`'s Great Britain employment-law workflow and routed to four skills that do not exist. Both are removed; rerun `scripts/install.sh` to drop their installs. `learn-lessons` no longer keeps `~/.claude/LESSONS.md`: the file had held the same parked entries for two months while the runtime's memory did the job, so a correction is now settled in the run that finds it and the queue-review workflow is gone. Delivery asks the user about choices that change product behaviour, data, security, cost or anything hard to reverse, and makes purely technical calls itself with a one-line statement of cost; the earlier list also stopped for architecture, APIs, dependencies, compatibility and review boundaries.

@@ -4,9 +4,9 @@ Read this reference for a named packet in a multi-packet story or change package
 
 ## Packet size
 
-Use as few packets as the work allows. Split only at a boundary you can see in the plan: a human step sits between the parts (the user configuring an external account), or a later part needs an earlier part landed and proven first (a schema change before the screens that use it). Short chats may resume the same packet; a chat boundary does not require a new packet, review or landing.
+Use as few packets as the work allows. Split only at a boundary you can see in the plan: a human step sits between the parts (the user configuring an external account), or a later part needs an earlier part landed and proven first (a schema change before the screens that use it). Parts with neither boundary are one packet, however many screens or rows they touch, and only a packet that must land first lands before the story. Short chats may resume the same packet; a chat boundary does not require a new packet, review or landing.
 
-Give each packet a stable ID, its outcome, the acceptance it covers, dependencies, likely change surface, non-goals where scope could drift, verification, and one state: `pending`, `ready`, `in-progress`, `blocked`, `done`, or `invalidated`. Packets are not tracker items.
+Give each packet a stable ID, its outcome, the boundary that separates it from the packet before, the acceptance it covers, dependencies, likely change surface, non-goals where scope could drift, verification, and one state: `pending`, `ready`, `in-progress`, `blocked`, `done`, or `invalidated`. Packets are not tracker items.
 
 Exactly one packet is in progress at a time. A broad request to build, continue, or finish a story selects its current or next ready packet. When that packet's gate passes, the same session continues to the next ready packet unless a human checkpoint, a decision that is the user's, unavailable required independent evidence, or the core's running-out rule intervenes; the user may also choose shorter chats without changing delivery boundaries. A corrected or invalidated packet invalidates downstream completion whose evidence no longer holds. A human checkpoint is a hard stop before dependent work.
 

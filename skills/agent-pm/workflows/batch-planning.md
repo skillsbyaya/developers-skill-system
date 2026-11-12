@@ -6,9 +6,9 @@ PM owns batch scope, membership and order in the existing queue or plan. Dev own
 
 Read current membership and the owning records of plausible members: outcomes, readiness, dependencies and assurance constraints. Preserve priority, deadlines, item IDs and active ownership.
 
-- **One story is normally one batch.** Reuse its scope and finish condition. Combine backlog candidates into a story only when they share an outcome and acceptance.
-- **Independent small fixes may share a batch** when shared integration, test setup or review saves meaningful work. Do not invent a story to bundle them, or group unrelated work merely because it is small or in the same area.
-- **A story spans batches only at a real delivery boundary:** Dev confirms that an earlier part must land first or a portion is independently acceptable. Identify exact scope; never clone the whole story into several batches.
+- **A story on its own needs no numbered batch.** Its record already holds its scope and finish condition; give it no batch ID or row. Combine backlog candidates into a story only when they share an outcome and acceptance.
+- **Batch independent small items that share set-up:** the same code to load, test set-up and review, so one session and one landing carry them. Unbatched, each costs its own session and landing. Do not invent a story to bundle them, or group unrelated work merely because it is small or in the same area.
+- **Part of a story joins a batch only at a real delivery boundary:** Dev confirms that an earlier part must land first or a portion is independently acceptable. Identify exact scope; never clone the whole story into several batches.
 - **Packets stay with Dev.** They are implementation steps inside a story. A batch is a checking/landing boundary; a chat is neither. Do not insert every layer into every task.
 
 ## Plan the boundary
@@ -35,4 +35,4 @@ At delivery start, Dev records the branch and starting revision once in the batc
 
 ## Validate and finish
 
-Check unique IDs, one membership owner, no duplicate scope, valid owner links, dependency order, build authority, feasible shared assurance and an explicit finish condition. Return the compact table or changed rows, the grouping reason, unresolved decisions and next ready batch. Do not silently start delivery or assign other sessions. An authorised delivery handoff carries the batch ID, member owners, established branch and finish condition.
+Check unique IDs, two or more members per batch, one membership owner, no duplicate scope, valid owner links, dependency order, build authority, feasible shared assurance and an explicit finish condition. Return the compact table or changed rows, the grouping reason, unresolved decisions and next ready batch. Do not silently start delivery or assign other sessions. An authorised delivery handoff carries the batch ID, member owners, established branch and finish condition.
