@@ -2,6 +2,10 @@
 
 This file records material changes to the integrated system. Because the skills are interconnected, update notes describe system-level behaviour rather than isolated skill releases.
 
+## 12 November 2026: Close-session trimmed, with a repository line on every full close
+
+An audit of 228 Claude and 73 Codex closes in a fortnight found the skill doing its job (two closes ended by asking permission to land, none opened a PR to save work) while growing into the library's longest file through twelve edits in six days. It now points at batch planning and the project's workflow instead of restating them, and is about a tenth shorter; no approved rule was dropped. Every full close reports the worktrees and non-permanent remote branches that exist, with age and merge state, because leftover worktrees were accumulating unseen; removal rules are unchanged. The `notes/<topic>` fallback stays, but a project's own record-only branch policy takes precedence, and the handoff's Model line names a model, not a tier.
+
 ## 12 November 2026: Fewer landings per story
 
 A review of 76 sessions and 88 landings over five days found closing and landing took about a quarter of token spend: a third of the landings changed only documents, and one small story landed as five pull requests. A prepared story record is now the story's first checkpoint and lands with its build. Each packet after the first states the boundary that separates it, parts with no boundary are one packet, and a handoff prompt no longer says when to land. A change that only records a result waits on its batch's branch or a `notes/` branch for the next landing. PM gives a batch number only to two or more items that share set-up; a story on its own has none.
