@@ -34,7 +34,7 @@ Do not read full persona bodies or maintain a second identity registry. If the h
 
 ## Worker policy
 
-Policy: `optional-expensive`, authorised by the user's explicit request for Party Mode, a roundtable, or multiple independent perspectives.
+Workers are authorised by the user's explicit request for Party Mode, a roundtable, or multiple independent perspectives.
 
 Use the restricted `persona-panelist` subagent so each panelist has no tools. Default to two to four panelists. Use five or six only when the topic materially spans that many independent domains or the user explicitly names them. Six is the per-pass cap; for a larger requested roster, propose two focused passes rather than silently omitting voices.
 

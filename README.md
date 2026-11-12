@@ -52,7 +52,7 @@ This repository is the canonical distribution. Installed copies under a runtime'
 | --- | --- | --- |
 | Shared skills | `~/.claude/skills/` | `~/.agents/skills/` |
 | Platform-specific skills | `platform/claude/skills/` when present | `platform/codex/skills/` |
-| Subagents | `~/.claude/agents/` | Platform-specific support to be assessed |
+| Subagents | `~/.claude/agents/` | None |
 
 Clone the repository first:
 
@@ -84,21 +84,9 @@ Use `codex` instead of `claude` for a Codex cloud environment. This tracks `main
 
 Claude Code subagents are not installed into Codex. Codex can use the shared skills, but it has a different agent model and no equivalent subagent package is claimed here.
 
-### Upgrading documentation conventions
-
-After updating the integrated skills, remove these obsolete resources from each installed skill root (`~/.claude/skills/` or `~/.agents/skills/`), preserving any personal customisations first:
-
-- `organise-docs/doc-conventions.csv`
-- `organise-docs/references/convention-resolution.md`
-- `organise-docs/templates/project-conventions.md`
-
-[Documentation guidance](skills/manage-project-context/templates/documentation-conventions.md) starts from the areas people work on: related documents stay together, with links to shared authorities. Skills follow the convention source named by project instructions or context; a separate convention file need not move. Existing project rules and paths change only through an explicit adoption task. Projects that still inherit removed global defaults need to record the rules they rely on when adopting this version.
-
 ## Project status
 
 The repository is the distribution source of truth; installed copies are deployments for a specific AI coding environment. Make changes here (directly, or through linked runtimes), validate them, and commit and push them; cloud sessions pick them up at their next start.
-
-Material changes are recorded in the [change log](CHANGELOG.md).
 
 ## Maintenance
 

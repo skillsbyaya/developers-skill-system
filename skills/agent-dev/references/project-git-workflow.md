@@ -10,7 +10,7 @@ Use this default only where the project has no stronger requirement:
 
 | Stage | Branching and delivery convention |
 | --- | --- |
-| No real users or real data depend on the project | Work directly on `main`; no routine pull request, release tag, or changelog ceremony. Apply proportionate verification and the commit safety check. |
+| No real users or real data depend on the project | Work directly on `main`; no routine pull request, release tag, or changelog ceremony. Apply proportionate verification and `close-session`'s commit check. |
 | Real users or real data depend on the project | Use a working `dev` or sandbox branch for changes and integrate to `main` only for a live release. Review the integrated change proportionately before release; tag the released `main` revision with the project's version convention. No changelog prose is required by default. |
 
 Cross at the point real users or real data first depend on the project. Do not infer a single protected branch when repository policy maps different modules, environments, or change types to different branches.

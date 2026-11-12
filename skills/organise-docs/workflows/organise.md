@@ -19,7 +19,7 @@ Follow project instructions or context to the declared documentation conventions
 
 - **Placement and naming:** group material by the subject people work on, keeping its current requirements, research, design, and active work together. Link shared authorities from that folder rather than copying them. Follow established naming and lifecycle rules; record a recurring gap only when it would affect future placement. Preserve stable paths or identifiers when churn would cost more than the inconsistency.
 - **Duplication:** two documents may duplicate wholly, or share only a restated argument while both stay live. Archive a wholly superseded copy once still-useful unique content is merged; where only an argument is shared both documents usually survive, so one owner carries the reasoning and every other site keeps the conclusion and a pointer. **The owner is the document whose stated purpose is incomplete without the content** — where a record of work and a durable reference both hold it, the reference owns it and the record cites. **Check the copies still agree before choosing:** a pair that has drifted apart identifies which side is stale, and that correction is worth more than the tidy-up, but resolve it against an explicit current authority as concept staleness requires below — never by preferring the better-written copy or the more recently changed file. **Lifecycle decides whether there is anything to fix:** a live delivery record legitimately carries its own argument, while a retired or archived one is frozen history and is never edited to remove a repetition.
-- **Hygiene staleness:** remove finished-work-as-current, dated session framing, obsolete navigation, duplicated history, and next-action sections that contain anything other than the actual next direction.
+- **Hygiene staleness:** remove finished-work-as-current, dated session framing, obsolete navigation, duplicated history, and next-action sections that contain anything other than the actual next direction. Apply `clean-up`'s [residue check](../../clean-up/references/residue.md) to the documents in scope, including its producer step.
 - **Concept staleness:** remove a reversed decision, abandoned approach, or invalid claim only from an explicit current decision or stale-concepts list. Never infer a pivot from tidy but older prose.
 - **Size and structure:** split only when parts have distinct lasting purposes or readers. Keep one source intact when the real need is a shorter derivative and route that need to the `agent-writer` distillation workflow.
 - **Discoverability:** repair broken inbound links and navigation. Do not reject an intentionally standalone document merely because nothing links to it.
@@ -29,19 +29,11 @@ Prune always-read control and context files hardest because their cost recurs. K
 
 When the sweep finds a consequential documentation gap, report the intended reader, decision it blocks, and evidence for the gap. Do not inspect code or author domain content merely to fill it.
 
-## Preserve evidence from preventable documentation residue
-
-When pruning finds supported evidence that an item remained in the live set because the responsible producing or closing workflow did not clean it up at the right time, or that it should never have been recorded durably, capture one compact learning candidate instead of invoking `learn-lessons`. Record only the affected artifact, the expected lifecycle or recording boundary, how it entered or remained in the live set when known, and the consequence. Put the candidate in the current owning story or package when one exists so packet close can preserve it; otherwise include it in the current work outcome for full close. Do not create a standalone lesson note or queue entry.
-
-Invoke `learn-lessons` with its current-correction workflow during pruning only for a serious preventable failure when delaying would genuinely lose important causal evidence, such as when cleanup must remove the only source from which the cause can be established and compact capture cannot preserve it. The urgency must come from the evidence-loss risk, not merely from the fact that the residue was preventable.
-
-Keep the documentation cleanup moving, but do not expand it into protected skill, instruction, configuration, tool, or project changes without the authority those targets require.
-
 ## Assess convention mismatches
 
 Treat a difference from the resolved convention as a decision to assess, not an automatic defect to normalise. For each mismatch:
 
-1. State the adopted rule and cite its declared authority. A difference from a global template is not a project defect.
+1. State the adopted rule and cite its declared authority.
 2. Describe the smallest adjustment that would conform and the practical payoff, such as clearer discovery, lower ambiguity, repaired automation, reduced recurring maintenance, or consistency that helps real readers.
 3. Assess migration cost and safety: stable-path or identifier churn, inbound references, external links, hardcoded consumers, producing skills, tooling, collisions, concurrent work, archive or history value, reversibility, and risk of losing unique content.
 4. Give one verdict:
@@ -58,7 +50,7 @@ Do not recommend migration for cosmetic consistency alone. Group mismatches only
 1. Read the adopted project rule and representative artifacts, including consumers that hardcode affected paths. If the target is unresolved, return the concrete mismatch and required decision to the convention owner; do not infer approval for a redesign from a cleanup request.
 2. Propose file migrations, inbound-reference repairs, affected consumers, collisions, exceptions, and whether adoption is forward-only or retrospective. Preserve useful fixed-name contracts, unique content, and stable identifiers.
 3. When authorised, update the affected project convention with its adopted form and any deliberate exception. Global preference changes belong to `personalise-working-system`; producing-skill changes belong to `upskill`.
-4. Migrate only the approved scope and repair affected references. Do not move files merely because the global template changed.
+4. Migrate only the approved scope and repair affected references.
 5. Verify representative existing paths and one future path against the adopted rule. Record any forward-only boundary with the convention so later cleanup does not undo it.
 
 For an identifier-vocabulary change, preserve stable base IDs and archives. Update current suffixes and affected current references only after the vocabulary change is approved. Remove an unused area only when no current ID uses it, no current document declares it, no alias or current product language needs it, and no active near-term work needs it.

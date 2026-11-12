@@ -13,11 +13,11 @@ A **packet close** checkpoints while work continues; a **full close** ends the c
 
 ## 1. Save missing continuity
 
-Save unfinished work, decisions, constraints and findings once, with the project's declared state owner, otherwise the story, package or plan. Replace stale text and link existing records; touch other documents only where this work made them wrong. Route distinct follow-up work through backlog planning.
+Save unfinished work, decisions, constraints and findings once, with the project's declared state owner, otherwise the story, package or plan. Replace stale text and link existing records; touch other documents only where this work made them wrong. When this work fixed a defect or removed a rule, delete every note, memory and workaround that existed because of it, and leave no record that it went: the commit message carries the reason. Route distinct follow-up work through backlog planning.
 
-Preserve unresolved defects, recurring failures and workarounds that leave a future cost. If the cause is unknown, save the evidence and the next diagnostic, not an invented fix. Expected failures and resolved transient mistakes need no item. Never dismiss a real defect because its workaround succeeds.
+Save an unresolved defect or recurring failure as work to fix, through backlog planning: its cause or, when unknown, the evidence and the next diagnostic, not an invented fix. Its workaround is written in that item and nowhere else, so it leaves when the fix lands. Expected failures and resolved transient mistakes need no item.
 
-Reconcile only affected status and next-action entries; replace settled questions with their decisions and sources. If reconciliation cannot finish safely, record the exact remaining edit with its owner. Send a confirmed agent-behaviour correction through `learn-lessons` only when it would otherwise be lost. Create no session diary or separate handoff document.
+Reconcile only affected status and next-action entries; replace settled questions with their decisions. If reconciliation cannot finish safely, record the exact remaining edit with its owner. Send a confirmed agent-behaviour correction through `learn-lessons` only when it would otherwise be lost. Create no session diary or separate handoff document.
 
 ## 2. Preserve or land
 

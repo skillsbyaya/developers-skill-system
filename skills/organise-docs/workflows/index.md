@@ -5,7 +5,7 @@ Create or refresh navigation for a bounded folder without changing the documents
 ## Set the boundary
 
 1. Resolve the target folder from the request or one obvious supplied path; ask one short question only when several plausible folders remain.
-2. Follow the project's declared navigation convention. Reuse an existing README or index; otherwise use `README.md` inside the folder. Do not load the global template for this lookup.
+2. Follow the project's declared navigation convention. Reuse an existing README or index; otherwise use `README.md` inside the folder.
 3. Inspect immediate eligible files and subdirectories. Recurse only when requested or when a small nested documentation tree clearly benefits from one index; state the boundary before traversing a large tree.
 4. Exclude the index itself, hidden files, build or generated outputs, archives, and non-document assets unless requested. Do not follow a symlink outside the target boundary.
 

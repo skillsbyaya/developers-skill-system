@@ -51,7 +51,7 @@ Drop a part when it has nothing true to say. Do not invent changes, a preconditi
 ## Behaviour to preserve
 
 - Ticks persist in `localStorage`, keyed by a hash of the step text — so inserting, removing, or reordering steps does not scramble unrelated ticks. Give `KEY` a slug unique to this checklist, or two published checklists can share one set of ticks.
-- To invalidate one retained step after a fix without changing its wording, use the current template behaviour and add a new revision token to its input, for example `data-recheck="revision-2"`. The template ignores that step's older stored tick, then persists the new pass under the token. Change the token again only if a later change invalidates the result again. When revising an artifact created from an older template, refresh its checklist script from the current template before using a token.
+- To invalidate one retained step after a fix without changing its wording, add a new revision token to its input, for example `data-recheck="revision-2"`. The template ignores that step's older stored tick, then persists the new pass under the token. Change the token again only if a later change invalidates the result again. When the artifact's checklist script does not read `data-recheck`, refresh it from the template before using a token.
 - Items marked `data-opt` are excluded from the required count. Decisions to confirm are not outstanding work.
 - Print hides progress and the clear button, and avoids breaking a section across pages.
 

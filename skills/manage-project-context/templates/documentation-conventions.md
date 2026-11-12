@@ -33,6 +33,6 @@ These are examples, not folders or artifacts to create. Add concrete naming exam
 
 ## Adopt changes deliberately
 
-Apply explicit user decisions and project rules before these starting choices. A template update does not move existing files or replace adopted conventions. For a legacy record that inherits unspecified global defaults, resolve the affected rules during adoption and write the choices the project still needs into its own source.
+Apply explicit user decisions and project rules before these starting choices. A template update does not move existing files or replace adopted conventions.
 
 When changing an existing organisation, state whether the change governs new work only or a specified existing set. `organise-docs` owns moves and reference repairs. Keep one convention authority; consolidation is needed only when sources compete, not merely because the rules live outside project context.

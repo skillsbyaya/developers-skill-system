@@ -18,11 +18,11 @@ Read exactly one workflow:
 
 An explicit workflow request selects it directly without consultation or sibling loading. Use current correction for one triggering exchange and completed-work retrospective for synthesis across several completed items or one consequential completed event. A `close-session` handoff may select only current correction.
 
-Do not auto-trigger from frustration, generic criticism, a factual correction, cleanup alone, a simple status question, or a request whose primary job is editing a skill. Follow an `organise-docs` handoff during pruning only when it states that a serious preventable documentation-practice failure would lose important causal evidence if current correction were delayed. Routine preventable residue is captured compactly for packet or full close and does not trigger this skill.
+Do not auto-trigger from frustration, generic criticism, a factual correction, cleanup alone, a simple status question, or a request whose primary job is editing a skill.
 
 ## Ownership
 
-This skill keeps no queue. A correction is settled in the run that finds it: installed, or put to the user and declined. Route:
+A correction is settled in the run that finds it: installed, or put to the user and declined. Route:
 
 - durable project facts and constraints to the project-context owner;
 - corrective delivery work to the active story, change package, or backlog owner;

@@ -9,4 +9,4 @@ The current Claude Code system uses four bounded subagents, stored under `claude
 - `skill-scout-quarantine`
 - `untrusted-content-reader`
 
-These definitions have restricted tools and specific safety or independence roles. They must be installed into the platform's subagent location rather than its skills location. The first release will document Claude Code installation explicitly and will claim Codex support only where an equivalent, enforceable worker boundary has been verified.
+These definitions have restricted tools and specific safety or independence roles. They must be installed into the platform's subagent location rather than its skills location: `scripts/install.sh` places them in `~/.claude/agents/`. Codex receives none.
