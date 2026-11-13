@@ -38,9 +38,9 @@ Resolve user-owned decisions this task needs before dependent work, batched wher
 
 Delivery owns when evidence is needed: before dependent work, at completion, or at release. A checkpoint brings none of those forward; carry pending checks in the existing record and never call the unit complete, or land it, with required evidence missing.
 
-Choose at most one next action, in this order: unblock this unit; resume its unfinished work or required assurance; resume the oldest other open unit that can move; only then the next ready item in the existing plan. Started work is finished before new work starts.
+Choose at most one next action, in this order: unblock this unit; resume its unfinished work or required assurance; the oldest other open unit that can now be finished; the oldest that can only move a step; only then the next ready item in the existing plan. Started work is finished before new work starts.
 
-An open unit is a non-permanent remote branch holding work that has not landed. Leave out one a parallel session is working on, named from session evidence only, instead of reassigning its work. Before passing over any other, read the wait its record names and test it now: the version released, the change landed, the date reached. A wait that has ended makes that unit the next action; replace the stale wait in its record. A wait only the user can end goes in **Your action**. A unit with no recorded wait can move.
+An open unit is a non-permanent remote branch holding work that has not landed. Leave out one a parallel session is working on, named from session evidence only, instead of reassigning its work. Before passing over any other, read the wait its record names and test it now: the version released, the change landed, the date reached. A wait that has ended makes that unit the next action; replace the stale wait in its record. A wait only the user can end goes in **Your action**. A unit with no recorded wait can move; it can be finished when its record leaves only its last step or check.
 
 When the requested outcome is complete and no open unit can move, end without a handoff.
 
