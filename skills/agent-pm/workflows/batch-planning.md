@@ -1,6 +1,6 @@
 # Delivery Batch Planning
 
-PM owns batch scope, membership and order in the existing queue or plan. Dev owns implementation and acceptance evidence; `close-session` owns checkpoints and landing. A read-only request returns a view; planning does not authorise implementation.
+PM owns batch scope, membership and order in the backlog, or in the owner the project declares for sequence. Dev owns implementation and acceptance evidence; `close-session` owns checkpoints and landing. A read-only request returns a view; planning does not authorise implementation.
 
 ## Choose the simplest structure
 
@@ -21,7 +21,7 @@ Define the finish condition: included scope accepted, outstanding integrated che
 
 ## Record once and display
 
-Follow [identifier conventions](../../organise-docs/references/identifier-conventions.md). Use one **Delivery batches** section in the existing queue or plan; no batch document or second tracker. It owns membership and order, linking item owners instead of copying acceptance or status.
+Follow [identifier conventions](../../organise-docs/references/identifier-conventions.md). Record batches where the backlog lists its sessions, in build order; no batch document or second tracker. That table owns membership and order, linking item owners instead of copying acceptance or status. The columns below are the minimum.
 
 | Batch | Outcome | Member IDs and owner links | Order / prerequisite | Finish condition |
 | --- | --- | --- | --- | --- |

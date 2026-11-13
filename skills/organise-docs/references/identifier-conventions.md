@@ -40,7 +40,7 @@ Do not introduce a new prefix merely to label prose. Add a type only when items 
 
 ## Delivery batch identity
 
-Use `BAT1`, `BAT2`, … for project-wide batch IDs unless the project has an adopted batch scheme. Display `BAT3 · B14 — Invoice totals`; the batch is a relationship, never an item suffix, replacement key or filename component. Numbers survive reorder and retitle and never imply priority. PM owns membership in one existing queue or plan; delivery preserves the assigned ID.
+Use `BAT1`, `BAT2`, … for project-wide batch IDs unless the project has an adopted batch scheme. Display `BAT3 · B14 — Invoice totals`; the batch is a relationship, never an item suffix, replacement key or filename component. Numbers survive reorder and retitle and never imply priority. PM owns membership in the backlog; delivery preserves the assigned ID.
 
 For this type, PM may allocate numbers during an authorised batch-planning edit. Use the project allocator when present; otherwise inspect issued batch IDs in the authoritative current and retained planning/landing records (including Git history when retired rows were removed), allocate above the highest issued number, and recheck the source before writing. Start at BAT1 only after confirming none was issued. If history is unavailable or another writer overlaps, resolve allocation before assigning numbers. Do not add a separate counter, registry or batch tracker. Retired IDs are not recycled.
 

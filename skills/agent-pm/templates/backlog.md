@@ -1,19 +1,26 @@
 # Backlog
 
-> Group discretionary uncommitted work by the outcome sought or problem addressed, even when related candidates touch different product or system areas. Use governed identifier suffixes for area routing rather than repeating that taxonomy as backlog structure. Headings and adjacency support comparison and shaping, not delivery chunking or a total priority order. When governed IDs are active, pair each canonical ID with its item title; otherwise do not invent numbers. An unqualified item is available for assessment, not build approval; qualify exceptions as `(needs shaping — owner)`, `(waiting — blocker; check date or event)`, or `(not now — reason or revisit trigger)`. Remove completed or adopted items instead of keeping history.
+> Everything not yet started, in the order it is built. Tiers run top to bottom and sessions top to bottom inside a tier; take the first session whose prerequisite is met. A session is one sitting and one landing: a batch of items that share set-up and checks, or one item or story alone. A prerequisite is only something that cannot be done sooner; "until it is first needed" is not one. When governed IDs are active, pair each canonical ID with its item title; otherwise do not invent numbers. Qualify exceptions as `(needs shaping — owner)`, `(waiting — blocker; check date or event)`, or `(not now — whose decision and why)`. Remove completed or adopted items instead of keeping history; started work lives in the delivery-status owner, not here.
 
-## [Outcome sought or problem addressed]
+## [Tier: what this work protects or unlocks]
 
-> Replace this placeholder with a concise statement of why the work may be worth doing, using the project's current product language and evidence. Keep only occupied themes. Related candidates may span several routed areas when they pursue the same outcome or address the same problem.
+> One or two sentences on why this tier comes where it does. Keep only occupied tiers, most important first.
 
-### [Optional review cluster]
+| Session | Members | Needs first | Finished when |
+| --- | --- | --- | --- |
 
-> Use one sub-heading level only when alternatives, sub-problems, or another recurring comparison materially improve shaping. Omit it when a flat theme is clearer; never use it for area, status, priority, size, complexity, risk, an epic, a delivery chunk, a team, or a lifecycle stage.
+### [Item title]
 
-## Obligations and triggered work
+> Problem or intended outcome, source, and enough scope and evidence to distinguish the work.
 
-> Keep only work made necessary by a named obligation, deadline, external commitment, or observable trigger. State that forcing condition with the item; do not use this section for merely important discretionary work.
+## Waiting on something outside the work
+
+> Keep only work that an account, purchase, date or another party's act holds. Name what ends the wait.
+
+## No session of their own
+
+> Keep only work done inside whatever next touches the same code, and unreproduced failures whose evidence capture is already built.
 
 ## Unframed candidates
 
-> Keep only captured work whose intended outcome or problem is not yet clear enough for honest placement. State the question or missing evidence needed to frame it. This is a temporary exception, not a synonym for all work that still needs shaping.
+> Keep only captured work whose intended outcome or problem is not yet clear enough for honest placement. State the question or missing evidence needed to frame it.

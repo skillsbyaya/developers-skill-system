@@ -25,21 +25,21 @@ An unqualified candidate is available for assessment, not automatically approved
 
 - `(needs shaping — owner or workflow)` for unresolved definition or requirements. An available owner can resolve this work; it is not an external wait.
 - `(waiting — blocker; check date or event)` for an external party, event or missing evidence. State what would unlock it. After an unsuccessful scheduled check, retain the blocker and set the next check; reaching a date does not satisfy the dependency.
-- `(not now — reason or revisit trigger)` for deliberately deferred work.
+- `(not now — whose decision and why)` for work the user has deliberately set aside. "Until it is first needed" is not a reason: work known to be needed takes its place in the order, and is built when that place comes up.
 
 Ask a user-owned decision when it can be resolved now rather than parking it as waiting. Route UX, UI or architecture judgement to its specialist, approved decomposition to epics and stories, and authorised implementation to Dev. Keep a deadline, earliest-start date, hard prerequisite, preferred order and priority distinct. Do not hide an actionable decision or overdue blocked commitment in a passive waiting item.
 
-## Group for comparison
+## Keep it in build order
 
-Use the smallest useful set of outcome or problem themes, named from actual product language and candidates. Group across areas when comparison helps; use identifier suffixes for area routing. Preserve a meaningful theme and unrelated order during routine capture. Add, merge, rename or split themes only when the distinction improves shaping or comparison.
+The backlog is the plan for everything not yet started, so its order is the order of work: unless the project declares another owner for sequence, file position is priority. Use a few tiers named for what each protects or unlocks, most important first, in the project's own product language. Inside a tier, list sessions in order: a batch of items that share set-up and checks ([Delivery batch planning](batch-planning.md)), or one item or story on its own. Place every new item in a tier and a session at capture; nothing waits in an unordered pile. Do not group by area, size, team or epic; use identifier suffixes for area routing.
 
-Within a substantial theme, allow one optional sub-heading level for alternatives or sub-problems; omit it when adjacency is enough. Do not group by area, readiness, priority, size, risk, team, epic or delivery package. Themes and file position neither set total priority nor define execution boundaries.
+Order by importance: what protects people already relying on the product, then what the next milestone needs, then approved breadth, with work that lowers the cost of every later session taken at a stated rhythm rather than left to the end. Record a prerequisite only for something that cannot be done sooner: an earlier item, a release that must be live, an account, purchase or date, or a choice the user has yet to make. A release date alone, or the first customer who will use the feature, is not a prerequisite.
 
-Use **Obligations and triggered work** only for a named obligation, deadline, commitment or observable trigger. Use **Unframed candidates** only when the outcome is unclear, stating the missing framing question. Remove empty themes and exception sections with their guidance.
+Keep three exception sections, each only while occupied: **Waiting on something outside the work** for an account, purchase, date or another party's act, naming what ends the wait; **No session of their own** for work done inside whatever next touches the same code, and for an unreproduced failure whose evidence capture is already built; **Unframed candidates** when the outcome is unclear, stating the missing framing question. Started work is not in the backlog: it lives in the project's delivery-status owner, so the two never list the same work.
 
 Use the project's existing ownership convention for active uncommitted work. If it uses `(in progress)` markers, identify the owning session or record and preserve its scope. Non-overlapping work may proceed within project concurrency limits; competing claims require resolution. An active marker does not control where an unrelated candidate is filed, and a marker alone is not a concurrency lock.
 
-When organising selected candidates, distinguish one shared outcome needing a story from independent fixes that can share delivery checks. Route approved shared acceptance to epics and stories; do not invent a story merely to bundle fixes. For numbered delivery groups and the next executable sequence, use [Delivery batch planning](batch-planning.md). Backlog themes remain comparison groups; the existing queue or plan owns batch membership. Show assigned batch IDs beside item IDs in requested work lists, resolving them from that owner. Capture alone does not allocate a batch.
+When organising selected candidates, distinguish one shared outcome needing a story from independent fixes that can share delivery checks. Route approved shared acceptance to epics and stories; do not invent a story merely to bundle fixes. For numbered delivery groups and the next executable sequence, use [Delivery batch planning](batch-planning.md). The backlog owns batch membership and order. Show assigned batch IDs beside item IDs in requested work lists. Capture alone does not allocate a batch.
 
 ## Transfer without losing scope
 
