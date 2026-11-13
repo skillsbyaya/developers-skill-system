@@ -38,7 +38,11 @@ Resolve user-owned decisions this task needs before dependent work, batched wher
 
 Delivery owns when evidence is needed: before dependent work, at completion, or at release. A checkpoint brings none of those forward; carry pending checks in the existing record and never call the unit complete, or land it, with required evidence missing.
 
-Choose at most one next action: unblock this unit, resume its unfinished work or required assurance, then the next ready item in the existing plan. Name relevant parallel sessions from session evidence only, instead of reassigning their work. When the requested outcome is complete and nothing needs continuation, end without a handoff.
+Choose at most one next action, in this order: unblock this unit; resume its unfinished work or required assurance; resume the oldest other open unit that can move; only then the next ready item in the existing plan. Started work is finished before new work starts.
+
+An open unit is a non-permanent remote branch holding work that has not landed. Leave out one a parallel session is working on, named from session evidence only, instead of reassigning its work. Before passing over any other, read the wait its record names and test it now: the version released, the change landed, the date reached. A wait that has ended makes that unit the next action; replace the stale wait in its record. A wait only the user can end goes in **Your action**. A unit with no recorded wait can move.
+
+When the requested outcome is complete and no open unit can move, end without a handoff.
 
 ## Output
 
@@ -47,7 +51,7 @@ Give the core handoff in short lines and everyday language:
 - Begin the status line with **Done** when this session achieved its requested goal, or **Not done** otherwise. Say what finished and where repository work was saved or landed. State separately if the wider unit is still open.
 - **Your action** — the one thing the user needs to do now, stated so they can do it; **None** when the unit is open and the next step belongs to an agent.
 - **Next** — when work remains, who owns the next step and what they will do, linking the existing record.
-- **Repository** — on a full close, the worktrees and non-permanent remote branches that exist, each with its age and merge state, from a fresh fetch. A report, not a clean-up: removal belongs to step 2.6. Say when the inventory is unavailable.
+- **Repository** — on a full close, the worktrees and non-permanent remote branches that exist, each with its age and merge state, from a fresh fetch, and for each open unit what it waits for and whether that was tested in this close. A report, not a clean-up: removal belongs to step 2.6. Say when the inventory is unavailable.
 
 Add other information only when it changes how the user understands the result or what to do, placed first when it needs immediate attention; routine evidence stays in the record. A completed task with no next action may need only the status and repository lines.
 
