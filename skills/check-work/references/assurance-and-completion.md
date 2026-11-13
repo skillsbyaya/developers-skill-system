@@ -40,7 +40,7 @@ When classification is uncertain, use the higher class. Upgrade for wider impact
 | Selected condition | Evidence required before `done` |
 | --- | --- |
 | Routine implementation evidence | Acceptance conditions are supported; affected checks are current and green; the complete diff or finished artifact was inspected; no critical trigger, material unresolved decision or finding, or missing consequential evidence remains. |
-| Human acceptance | The user performed the material checks or explicitly accepted the named exposure from skipped non-critical checks; requested changes are incorporated and affected checks rerun. |
+| Human acceptance | The user answered, at completion, the questions only they could settle, or accepted the named exposure from skipped non-critical checks; requested changes are incorporated and affected checks rerun. A look planned for a later walkthrough is not this condition. |
 | Focused independent assurance | The selected reviewer or method completed on the current revision; no required finding remains unresolved; fixes received a fresh affected recheck. |
 | Critical assurance | Required specialist or independent evidence is current; critical-path evidence is present; no mandatory control or material finding remains unresolved; residual risks are explicitly accepted. |
 

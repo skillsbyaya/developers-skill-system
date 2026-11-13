@@ -9,7 +9,7 @@ Use the supplied check, result, packet note, limitation, or clear current record
 Classify each item as one of:
 
 - **Current evidence** — performed evidence still matches the relevant scope and revision.
-- **Pending observation** — a specific unperformed observation that could still affect acceptance.
+- **Pending observation** — a specific unperformed observation that could still affect acceptance. At completion it is asked now or goes on a later walkthrough's list; it never holds the work open.
 - **Known limitation** — unavailable or deliberately omitted evidence whose consequence is understood.
 - **Failed evidence** — a performed check exposed a defect or unresolved finding.
 - **Invalidated evidence** — a later change affected the checked surface, dependency, environment, or oracle.

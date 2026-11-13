@@ -36,7 +36,7 @@ Tags, releases and deployments keep their own authorisation. If preservation or 
 
 Resolve user-owned decisions this task needs before dependent work, batched where possible; if evidence must come first, record that dependency. Do not ask for a new project direction to fill a handoff.
 
-Delivery owns when evidence is needed: before dependent work, at completion, or at release. A checkpoint brings none of those forward; carry pending checks in the existing record and never call the unit complete, or land it, with required evidence missing.
+Delivery owns when evidence is needed: before dependent work, at completion, or at release. A checkpoint brings none of those forward; never call the unit complete, or land it, with required evidence missing.
 
 Choose at most one next action, in this order: unblock this unit; resume its unfinished work or required assurance; the oldest other open unit that can now be finished; the oldest that can only move a step; only then the next ready item in the existing plan. Started work is finished before new work starts.
 
