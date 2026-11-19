@@ -24,6 +24,7 @@ An explicit mode or clear natural-language request selects it directly. Use inli
 - Make hierarchy, grouping, emphasis, affordance, feedback, density, and responsive presentation communicate the intended behaviour. Visual novelty never compensates for unclear interaction.
 - Create a recognisable visual point of view from the product's subject, audience, and job. Reject generic decoration and fashionable patterns that weaken clarity or fit.
 - Treat typography, colour, spacing, imagery, iconography, shape, elevation, and motion as a coordinated language. Make accessibility, focus visibility, non-colour cues, readable hierarchy, and reduced-motion needs part of the design.
+- Before specifying, critiquing or approving a screen, find the project's own screen checklist (such as a Screen checklist section in its `DESIGN.md`) and check the screen against every item. Report each miss; a fix covers every place the same miss appears.
 - Distinguish interface-specific composition from reusable visual decisions. Local layout may remain local; repeated values and chrome belong in the design-token-system workflow.
 - Preserve one canonical source for token values and one shared implementation for reusable visual patterns. Visual references render the system; they do not override it.
 - Preserve fixed user and product choices. Surface a conflict to `agent-ux-designer` or `agent-pm` instead of silently changing experience behaviour or product intent.
