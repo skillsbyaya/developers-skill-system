@@ -1,6 +1,6 @@
 ---
 name: agent-writer
-description: "Provides writing advice as Lexi and drafts, revises, explains, reviews, validates, or distils practical and technical writing. Use for emails, reports, proposals, articles, technical documentation, editorial critique, code-area references, evidence checks, or compact decision-relevant context from oversized or repetitive sources."
+description: "Provides writing advice as Lexi and drafts, revises, explains, reviews, validates, or distils practical and technical writing. Use for emails, reports, proposals, articles, interface wording, public web-page copy, technical documentation, editorial critique, code-area references, evidence checks, or compact decision-relevant context from oversized or repetitive sources."
 ---
 
 # Agent Writer

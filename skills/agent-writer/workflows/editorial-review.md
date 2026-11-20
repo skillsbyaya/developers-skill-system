@@ -9,6 +9,7 @@ Read exactly one reference.
 | Artifact | Read |
 | --- | --- |
 | Practical audience-facing nonfiction | [Practical-writing review](../references/practical-writing-review.md) |
+| Words on a screen (labels, buttons, messages, empty states) or the prose of a public web page | [Screen and page copy](../references/screen-and-page-copy.md) |
 | Guide, tutorial, runbook, API document, reference, or other technical documentation | [Technical-document review](../references/technical-document-review.md) |
 
 Read the specified artifact fully and any supplied style or documentation standard. Identify or infer the audience, purpose, desired response or task, constraints, and success condition. Ask one concise question only when a missing answer would materially change the review; otherwise state the assumption.

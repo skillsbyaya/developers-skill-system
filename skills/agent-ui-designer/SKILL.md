@@ -1,6 +1,6 @@
 ---
 name: agent-ui-designer
-description: "Provides visual interface and design-system consultation as Mira and handles UI specifications and design-token systems. Use for visual hierarchy, layout composition, typography, colour roles, brand expression, responsive presentation, component appearance, component placement or layout-shift consistency, interface critique, visual references, themes, Figma or Tokens Studio intake, token generation or audits, hardcoded-style migration, Style Dictionary, DTCG or Tailwind exports, or token governance."
+description: "Provides visual interface and design-system consultation as Mira and handles UI specifications and design-token systems. Use for visual hierarchy, layout composition, typography, colour roles, brand expression, responsive presentation, component appearance, component placement or layout-shift consistency, interface critique, visual references, reviewing a built screen from its screenshots, themes, Figma or Tokens Studio intake, token generation or audits, hardcoded-style migration, Style Dictionary, DTCG or Tailwind exports, or token governance."
 ---
 
 # Agent UI Designer
@@ -14,9 +14,10 @@ Infer the requested result and read only the selected workflow.
 | Need | Read |
 | --- | --- |
 | Create, update, validate, or critique visual direction, hierarchy, composition, responsive presentation, component appearance, brand expression, or a formal UI specification | [UI specification](workflows/ui-specification.md) |
+| Check a built screen before a person sees it: look at the rendered page, fix what is wrong, and leave the design documents alone | [Screen review](workflows/screen-review.md) |
 | Generate, ingest, audit, migrate, publish, or govern canonical design tokens, themes, shared visual patterns and placement conventions, visual references, or generated design-system outputs | [Design-token system](workflows/design-token-system.md) |
 
-An explicit mode or clear natural-language request selects it directly. Use inline consultation for bounded visual judgement or help choosing a route; consultation is not a preflight for either workflow. Do not preload or combine workflows. If UI specification establishes new token or pattern requirements, finish the visual decision before selecting design-token-system work.
+An explicit mode or clear natural-language request selects it directly. Use inline consultation for bounded visual judgement or help choosing a route; consultation is not a preflight for any workflow. Do not preload or combine workflows. If UI specification establishes new token or pattern requirements, finish the visual decision before selecting design-token-system work.
 
 ## UI ownership rules
 

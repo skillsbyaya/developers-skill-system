@@ -9,6 +9,7 @@ Read exactly one reference.
 | Result | Read |
 | --- | --- |
 | Email, report, memo, briefing, proposal, article, announcement, communication, or risk or decision write-up | [Practical writing](../references/practical-writing.md) |
+| Words on a screen (labels, buttons, messages, empty states) or the prose of a public web page | [Screen and page copy](../references/screen-and-page-copy.md) |
 | Guide, tutorial, how-to, runbook, API document, reference, integration guide, or other complete technical document | [Technical document](../references/technical-document.md) |
 | Explanation of a technical concept, API, behaviour, or system | [Technical explanation](../references/technical-explanation.md) |
 
