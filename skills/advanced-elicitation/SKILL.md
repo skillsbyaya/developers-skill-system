@@ -12,7 +12,7 @@ Improve a current piece of content through one or more user-selected elicitation
 - Keep one accepted working version separate from each proposed pass.
 - Follow the interaction loop in order and stop whenever it requires the user's response.
 - Treat accepted changes as updates to the conversational working version. Do not edit an artifact merely because the user accepted an elicitation pass; return accepted content to the invoking owner or wait for a separate request to apply it.
-- Use the normal assistant style unless the selected method calls for a named viewpoint or the user explicitly combines the session with Party Mode.
+- Use the normal assistant style unless the selected method calls for a named viewpoint.
 
 ## Entry
 
@@ -24,8 +24,6 @@ When invoked by another skill or process:
 2. Run the elicitation loop against that content.
 3. Return the accepted working version when the user selects `x`.
 4. Let the invoking owner decide whether and how to apply it under that owner's normal authority.
-
-If Party Mode is already active or the user explicitly asks to combine it with elicitation, invoke `party-mode` for roster, worker, and synthesis rules. Use the selected elicitation method as the roundtable's common lens; do not maintain a persona roster here.
 
 ## Select methods
 
@@ -42,7 +40,7 @@ Present:
 
 ```text
 Advanced Elicitation Options
-If Party Mode is active, selected personas may join in.
+
 Choose a number (1-5), [r] to Reshuffle, [a] to List All, or [x] to Proceed:
 
 1. [Method Name]
@@ -90,6 +88,6 @@ Return the accepted working version. If it is unclear which proposals were accep
 - Tie every pass to the current content and its intended decision or outcome.
 - Show concise rationale, assumptions, checks, or comparison criteria when useful. Do not expose private hidden reasoning.
 - Distinguish evidence, user-supplied facts, inference, generated alternatives, and unresolved uncertainty.
-- For named or multiple viewpoints, identify each lens clearly. Use Party Mode only when it is already active or the user explicitly requested independent perspectives; otherwise apply the viewpoints inline without claiming independence.
+- For named or multiple viewpoints, identify each lens clearly. Apply the viewpoints inline without claiming independence.
 - Each accepted method builds on the latest accepted working version.
 - Always return to the choice prompt after a method pass until the user selects `x`.

@@ -1,6 +1,6 @@
 ---
 name: clean-up
-description: "Removes residue that patched-on changes leave in instructions, memory, documents and skills, and coordinates broad project housekeeping across testing, documentation, project-context health, skill fit, token cost, and backlog. Use for clean up, tidy, housekeeping, or sort-this-project-out requests, and for bloat, stale rules, workarounds, or notes about things already removed or fixed. Not for application-code refactoring."
+description: "Removes residue that patched-on changes leave in instructions, memory, documents and skills, and coordinates broad project housekeeping across testing, documentation, project-context health, skill fit, and backlog. Use for clean up, tidy, housekeeping, or sort-this-project-out requests, and for bloat, stale rules, workarounds, or notes about things already removed or fixed. Not for application-code refactoring."
 ---
 
 # Clean Up
@@ -18,8 +18,7 @@ If the user names one clear area, run only that row and do not broaden the reque
 | 3 | Test health → `agent-test-architect` test-system Review | A test suite exists and a report-only health review would be useful. |
 | 4 | Documentation → `organise-docs` | A documentation set exists and its placement, naming, duplication, staleness, size, navigation, identifier-area vocabulary, or temporary `.working/` material needs attention. Include `.working/` only when a file has no current owner or its useful outcome is already incorporated; an empty or absent `.working/` is a valid no-op. |
 | 5 | Project skill fit → ordinary reasoning over project evidence and live skill frontmatter | The user explicitly asks which capabilities the project is missing, or a broad sweep has enough current project evidence to assess overlooked skill opportunities. |
-| 6 | Skill or token cost → `optimise-tokens` | The project is a skill library, or the user raised context or token cost. |
-| 7 | Uncommitted follow-ups and triggered deferrals → `agent-pm` backlog planning | A backlog exists, earlier selected areas produced confirmed work that is not already owned by committed delivery, or an explicit deferral trigger or deadline has demonstrably arrived. |
+| 6 | Uncommitted follow-ups and triggered deferrals → `agent-pm` backlog planning | A backlog exists, earlier selected areas produced confirmed work that is not already owned by committed delivery, or an explicit deferral trigger or deadline has demonstrably arrived. |
 
 Do not add assurance, code review, security, compliance, lessons, retrospective, CI, release readiness, or session close merely because they are useful elsewhere. Include them only when the user separately requests that outcome or a selected owner identifies a concrete specialist need.
 
