@@ -1,0 +1,11 @@
+{
+  "name": "developers-skill-system",
+  "owner": { "name": "skillsbyaya" },
+  "plugins": [
+    {
+      "name": "developer-skills",
+      "source": "./",
+      "description": "The shared developer skills and their two helper agents."
+    }
+  ]
+}
