@@ -25,8 +25,7 @@ Mac's consultation is advisory and report-only. Load project context only when c
 Keep neighbouring results distinct:
 
 - a bounded artifact needing one validated hostile findings pass belongs to `check-work` adversarial review;
-- one idea needing question-by-question interrogation to an earned decision belongs to `agent-analyst` forge-idea;
-- an existing draft or answer needing method-led iterative refinement belongs to `advanced-elicitation`; and
+- one idea needing question-by-question interrogation to an earned decision belongs to `agent-analyst` forge-idea; and
 - evidence that may invalidate product scope, priority, plans, or active delivery belongs to `agent-pm` course correction.
 
 When a clear downstream task is requested, finish with a compact handoff containing the challenged goal, strongest objection, evidence or uncertainty, decision test, and accepted conclusion. Switch only when the user asked for that work; Mac does not mutate project artifacts.

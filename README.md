@@ -14,7 +14,7 @@ The system improves through use. Demonstrated failures and corrections feed into
 4. Use specialist consultation, assurance, or an isolated subagent only when the unresolved decision requires it.
 5. Preserve one authoritative source for project state, decisions, lessons, and conventions.
 6. Scale planning, evidence, review, and durable records to consequence and reversibility.
-7. Keep one delivery batch across short chats: checkpoint remotely at handoff and publish once its agreed outcome and assurance are complete (`close-session`).
+7. Keep one delivery batch across short chats: checkpoint remotely at handoff and publish once its agreed outcome and assurance are complete.
 
 ```text
 work
@@ -31,9 +31,8 @@ work
 
 Skills and subagents are separate concepts and separate installation surfaces.
 
-- `skills/` contains reusable skill owners, workflows, references, scripts, and assets shared across Claude Code and Codex, except the documented Claude-only `use-codex` skill.
-- `platform/` contains the small number of runtime-specific additions that should not be mirrored to the other platform.
-- `subagents/` contains actual isolated worker definitions. These are installed separately and may be platform-specific.
+- `skills/` contains reusable skill owners, workflows, references, scripts, and assets for Claude Code.
+- `subagents/` contains actual isolated worker definitions. These are installed separately.
 
 ### Terminology
 
@@ -48,11 +47,10 @@ Area-owner skills are not Claude Code subagents. Actual Claude Code subagents li
 
 This repository is the canonical distribution. Installed copies under a runtime's home directory are generated deployments, not editing sources.
 
-| Component | Claude Code destination | Codex destination |
-| --- | --- | --- |
-| Shared skills | `~/.claude/skills/` | `~/.agents/skills/` |
-| Platform-specific skills | `platform/claude/skills/` when present | `platform/codex/skills/` |
-| Subagents | `~/.claude/agents/` | None |
+| Component | Destination |
+| --- | --- |
+| Skills | `~/.claude/skills/` |
+| Subagents | `~/.claude/agents/` |
 
 Clone the repository first:
 
@@ -61,15 +59,15 @@ git clone https://github.com/skillsbyaya/developers-skill-system.git
 cd developers-skill-system
 ```
 
-On the machine where you edit the skills, link both runtimes to the clone so there is one local copy:
+On the machine where you edit the skills, link Claude Code to the clone so there is one local copy:
 
 ```sh
-./scripts/install.sh --link all
+./scripts/install.sh --link
 ```
 
-Claude Code and Codex then read the clone directly: an edit made from either is live at once and is the same edit you commit and push. Rerun the command only when a skill is added, renamed, or removed. Without `--link`, the installer copies instead (`./scripts/install.sh all`, or `claude` / `codex` for one runtime); use copies on machines where you do not edit the skills.
+Claude Code then reads the clone directly: an edit is live at once and is the same edit you commit and push. Rerun the command only when a skill is added, renamed, or removed. Without `--link`, the installer copies instead; use copies on machines where you do not edit the skills.
 
-The installer replaces repository-managed skill directories exactly, removes skills retired by a later repository version, preserves unrelated runtime, plugin, system, and personal skills, and installs the Claude Code subagents into `~/.claude/agents/`. Claude receives `use-codex`; Codex omits it and receives the Codex-only `read-project-guidance` bridge.
+The installer replaces repository-managed skill directories exactly, removes skills retired by a later repository version, preserves unrelated runtime, plugin, system, and personal skills, and installs the subagents into `~/.claude/agents/`.
 
 ### Cloud sessions
 
@@ -80,13 +78,11 @@ git clone --depth 1 https://github.com/skillsbyaya/developers-skill-system.git /
 /tmp/developers-skill-system/scripts/install.sh claude
 ```
 
-Use `codex` instead of `claude` for a Codex cloud environment. This tracks `main`, so cloud sessions match local ones with no per-project updates; it relies on only trusted maintainers pushing to `main`. If that ever stops being true, check out a reviewed commit or release tag after cloning instead.
-
-Claude Code subagents are not installed into Codex. Codex can use the shared skills, but it has a different agent model and no equivalent subagent package is claimed here.
+This tracks `main`, so cloud sessions match local ones with no per-project updates; it relies on only trusted maintainers pushing to `main`. If that ever stops being true, check out a reviewed commit or release tag after cloning instead.
 
 ## Project status
 
-The repository is the distribution source of truth; installed copies are deployments for a specific AI coding environment. Make changes here (directly, or through linked runtimes), validate them, and commit and push them; cloud sessions pick them up at their next start.
+The repository is the distribution source of truth; installed copies are deployments for a specific AI coding environment. Make changes here (directly, or through a linked install), validate them, and commit and push them; cloud sessions pick them up at their next start.
 
 ## Maintenance
 

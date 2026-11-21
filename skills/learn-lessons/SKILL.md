@@ -13,10 +13,10 @@ Read exactly one workflow:
 
 | Request | Read |
 | --- | --- |
-| Learn from the current correction, mistake, or confirmed close-session lesson | [Current correction](workflows/current-correction.md) |
+| Learn from the current correction or mistake | [Current correction](workflows/current-correction.md) |
 | Review a completed epic, release, milestone, or chosen work block for cross-work patterns and improvements | [Completed-work retrospective](workflows/completed-work-retrospective.md) |
 
-An explicit workflow request selects it directly without consultation or sibling loading. Use current correction for one triggering exchange and completed-work retrospective for synthesis across several completed items or one consequential completed event. A `close-session` handoff may select only current correction.
+An explicit workflow request selects it directly without consultation or sibling loading. Use current correction for one triggering exchange and completed-work retrospective for synthesis across several completed items or one consequential completed event.
 
 Do not auto-trigger from frustration, generic criticism, a factual correction, cleanup alone, a simple status question, or a request whose primary job is editing a skill.
 

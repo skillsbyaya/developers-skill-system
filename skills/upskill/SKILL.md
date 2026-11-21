@@ -9,7 +9,7 @@ A skill earns its place only when sessions that use it finish faster or better t
 
 ## Where changes go
 
-Edit the canonical source, never a copied install. When the library is a cloned repository with an install script, the clone is the source and `~/.claude/skills/` (Claude Code) and `~/.agents/skills/` (Codex) are deployments, ideally symlinks to the clone. Edit the clone, rerun the installer if a skill was added, renamed or removed (or if the installs are copies), then use `close-session` to commit and push. Without a repository, personal skills live in `~/.claude/skills/` and project skills in the project's `.claude/skills/`.
+Edit the canonical source, never a copied install. When the library is a cloned repository with an install script, the clone is the source and `~/.claude/skills/` is a deployment, ideally symlinks to the clone. On a machine that holds only an installed copy, clone the repository and edit that. Edit the clone, rerun the installer if a skill was added, renamed or removed (or if the installs are copies), then commit and push as the repository's README directs. Without a repository, personal skills live in `~/.claude/skills/` and project skills in the project's `.claude/skills/`.
 
 ## Choose the job
 
@@ -39,7 +39,7 @@ Apply this to every line written or changed, and use it as the review checklist.
 
 ## Change a skill
 
-1. **Find the cause.** For a reported behaviour, look for it in a real transcript (Claude Code: `~/.claude/projects/<project>/*.jsonl`; Codex: `~/.codex/sessions/`), reading only what the question needs, and locate the instruction that produced it. The cause is usually an instruction that over-asks, repeats or is vague, not a missing one.
+1. **Find the cause.** For a reported behaviour, look for it in a real transcript (`~/.claude/projects/<project>/*.jsonl`), or in the conversation where it happened when this machine holds no earlier sessions, reading only what the question needs, and locate the instruction that produced it. The cause is usually an instruction that over-asks, repeats or is vague, not a missing one.
 2. **Fix the class.** Correct every occurrence of the same pattern in the skills in scope, and name other skills that share it so the user can widen the work. Correct the instruction that caused the behaviour; do not add its denial ("X does not require Y") at each place the behaviour showed.
 3. **Replace or delete before adding.** Treat the skill and affected guides, references, scripts, and distribution documentation as one deliverable. Update installation guidance when the change affects it. The commit message says what changed and why; no file does. Apply the writing standard to the text you touch. For a merge or split, decide which jobs land in which skill first, then move only content that passes the standard.
 4. **Keep references whole.** When renaming or moving a file or skill, search the library for references and update them in the same change. When removing one, delete each reference and every rule that existed only because of it. Remove a capability only once its genuine uses have somewhere to go.
