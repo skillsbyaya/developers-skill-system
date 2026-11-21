@@ -9,7 +9,7 @@ A skill earns its place only when sessions that use it finish faster or better t
 
 ## Where changes go
 
-Edit the canonical source, never a copied install. When the library is a cloned repository with an install script, the clone is the source and `~/.claude/skills/` is a deployment, ideally symlinks to the clone. On a machine that holds only an installed copy, clone the repository and edit that. Edit the clone, rerun the installer if a skill was added, renamed or removed (or if the installs are copies), then commit and push as the repository's README directs. Without a repository, personal skills live in `~/.claude/skills/` and project skills in the project's `.claude/skills/`.
+Edit the canonical source, never a copied install. When the library is a repository served as a plugin, the repository is the source and the plugin cache is a deployment: edit a clone of the repository, then commit and push as its README directs; sessions pick the change up from there. Without a repository, personal skills live in `~/.claude/skills/` and project skills in the project's `.claude/skills/`.
 
 ## Choose the job
 

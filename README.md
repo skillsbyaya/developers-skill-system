@@ -45,44 +45,24 @@ Area-owner skills are not Claude Code subagents. Actual Claude Code subagents li
 
 ## Installation model
 
-This repository is the canonical distribution. Installed copies under a runtime's home directory are generated deployments, not editing sources.
+This repository is the one source. It is also a Claude Code plugin marketplace (`.claude-plugin/marketplace.json`) holding one plugin, `developer-skills`, which serves every skill under `skills/` and the subagents under `subagents/claude-code/`. Installed copies are generated from it; nobody edits them.
 
-| Component | Destination |
-| --- | --- |
-| Skills | `~/.claude/skills/` |
-| Subagents | `~/.claude/agents/` |
+Add the marketplace once to the Claude account, at claude.ai → Customize → Plugins → Add, by its URL:
 
-Clone the repository first:
-
-```sh
-git clone https://github.com/skillsbyaya/developers-skill-system.git
-cd developers-skill-system
+```text
+https://github.com/skillsbyaya/developers-skill-system
 ```
 
-On the machine where you edit the skills, link Claude Code to the clone so there is one local copy:
+Then install `developer-skills` from it. Account plugins reach every Claude Code session on that account, cloud and desktop alike, so no project repository copies or installs the skills. In a session they are named `developer-skills:<skill>`, for example `developer-skills:agent-dev`.
+
+In a terminal without the account, the same plugin installs with:
 
 ```sh
-./scripts/install.sh --link
+/plugin marketplace add skillsbyaya/developers-skill-system
+/plugin install developer-skills@developers-skill-system
 ```
 
-Claude Code then reads the clone directly: an edit is live at once and is the same edit you commit and push. Rerun the command only when a skill is added, renamed, or removed. Without `--link`, the installer copies instead; use copies on machines where you do not edit the skills.
-
-The installer replaces repository-managed skill directories exactly, removes skills retired by a later repository version, preserves unrelated runtime, plugin, system, and personal skills, and installs the subagents into `~/.claude/agents/`.
-
-### Cloud sessions
-
-The repository is public, so a cloud environment can install the current release at session start without copying skills into every application repository. A project keeps a small bootstrap script, run during environment setup:
-
-```sh
-git clone --depth 1 https://github.com/skillsbyaya/developers-skill-system.git /tmp/developers-skill-system
-/tmp/developers-skill-system/scripts/install.sh claude
-```
-
-This tracks `main`, so cloud sessions match local ones with no per-project updates; it relies on only trusted maintainers pushing to `main`. If that ever stops being true, check out a reviewed commit or release tag after cloning instead.
-
-## Project status
-
-The repository is the distribution source of truth; installed copies are deployments for a specific AI coding environment. Make changes here (directly, or through a linked install), validate them, and commit and push them; cloud sessions pick them up at their next start.
+The plugin has no fixed `version`, so each commit on `main` is a new version. Only trusted maintainers push to `main`, because every session runs what it holds.
 
 ## Maintenance
 
