@@ -2,7 +2,7 @@
 
 Independently judge whether a code change is correct enough for its residual technical risk. Report defensible findings and current evidence.
 
-This is `check-work`'s inline review route, not an instruction to invoke Claude Code's bundled `code-review` skill. Do not call that bundled skill from this workflow.
+Review inline as this workflow describes. Claude Code's bundled `code-review` skill is a separate review with its own cost, so it runs only when the user names it.
 
 ## Resolve the review target
 

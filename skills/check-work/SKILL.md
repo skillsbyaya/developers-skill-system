@@ -21,7 +21,7 @@ Infer the assurance decision from the request, target, current evidence, and unr
 | Does this artifact survive hostile challenge? | [Adversarial review](workflows/adversarial.md) |
 | Are reachable paths, states, transitions, or boundaries unhandled? | [Edge-case review](workflows/edge-cases.md) |
 
-Merely recording packet evidence, an unavailable check, or a possible future manual observation is not a new assurance decision and does not require this skill. Preserve it in the owning delivery record. Use evidence disposition only when the user or current task asks how existing evidence should count, persist, or be invalidated.
+A check that is only being noted (packet evidence, an unavailable check, a possible later manual look) stays in the owning delivery record. Use evidence disposition when the user or current task asks how existing evidence should count, persist, or be invalidated.
 
 If the request and context do not identify one decision, including a generic request such as “check this,” “review the work,” “what assurance do we need?”, or a question about `review` versus `done`, read [Assurance selection and completion](references/assurance-and-completion.md). Use it to choose one workflow above or switch once to the independent specialist that owns the unresolved question.
 
