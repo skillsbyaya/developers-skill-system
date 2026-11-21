@@ -65,8 +65,7 @@ Route durable changes to their owner:
 
 - skill structure, triggers, or loading → `upskill`;
 - a particular oversized source needing compact downstream context → `agent-writer` distillation;
-- living document structure or recurring stale content → `organise-docs`;
-- end-of-session context handling → `close-session`; and
+- living document structure or recurring stale content → `organise-docs`; and
 - ordinary implementation → the relevant delivery owner.
 
 Do not create a second token-policy store or copy the same prevention rule into every consumer.

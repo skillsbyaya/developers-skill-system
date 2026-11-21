@@ -26,13 +26,13 @@ Inspect the complete packet delta, including its record updates, and refresh aff
 
 Maintain the delivery controls' completion-assurance note, changing it only when consequence, completion uncertainty, reusable evidence, or invalidation changes. Record the packet outcome, changed paths or contracts, checks and results, material decisions, unresolved risk, newly ready or invalidated work, and the exact next boundary. Update known stale documents with the code. Packet `done` means its gate passed, not that its code is committed or its owner complete.
 
-Continue to the next ready packet without a mandatory commit or push. At a preservation boundary use `close-session` and its open-batch checkpoint route; a failed or unchecked packet remains `in-progress` or `blocked`. Its handoff is the only final response when the chat stops. Use a bounded worker only under the worker reference.
+Continue to the next ready packet without a mandatory commit or push. Checkpoint as the delivery controls direct; a failed or unchecked packet remains `in-progress` or `blocked`. Use a bounded worker only under the worker reference.
 
 ## Story review and completion
 
 One session finishes the story, starting from the current execution state and completion-assurance note rather than replaying packet history:
 
-- **When the note requires independent review,** obtain it after the last packet: run the recorded method (normally `check-work` code review) on the complete story diff, apply its fixes in the same session, recheck each fixed surface, then complete the story and land it through `close-session`. Use code review's fix and re-review boundary for any changed critical surface.
+- **When the note requires independent review,** obtain it after the last packet: run the recorded method (normally `check-work` code review) on the complete story diff, apply its fixes in the same session, recheck each fixed surface, then complete the story and land it. Use code review's fix and re-review boundary for any changed critical surface.
 - **Otherwise** the last packet's session completes the story once its gate passes.
 
-Either way: reuse valid packet evidence, run outstanding integrated acceptance and regression checks, and inspect the complete story diff against its recorded base, including untracked files and checkpoint commits. Keep the recorded consequence floor unless the complete diff disproves it. Fix a defect found here in the same session unless it needs a packet of its own. Then apply the completion rule in the delivery controls and land through `close-session`.
+Either way: reuse valid packet evidence, run outstanding integrated acceptance and regression checks, and inspect the complete story diff against its recorded base, including untracked files and checkpoint commits. Keep the recorded consequence floor unless the complete diff disproves it. Fix a defect found here in the same session unless it needs a packet of its own. Then apply the completion rule in the delivery controls and land.

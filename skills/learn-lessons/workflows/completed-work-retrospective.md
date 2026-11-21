@@ -5,7 +5,6 @@ Turn evidence from a completed body of project work into a few improvements wort
 ## Resolve the boundary and scope
 
 - Use current correction when the primary evidence is one live interaction or delivery mistake and the goal is agent-behaviour prevention.
-- Use `close-session` for routine state reconciliation and handoff maintenance.
 - Use ordinary conversation for a quick reflection that does not need cross-work evidence or a durable record.
 - Use `check-work` implementation readiness when the primary goal is to decide whether a future planning set is coherent enough to build.
 - Use `agent-pm` course correction when new evidence may invalidate product scope, priority, planning, or active delivery.

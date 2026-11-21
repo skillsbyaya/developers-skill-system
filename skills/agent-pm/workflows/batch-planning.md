@@ -1,6 +1,6 @@
 # Delivery Batch Planning
 
-PM owns batch scope, membership and order in the backlog, or in the owner the project declares for sequence. Dev owns implementation and acceptance evidence; `close-session` owns checkpoints and landing. A read-only request returns a view; planning does not authorise implementation.
+PM owns batch scope, membership and order in the backlog, or in the owner the project declares for sequence. Dev owns implementation, acceptance evidence, checkpoints and landing. A read-only request returns a view; planning does not authorise implementation.
 
 ## Choose the simplest structure
 
