@@ -8,7 +8,7 @@ The change is reconciliation-heavy (the approved spec may be stale against today
 
 ## Prepare before implementation
 
-Follow [Story preparation](../references/story-preparation.md) for the procedure — including resolving the genuine design decisions during prep, via `agent-ux-designer` and `agent-ui-designer`, rather than deferring a new pattern or primitive to a build-time try-it-on-the-sandbox.
+Follow [Story preparation](../references/story-preparation.md) for the procedure.
 
 Write the `ready-for-dev` story before code. A preparation-only request ends there: the record is the story's first checkpoint on its working branch and lands with the build. It lands alone only when preparation allocated a new item ID or the build is not the next work planned. When implementation is authorised, continue into delivery once blocking decisions and dependencies are resolved, by reading the direct or staged workflow before the first edit. Story size alone does not require a new session.
 
