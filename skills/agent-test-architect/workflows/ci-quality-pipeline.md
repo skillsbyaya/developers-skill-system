@@ -24,8 +24,6 @@ Before editing, make a compact gate map:
 
 Every gate needs repository evidence or an explicit user requirement. Coverage thresholds, sharding, burn-in loops, browser installation, and runtime matrices are choices to justify, not defaults.
 
-Validation or assessment alone is report-only. A combined “review and fix,” “design and implement,” or similar request authorises discovery followed by in-scope quality-pipeline edits; do not pause after the gate map merely because discovery determined the exact configuration. Ask again only when discovery exposes materially different work, deletion, a production or deployment change, or a consequential trigger, topology, dependency, permission, status-name, or external-state trade-off that the user has not already authorised.
-
 ## Choose the smallest reliable topology
 
 - Give materially different failure domains separate jobs when distinct diagnosis, permissions, services, runtimes, or hosted status matter. Keep tightly coupled commands together when splitting would only repeat setup.
@@ -94,4 +92,4 @@ Report:
 - secrets, variables, hosted runs, required checks, rulesets, or merge-queue settings still requiring external action; and
 - whether hosted execution and merge enforcement were actually verified.
 
-Do not create a recurring pipeline report. If the work establishes a durable, almost-always-needed project fact such as the CI platform or canonical verification command, make only that bounded update to the existing project context; do not duplicate details already authoritative in manifests or pipeline configuration.
+If the work establishes a durable, almost-always-needed project fact such as the CI platform or canonical verification command, make only that bounded update to the existing project context; do not duplicate details already authoritative in manifests or pipeline configuration.

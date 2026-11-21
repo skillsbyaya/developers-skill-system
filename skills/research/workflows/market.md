@@ -12,7 +12,7 @@ Establish only what materially shapes the work:
 - intended use and required confidence; and
 - known constraints and existing evidence.
 
-Scale the output to the need: a focused answer, a decision assessment, a supplied-source synthesis, or a reusable landscape report. Do not create a report merely because research occurred.
+Scale the output to the need: a focused answer, a decision assessment, a supplied-source synthesis, or a reusable landscape report.
 
 ## Select decision-relevant lenses
 

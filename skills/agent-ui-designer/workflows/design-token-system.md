@@ -13,11 +13,9 @@ Create, ingest, audit, migrate, publish, or govern one canonical visual token an
 | Canonical tokens must feed Tailwind, Style Dictionary, CSS, design tools, native platforms, documentation, or CI | Publish |
 | A visual decision's owner, extension rule, deprecation, exception, or release impact must be decided | Govern |
 
-An explicit operation or clear request selects it directly without UX consultation or another workflow as preflight. Combine operations only when the requested finished result genuinely requires them; otherwise finish or checkpoint one before selecting the next.
+An explicit operation or clear request selects it directly. Combine operations only when the requested finished result genuinely requires them; otherwise finish or checkpoint one before selecting the next.
 
-Audit and advisory governance are report-only. A broad "audit and fix" request authorises assessment, not changes whose exact target, scope, compatibility impact, rollback, or visual trade-off becomes knowable only through the audit. Present the findings and proposed mutation, then obtain confirmation before applying that newly determined change.
-
-Generate, ingest, migrate, publish, or requested governance edits may change the canonical token source, shared patterns, requested guides or visual references, generated outputs, and expressly implicated consumers. Confirm before a broad call-site migration, replacement of an established canonical format, meaning-changing rename, alias or deprecation removal, manual edit to generated output, or write to an external design system. If the exact bounded change and consequences were already established and authorised, proceed without another ceremony.
+Generate, ingest, migrate, publish, or requested governance edits may change the canonical token source, shared patterns, requested guides or visual references, generated outputs, and expressly implicated consumers. Confirm before a broad call-site migration, replacement of an established canonical format, meaning-changing rename, alias or deprecation removal, manual edit to generated output, or write to an external design system.
 
 ## Resolve the current system
 

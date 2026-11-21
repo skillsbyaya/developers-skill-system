@@ -20,15 +20,13 @@ If the user names one clear area, run only that row and do not broaden the reque
 | 5 | Project skill fit → ordinary reasoning over project evidence and live skill frontmatter | The user explicitly asks which capabilities the project is missing, or a broad sweep has enough current project evidence to assess overlooked skill opportunities. |
 | 6 | Uncommitted follow-ups and triggered deferrals → `agent-pm` backlog planning | A backlog exists, earlier selected areas produced confirmed work that is not already owned by committed delivery, or an explicit deferral trigger or deadline has demonstrably arrived. |
 
-Do not add assurance, code review, security, compliance, lessons, retrospective, CI, or release readiness merely because they are useful elsewhere. Include them only when the user separately requests that outcome or a selected owner identifies a concrete specialist need.
-
-A sweep where only the residue check applies is complete. Do not manufacture work to widen it.
+A sweep where only the residue check applies is complete.
 
 ## Confirm once
 
 Run the residue check first, without confirmation: it changes no live rule, and it shrinks what the other owners read. For two or more other areas, present the proposed order, what each owner may change, and any area skipped for lack of evidence. Ask for one sweep-level confirmation before mutation. The user may trim or reorder the set.
 
-Do not add another confirmation at every owner boundary. Reconfirm only when an owner surfaces a material action outside the confirmed scope, such as deletion, a risky restructure, a comprehensive project rebaseline, or another hard-to-reverse change.
+Reconfirm only when an owner surfaces a material action outside the confirmed scope, such as deletion, a risky restructure, a comprehensive project rebaseline, or another hard-to-reverse change.
 
 For one other area, switch directly and let that owner apply its normal authority and confirmation rules.
 
@@ -49,12 +47,9 @@ For one other area, switch directly and let that owner apply its normal authorit
 
 - Do not edit production, feature, runtime, or test code. A workaround whose true fix is in code goes to the backlog owner.
 - Do not mutate delivery lifecycle or infer completion.
-- Do not load project context merely for orientation. Inspect its health only when current project evidence makes that area relevant.
 - Stop at a material blocking decision instead of pushing through it to finish the sweep.
 - Run each area at most once per sweep.
 
 ## Finished result
 
 Report the residue removed as the residue check specifies, then the areas checked, owners used, material outcomes, skipped or unavailable areas, temporary working material removed or deliberately retained, triggered deferrals promoted or left in place, confirmed follow-ups added to the backlog, and deferred code or test work.
-
-Do not close the sweep by reporting a decision that is the user's to make. Ask it in this run, batching every decision the sweep raised into one round of questions. Only a decision that genuinely cannot be put to the user yet stays written down, and it names what has to happen first.

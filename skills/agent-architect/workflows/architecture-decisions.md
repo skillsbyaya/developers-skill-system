@@ -13,19 +13,15 @@ One-off advice belongs in consultation. A formal request selects this workflow d
 
 A request to create or update the artifact authorises writing it, but not silently accepting a consequential unresolved choice. Mark a decision accepted only when current authoritative evidence or the user's decision supports that status.
 
-For a broad “validate and update,” “review and fix,” or similar request, validate first. If the assessment determines the target, scope, mechanism, risk, reversal condition, or accepted trade-off of the change, present the exact proposed artifact edits and obtain fresh confirmation before writing. Continue without another confirmation only when the requested edits and their material consequences were already bounded and authorised.
-
 ## Resolve scope, authority, and sources
 
 1. Identify the architecture scope, intended downstream use, current artifact, current system or baseline, accepted decisions, and the revision being changed or assessed.
-2. Inspect supplied and clearly relevant current sources: requirements, UX decisions, UI/design-system decisions, research, existing architecture or decision records, project context, code and infrastructure for brownfield work, delivery constraints, and specialist findings. These are inputs, not mandatory predecessors.
+2. Inspect supplied and clearly relevant current sources: requirements, UX decisions, UI/design-system decisions, research, existing architecture or decision records, project context, code and infrastructure for brownfield work, delivery constraints, and specialist findings.
 3. Distinguish binding requirements, observed current state, accepted architecture decisions, proposals, assumptions, and recommendations. Preserve user-owned choices and specialist decisions unless current evidence materially conflicts.
 4. When sources conflict, identify the exact incompatible claims and their owners. Resolve from established authority and recency when possible; otherwise stop on the decision rather than hiding the conflict in prose.
 5. Research only volatile choices that could change the architecture. Prefer official documentation, standards, and primary vendor sources; record the source and access date near the affected decision. Verify version compatibility as a set, not as isolated “latest” numbers.
 
 Read each selected authoritative source deeply enough to preserve every architecture-affecting decision and constraint. Do not claim coverage from a filename, index, generated summary, or partial scan.
-
-Do not require a PRD, UX specification, UI specification, epic set, starter template, greenfield structure, or fixed artifact sequence when the scoped decision can be made responsibly from other evidence.
 
 ## Define the architecture
 
@@ -88,4 +84,4 @@ For validation, use one verdict:
 
 This is an architecture-only verdict. It does not replace `check-work implementation-readiness`, which compares the complete planning set.
 
-Return the operation, scope, artifact path or assessed source, verdict when validating, decisions added or changed, superseded decisions, evidence and version checks, assumptions, unresolved blockers, downstream impacts, and next owner when another action is actually needed. Do not automatically begin implementation, mutate infrastructure, or start assurance.
+Return the operation, scope, artifact path or assessed source, verdict when validating, decisions added or changed, superseded decisions, evidence and version checks, assumptions, unresolved blockers, downstream impacts, and next owner when another action is actually needed.

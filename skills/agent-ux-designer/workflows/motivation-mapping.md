@@ -6,7 +6,7 @@ Create or update a durable motivation map connecting business purpose to the for
 
 Clarify the product or bounded area, the decision the map must support, and which motivations remain uncertain. Reuse one existing map for the same scope and update it in place.
 
-Use supplied research, briefs, requirements, designs, behavioural data, support evidence, interviews, and explicit user decisions as possible inputs, not mandatory predecessors. Preserve fixed goals, groups, and decisions unless new evidence materially conflicts with them.
+Use supplied research, briefs, requirements, designs, behavioural data, support evidence, interviews, and explicit user decisions. Preserve fixed goals, groups, and decisions unless new evidence materially conflicts with them.
 
 When evidence acquisition is the primary job, use `research` for current secondary evidence or this skill's human-centred-design mode for primary research and testing. Sparse evidence may support a provisional hypothesis map, but never invented psychology presented as fact.
 
@@ -65,4 +65,4 @@ Use only sections earned by the work:
 ## Downstream implications
 ```
 
-Update stable supported content in place and remove stale claims instead of appending history. Return the artifact path, material delta, strongest forces, evidence limits, and any current decision that may need reassessment. Do not automatically continue into product requirements or UX specification.
+Update stable supported content in place and remove stale claims instead of appending history. Return the artifact path, material delta, strongest forces, evidence limits, and any current decision that may need reassessment.

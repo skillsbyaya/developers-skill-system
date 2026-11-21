@@ -31,5 +31,3 @@ Return:
 - the next testing operation, if one is actually needed.
 
 Consultation may finish with advice or a compact test strategy. It does not edit test files, configuration, delivery state, or durable artifacts.
-
-For a combined strategy-and-implementation request, state the proposed operational route, bounded repository scope, expected edits, dependency or deletion implications, verification, and unresolved choices, then continue through the test-system or ATDD workflow when the work remains within the requested testing outcome. Stop for fresh authority only when consultation exposes materially different work, deletion, a production change, or a consequential dependency, scope, risk, or trade-off that the user has not already authorised.

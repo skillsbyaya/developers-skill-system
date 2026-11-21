@@ -32,6 +32,6 @@ Test the proposed prevention counterfactually:
 
 ## Apply
 
-Before changing a protected target without specific prior authority, present the evidence, inferred mechanism, target, exact change, expected counterfactual benefit, and material trade-off, then ask. Ask in the run that finds it, batching several into one round of questions rather than deferring any. A declined change is settled. Only a decision that genuinely cannot be put to the user yet is saved, once, in the runtime's own memory, naming what has to happen first.
+Before changing a protected target without specific prior authority, present the evidence, inferred mechanism, target, exact change, expected counterfactual benefit, and material trade-off, then ask. A declined change is settled.
 
 After an authorised change, run the smallest finished-behaviour check that could disprove the fix. If it fails, report why and what remains.

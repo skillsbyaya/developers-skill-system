@@ -59,4 +59,4 @@ Validate that:
 - placement and layout-stability judgements are confirmed against the rendered interface (run or sandbox) when static inspection cannot settle them — token and value drift show in code, spatial and layout-shift drift do not; and
 - implementation constraints, evidence limits, open decisions, and downstream owners are explicit.
 
-Return the operation, scope, visual-specification and visual-reference paths changed or reviewed, visual decisions or findings, token and shared-pattern requirements, unresolved UX or product choices, evidence limits, and next owner. Validation and critique are report-only; obtain fresh authority before applying materially determined design changes.
+Return the operation, scope, visual-specification and visual-reference paths changed or reviewed, visual decisions or findings, token and shared-pattern requirements, unresolved UX or product choices, evidence limits, and next owner.

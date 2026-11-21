@@ -8,7 +8,7 @@ Create and maintain the named records that show UK personal-data processing is u
 - **Create or update:** write the requested record or process.
 - **Maintain:** update only records affected by a material processing change or review trigger.
 
-An explicit record request selects it directly. Do not require a separate consultation or legal-advice workflow first. Verify current legal claims from official ICO, GOV.UK, or legislation sources when the record depends on them.
+An explicit record request selects it directly. Verify current legal claims from official ICO, GOV.UK, or legislation sources when the record depends on them.
 
 ## Establish current state
 

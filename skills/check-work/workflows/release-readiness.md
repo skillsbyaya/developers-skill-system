@@ -48,6 +48,6 @@ Apply stated non-functional thresholds from current project or release sources. 
 | **CONCERNS** | Mandatory gates pass, but bounded non-blocking evidence gaps or release risks remain and each has an explicit mitigation or acceptance decision. |
 | **FAIL** | An applicable mandatory gate or relevant test fails or is unavailable, required critical-path evidence is missing, or a blocking defect or release risk remains. |
 
-When uncertainty concerns a mandatory gate, current test result, or critical-path evidence, choose the more conservative verdict. Never report unrun checks as green.
+When uncertainty concerns a mandatory gate, current test result, or critical-path evidence, choose the more conservative verdict.
 
 Report the revision and scope, release contract and oracle sources, test evidence, requirement and critical-path support, gaps, limitations, and accepted risks. Send test gaps to testing, implementation gaps to technical or specialist review, and planning gaps to their owner. After a fix, rerun only the affected gate plus any integrated check the change invalidated; this verdict controls shipping, not completion.

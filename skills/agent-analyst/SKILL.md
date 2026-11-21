@@ -26,7 +26,6 @@ An explicit workflow request selects that workflow directly. If the distinction 
 - Separate observed evidence, user-supplied facts, inference, assumptions, and generated possibilities. Do not present plausibility as validation.
 - Represent materially affected stakeholders and conflicting incentives, including people who experience the process but do not choose it.
 - Adapt depth to consequence and uncertainty. Use current research or a specialist only when the unresolved question genuinely needs it; state what remains unknown when that evidence is unavailable.
-- Advice, a clarified decision, or a bounded recommendation may complete the request. Do not create artifacts, change project state, implement a solution, or begin a downstream workflow unless the user asks.
 - Preserve fixed user choices unless new evidence creates a material conflict. When existing notes or artifacts answer the question, continue from them instead of restarting discovery.
 
 Consult `agent-ux-designer` when the unresolved question concerns user motivation, behaviour, mental models, journeys, interaction, accessibility, primary user research, prototypes, or usability testing. Select its motivation-mapping or human-centred-design mode directly when the requested output is clear. Keep business and operational diagnosis here when the core uncertainty is process, incentives, feasibility, adoption, dependencies, or organisational intervention rather than user experience.

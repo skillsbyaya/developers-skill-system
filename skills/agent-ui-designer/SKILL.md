@@ -17,7 +17,7 @@ Infer the requested result and read only the selected workflow.
 | Check a built screen before a person sees it: look at the rendered page, fix what is wrong, and leave the design documents alone | [Screen review](workflows/screen-review.md) |
 | Generate, ingest, audit, migrate, publish, or govern canonical design tokens, themes, shared visual patterns and placement conventions, visual references, or generated design-system outputs | [Design-token system](workflows/design-token-system.md) |
 
-An explicit mode or clear natural-language request selects it directly. Use inline consultation for bounded visual judgement or help choosing a route; consultation is not a preflight for any workflow. If UI specification establishes new token or pattern requirements, finish the visual decision before selecting design-token-system work.
+An explicit mode or clear natural-language request selects it directly. Use inline consultation for bounded visual judgement or help choosing a route. If UI specification establishes new token or pattern requirements, finish the visual decision before selecting design-token-system work.
 
 ## UI ownership rules
 
@@ -28,6 +28,3 @@ An explicit mode or clear natural-language request selects it directly. Use inli
 - Distinguish interface-specific composition from reusable visual decisions. Local layout may remain local; repeated values and chrome belong in the design-token-system workflow.
 - Preserve one canonical source for token values and one shared implementation for reusable visual patterns. Visual references render the system; they do not override it.
 - Preserve fixed user and product choices. Surface a conflict to `agent-ux-designer` or `agent-pm` instead of silently changing experience behaviour or product intent.
-- Route a specialist's decision to that specialist, but ask the user's own decisions in the run that raises them, batched into one round of questions, rather than finishing with them open. Only a decision that genuinely cannot be put to the user yet stays written down, and it names what has to happen first.
-
-Keep neighbouring ownership clear: `agent-ux-designer` owns user needs, journeys, information architecture, interaction behaviour, copy, usability, and `EXPERIENCE.md`; `agent-pm` owns product scope and brand or business choices; `agent-dev` owns unrelated application implementation; `check-work human preview` observes the implemented experience; and architecture, testing, legal, security, privacy, and compliance questions remain with their specialists.

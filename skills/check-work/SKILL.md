@@ -40,7 +40,7 @@ These rules apply to assurance routes other than evidence disposition, whose wor
 - Do not change the assessed work. Return the scope, revision, evidence, findings, and limitations; recheck affected assurance after changes. In a story's review session, apply confirmed Fix findings in the same session through `agent-dev`; only Decision-needed items wait for the user, asked in this run.
 - When the assessment ends with nothing awaiting the user (no open decision, no finding still to fix) and the reviewed work or this session's changes live in a repository, checkpoint or land them in that turn by the project's declared Git workflow. Finishing a review does not itself complete the unit. Never end by telling the user that another session should record, land or close the work.
 - If required specialist evidence is unavailable, state what is missing and leave the decision unresolved rather than imitating the specialist.
-- Consequential acceptance and residual-risk decisions are the user's. Put them to the user in this run, batching every such decision the assurance raised into one round of questions, rather than returning them as findings for a later run. Only a decision that genuinely cannot be put to the user yet — because required evidence is still missing — stays written down, and it names what has to happen first. Acceptance cannot replace a mandatory safety or legal control.
+- Consequential acceptance and residual-risk decisions are the user's. Acceptance cannot replace a mandatory safety or legal control.
 
 ## Finished result
 
