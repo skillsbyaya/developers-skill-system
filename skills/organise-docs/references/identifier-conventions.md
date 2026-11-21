@@ -1,6 +1,6 @@
 # Shared Identifier Convention
 
-Use this reference only when creating, changing, locating, or reconciling durable identified items or the project area vocabulary. Follow explicit user requirements and binding project instructions, then any identifier rules in the project's declared documentation conventions. Those project rules supersede the matching defaults here; preserve existing identities when no adopted rule settles a case. `organise-docs` owns this shared identifier convention and handling; `personalise-working-system` may update global identifier preferences after their scope is confirmed. Domain skills own item meaning and lifecycle.
+Use this reference only when creating, changing, locating, or reconciling durable identified items or the project area vocabulary. Follow explicit user requirements and binding project instructions, then any identifier rules in the project's declared documentation conventions. Those project rules supersede the matching defaults here; preserve existing identities when no adopted rule settles a case. `organise-docs` owns this shared identifier convention and handling. Domain skills own item meaning and lifecycle.
 
 ## Grammar
 

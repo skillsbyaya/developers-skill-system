@@ -7,7 +7,7 @@ description: "Organises, prunes, merges, archives, restructures, or indexes exis
 
 Make a project's durable documentation coherent, current, and findable. Own documentation-set maintenance, migrations, indexing, and [identifier vocabulary and handling](references/identifier-conventions.md). Domain owners retain the meaning and lifecycle of their identified items.
 
-Follow project instructions or context to the declared documentation conventions. `manage-project-context` establishes project conventions; `personalise-working-system` changes global preferences.
+Follow project instructions or context to the declared documentation conventions. `manage-project-context` establishes project conventions.
 
 ## Select one workflow
 

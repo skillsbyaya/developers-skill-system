@@ -1,6 +1,6 @@
 # Documentation Conventions
 
-Use when establishing or changing project conventions, or changing global preferences through `personalise-working-system`. Routine readers and writers use the project's declared convention source.
+Use when establishing or changing project conventions. Routine readers and writers use the project's declared convention source.
 
 ## Start from the working area
 

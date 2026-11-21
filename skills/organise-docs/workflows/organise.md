@@ -5,7 +5,7 @@ Use this workflow for a documentation sweep, a bounded archive, an identifier-vo
 ## Choose the operation
 
 - **Sweep:** documents are messy, stale, duplicated, bloated, misfiled, or inconsistent. Inspect the relevant tree and propose a coherent target.
-- **Convention migration:** the user wants existing documents brought into an agreed structure or naming system. Establish the adopted target in the project convention source, then plan the bounded migration. Route unresolved project-rule design to `manage-project-context`, or global preference changes to `personalise-working-system`, before migrating files.
+- **Convention migration:** the user wants existing documents brought into an agreed structure or naming system. Establish the adopted target in the project convention source, then plan the bounded migration. Route unresolved project-rule design to `manage-project-context` before migrating files.
 - **Archive:** a known set of documents is superseded and needs removal from the live set without deletion.
 - **Identifier vocabulary:** the user wants to create, inspect, rename, merge, or prune the project's canonical identifier areas. Read [identifier conventions](../references/identifier-conventions.md) and the current project area registry at the path declared by project conventions, normally `reference/identifier-areas.yaml`.
 
@@ -49,7 +49,7 @@ Do not recommend migration for cosmetic consistency alone. Group mismatches only
 
 1. Read the adopted project rule and representative artifacts, including consumers that hardcode affected paths. If the target is unresolved, return the concrete mismatch and required decision to the convention owner; do not infer approval for a redesign from a cleanup request.
 2. Propose file migrations, inbound-reference repairs, affected consumers, collisions, exceptions, and whether adoption is forward-only or retrospective. Preserve useful fixed-name contracts, unique content, and stable identifiers.
-3. When authorised, update the affected project convention with its adopted form and any deliberate exception. Global preference changes belong to `personalise-working-system`; producing-skill changes belong to `upskill`.
+3. When authorised, update the affected project convention with its adopted form and any deliberate exception. Producing-skill changes belong to `upskill`.
 4. Migrate only the approved scope and repair affected references.
 5. Verify representative existing paths and one future path against the adopted rule. Record any forward-only boundary with the convention so later cleanup does not undo it.
 
