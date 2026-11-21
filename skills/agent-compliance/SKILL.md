@@ -23,7 +23,7 @@ Infer the requested result and read only the selected workflow.
 | A UK food-business, wholesale, distribution, traceability, labelling, hygiene, unsafe-food, withdrawal, or recall question | [UK food and wholesale regulation](workflows/uk-food-wholesale-regulation.md) |
 | Inspect or harden Supabase or Postgres roles, grants, RLS, policies, privileged functions, and exposed database access paths | [Database access-control audit](workflows/database-access-control-audit.md) |
 
-An explicit workflow or clear natural-language request selects it directly. Consultation is not a preflight for a specialist workflow. Use consultation for an unclear “are we compliant?” or “what have we missed?” request. Do not preload workflows; select one at a time. When one request needs a legal conclusion and a named privacy record, finish the advice decision first, then load the records workflow using that conclusion; do not repeat broad discovery.
+An explicit workflow or clear natural-language request selects it directly. Consultation is not a preflight for a specialist workflow. Use consultation for an unclear “are we compliant?” or “what have we missed?” request. When one request needs a legal conclusion and a named privacy record, finish the advice decision first, then load the records workflow using that conclusion; do not repeat broad discovery.
 
 Distinguish monitoring from substantive judgement: “what changed or is coming?” selects the horizon scan; “what does the current rule require for us?” selects the relevant legal or compliance workflow. Distinguish programme assurance from technical inspection: a broad SaaS readiness question selects SaaS assurance, while a request to inspect live database privileges or RLS selects the database audit.
 

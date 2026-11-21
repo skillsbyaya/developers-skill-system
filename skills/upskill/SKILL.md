@@ -35,7 +35,7 @@ Apply this to every line written or changed, and use it as the review checklist.
 5. **Specify the output.** Where a skill reports to the user, say what the report contains and how long it is: normally the outcome first, then anything the user must do or decide, then nothing else. Do not repeat what is already on screen, restate one fact in several sections, list checks that passed, or narrate the process.
 6. **Prevent before instructing.** Prefer a script, template or removed step over an instruction to remember something. A repair that only adds text is suspect: find the text that caused the failure and change or delete it.
 7. **Load only what is needed.** The core holds what every run needs; anything else loads on a stated condition. Do not split a short skill into files, and do not make a model open a file only to learn it was not needed.
-8. **Keep personal skills portable.** No project names, paths, decisions or history in a personal skill. Preserve supported runtimes unless a capability is intentionally platform-specific.
+8. **Keep personal skills portable.** No project names, paths, decisions or history in a personal skill.
 
 ## Change a skill
 

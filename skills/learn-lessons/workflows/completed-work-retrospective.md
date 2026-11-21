@@ -21,7 +21,7 @@ If the work is materially incomplete, name the incomplete portion and ask whethe
 2. Extract specific successes, failures, surprises, rework, blockers, quality signals, unresolved debt, and outcome evidence.
 3. Identify a recurring pattern only when it appears across more than one item or one consequential event justifies system-level prevention. Separate observation, user interpretation, and inference.
 4. Check previous retrospective commitments against current evidence. Mark each met, partly met, not met, or not assessable; do not treat an absent record as failure.
-5. Discuss the important findings in ordinary conversation. Frame causes as systems, decisions, and conditions rather than blame, and use specific examples. Ask for the user's perspective where records cannot explain motivation, trade-offs, or impact. Apply expert lenses inline; use a multi-perspective workflow only when the user explicitly asks for one.
+5. Discuss the important findings in ordinary conversation. Frame causes as systems, decisions, and conditions rather than blame, and use specific examples. Ask for the user's perspective where records cannot explain motivation, trade-offs, or impact.
 6. Agree at most five improvements. Give each an observable outcome and one real destination:
    - a durable, almost-always-needed project fact to the project-context owner;
    - committed corrective work to its active story or change package;

@@ -18,7 +18,7 @@ Infer the requested result and read only the selected workflow.
 | Turn acceptance criteria for not-yet-implemented behaviour into CI-safe red-phase scaffolds and an implementation checklist | [ATDD](workflows/atdd.md) |
 | Design, create, repair, or validate CI quality gates and hosted merge signals from the repository's real commands | [CI quality pipeline](workflows/ci-quality-pipeline.md) |
 
-An explicit mode or clear operational request selects it directly. Consultation is not a preflight for suite work, ATDD, or CI work. For a vague request such as “sort out the tests,” select the test-system workflow and begin with its light assessment; a vague request about CI or pull-request checks selects the CI workflow and begins with pipeline-contract discovery. Do not preload or combine workflows. If one request genuinely spans workflows, finish or checkpoint one result before selecting the next.
+An explicit mode or clear operational request selects it directly. Consultation is not a preflight for suite work, ATDD, or CI work. For a vague request such as “sort out the tests,” select the test-system workflow and begin with its light assessment; a vague request about CI or pull-request checks selects the CI workflow and begins with pipeline-contract discovery. If one request genuinely spans workflows, finish or checkpoint one result before selecting the next.
 
 ## Testing ownership rules
 
@@ -34,4 +34,4 @@ Test code, fixtures, local test configuration, concise test instructions, and CI
 
 Assessment, review, teaching, and consultation are report-only when requested alone. A combined “review and fix,” “decide and implement,” or similar request authorises assessment followed by the bounded test or configuration edits needed for the stated outcome; continue through the appropriate operational workflow without an interim report-only stop or fresh confirmation. Ask again only when assessment exposes materially different work, deletion, a production or deployment change, or a consequential dependency, scope, risk, or accepted trade-off that the user has not already authorised. A test repair that proves a production defect stops with evidence and a handoff to `agent-dev`; do not change product behaviour to make the suite green.
 
-If a needed neighbouring owner is unavailable, state the boundary and complete only the responsible testing work that remains possible. When this skill changes repository files, preserve them through the project's declared Git workflow: commit and push separable session-owned state to a non-live working branch without claiming delivery, release, or merge authority.
+When this skill changes repository files, preserve them through the project's declared Git workflow: commit and push separable session-owned state to a non-live working branch without claiming delivery, release, or merge authority.

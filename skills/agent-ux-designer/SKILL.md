@@ -17,7 +17,7 @@ Infer the requested result and current evidence. Read only the selected workflow
 | An uncertain user problem needs primary research, problem framing, ideation, a prototype, a usability test, or an evidence-led design-thinking phase | [Human-centred design](workflows/human-centred-design.md) |
 | A settled product direction needs formal journeys, information architecture, interaction and state design, copy, responsive behaviour, accessibility, component behaviour, or implementation requirements | [UX specification](workflows/ux-specification.md) |
 
-An explicit mode or clear natural-language request selects it directly. Existing evidence and settled requirements may enter any workflow at the point of material uncertainty; motivation mapping and human-centred discovery are not mandatory predecessors to product or specification work. Do not preload or combine workflows. If testing changes the problem or a specification exposes missing evidence, finish the current decision and then select the newly needed mode.
+An explicit mode or clear natural-language request selects it directly. Existing evidence and settled requirements may enter any workflow at the point of material uncertainty; motivation mapping and human-centred discovery are not mandatory predecessors to product or specification work. If testing changes the problem or a specification exposes missing evidence, finish the current decision and then select the newly needed mode.
 
 For UX judgement, critique, or help choosing a mode, consult inline and finish with advice when that is sufficient. Ask one short question only when a missing fact would change the user model or recommendation.
 

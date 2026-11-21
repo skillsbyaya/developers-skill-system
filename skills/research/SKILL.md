@@ -17,7 +17,7 @@ Infer the evidence needed and read only the selected workflow.
 | Understand demand, customers, buying behaviour, segments, alternatives, competitors, market size, positioning, or commercial opportunity | [Market research](workflows/market.md) |
 | Compare technologies, frameworks, standards, integrations, migrations, build-versus-buy options, technical feasibility, or project fit | [Technical research](workflows/technical.md) |
 
-An explicit mode or clear research request selects it directly. If several evidence questions are genuinely required, finish or checkpoint one workflow before selecting another and carry forward only the relevant conclusions. Do not preload or combine workflows.
+An explicit mode or clear research request selects it directly. If several evidence questions are genuinely required, finish or checkpoint one workflow before selecting another and carry forward only the relevant conclusions.
 
 ## Common research rules
 
@@ -27,13 +27,13 @@ An explicit mode or clear research request selects it directly. If several evide
 - Cite evidence beside the claim it supports. Record dates, geography, jurisdiction, versions, configurations, or definitions when they affect interpretation.
 - Separate evidence, estimate, inference, assumption, and recommendation. Preserve material conflicts and incompatible definitions instead of averaging them into false certainty.
 - Match confidence and output depth to the evidence. A focused answer may remain in conversation; create or update one reusable artifact only when the user requests it or future reuse, breadth, or continuity earns it.
-- When writing a durable artifact, use the project's declared documentation conventions, reuse an existing report for the same scope, and use a bundled template only when it improves the result. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
+- When writing a durable artifact, use the project's declared documentation conventions, reuse an existing report for the same scope, and use a bundled template only when it improves the result.
 - Stay inline while the evidence surface is manageable. Use at most one read-only `evidence-reader`, and only when a broad or noisy source set would materially crowd the main context. Give it one bounded evidence question and require a compact claim/source/date/limitation return. The main agent owns scope, source choice, synthesis, judgement, and user communication.
 - Continue research that can be resolved independently. Pause for the user only when an unresolved jurisdiction, objective, risk tolerance, or trade-off would make the remaining work build on the wrong premise.
 
 Research may create or update its own requested research artifact; beyond that it is report-only. It may recommend a product, architecture, implementation, compliance, or operational change, but it does not silently make that decision or mutation. For broad requests such as “research and implement” or “assess and apply,” finish the research first. If the result determines or materially changes the exact target, mechanism, scope, risk, rollback, or accepted trade-off, present the proposed next action and obtain fresh authority before handing off to the owner that can act.
 
-Keep neighbouring ownership clear: `agent-ux-designer` owns primary user research, prototypes, and usability tests; `agent-pm` owns product scope and commercial decisions; `agent-architect` owns architecture decisions; `agent-dev` owns code changes and investigation of existing defects; and legal, security, privacy, database, and compliance specialists own substantive determinations and controlled records. If a required owner is unavailable, state the boundary and complete only the responsible research.
+Keep neighbouring ownership clear: `agent-ux-designer` owns primary user research, prototypes, and usability tests; `agent-pm` owns product scope and commercial decisions; `agent-architect` owns architecture decisions; `agent-dev` owns code changes and investigation of existing defects; and legal, security, privacy, database, and compliance specialists own substantive determinations and controlled records.
 
 ## Finished result
 

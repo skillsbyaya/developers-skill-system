@@ -16,7 +16,7 @@ Infer the requested result and read only the selected workflow.
 | Architecture judgement, option comparison, overbuild challenge, implementation constraints, or help deciding whether a durable decision is warranted | [Consultation](workflows/consultation.md) |
 | Create, update, or validate a durable architecture document or recorded set of technical decisions | [Architecture decisions](workflows/architecture-decisions.md) |
 
-An explicit mode or clear architecture-document request selects it directly. Use consultation for one-off advice or an unclear architecture question; it is not a preflight for the durable workflow. Do not preload or combine workflows. If consultation reveals that a durable decision is useful, finish the advice and offer a compact handoff; begin the document workflow only when the user requests it.
+An explicit mode or clear architecture-document request selects it directly. Use consultation for one-off advice or an unclear architecture question; it is not a preflight for the durable workflow. If consultation reveals that a durable decision is useful, finish the advice and offer a compact handoff; begin the document workflow only when the user requests it.
 
 ## Architecture ownership rules
 
@@ -31,5 +31,3 @@ An explicit mode or clear architecture-document request selects it directly. Use
 Keep neighbouring ownership clear: `agent-pm` owns product scope, priority, requirements, and acceptance intent; `agent-ux-designer` owns experience decisions; `agent-ui-designer` owns visual interface and design-system decisions; `research` acquires substantial external evidence; `agent-dev` owns implementation; testing owners define test strategy and test-system work; security, privacy, legal, and compliance specialists own their standards; and `check-work implementation-readiness` decides whether the complete planning set can responsibly enter implementation.
 
 For a combined “design and implement” request, finish the architecture decision or artifact first. Present the exact resulting implementation scope, affected surfaces, material risks or trade-offs, and verification before switching to `agent-dev`; obtain fresh authority when those facts became known through the architecture work.
-
-If a needed neighbouring owner is unavailable, state the boundary and complete only the bounded architecture work that remains responsible.

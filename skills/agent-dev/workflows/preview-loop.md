@@ -6,5 +6,5 @@ Use this workflow when the user will judge many small visible changes by looking
 2. Start the app once, the way the project's instructions say (its dev server against local data), sign the user in, and open it in their browser. Say where it is running. Keep it running for the whole session.
 3. Loop: the user says what to change; make the change; tell them which page to refresh. Their look is the working check. Run a narrow check only for something they cannot see, such as a server action or a calculation. No plan, record update or assurance note per change.
 4. Neither elapsed time nor each accepted edit requires a checkpoint. The story record's execution area holds only the pages done, the pages left, and anything asked for that is not yet done or accepted.
-5. Checkpoint whenever the session ends before the user says the pass is done. When they do, record that their preview covered every change and land: the pass lands once, on the tiers its diff selects, with no separate review session.
+5. Checkpoint whenever the session ends before the user says the pass is done. When they do, record that their preview covered every change and land: the pass lands once, on the checks its diff needs, with no separate review session.
 
