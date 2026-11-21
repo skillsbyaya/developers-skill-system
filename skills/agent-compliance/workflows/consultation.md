@@ -46,6 +46,6 @@ An assurance report belongs to this owner for the assessed scope. Create or upda
 
 ## Handoffs and finished result
 
-A handoff states the assessed scope, material exposure, required control outcome, evidence needed, decisions already made, unresolved authority, and the next owner. Do not require another owner merely to restate a conclusion this workflow can responsibly make.
+A handoff states the assessed scope, material exposure, required control outcome, evidence needed, decisions already made, unresolved authority, and the next owner.
 
 Lead with the assurance conclusion. Then give scope and assumptions, decisive findings or recommendation, material trade-offs, evidence and limitations, required decision, and next action. A clean-looking document, policy, configured tool, or lack of known incidents is not proof that a control operates.

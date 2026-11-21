@@ -28,4 +28,4 @@ When the user asks to apply an approved contained correction:
 
 If the change requires comprehensive requirements rewriting, epic redesign, backlog reprioritisation, UX, UI/design-system work, architecture, implementation, or assurance, stop with a compact handoff to the selected workflow or neighbouring owner. Carry the approved decision, affected paths or stable keys, current revision, invalidated assumptions, and unresolved constraints. Return to the prior active owner when the correction is contained.
 
-Finish with the diagnosis, approved decision or unresolved choice, exact changes made, invalidated work, and current owner. Do not create a proposal document unless durable comparison or approval genuinely needs one.
+Finish with the diagnosis, approved decision or unresolved choice, exact changes made, invalidated work, and current owner.

@@ -29,4 +29,4 @@ Do not produce an exhaustive project structure or generic best-practice catalogu
 
 Return the recommendation, rationale, credible alternative, assumptions, implementation constraints, risks, deferred decisions, and reversal condition. Consultation is advisory and does not edit architecture artifacts or implementation.
 
-If a durable record is now warranted, offer a compact handoff containing the decision scope, recommendation, evidence, constraints, unresolved choices, and affected current artifact. Do not start the architecture-decisions workflow without the user's request.
+If a durable record is now warranted, offer a compact handoff containing the decision scope, recommendation, evidence, constraints, unresolved choices, and affected current artifact.

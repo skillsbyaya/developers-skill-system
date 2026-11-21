@@ -1,6 +1,6 @@
 # Completed-Work Retrospective
 
-Turn evidence from a completed body of project work into a few improvements worth carrying forward. This is an optional milestone review, not mandatory ceremony or a simulated team meeting.
+Turn evidence from a completed body of project work into a few improvements worth carrying forward.
 
 ## Resolve the boundary and scope
 
@@ -31,8 +31,6 @@ If the work is materially incomplete, name the incomplete portion and ask whethe
 7. Check whether the evidence conflicts with the next planned stage. If so, name the exact conflict and route a cross-artifact assessment to `check-work` implementation readiness or a product/delivery decision to `agent-pm` course correction. Do not silently rewrite planning artifacts.
 
 A valid result may contain no durable improvement. Do not manufacture actions merely to fill the limit.
-
-A retrospective request authorizes the review and its own saved record when the conditions below apply. It does not by itself authorize changes to other owners' artifacts. Apply only an exact downstream change already established and authorized before the review; otherwise finish the review, present the proposed destination and consequence, and obtain fresh authority after the exact change is known.
 
 ## Save only when useful
 

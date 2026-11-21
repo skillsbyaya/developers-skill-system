@@ -43,9 +43,9 @@ Select lenses from the risks:
 - **Acceptance:** required behaviour, constraints, omissions, contradictions, and unapproved scope.
 - **Risk specialists:** security, privacy, database, legal, compliance, accessibility, performance, or other domains only when their specialist standard is actually needed.
 
-Apply code-specific lenses inside this workflow. Do not invoke other generic assurance modes merely to create a review stack. Route to an independent specialist when the unresolved question requires authority or evidence this workflow cannot supply.
+Apply code-specific lenses inside this workflow. Route to an independent specialist when the unresolved question requires authority or evidence this workflow cannot supply.
 
-Run relevant verification commands when they materially improve the decision, without intentionally mutating source or project state. Inspect any resulting workspace changes. Never report an unperformed, stale, mismatched, or unavailable check as passed.
+Run relevant verification commands when they materially improve the decision, without intentionally mutating source or project state. Inspect any resulting workspace changes.
 
 ## Use workers only when they earn the cost
 
@@ -85,7 +85,7 @@ When that project already gives durable review findings stable IDs, resolve [the
 
 Do not write individual findings into delivery status.
 
-If no owning record exists, keep a clean or fully resolved review in conversation. When unresolved findings must survive another session, use the project's declared documentation conventions and create or update the smallest `code-review-handoff` artifact. Do not create it merely to archive a review.
+If no owning record exists, keep a clean or fully resolved review in conversation. When unresolved findings must survive another session, use the project's declared documentation conventions and create or update the smallest `code-review-handoff` artifact.
 
 ## Fix and re-review boundary
 

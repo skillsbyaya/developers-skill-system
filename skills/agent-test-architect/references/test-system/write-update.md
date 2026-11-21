@@ -9,4 +9,4 @@ Use this operation only for implemented behaviour. Not-yet-implemented acceptanc
 5. When source and test disagree, use authoritative intent when clear. Otherwise expose the mismatch instead of choosing the current code or test by convenience.
 6. Run the narrow changed tests first, then the relevant broader suite when shared contracts or risk justify it.
 
-If a current test summary exists and the work changes durable coverage knowledge worth preserving, resolve the `test-summary` rule in the project's declared documentation conventions and update that summary with the behaviour covered, commands and results, and remaining gaps. Do not create or churn a standing summary for routine edits.
+If a current test summary exists and the work changes durable coverage knowledge worth preserving, resolve the `test-summary` rule in the project's declared documentation conventions and update that summary with the behaviour covered, commands and results, and remaining gaps.

@@ -1,6 +1,6 @@
 # Review
 
-Review is report-only when requested alone. A combined review-and-fix request authorises bounded test rewrites within the requested scope. Test deletion or consolidation always requires explicit confirmation.
+Test deletion or consolidation always requires explicit confirmation.
 
 1. Establish a file, directory, changed-test set, risk-relevant slice, or whole-suite scope.
 2. Inspect mechanically and semantically for hard waits, hidden conditional flow, weak or missing assertions, shared data, brittle selectors, order dependence, cleanup failures, unnecessary abstraction, slow setup, and focused-test violations.
@@ -14,4 +14,4 @@ Review is report-only when requested alone. A combined review-and-fix request au
 
 When a durable review is requested, already exists for the scope, or is needed for continuation, resolve the `test-review` rule in the project's declared documentation conventions and create or update one current review. Include evidence-linked findings, concrete corrections, deletion or consolidation candidates, strengths worth preserving, and limitations.
 
-When bounded fixes are already authorised, select the matching Initialize, Write or Update, Repair, or Improve operation and continue without waiting for separate acceptance of the findings. Then rerun the affected review and tests; do not update the verdict by assertion. Otherwise present the findings and stop.
+For a review-and-fix request, continue into the matching Initialize, Write or Update, Repair, or Improve operation, then rerun the affected review and tests; do not update the verdict by assertion.

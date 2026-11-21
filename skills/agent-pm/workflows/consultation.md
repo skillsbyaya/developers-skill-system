@@ -14,4 +14,4 @@ For an MVP, preserve the smallest end-to-end outcome that proves or delivers the
 
 For priority advice without a requested state change, do not reorder the backlog. Return the recommended ordering or decision rule. A request to apply, groom, or sequence backlog priority selects backlog planning directly.
 
-Finish with the decision reached, unresolved evidence, and the next owner only when another action is actually needed. A consultation does not require a brief, PRD, PRFAQ, epic breakdown, or implementation handoff.
+Finish with the decision reached, unresolved evidence, and the next owner only when another action is actually needed.

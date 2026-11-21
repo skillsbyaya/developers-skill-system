@@ -18,7 +18,7 @@ Infer the requested result and read only the selected workflow.
 | Turn acceptance criteria for not-yet-implemented behaviour into CI-safe red-phase scaffolds and an implementation checklist | [ATDD](workflows/atdd.md) |
 | Design, create, repair, or validate CI quality gates and hosted merge signals from the repository's real commands | [CI quality pipeline](workflows/ci-quality-pipeline.md) |
 
-An explicit mode or clear operational request selects it directly. Consultation is not a preflight for suite work, ATDD, or CI work. For a vague request such as “sort out the tests,” select the test-system workflow and begin with its light assessment; a vague request about CI or pull-request checks selects the CI workflow and begins with pipeline-contract discovery. If one request genuinely spans workflows, finish or checkpoint one result before selecting the next.
+An explicit mode or clear operational request selects it directly. For a vague request such as “sort out the tests,” select the test-system workflow and begin with its light assessment; a vague request about CI or pull-request checks selects the CI workflow and begins with pipeline-contract discovery. If one request genuinely spans workflows, finish or checkpoint one result before selecting the next.
 
 ## Testing ownership rules
 
@@ -28,10 +28,10 @@ An explicit mode or clear operational request selects it directly. Consultation 
 - Require deterministic, isolated, explicit, focused tests and checks. Avoid hard sleeps, shared fixed data, conditional control flow that hides failures, weak assertions, speculative fixtures, and duplicate checks at several levels.
 - Follow the repository's current stack, commands, layout, fixtures, naming, and hosted platform. Verify volatile framework or platform behaviour from official documentation when it could change the work; do not replace working infrastructure merely because another tool is newer.
 - Preserve accepted product, UX, architecture, security, privacy, legal, and compliance decisions. Testing may expose a conflict or missing oracle, but it does not silently redefine another owner's standard.
-- Continue from current artifacts, tests, and pipeline configuration. Reuse a current strategy, coverage map, checklist, review, summary, or gate contract when it still owns the scope; do not create standing documents for routine edits.
+- Continue from current artifacts, tests, and pipeline configuration. Reuse a current strategy, coverage map, checklist, review, summary, or gate contract when it still owns the scope.
 
 Test code, fixtures, local test configuration, concise test instructions, and CI quality-pipeline configuration are within this owner. Production behaviour and delivery lifecycle belong to `agent-dev`. Deployment automation, repository rules, secrets, and external service administration are outside testing ownership and require their own explicit authority. User research and usability testing belong to `agent-ux-designer`; release go/no-go belongs to `check-work release-readiness`; and independent security, privacy, database, legal, or compliance standards remain with their specialists.
 
-Assessment, review, teaching, and consultation are report-only when requested alone. A combined “review and fix,” “decide and implement,” or similar request authorises assessment followed by the bounded test or configuration edits needed for the stated outcome; continue through the appropriate operational workflow without an interim report-only stop or fresh confirmation. Ask again only when assessment exposes materially different work, deletion, a production or deployment change, or a consequential dependency, scope, risk, or accepted trade-off that the user has not already authorised. A test repair that proves a production defect stops with evidence and a handoff to `agent-dev`; do not change product behaviour to make the suite green.
+Deleting tests is confirmed first. A test repair that proves a production defect stops with evidence and a handoff to `agent-dev`; do not change product behaviour to make the suite green.
 
 When this skill changes repository files, preserve them through the project's declared Git workflow: commit and push separable session-owned state to a non-live working branch without claiming delivery, release, or merge authority.

@@ -6,15 +6,13 @@ Create, update, or validate formal experience requirements that guide product, U
 
 Identify the product area, affected users and journeys, desired outcome, current product decisions, existing UX folder or artifact, implementation constraints, evidence, and unresolved UX choices.
 
-Start from supplied briefs, requirements, motivation maps, research, prototypes, architecture constraints, existing interfaces, UI designs, and validation evidence when they are relevant. They are inputs, not mandatory predecessors. Reuse current accepted decisions and update the existing specification rather than restarting.
+Start from supplied briefs, requirements, motivation maps, research, prototypes, architecture constraints, existing interfaces, UI designs, and validation evidence when they are relevant. Reuse current accepted decisions and update the existing specification rather than restarting.
 
 Choose the operation:
 
 - **Create:** no current specification exists for the scope.
 - **Update:** accepted evidence or decisions require bounded changes.
 - **Validate:** judge completeness, coherence, implementability, accessibility, and conflicts without rewriting unless requested.
-
-Batch material user-owned choices. Do not require confirmation after every section or force a fixed sequence when the direction is already settled.
 
 ## Define the experience
 
@@ -87,4 +85,4 @@ Check that:
 - component behaviour and state requirements are complete enough for UI design and implementation; and
 - open decisions, evidence gaps, validation needs, and downstream owners are explicit.
 
-Return the operation, scope, experience-specification path, decisions made, material changes or findings, unresolved choices, evidence limits, UI handoff, and next owner. Do not automatically begin visual design, implementation, or assurance.
+Return the operation, scope, experience-specification path, decisions made, material changes or findings, unresolved choices, evidence limits, UI handoff, and next owner.

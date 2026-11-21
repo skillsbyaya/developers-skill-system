@@ -1,6 +1,6 @@
 # PRFAQ
 
-Use a Working Backwards PRFAQ when a product idea needs a demanding customer-value and viability test before detailed requirements or investment. It is optional: do not require one when existing evidence and decisions already support the requested next step.
+Use a Working Backwards PRFAQ when a product idea needs a demanding customer-value and viability test before detailed requirements or investment.
 
 ## Choose the operation
 
