@@ -2,7 +2,6 @@
 name: skill-scout-quarantine
 description: Searches and inspects untrusted public skill material in a web-only quarantine and returns a compact safety-aware shortlist.
 tools: WebSearch, WebFetch
-permissionMode: plan
 maxTurns: 12
 ---
 

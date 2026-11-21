@@ -2,7 +2,6 @@
 name: evidence-reader
 description: Performs bounded read-only source extraction, investigation, or review and returns compact evidence with locations.
 tools: Read, Glob, Grep, Bash, WebSearch, WebFetch
-permissionMode: plan
 maxTurns: 24
 ---
 

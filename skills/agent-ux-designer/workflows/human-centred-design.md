@@ -12,7 +12,7 @@ Route to the earliest phase with a material gap. If the user names a phase, begi
 - **Inference:** a reasoned interpretation.
 - **Assumption:** an unverified belief that must not be presented as research.
 
-Read [the design methods catalogue](../references/design-methods.csv) only when choosing among research, framing, ideation, prototype, test, or implementation-learning methods could materially improve the work. Use each row's purpose and warning, not its title alone.
+Read [the design methods catalogue](../references/design-methods.md) only when choosing among research, framing, ideation, prototype, test, or implementation-learning methods could materially improve the work. Use each row's purpose and warning, not its title alone.
 
 ## Phase route
 

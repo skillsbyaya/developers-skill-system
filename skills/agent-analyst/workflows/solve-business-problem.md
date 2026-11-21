@@ -6,7 +6,7 @@ Infer the lightest suitable mode: quick diagnosis, guided problem solving, multi
 
 ## Use the exercise catalogue when it changes the work
 
-Reassess catalogue need after framing the problem, after diagnosis, before comparing interventions, and when defining a pilot or rollout. Read the [business problem exercise catalogue](../references/business-problem-exercises.csv) once when:
+Reassess catalogue need after framing the problem, after diagnosis, before comparing interventions, and when defining a pilot or rollout. Read the [business problem exercise catalogue](../references/business-problem-exercises.md) once when:
 
 - the user asks for a workshop, methods, or a named problem-solving exercise;
 - the problem shape makes a specialist diagnostic or analysis method material, such as uneven occurrence, interacting feedback, measured cause distribution, adoption resistance, or reliability risk;

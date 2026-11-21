@@ -1,3 +1,8 @@
+# Preview checklist template
+
+Copy the page below into a new `.html` file.
+
+````html
 <title>REPLACE — Preview Checklist</title>
 
 <style>
@@ -433,3 +438,4 @@
     paint();
   })();
 </script>
+````
