@@ -7,4 +7,4 @@ The current Claude Code system uses two bounded subagents, stored under `claude-
 - `evidence-reader`
 - `skill-scout-quarantine`
 
-These definitions have restricted tools and specific safety or independence roles. The `developer-skills` plugin serves them as subagents, not skills: `.claude-plugin/plugin.json` lists them under `agents`.
+These definitions have restricted tools and specific safety or independence roles. The `devkit` plugin serves them as subagents, not skills: `.claude-plugin/plugin.json` lists them under `agents`.

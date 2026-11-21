@@ -2,7 +2,7 @@
 
 Publish a human-preview checklist as a working document when the person will work through it away from this conversation: it runs past a handful of steps, will be ticked off over one or more sittings, gets revisited after fixes, or needs printing or reading on another device. A short check or single question belongs in the reply — a chat answer is faster to act on than a page.
 
-Build from [`../templates/preview-checklist.html`](../templates/preview-checklist.html). Copy it, replace the content, keep the behaviour. Load `artifact-design` first, but the template already settles layout, palette, type, and print — spend the effort on content and sequencing, not on restyling a solved page. Keep the page sparse, factual, and easy to scan.
+Build from [`../templates/preview-checklist.md`](../templates/preview-checklist.md). Copy its page, replace the content, keep the behaviour. Load `artifact-design` first, but the template already settles layout, palette, type, and print — spend the effort on content and sequencing, not on restyling a solved page. Keep the page sparse, factual, and easy to scan.
 
 ## Required parts
 

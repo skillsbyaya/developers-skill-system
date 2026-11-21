@@ -1,9 +1,12 @@
 {
   "name": "developers-skill-system",
-  "owner": { "name": "skillsbyaya" },
+  "owner": {
+    "name": "skillsbyaya"
+  },
+  "description": "The shared developer skills by skillsbyaya.",
   "plugins": [
     {
-      "name": "developer-skills",
+      "name": "devkit",
       "source": "./",
       "description": "The shared developer skills and their two helper agents."
     }

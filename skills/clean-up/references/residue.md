@@ -21,9 +21,16 @@ Keep the current rule and the one clause of reason a session needs to apply it t
 ## Where to look
 
 1. **Everything loaded at session start**, read in full: each instruction file in the chain (global, parent and project), and the runtime's memory index and notes. A memory index line is a short pointer; trim one that carries the note's content.
-2. **The documents those files name as authorities for how work is done**: workflow, conventions, script and test guides, the queue, the backlog. Rank them with `sh scripts/residue-scan.sh <path>…` from this skill's folder and read the highest in full. The scan finds marker words only. Ghost rules and workarounds carry none, so a file read in full is the only complete check.
+2. **The documents those files name as authorities for how work is done**: workflow, conventions, script and test guides, the queue, the backlog. Rank them by marker words with the search below, and read the highest in full. The search finds marker words only. Ghost rules and workarounds carry none, so a file read in full is the only complete check.
 3. **A skill library**, when the project is one or the user includes it.
 4. **Product and design documents** only when the user includes them. Ask first when a sweep would touch files that open branches are editing.
+
+**The marker search.** Count marker lines per Markdown file, most first, leaving out `.git`, `node_modules`, `archive` and `migrations`. A hit is a line to judge, not a verdict. In a shell:
+
+```sh
+find <path>… \( -name .git -o -name node_modules -o -name archive -o -name migrations \) -prune -o -type f -name '*.md' -print |
+while IFS= read -r f; do n=$(grep -ciE 'no longer|used to |formerly|previously|originally|earlier version|superseded|deprecated|workaround|for now|temporar|going forward|replace[sd] the|instead of the (old|former|previous)|(was|were|has been|have been) (removed|retired|replaced|dropped|renamed|moved|fixed)|(fixed|landed|corrected|removed|dropped|retired|renamed|moved|since|as of|until)[^.|]{0,24}(#[0-9]+|20[0-9][0-9]-[0-9][0-9])|landed as|correction[:( ]' "$f"); [ "$n" -gt 0 ] && printf '%s\t%s\n' "$n" "$f"; done | sort -rn | head -40
+```
 
 ## Clean and report
 
