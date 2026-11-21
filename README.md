@@ -45,7 +45,7 @@ Area-owner skills are not Claude Code subagents. Actual Claude Code subagents li
 
 ## Installation model
 
-This repository is the one source. It is also a Claude Code plugin marketplace (`.claude-plugin/marketplace.json`) holding one plugin, `developer-skills`, which serves every skill under `skills/` and the subagents under `subagents/claude-code/`. Installed copies are generated from it; nobody edits them.
+This repository is the one source. It is also a Claude Code plugin marketplace (`.claude-plugin/marketplace.json`) holding one plugin, `devkit`, which serves every skill under `skills/` and the subagents under `subagents/claude-code/`. Installed copies are generated from it; nobody edits them.
 
 Add the marketplace once to the Claude account, at claude.ai → Customize → Plugins → Add, by its URL:
 
@@ -53,13 +53,13 @@ Add the marketplace once to the Claude account, at claude.ai → Customize → P
 https://github.com/skillsbyaya/developers-skill-system
 ```
 
-Then install `developer-skills` from it. Account plugins reach every Claude Code session on that account, cloud and desktop alike, so no project repository copies or installs the skills. In a session they are named `developer-skills:<skill>`, for example `developer-skills:agent-dev`.
+Then install `devkit` from it. Account plugins reach every Claude Code session on that account, cloud and desktop alike, so no project repository copies or installs the skills. In a session they are named `devkit:<skill>`, for example `devkit:agent-dev`.
 
 In a terminal without the account, the same plugin installs with:
 
 ```sh
 /plugin marketplace add skillsbyaya/developers-skill-system
-/plugin install developer-skills@developers-skill-system
+/plugin install devkit@developers-skill-system
 ```
 
 Claude Code updates the plugin only when `version` in `.claude-plugin/plugin.json` changes, so every change that lands on `main` raises it: the last number for a wording fix, the middle one for a changed or added skill, the first for a removed or renamed one. Only trusted maintainers push to `main`, because every session runs what it holds.
