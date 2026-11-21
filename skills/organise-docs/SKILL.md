@@ -23,5 +23,3 @@ An explicit indexing request selects the index workflow directly. Use organisati
 Navigation and index prose should describe the durable shape of the material without copying inventory facts that can be derived from the files it points to. Omit counts, terminal identifier ranges, and similar change-sensitive summaries unless they materially help a reader choose or act. When one is necessary, link to its living authority or make its generation and verification explicit; do not replace a stale count with another hand-maintained description of the same inventory.
 
 This skill organises existing content; it does not invent missing product, technical, legal, research, or backlog substance. Route substantive gaps to their domain owner, `agent-writer` for a shorter derived context, and `agent-pm` backlog planning for backlog content or order. Use `upskill` when a producing skill must be changed to follow a correct convention.
-
-If an optional neighbouring owner is unavailable, complete only the bounded documentation work this skill can support and name the missing boundary.

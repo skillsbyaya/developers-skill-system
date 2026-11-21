@@ -20,7 +20,7 @@ If the user names one clear area, run only that row and do not broaden the reque
 | 5 | Project skill fit → ordinary reasoning over project evidence and live skill frontmatter | The user explicitly asks which capabilities the project is missing, or a broad sweep has enough current project evidence to assess overlooked skill opportunities. |
 | 6 | Uncommitted follow-ups and triggered deferrals → `agent-pm` backlog planning | A backlog exists, earlier selected areas produced confirmed work that is not already owned by committed delivery, or an explicit deferral trigger or deadline has demonstrably arrived. |
 
-Do not add assurance, code review, security, compliance, lessons, retrospective, CI, release readiness, or session close merely because they are useful elsewhere. Include them only when the user separately requests that outcome or a selected owner identifies a concrete specialist need.
+Do not add assurance, code review, security, compliance, lessons, retrospective, CI, or release readiness merely because they are useful elsewhere. Include them only when the user separately requests that outcome or a selected owner identifies a concrete specialist need.
 
 A sweep where only the residue check applies is complete. Do not manufacture work to widen it.
 
@@ -44,8 +44,6 @@ For one other area, switch directly and let that owner apply its normal authorit
 6. For project skill fit, compare evidenced project needs with live skill names and descriptions, keep the result findings-only, and do not infer a missed trigger from non-use. A proposed skill change requires separate work through `upskill`.
 7. Inspect living deferral registers and backlog items only for explicit, observable triggers or deadlines that current evidence can verify. Send triggered, still-uncommitted work and other confirmed follow-ups to `agent-pm` backlog planning; leave a deferral that waits on a real prerequisite in place, send one whose only condition is first use to `agent-pm` for a place in the order, and do not copy active story, package, or delivery-status work into the backlog. A trigger arriving authorises lifecycle reconciliation, not implementation.
 8. If accumulated context would weaken the next area, checkpoint the completed results and continue area by area in a fresh session rather than forcing one oversized run.
-
-If an optional owner is unavailable, name the skipped boundary and continue the remaining confirmed areas when that is still useful.
 
 ## Boundaries
 

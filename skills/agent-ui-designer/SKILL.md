@@ -17,7 +17,7 @@ Infer the requested result and read only the selected workflow.
 | Check a built screen before a person sees it: look at the rendered page, fix what is wrong, and leave the design documents alone | [Screen review](workflows/screen-review.md) |
 | Generate, ingest, audit, migrate, publish, or govern canonical design tokens, themes, shared visual patterns and placement conventions, visual references, or generated design-system outputs | [Design-token system](workflows/design-token-system.md) |
 
-An explicit mode or clear natural-language request selects it directly. Use inline consultation for bounded visual judgement or help choosing a route; consultation is not a preflight for any workflow. Do not preload or combine workflows. If UI specification establishes new token or pattern requirements, finish the visual decision before selecting design-token-system work.
+An explicit mode or clear natural-language request selects it directly. Use inline consultation for bounded visual judgement or help choosing a route; consultation is not a preflight for any workflow. If UI specification establishes new token or pattern requirements, finish the visual decision before selecting design-token-system work.
 
 ## UI ownership rules
 

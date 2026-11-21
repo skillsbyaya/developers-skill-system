@@ -44,7 +44,7 @@ For a durable reference, use the `visual-reference` convention or place a compan
 
 ## Write and finish
 
-For durable output, resolve the `ux` rule in the project's declared documentation conventions. Update the owning visual specification (normally `DESIGN.md`), including a shared specification when it owns this area, with visual thesis, hierarchy, composition, responsive presentation, component appearance, visual roles, token and pattern dependencies, reference links, implementation guidance, and unresolved visual decisions. An explicit requested path takes precedence; if a rule is missing, preserve established local placement or choose and report a suitable path, asking only when ambiguity matters.
+For durable output, resolve the `ux` rule in the project's declared documentation conventions. Update the owning visual specification (normally `DESIGN.md`), including a shared specification when it owns this area, with visual thesis, hierarchy, composition, responsive presentation, component appearance, visual roles, token and pattern dependencies, reference links, implementation guidance, and unresolved visual decisions.
 
 Do not rewrite `EXPERIENCE.md`. Report any conflict or required UX update to `agent-ux-designer`. Preserve stable supported visual decisions, reconcile contradictions, and remove stale content rather than appending history.
 
