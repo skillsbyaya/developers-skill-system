@@ -62,7 +62,7 @@ In a terminal without the account, the same plugin installs with:
 /plugin install developer-skills@developers-skill-system
 ```
 
-The plugin has no fixed `version`, so each commit on `main` is a new version. Only trusted maintainers push to `main`, because every session runs what it holds.
+Claude Code updates the plugin only when `version` in `.claude-plugin/plugin.json` changes, so every change that lands on `main` raises it: the last number for a wording fix, the middle one for a changed or added skill, the first for a removed or renamed one. Only trusted maintainers push to `main`, because every session runs what it holds.
 
 ## Maintenance
 

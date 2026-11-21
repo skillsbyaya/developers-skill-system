@@ -1,7 +1,10 @@
 {
   "name": "developer-skills",
+  "version": "1.0.0",
   "description": "The shared developer skills and their two helper agents.",
-  "author": { "name": "skillsbyaya" },
+  "author": {
+    "name": "skillsbyaya"
+  },
   "repository": "https://github.com/skillsbyaya/developers-skill-system",
   "agents": [
     "./subagents/claude-code/evidence-reader.md",
