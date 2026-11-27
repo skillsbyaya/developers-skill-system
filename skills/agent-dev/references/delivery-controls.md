@@ -21,7 +21,7 @@ Inspect version-control state and the project's continuation source before editi
 
 ## Show the plan before acting
 
-Once the plan for the unit is formed, show it in a few lines before acting: what will change, where, and any judgement call. It is not an approval gate; carry on unless it contains a decision that is the user's.
+Once the plan for the unit is formed, show it in a few lines before acting: what will change, where, the tests it changes, and any judgement call. For the tests, name each table, column, default, permission, function, route and visible text the change adds a rule to, alters or removes, search the tests for each, and list every test that uses one with how it will change: those edits are designed with the change, never discovered by a later run. It is not an approval gate; carry on unless it contains a decision that is the user's.
 
 ## Implement the smallest correct change
 
@@ -36,7 +36,6 @@ For changed behaviour, establish the smallest failing or observable check first 
 Choose checks by what the change can break, not by what is named after it. Run narrow tests first, then affected lint, type or build checks; broader regression only when shared contracts, subsystem boundaries or risk justify it, and integrated regression at the delivery batch boundary. What a change can break includes:
 
 - the project's sweep and inventory checks for the change's kind (catalogues, privilege floors, page or route lists, budgets), which no name or import links to the change;
-- tests that still depend on user-visible text, a route or an identifier the change removes or renames: search for the old value and update them in the same change;
 - the cost of a request-time read (a page render, an API handler, a database function a page calls): independent awaits run together, one render asks each question once, a helper on a per-row path is measured by counting its calls, and the project's latency or round-trip budget is a check like any other.
 
 A documentation-only change needs document checks, and an empty diff needs none. A test never pins a calendar date that today-dependent logic reads. For small changes across chats, use the same branch and existing owner, with a concrete scope and stopping condition; use packet coordination for a multi-packet owner.
