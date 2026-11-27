@@ -21,13 +21,22 @@ Inspect version-control state and the project's continuation source before editi
 
 ## Show the plan before acting
 
-Once the plan for the unit is formed, show it in a few lines before acting: what will change, where, the tests it changes, and any judgement call. For the tests, name each table, column, default, permission, function, route and visible text the change adds a rule to, alters or removes, search the tests for each, and list every test that uses one with how it will change: those edits are designed with the change, never discovered by a later run. It is not an approval gate; carry on unless it contains a decision that is the user's.
+Once the plan for the unit is formed, show it in a few lines before acting, starting from what is there and not from the change:
+
+- each thing the request or brief asks for, in the person's own words, so that none is dropped;
+- what the product already has that does it or part of it (a setting, a screen, a mechanism a few files over), and how the change uses that, or why none fits;
+- what a person can do in this area today, each one still possible afterwards or named as going;
+- then what will change, where, the tests it changes, and any judgement call.
+
+For the tests, name each table, column, default, permission, function, route and visible text the change adds a rule to, alters or removes, search the tests for each, and list every test that uses one with how it will change: those edits are designed with the change, never discovered by a later run. It is not an approval gate; carry on unless it contains a decision that is the user's.
+
+A decision put to the user that changes how something works carries the same line on every option: what it takes away, or that nothing is lost.
 
 ## Implement the smallest correct change
 
 Understand the real call path, data flow, contracts, and existing behaviour. Follow the project's architecture, naming, error handling, typing, formatting, accessibility, security, and testing conventions; prefer surrounding code to generic fashion.
 
-Stop at the first sufficient solution: no change; remove or replace obsolete code; reuse a project solution (look before you write: re-implementing a component, pattern or helper that lives a few files over is the most common slop, and new code that overlaps one says why); native or standard-library behaviour; an installed dependency; the smallest local change; an abstraction, dependency, configuration surface or scaffold only when the outcome or risk requires it. Fix defects at the lowest shared cause that preserves intended behaviour. If current behaviour already satisfies the outcome, change nothing and report the evidence.
+Stop at the first sufficient solution: no change; remove or replace obsolete code; reuse a project solution; native or standard-library behaviour; an installed dependency; the smallest local change; an abstraction, dependency, configuration surface or scaffold only when the outcome or risk requires it. Fix defects at the lowest shared cause that preserves intended behaviour. If current behaviour already satisfies the outcome, change nothing and report the evidence.
 
 Keep the diff cohesive: no speculative extension points, duplicated helpers, one-use abstractions, broad configuration, unrelated refactors, or file churn. Make failure behaviour explicit and update affected contracts or documentation when callers rely on them. Record a consequential ceiling and its observable upgrade trigger only when later work needs it.
 
