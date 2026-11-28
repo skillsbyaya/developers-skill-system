@@ -28,7 +28,7 @@ Once the plan for the unit is formed, show it in a few lines before acting, star
 - what a person can do in this area today, each one still possible afterwards or named as going;
 - then what will change, where, the tests it changes, and any judgement call.
 
-For the tests, name each table, column, default, permission, function, route and visible text the change adds a rule to, alters or removes, search the tests for each, and list every test that uses one with how it will change: those edits are designed with the change, never discovered by a later run. It is not an approval gate; carry on unless it contains a decision that is the user's.
+For the tests, start from the promises the change alters: a default, a required field, a count, a signature, a permission, what a page shows, a step that must repeat safely. The area's own instructions (its folder's `CLAUDE.md` or equivalent) state its promises; read them and the code that calls what changes, because a promise such as "a repeat run writes nothing" has no name a search would find. For each one, say whether the change keeps it, or changes it together with every caller and test that relies on it, in this change. A test that would fail is a promise not yet designed for, and is found here, never by a later run. It is not an approval gate; carry on unless it contains a decision that is the user's.
 
 A decision put to the user that changes how something works carries the same line on every option: what it takes away, or that nothing is lost.
 
